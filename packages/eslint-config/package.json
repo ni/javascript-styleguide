@@ -23,14 +23,14 @@
   },
   "homepage": "https://github.com/ni/javascript-styleguide#readme",
   "dependencies": {
-    "eslint-config-airbnb-base": "^14.2.0"
+    "eslint-config-airbnb-base": "~14.2.0"
   },
   "devDependencies": {
     "eslint": "^7.6.0",
     "eslint-plugin-import": "^2.12.2"
   },
   "peerDependencies": {
-    "eslint": ">=7.6.0",
-    "eslint-plugin-import": ">=2.12.2"
+    "eslint": "^7.6.0",
+    "eslint-plugin-import": "^2.12.2"
   }
 }
