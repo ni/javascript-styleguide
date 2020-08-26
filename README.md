@@ -1,11 +1,21 @@
-# NI JavaScript Style Guide
+# NI JavaScript and TypeScript Style Guide
 
-Welcome to NI's internal and external JavaScript and TypeScript linter rules for [ESLint](https://eslint.org/docs/user-guide/getting-started) and [TSLint](https://palantir.github.io/tslint/).
+Welcome to NI's JavaScript and TypeScript linter rules for [ESLint](https://eslint.org/docs/user-guide/getting-started) and [TSLint](https://palantir.github.io/tslint/).
 
 ## Installation
 
+Install @ni/eslint-config and its peer dependencies.
+
+Use [npm view](https://docs.npmjs.com/cli/view.html) to get the correct versions of each package.
+
+```bash
+npm view @ni/eslint-config peerDependencies
 ```
-npm install --save-dev eslint eslint-plugin-import @ni/eslint-config
+
+Alternatively, use a shortcut with [install-peerdeps](https://www.npmjs.com/package/install-peerdeps).
+
+```bash
+npx install-peerdeps --dev @ni/eslint-config
 ```
 
 ## Usage
@@ -20,4 +30,4 @@ Extend @ni in the ESLint configuration.
 
 ## License
 
-[MIT (c) 2020 NI](./LICENSE)
+[MIT (c) 2020 National Instruments Corporation](./LICENSE)
