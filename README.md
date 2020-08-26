@@ -1,5 +1,7 @@
 # NI JavaScript and TypeScript Style Guide
 
+![Logo](resources/logo.svg)
+
 Welcome to NI's JavaScript and TypeScript linter rules for [ESLint](https://eslint.org/docs/user-guide/getting-started) and [TSLint](https://palantir.github.io/tslint/).
 
 ## Installation

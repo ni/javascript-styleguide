@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 540 250" style="enable-background:new 0 0 540 250;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;fill:#841414;}
+	.st2{display:inline;fill:#0436B2;}
+	.st3{display:inline;fill:#55CAF5;}
+	.st4{display:inline;fill:#A7489B;}
+	.st5{fill:#03B585;}
+	.st6{fill:none;stroke:#03B585;stroke-width:2;stroke-miterlimit:10;}
+	.st7{fill:#F7DF1E;}
+</style>
+<g id="Padding" class="st0">
+	<rect x="125.9" y="168" class="st1" width="32" height="82"/>
+	<rect x="111" class="st1" width="32" height="82"/>
+	<rect x="204.5" y="93" transform="matrix(6.123234e-17 -1 1 6.123234e-17 98.0281 342.9719)" class="st1" width="32" height="59"/>
+	
+		<rect x="261.5" y="93" transform="matrix(6.123234e-17 -1 1 6.123234e-17 155.0281 399.9719)" class="st1" width="32" height="59"/>
+	<rect x="13.5" y="93" transform="matrix(6.123234e-17 -1 1 6.123234e-17 -92.9719 151.9719)" class="st1" width="32" height="59"/>
+	
+		<rect x="494.5" y="93" transform="matrix(6.123234e-17 -1 1 6.123234e-17 388.0281 632.9719)" class="st1" width="32" height="59"/>
+	<rect x="88" y="82" class="st2" width="29" height="29"/>
+	<rect x="88" y="111" class="st3" width="29" height="29"/>
+	<rect x="88" y="140" class="st4" width="29" height="29"/>
+</g>
+<g id="NEW_Logo_resize_1_pixel_down">
+	<g>
+		<path class="st5" d="M117,82c16.2,0,29,13.1,29,30v57h-29v-58H88V82H117z M88,111v58H59v-58H88z M191,82v87c-16.2,0-29-13.3-29-29
+			V82H191z"/>
+	</g>
+	<line class="st6" x1="249" y1="38" x2="249" y2="212"/>
+</g>
+<g id="JS_Logo">
+	<g id="logo">
+		<rect id="background" x="307" y="38" class="st7" width="174" height="174"/>
+		<path id="j" d="M352.8,183.4l13.3-8.1c2.6,4.6,4.9,8.4,10.5,8.4c5.4,0,8.8-2.1,8.8-10.3v-55.6h16.4v55.8
+			c0,16.9-9.9,24.6-24.4,24.6C364.2,198.4,356.6,191.6,352.8,183.4"/>
+		<path id="s" d="M410.6,181.7l13.3-7.7c3.5,5.7,8.1,9.9,16.1,9.9c6.8,0,11.1-3.4,11.1-8.1c0-5.6-4.4-7.6-11.9-10.9l-4.1-1.8
+			c-11.8-5-19.6-11.3-19.6-24.6c0-12.3,9.3-21.6,23.9-21.6c10.4,0,17.9,3.6,23.2,13.1l-12.7,8.2c-2.8-5-5.8-7-10.5-7
+			c-4.8,0-7.8,3-7.8,7c0,4.9,3,6.9,10,9.9l4.1,1.8c13.9,6,21.7,12,21.7,25.7c0,14.7-11.6,22.8-27.1,22.8
+			C425.2,198.4,415.4,191.1,410.6,181.7"/>
+	</g>
+</g>
+</svg>
