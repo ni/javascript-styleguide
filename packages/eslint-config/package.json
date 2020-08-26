@@ -1,0 +1,36 @@
+{
+  "name": "@ni/eslint-config",
+  "version": "1.0.0",
+  "description": "NI's ESLint Shareable Config",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "npm test",
+    "test": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ni/javascript-styleguide.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "ni"
+  ],
+  "author": "NI",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ni/javascript-styleguide/issues"
+  },
+  "homepage": "https://github.com/ni/javascript-styleguide#readme",
+  "dependencies": {
+    "eslint-config-airbnb-base": "~14.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-plugin-import": "^2.12.2"
+  },
+  "peerDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-plugin-import": "^2.12.2"
+  }
+}

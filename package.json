@@ -1,0 +1,24 @@
+{
+  "name": "@ni/javascript-styleguide",
+  "version": "1.0.0-alpha.0",
+  "description": "NI's JavaScript and TypeScript style guide",
+  "private": true,
+  "scripts": {
+    "eslint-config:install": "cd packages/eslint-config && npm install",
+    "eslint-config:publish": "cd packages/eslint-config && npm publish",
+    "eslint-config:test": "cd packages/eslint-config; npm test",
+    "preinstall": "npm run eslint-config:install",
+    "publish:packages": "npm run eslint-config:publish",
+    "test": "npm run eslint-config:test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ni/javascript-styleguide.git"
+  },
+  "author": "NI",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ni/javascript-styleguide/issues"
+  },
+  "homepage": "https://github.com/ni/javascript-styleguide#readme"
+}
