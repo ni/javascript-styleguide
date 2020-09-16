@@ -20,6 +20,14 @@ module.exports = {
         */
         indent: ['error', 4],
         /*
+            This is the default value which is defined here to note that there may be exceptions
+            where it is appropriate to disable this rule for older projects or with a comment.
+            Including one class per file is a best practice and recommended by the Angular style
+            guide. However, migrating older projects may not be trivial, and there may be
+            exceptions for organization.
+        */
+        'max-classes-per-file': ['error', 1],
+        /*
             Errors from this rule will identify issues more often than not. However, there may be
             unique exceptions where this rule can be disabled with an inline comment.
         */
@@ -32,5 +40,10 @@ module.exports = {
             Migrating from var is not trivial, so there may be exceptions for older projects.
         */
         'no-var': 'error',
-    }
+        /*
+            This configuration already supports the JSDoc syntax. Add additional syntax as line or
+            block exceptions or markers when necessary.
+        */
+        'spaced-comment': 'error'
+    },
 };
