@@ -16,9 +16,20 @@ module.exports = {
         */
         'eol-last': 'off',
         /*
+            There may be exceptions where it is appropriate to disable this rule for older projects
+            that make use of Immediately Invoked Function Expressions (IIFE).
+        */
+        'func-names': ['error', 'as-needed'],
+        /*
             This indentation size is used to promote consistency.
         */
         indent: ['error', 4],
+        /*
+            This rule is disabled to avoid errors while developing on Windows and in favor of using
+            features of the source control to ensure the correct line endings are checked out and
+            committed, e.g. the core.autocrlf git configuration.
+        */
+        'linebreak-style': 'off',
         /*
             This is the default value which is defined here to note that there may be exceptions
             where it is appropriate to disable this rule for older projects or with a comment.
@@ -36,6 +47,16 @@ module.exports = {
             Console logs should not be exposed in production environments.
         */
         'no-console': 'error',
+        /*
+            There may be exceptions, like array iterators, where it is appropriate to disable this
+            rule with a comment.
+        */
+        'no-loop-func': 'error',
+        /*
+            This rule defends against prototype pollution vulnerabilities that exploitable with
+            XSS.
+        */
+        'no-prototype-builtins': 'error',
         /*
             Migrating from var is not trivial, so there may be exceptions for older projects.
         */
