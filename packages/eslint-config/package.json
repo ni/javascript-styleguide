@@ -1,6 +1,6 @@
 {
   "name": "@ni/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.1",
   "description": "NI's ESLint Shareable Config",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,9 @@
     "url": "https://github.com/ni/javascript-styleguide/issues"
   },
   "homepage": "https://github.com/ni/javascript-styleguide#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "eslint-config-airbnb-base": "~14.2.0"
   },
