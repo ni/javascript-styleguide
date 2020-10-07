@@ -69,6 +69,21 @@ module.exports = {
         'no-prototype-builtins': 'error',
 
         /*
+            Higher-order function composition, like Array.forEach(), is preferred for iterative
+            loops. For...in statements can be used when performance is a consideration as long as
+            guard-for-in is enabled. For...of statements can be used when break is required for
+            control flow or the iteration produces side-effects.
+        */
+        'no-restricted-syntax': [
+            'error', {
+                selector: 'LabeledStatement',
+                message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
+            }, {
+                selector: 'WithStatement',
+                message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
+            }],
+
+        /*
             Migrating from var is not trivial, so there may be exceptions for older projects.
         */
         'no-var': 'error',
