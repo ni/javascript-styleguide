@@ -89,6 +89,17 @@ module.exports = {
         'no-var': 'error',
 
         /*
+            Allow single line object expressions and patterns, but ensure a reasonable line length.
+            All expressions, patterns, and declarations should be consistent.
+        */
+        'object-curly-newline': ['error', {
+            ObjectExpression: { minProperties: 6, multiline: true, consistent: true },
+            ObjectPattern: { minProperties: 6, multiline: true, consistent: true },
+            ImportDeclaration: { consistent: true },
+            ExportDeclaration: { consistent: true }
+        }],
+
+        /*
             This configuration already supports the JSDoc syntax. Add additional syntax as line or
             block exceptions or markers when necessary.
         */
