@@ -63,6 +63,24 @@ module.exports = {
         'no-loop-func': 'error',
 
         /*
+            Enforce parenthesis in cases of mixed precedence.
+        */
+        'no-mixed-operators': ['error', {
+            groups: [
+                ['%', '**'],
+                ['%', '+'],
+                ['%', '-'],
+                ['%', '*'],
+                ['%', '/'],
+                ['/', '*'],
+                ['&', '|', '<<', '>>', '>>>'],
+                ['==', '!=', '===', '!=='],
+                ['&&', '||'],
+            ],
+            allowSamePrecedence: true
+        }],
+
+        /*
             This rule defends against prototype pollution vulnerabilities that exploitable with
             XSS.
         */
