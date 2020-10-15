@@ -25,6 +25,18 @@ module.exports = {
         'func-names': ['error', 'as-needed'],
 
         /*
+            There may be exceptions where it is appropriate to disable this rule for projects that
+            require ES6 compliant module imports. It is understood that the compliance standards
+            may change and that this rule may need to be reevaluated.
+        */
+        'import/extensions': ['error', 'ignorePackages', {
+            js: 'never',
+            mjs: 'never',
+            jsx: 'never',
+            ts: 'never'
+        }],
+
+        /*
             This indentation size is used to promote consistency.
         */
         indent: ['error', 4],
@@ -105,6 +117,13 @@ module.exports = {
             Migrating from var is not trivial, so there may be exceptions for older projects.
         */
         'no-var': 'error',
+
+        /*
+            Defining classes and variables before their use can cause errors. However, placing
+            function declarations at the end of a file is a common programming practice for
+            readability.
+        */
+        'no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
 
         /*
             Allow single line object expressions and patterns, but ensure a reasonable line length.
