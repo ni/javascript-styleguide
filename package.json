@@ -1,24 +1,42 @@
 {
-  "name": "@ni/javascript-styleguide",
-  "version": "1.0.0-alpha.0",
-  "description": "NI's JavaScript and TypeScript style guide",
-  "private": true,
+  "name": "@ni/eslint-config",
+  "version": "1.0.0-alpha.2",
+  "description": "NI's ESLint Shareable Config",
+  "main": "index.js",
   "scripts": {
-    "eslint-config:install": "cd packages/eslint-config && npm install",
-    "eslint-config:publish": "cd packages/eslint-config && npm publish",
-    "eslint-config:test": "cd packages/eslint-config; npm test",
-    "preinstall": "npm run eslint-config:install",
-    "publish:packages": "npm run eslint-config:publish",
-    "test": "npm run eslint-config:test"
+    "prepare": "npm test",
+    "test": "eslint ."
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ni/javascript-styleguide.git"
   },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "ni"
+  ],
   "author": "NI",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ni/javascript-styleguide/issues"
   },
-  "homepage": "https://github.com/ni/javascript-styleguide#readme"
+  "homepage": "https://github.com/ni/javascript-styleguide#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    ".eslintrc.js"
+  ],
+  "dependencies": {
+    "eslint-config-airbnb-base": "~14.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-plugin-import": "^2.22.0"
+  },
+  "peerDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-plugin-import": "^2.22.0"
+  }
 }
