@@ -14,7 +14,7 @@ Use [npm view](https://docs.npmjs.com/cli/view.html) to list the correct version
 npm view @ni/eslint-config peerDependencies
 ```
 
-Alternatively, use [install-peerdeps](https://www.npmjs.com/package/install-peerdeps) as a shortcut to install the pakages for you.
+Alternatively, use [install-peerdeps](https://www.npmjs.com/package/install-peerdeps) as a shortcut to install the packages for you.
 
 ```bash
 npx install-peerdeps --dev @ni/eslint-config
