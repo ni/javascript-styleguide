@@ -146,12 +146,17 @@ module.exports = {
             Enforcing this rule improves code readability by making its appearance more consistent
             across codebases. Disabling or changing the value of this rule is discouraged.
 
-            We elect not to include a space before function parentheses. There are advocates in the
-            external JavaScript community and within NI for both this configuration and
-            others that include a space. Each of those opinions have valid merits. The primary
-            justification is that the syntax without a space will be more familiar to the many NI
-            web developers with experience in other languages (e.g. C, C++, C#, and Python).
+            We elect not to include a space before function parentheses except for anonymous
+            functions. There are advocates in the external JavaScript community and within NI for
+            both this configuration and others that include a space. Each of those opinions have
+            valid merits. The primary justification is that the syntax without a space will be more
+            familiar to the many NI web developers with experience in other languages (e.g. C, C++,
+            C#, and Python).
         */
-        'space-before-function-paren': ['error', 'never']
+        'space-before-function-paren': ['error', {
+            anonymous: 'always',
+            named: 'never',
+            asyncArrow: 'always'
+        }]
     },
 };
