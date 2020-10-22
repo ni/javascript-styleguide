@@ -74,6 +74,13 @@ module.exports = {
         'no-var': 'error',
 
         /*
+            Allow object property shorthand, but disallow method shorthand to differentiate objects
+            with functions from classes. However, this rule does not support disallowing method
+            shorthands, so they should be corrected in review.
+        */
+        'object-shorthand': ['error', 'properties', { avoidQuotes: true }],
+
+        /*
             This configuration already supports the JSDoc syntax. Add additional syntax as line or
             block exceptions or markers when necessary.
         */
