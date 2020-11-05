@@ -92,8 +92,14 @@ module.exports = {
             allowSamePrecedence: true
         }],
 
+        /**
+         * Prefer the '+=' operator. Allow unary operators in for loops, because it is a common
+         * pattern.
+         */
+        'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
+
         /*
-            This rule defends against prototype pollution vulnerabilities that exploitable with
+            This rule defends against prototype pollution vulnerabilities that are exploitable with
             XSS.
         */
         'no-prototype-builtins': 'error',
@@ -112,6 +118,15 @@ module.exports = {
                 selector: 'WithStatement',
                 message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
             }],
+
+        /**
+         * Underscore prefixes are permitted only to indicate fields that are for private internal
+         * use. Trailing or prefixed underscores that signify other use cases are not allowed.
+         * Different guidelines may exist for languages that support private fields, such as
+         * TypeScript. The JavaScript guidelines are subject to change if availability of private
+         * fields changes in the JavaScript ecosystem.
+         */
+        'no-underscore-dangle': 'off',
 
         /*
             Migrating from var is not trivial, so there may be exceptions for older projects.
@@ -135,6 +150,13 @@ module.exports = {
             ImportDeclaration: { consistent: true },
             ExportDeclaration: { consistent: true }
         }],
+
+        /*
+            Allow object property shorthand, but disallow method shorthand to differentiate objects
+            with functions from classes. However, this rule does not support disallowing method
+            shorthands, so they should be corrected in review.
+        */
+        'object-shorthand': ['error', 'properties', { avoidQuotes: true }],
 
         /*
             This configuration already supports the JSDoc syntax. Add additional syntax as line or
