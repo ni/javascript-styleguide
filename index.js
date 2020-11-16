@@ -7,6 +7,14 @@ module.exports = {
         'arrow-parens': ['error', 'as-needed'],
 
         /*
+            A method's use of the this keyword does not always dictate that it should be static,
+            particularly when the class must satisfy a derived interface or the caller has an
+            instance. However, there are other cases, like when functionality is required without
+            an instance, when a static type is appropriate.
+        */
+        'class-methods-use-this': 'off',
+
+        /*
             This rule is controversial and is defined such that trailing commas are not required but
             may be used if preferred.
         */
