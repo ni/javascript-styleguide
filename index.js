@@ -102,7 +102,8 @@ module.exports = {
 
         /**
             This rule disallows assigning to function parameters; function parameters are
-            treated as const bindings. Some more readable or type-safe alternatives:
+            treated as const bindings. Some more readable or type-safe alternatives to
+            parameter assignment are:
             - use default parameters
             - assign to a new variable with a stricter type and descriptive name
          */
