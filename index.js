@@ -101,8 +101,17 @@ module.exports = {
         }],
 
         /**
-         * Prefer the '+=' operator. Allow unary operators in for loops, because it is a common
-         * pattern.
+            This rule disallows assigning to function parameters; function parameters are
+            treated as const bindings. Some more readable or type-safe alternatives to
+            parameter assignment are:
+            - use default parameters
+            - assign to a new variable with a stricter type and descriptive name
+         */
+        'no-param-reassign': ['error', { props: false }],
+
+        /**
+            Prefer the '+=' operator. Allow unary operators in for loops, because it is a common
+            pattern.
          */
         'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
 
@@ -128,11 +137,11 @@ module.exports = {
             }],
 
         /**
-         * Underscore prefixes are permitted only to indicate fields that are for private internal
-         * use. Trailing or prefixed underscores that signify other use cases are not allowed.
-         * Different guidelines may exist for languages that support private fields, such as
-         * TypeScript. The JavaScript guidelines are subject to change if availability of private
-         * fields changes in the JavaScript ecosystem.
+            Underscore prefixes are permitted only to indicate fields that are for private internal
+            use. Trailing or prefixed underscores that signify other use cases are not allowed.
+            Different guidelines may exist for languages that support private fields, such as
+            TypeScript. The JavaScript guidelines are subject to change if availability of private
+            fields changes in the JavaScript ecosystem.
          */
         'no-underscore-dangle': 'off',
 
