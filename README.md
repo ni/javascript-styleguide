@@ -22,11 +22,27 @@ npx install-peerdeps --dev @ni/eslint-config
 
 ## Usage
 
+### JavaScript
+
 Extend @ni in the ESLint configuration.
 
 ```json
 {
     "extends": "@ni"
+}
+```
+
+### TypeScript
+
+Extend @ni/eslint-config/typescript in the ESLint configuration. Configure the @typescript-eslint plugin and the project's TypeScript configuration.
+
+```json
+{
+    "extends": "@ni/eslint-config/typescript",
+    "plugins": ["@typescript-eslint"],
+    "parserOptions": {
+        "project": "tsconfig.json"
+    }
 }
 ```
 
