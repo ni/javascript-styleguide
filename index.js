@@ -41,7 +41,8 @@ module.exports = {
             js: 'never',
             mjs: 'never',
             jsx: 'never',
-            ts: 'never'
+            ts: 'never',
+            tsx: 'never'
         }],
 
         /*
