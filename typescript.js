@@ -1,5 +1,5 @@
 module.exports = {
-    extends: './index',
+    extends: ['./index', 'plugin:@typescript-eslint/recommended'],
     parser: '@typescript-eslint/parser',
     rules: {
         /*
@@ -64,26 +64,5 @@ module.exports = {
         }],
         'space-infix-ops': 'off',
         '@typescript-eslint/space-infix-ops': 'error',
-        /*
-            The following are TypeScript specific rules that do not require type
-            checking to run.
-        */
-        '@typescript-eslint/adjacent-overload-signatures': 'error',
-        '@typescript-eslint/ban-ts-comment': 'error',
-        '@typescript-eslint/ban-types': 'error',
-        '@typescript-eslint/explicit-module-boundary-types': 'warn',
-        '@typescript-eslint/no-empty-interface': 'error',
-        '@typescript-eslint/no-explicit-any': 'warn',
-        '@typescript-eslint/no-extra-non-null-assertion': 'error',
-        '@typescript-eslint/no-inferrable-types': 'error',
-        '@typescript-eslint/no-misused-new': 'error',
-        '@typescript-eslint/no-namespace': 'error',
-        '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
-        '@typescript-eslint/no-non-null-assertion': 'warn',
-        '@typescript-eslint/no-this-alias': 'error',
-        '@typescript-eslint/no-var-requires': 'error',
-        '@typescript-eslint/prefer-as-const': 'error',
-        '@typescript-eslint/prefer-namespace-keyword': 'error',
-        '@typescript-eslint/triple-slash-reference': 'error',
     }
 };
