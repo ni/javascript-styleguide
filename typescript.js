@@ -4,7 +4,9 @@ module.exports = {
     rules: {
         /*
             The following are extension rules that replace core JavaScript rules to support
-            TypeScript.
+            TypeScript. When upgrading, changes to these rules can be identified in the
+            typescript-eslint changelog under features and breaking changes.
+            https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
         */
         'brace-style': 'off',
         '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: true }],
