@@ -1,5 +1,5 @@
 module.exports = {
-    extends: './index',
+    extends: ['./index', 'plugin:@typescript-eslint/recommended'],
     parser: '@typescript-eslint/parser',
     rules: {
         /*
@@ -65,6 +65,6 @@ module.exports = {
             asyncArrow: 'always'
         }],
         'space-infix-ops': 'off',
-        '@typescript-eslint/space-infix-ops': 'error'
+        '@typescript-eslint/space-infix-ops': 'error',
     }
 };
