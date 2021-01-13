@@ -1,5 +1,5 @@
 module.exports = {
-    extends: ['./index', 'plugin:@typescript-eslint/recommended'],
+    extends: ['./index', 'plugin:@typescript-eslint/all'],
     parser: '@typescript-eslint/parser',
     rules: {
         /*
