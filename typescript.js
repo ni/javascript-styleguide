@@ -1,10 +1,10 @@
 module.exports = {
-    extends: ['./index', 'plugin:@typescript-eslint/recommended'],
+    extends: [
+        './index',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:import/typescript'
+    ],
     parser: '@typescript-eslint/parser',
-    settings: {
-        // Use the eslint-plugin-import TypeScript resolver.
-        'import/resolver': { typescript: {} }
-    },
     rules: {
         /*
             The following rules are already handled by the TypeScript compiler.

@@ -31,8 +31,7 @@
   ],
   "dependencies": {
     "@typescript-eslint/parser": "^4.9.1",
-    "eslint-config-airbnb-base": "~14.2.0",
-    "eslint-import-resolver-typescript": "^2.3.0"
+    "eslint-config-airbnb-base": "~14.2.0"
   },
   "devDependencies": {
     "eslint": "^7.6.0",
