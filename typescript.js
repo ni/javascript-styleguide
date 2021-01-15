@@ -1,7 +1,17 @@
 module.exports = {
-    extends: ['./index', 'plugin:@typescript-eslint/recommended'],
+    extends: [
+        './index',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:import/typescript'
+    ],
     parser: '@typescript-eslint/parser',
     rules: {
+        /*
+            The following rules are already handled by the TypeScript compiler.
+        */
+        'import/named': 'off',
+        'import/no-unresolved': 'off',
+
         /*
             The following are extension rules that replace core JavaScript rules to support
             TypeScript. When upgrading, changes to these rules can be identified in the
