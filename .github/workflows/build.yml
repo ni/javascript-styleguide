@@ -8,19 +8,31 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
+
+    # Install dependencies
     - uses: actions/setup-node@v1
       with:
         node-version: '12'
         registry-url: 'https://registry.npmjs.org'
-
     - run: npm ci
+
+    # Build
+    - run: npm pack
+    - uses: actions/upload-artifact@v2
+      with:
+        name: npm package
+        path: ./vireo-*.tgz
+        if-no-files-found: error
+
+    # Test
     - run: npm run test-typescript
     - run: npm run test-typescript-typed
     - run: npm run dev-print-typescript-props
 
+    # Publish
     - if: startsWith(github.ref, 'refs/tags/v')
       run: npm publish
       env:
