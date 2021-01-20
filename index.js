@@ -1,5 +1,11 @@
 module.exports = {
-    extends: 'airbnb-base',
+    extends: [
+        /*
+            airbnb-base source:
+            https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/index.js
+        */
+        'airbnb-base'
+    ],
     rules: {
         /*
             Omit arrow function parenthesis where they are not required to improve readability.
