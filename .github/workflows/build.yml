@@ -18,6 +18,7 @@ jobs:
 
     - run: npm ci
     - run: npm run test-typescript
+    - run: npm run test-typescript-typed
     - run: npm run dev-print-typescript-props
 
     - if: startsWith(github.ref, 'refs/tags/v')

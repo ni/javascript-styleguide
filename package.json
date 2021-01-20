@@ -6,8 +6,9 @@
   "scripts": {
     "prepare": "npm test",
     "test": "eslint .",
-    "test-typescript": "eslint -c ./typescript.js ./test/fixtures/typescript-smoke-test.ts",
-    "dev-print-typescript-props": "node tools/print-typescript-properties"
+    "test-typescript": "eslint ./test/typescript/",
+    "test-typescript-typed": "eslint ./test/typescript-type-checking/",
+    "dev-print-typescript-props": "node ./tools/print-typescript-properties"
   },
   "repository": {
     "type": "git",
