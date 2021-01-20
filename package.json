@@ -29,8 +29,8 @@
     "access": "public"
   },
   "files": [
-    ".eslintrc.js",
-    "typescript.js"
+    "/*.js",
+    "/lib/*"
   ],
   "dependencies": {
     "@typescript-eslint/parser": "^4.9.1",

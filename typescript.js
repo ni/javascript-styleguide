@@ -52,7 +52,8 @@ module.exports = {
         '@typescript-eslint/prefer-literal-enum-member': 'error',
         '@typescript-eslint/prefer-optional-chain': 'error',
         '@typescript-eslint/prefer-ts-expect-error': 'error',
-        '@typescript-eslint/sort-type-union-intersection-members': 'error',
+        // Available in newer typescript-eslint version
+        // '@typescript-eslint/sort-type-union-intersection-members': 'error',
         '@typescript-eslint/type-annotation-spacing': 'error',
         '@typescript-eslint/typedef': 'error',
         '@typescript-eslint/unified-signatures': 'error'

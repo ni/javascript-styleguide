@@ -22,7 +22,8 @@ module.exports = {
         '@typescript-eslint/no-unnecessary-condition': 'error',
         '@typescript-eslint/no-unnecessary-qualifier': 'error',
         '@typescript-eslint/no-unnecessary-type-arguments': 'error',
-        '@typescript-eslint/non-nullable-type-assertion-style': 'error',
+        // Available in newer typescript-eslint version
+        // '@typescript-eslint/non-nullable-type-assertion-style': 'error',
         '@typescript-eslint/prefer-includes': 'error',
         '@typescript-eslint/prefer-nullish-coalescing': 'error',
         '@typescript-eslint/prefer-readonly': 'error',
