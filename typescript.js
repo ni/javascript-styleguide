@@ -34,11 +34,14 @@ module.exports = {
 
         '@typescript-eslint/class-literal-property-style': 'error',
 
-        '@typescript-eslint/consistent-indexed-object-style': 'error',
+        /*
+            Prefer the index signature syntax over the builtin `Record` type in all cases.
+        */
+        '@typescript-eslint/consistent-indexed-object-style': ['error', 'index-signature'],
 
         '@typescript-eslint/consistent-type-assertions': 'error',
 
-        '@typescript-eslint/consistent-type-definitions': 'error',
+        '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
 
         /*
             Type imports are useful for uncommon use cases such as modules with
@@ -124,7 +127,10 @@ module.exports = {
 
         '@typescript-eslint/no-confusing-non-null-assertion': 'error',
 
-        '@typescript-eslint/no-dynamic-delete': 'error',
+        /*
+            This rule is unnecessary because delete is banned via 'no-restricted-syntax'
+        */
+        '@typescript-eslint/no-dynamic-delete': 'off',
 
         '@typescript-eslint/no-extraneous-class': ['error', { allowWithDecorator: true, allowStaticOnly: true }],
 

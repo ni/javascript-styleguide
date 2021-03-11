@@ -145,6 +145,9 @@ module.exports = {
                 selector: 'LabeledStatement',
                 message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
             }, {
+                selector: "UnaryExpression[operator='delete']",
+                message: 'The `delete` operator is not allowed. If using an object keys as a map, use the ES `Map` data structure instead.'
+            }, {
                 selector: 'WithStatement',
                 message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
             }],
