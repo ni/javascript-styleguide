@@ -64,10 +64,16 @@ module.exports = {
         'linebreak-style': 'off',
 
         /*
+            Requires empty lines between multiline class members but avoids the empty line
+            for single line members to reduce the amount of vertical space used in a class.
+        */
+        'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
+
+        /*
             Including one class per file is a best practice in general and also recommended by the
             Angular style guide. However, migrating older projects may not be trivial, and there
             may be exceptions for public/internal types that are only used as part of the interface
-            to the main type and no other types
+            to the main type and no other types.
         */
         'max-classes-per-file': ['error', 1],
 
