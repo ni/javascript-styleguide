@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "prepare": "npm test",
-    "test": "eslint ."
+    "test": "eslint .",
+    "test-typescript": "eslint ./test/typescript/",
+    "test-typescript-typed": "eslint ./test/typescript-type-checking/",
+    "dev-print-typescript-props": "node ./tools/print-typescript-properties"
   },
   "repository": {
     "type": "git",
@@ -26,16 +29,18 @@
     "access": "public"
   },
   "files": [
-    ".eslintrc.js",
-    "typescript.js"
+    "/*.js",
+    "/lib/*"
   ],
   "dependencies": {
     "@typescript-eslint/parser": "^4.9.1",
     "eslint-config-airbnb-base": "~14.2.0"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.9.1",
     "eslint": "^7.6.0",
-    "eslint-plugin-import": "^2.22.0"
+    "eslint-plugin-import": "^2.22.0",
+    "typescript": "^4.1.3"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.9.1",

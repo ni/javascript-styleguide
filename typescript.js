@@ -2,79 +2,187 @@ module.exports = {
     extends: [
         './index',
         'plugin:@typescript-eslint/recommended',
-        'plugin:import/typescript'
+        'plugin:import/typescript',
+        './lib/typescript-extensions'
     ],
     parser: '@typescript-eslint/parser',
     rules: {
         /*
-            The following rules are already handled by the TypeScript compiler.
+            Overrides to import rules (already handled by the TypeScript compiler)
+            https://github.com/benmosher/eslint-plugin-import/blob/master/config/typescript.js
         */
         'import/named': 'off',
         'import/no-unresolved': 'off',
 
         /*
-            The following are extension rules that replace core JavaScript rules to support
-            TypeScript. When upgrading, changes to these rules can be identified in the
-            typescript-eslint changelog under features and breaking changes.
-            https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
+            Overrides to TypeScript recommended rules
+            https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.ts
         */
-        'brace-style': 'off',
-        '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: true }],
-        'comma-dangle': 'off',
-        '@typescript-eslint/comma-dangle': ['error', 'only-multiline'],
-        'comma-spacing': 'off',
-        '@typescript-eslint/comma-spacing': ['error'],
-        'dot-notation': 'off',
-        '@typescript-eslint/dot-notation': 'error',
-        'func-call-spacing': 'off',
-        '@typescript-eslint/func-call-spacing': 'error',
-        indent: 'off',
-        '@typescript-eslint/indent': ['error', 4],
-        'keyword-spacing': 'off',
-        '@typescript-eslint/keyword-spacing': 'error',
-        'lines-between-class-members': 'off',
-        '@typescript-eslint/lines-between-class-members': 'error',
-        'no-array-constructor': 'off',
-        '@typescript-eslint/no-array-constructor': 'error',
-        'no-dupe-class-members': 'off',
-        '@typescript-eslint/no-dupe-class-members': 'error',
-        'no-empty-function': 'off',
-        '@typescript-eslint/no-empty-function': ['error', {
-            allow: [
-                'arrowFunctions',
-                'functions',
-                'methods'
+
+        // None
+
+        /*
+            TypeScript rules outside of the recommended configuration
+        */
+
+        /*
+            Prefer the array straight bracket syntax over generics in all cases.
+        */
+        '@typescript-eslint/array-type': 'error',
+
+        '@typescript-eslint/ban-tslint-comment': 'error',
+
+        '@typescript-eslint/class-literal-property-style': 'error',
+
+        /*
+            Prefer the index signature syntax over the builtin `Record` type in all cases.
+        */
+        '@typescript-eslint/consistent-indexed-object-style': ['error', 'index-signature'],
+
+        '@typescript-eslint/consistent-type-assertions': 'error',
+
+        '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+
+        /*
+            Type imports are useful for uncommon use cases such as modules with
+            side-efects and file-by-file transpiling. Usage will be determined
+            on a case-by-case basis.
+        */
+        '@typescript-eslint/consistent-type-imports': 'off',
+
+        '@typescript-eslint/explicit-function-return-type': 'error',
+
+        /*
+            Requiring an accessibility modifier helps when creating classes to ensure the
+            accessibility of a class member is intentionally decided and not relying on
+            the default of public accessibility.
+        */
+        '@typescript-eslint/explicit-member-accessibility': 'error',
+
+        /*
+            All interface members should be terminated with a semicolon including single line
+            definitions, consistent with classes. Object literal types should use commas
+            consistent with object literals.
+        */
+        '@typescript-eslint/member-delimiter-style': ['error', {
+            overrides: {
+                interface: {
+                    singleline: {
+                        delimiter: 'semi',
+                        requireLast: true
+                    }
+                },
+                typeLiteral: {
+                    multiline: {
+                        delimiter: 'comma',
+                        requireLast: false
+                    },
+                    singleline: {
+                        delimiter: 'comma',
+                        requireLast: false
+                    }
+                }
+            }
+        }],
+
+        /*
+            Group members by fields and methods and then order them by accessibility starting
+            with statics. Order members within these groups in a logical organization where
+            readability is the most important thing. Private fields that back public accessors
+            may be grouped with their accessor by disabling the rule with a comment.
+        */
+        '@typescript-eslint/member-ordering': ['error', {
+            default: [
+                'signature',
+                'public-static-field',
+                'protected-static-field',
+                'private-static-field',
+                'static-field',
+                'public-field',
+                'protected-field',
+                'private-field',
+                'field',
+                'public-constructor',
+                'protected-constructor',
+                'private-constructor',
+                'constructor',
+                'public-static-method',
+                'protected-static-method',
+                'private-static-method',
+                'static-method',
+                'public-method',
+                'protected-method',
+                'private-method',
+                'method'
             ]
         }],
-        'no-extra-semi': 'off',
-        '@typescript-eslint/no-extra-semi': 'error',
-        'no-loop-func': 'off',
-        '@typescript-eslint/no-loop-func': 'error',
-        'no-redeclare': 'off',
-        '@typescript-eslint/no-redeclare': 'error',
-        'no-shadow': 'off',
-        '@typescript-eslint/no-shadow': 'error',
-        'no-unused-expressions': 'off',
-        '@typescript-eslint/no-unused-expressions': 'error',
-        'no-unused-vars': 'off',
-        '@typescript-eslint/no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: true }],
-        'no-use-before-define': 'off',
-        '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
-        'no-useless-constructor': 'off',
-        '@typescript-eslint/no-useless-constructor': 'error',
-        quotes: 'off',
-        '@typescript-eslint/quotes': ['error', 'single', { avoidEscape: true }],
-        'no-return-await': 'off',
-        '@typescript-eslint/return-await': 'error',
-        semi: 'off',
-        '@typescript-eslint/semi': 'error',
-        'space-before-function-paren': 'off',
-        '@typescript-eslint/space-before-function-paren': ['error', {
-            anonymous: 'always',
-            named: 'never',
-            asyncArrow: 'always'
-        }],
-        'space-infix-ops': 'off',
-        '@typescript-eslint/space-infix-ops': 'error',
+
+        /*
+            The stricter type checking that's possible by using property style when declaring
+            method signatures only has benefits in some cases of inheritance. Therefore we
+            prefer to align the style between interface and class definitions and to align
+            with other languages used by NI like C#.
+        */
+        '@typescript-eslint/method-signature-style': 'off',
+
+        '@typescript-eslint/no-confusing-non-null-assertion': 'error',
+
+        /*
+            This rule is unnecessary because delete is banned via 'no-restricted-syntax'
+        */
+        '@typescript-eslint/no-dynamic-delete': 'off',
+
+        '@typescript-eslint/no-extraneous-class': ['error', { allowWithDecorator: true, allowStaticOnly: true }],
+
+        /*
+            TypeScript only supports catching `any` and `unknown` so this rule does not add
+            much value. With the rule no-throw-literal we enforce throwing `Error` objects,
+            which should be sufficient most of the time. For more type safety, consider
+            using type guards.
+        */
+        '@typescript-eslint/no-implicit-any-catch': 'off',
+
+        '@typescript-eslint/no-invalid-void-type': 'error',
+
+        /*
+            Parameter properties are a nice shorthand for defining properties ingested
+            in the constructor.
+        */
+        '@typescript-eslint/no-parameter-properties': 'off',
+
+        '@typescript-eslint/no-require-imports': 'error',
+
+        '@typescript-eslint/no-type-alias': 'off',
+
+        '@typescript-eslint/no-unnecessary-type-constraint': 'error',
+
+        '@typescript-eslint/no-unused-vars-experimental': 'off',
+
+        /*
+            If an enum is crossing a code boundary (being serialized to JSON for example) then
+            you should initialize its values. But in most other cases code shouldn't care about
+            the values of enum items, so you can safely leave them implicit.
+        */
+        '@typescript-eslint/prefer-enum-initializers': 'off',
+
+        '@typescript-eslint/prefer-for-of': 'error',
+
+        '@typescript-eslint/prefer-function-type': 'error',
+
+        '@typescript-eslint/prefer-literal-enum-member': 'error',
+
+        '@typescript-eslint/prefer-optional-chain': 'error',
+
+        '@typescript-eslint/prefer-ts-expect-error': 'error',
+
+        // Available in newer typescript-eslint version, disable on upgrade.
+        // See: https://github.com/ni/javascript-styleguide/pull/18#discussion_r575487604
+        // '@typescript-eslint/sort-type-union-intersection-members': 'off',
+
+        '@typescript-eslint/type-annotation-spacing': 'error',
+
+        '@typescript-eslint/typedef': 'off',
+
+        '@typescript-eslint/unified-signatures': 'error'
     }
 };

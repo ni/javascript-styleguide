@@ -1,5 +1,11 @@
 module.exports = {
-    extends: 'airbnb-base',
+    extends: [
+        /*
+            airbnb-base source:
+            https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/index.js
+        */
+        'airbnb-base'
+    ],
     rules: {
         /*
             Omit arrow function parenthesis where they are not required to improve readability.
@@ -58,10 +64,16 @@ module.exports = {
         'linebreak-style': 'off',
 
         /*
+            Requires empty lines between multiline class members but avoids the empty line
+            for single line members to reduce the amount of vertical space used in a class.
+        */
+        'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
+
+        /*
             Including one class per file is a best practice in general and also recommended by the
             Angular style guide. However, migrating older projects may not be trivial, and there
             may be exceptions for public/internal types that are only used as part of the interface
-            to the main type and no other types
+            to the main type and no other types.
         */
         'max-classes-per-file': ['error', 1],
 
@@ -132,6 +144,9 @@ module.exports = {
             'error', {
                 selector: 'LabeledStatement',
                 message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
+            }, {
+                selector: "UnaryExpression[operator='delete']",
+                message: 'The `delete` operator is not allowed. If using an object keys as a map, use the ES `Map` data structure instead.'
             }, {
                 selector: 'WithStatement',
                 message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
