@@ -175,9 +175,7 @@ module.exports = {
 
         '@typescript-eslint/prefer-ts-expect-error': 'error',
 
-        // Available in newer typescript-eslint version, disable on upgrade.
-        // See: https://github.com/ni/javascript-styleguide/pull/18#discussion_r575487604
-        // '@typescript-eslint/sort-type-union-intersection-members': 'off',
+        '@typescript-eslint/sort-type-union-intersection-members': 'off',
 
         '@typescript-eslint/type-annotation-spacing': 'error',
 
