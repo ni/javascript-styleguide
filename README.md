@@ -48,7 +48,7 @@ Extend `@ni/eslint-config/typescript-requiring-type-checking` in a separate ESLi
 
 ```json
 {
-    "extends": ["@ni/eslint-config/typescript-requiring-type-checking"],
+    "extends": "@ni/eslint-config/typescript-requiring-type-checking",
     "parserOptions": {
         "project": "tsconfig.json"
     }
