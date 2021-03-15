@@ -33,18 +33,18 @@
     "/lib/*"
   ],
   "dependencies": {
-    "@typescript-eslint/parser": "^4.9.1",
-    "eslint-config-airbnb-base": "~14.2.0"
+    "@typescript-eslint/parser": "^4.17.0",
+    "eslint-config-airbnb-base": "~14.2.1"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.9.1",
-    "eslint": "^7.6.0",
-    "eslint-plugin-import": "^2.22.0",
-    "typescript": "^4.1.3"
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "eslint": "^7.21.0",
+    "eslint-plugin-import": "^2.22.1",
+    "typescript": "^4.2.3"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.9.1",
-    "eslint": "^7.6.0",
-    "eslint-plugin-import": "^2.22.0"
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "eslint": "^7.21.0",
+    "eslint-plugin-import": "^2.22.1"
   }
 }
