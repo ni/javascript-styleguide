@@ -6,7 +6,7 @@ Welcome to NI's JavaScript and TypeScript linter rules for [ESLint](https://esli
 
 ## Installation
 
-Install @ni/eslint-config and its peer dependencies.
+Install `@ni/eslint-config` and its peer dependencies.
 
 Use [npm view](https://docs.npmjs.com/cli/view.html) to list the correct versions of each package to install yourself.
 
@@ -24,7 +24,7 @@ npx install-peerdeps --dev @ni/eslint-config
 
 ### JavaScript
 
-Extend @ni in the ESLint configuration.
+Extend `@ni` in the default ESLint configuration, ie `.eslintrc.json`.
 
 ```json
 {
@@ -34,12 +34,21 @@ Extend @ni in the ESLint configuration.
 
 ### TypeScript
 
-Extend @ni/eslint-config/typescript in the ESLint configuration. Configure the @typescript-eslint plugin and the project's TypeScript configuration.
+Extend `@ni/eslint-config/typescript` in the default ESLint configuration. The default `.eslintrc.json` used for development should only extend TypeScript rules and not the TypeScript rules requiring type checking.
 
 ```json
 {
     "extends": "@ni/eslint-config/typescript",
-    "plugins": ["@typescript-eslint"],
+}
+```
+
+### TypeScript Rules Requiring Type Checking
+
+Extend `@ni/eslint-config/typescript-requiring-type-checking` in a separate ESLint configuration. Configure the project's TypeScript configuration. Due to the longer execution time, the separate `.eslintrc-requires-type-checking.json` should only run from an explicit `npm run lint` command invoked by developers and on CIs.
+
+```json
+{
+    "extends": ["@ni/eslint-config/typescript-requiring-type-checking"],
     "parserOptions": {
         "project": "tsconfig.json"
     }
