@@ -46,6 +46,20 @@ Extend @ni/eslint-config/typescript in the ESLint configuration. Configure the @
 }
 ```
 
+## Recommended Development Environment Configuration
+Modern IDEs can be configured to provide live feedback about ESLint errors.
+
+**Visual Studio Code**
+
+Install the [ESLint Extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
+
+![VSCode Extension](./resources/VSCodeESLintExtension.png)
+
+**JetBrains WebStorm**
+
+Follow the [instructions in the WebStorm documentation](https://www.jetbrains.com/help/webstorm/eslint.html#ws_js_eslint_activate) to activate and configure ESLint automatically in the Settings/Preferences dialog.
+
+
 ## License
 
 [MIT (c) 2020 National Instruments Corporation](./LICENSE)
