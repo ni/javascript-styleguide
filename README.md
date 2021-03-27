@@ -1,6 +1,6 @@
 # NI JavaScript and TypeScript Style Guide
 
-![Logo](https://raw.githubusercontent.com/ni/javascript-styleguide/HEAD/resources/logo.svg)
+![Logo](./resources/logo.svg)
 
 Welcome to NI's JavaScript and TypeScript linter rules for [ESLint](https://eslint.org/docs/user-guide/getting-started).
 
