@@ -135,7 +135,7 @@ module.exports = {
         'no-prototype-builtins': 'error',
 
         /* 
-            The jasmine 'fdescribe' and 'fit' functions are handy for local development but should 
+            The Jasmine 'fdescribe' and 'fit' functions are handy for local development but should 
             not be committed to production.
         */
         'no-restricted-globals': ['error',
