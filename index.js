@@ -134,18 +134,18 @@ module.exports = {
         */
         'no-prototype-builtins': 'error',
 
-        /* 
-            The Jasmine 'fdescribe' and 'fit' functions are handy for local development but should 
+        /*
+            The Jasmine 'fdescribe' and 'fit' functions are handy for local development but should
             not be committed to production.
         */
         'no-restricted-globals': ['error',
             {
-                'name': 'fdescribe',
-                'message': 'Do not commit fdescribe. Use "describe" instead for tests.'
+                name: 'fdescribe',
+                message: 'Do not commit fdescribe. Use "describe" instead for tests.'
             },
             {
-                'name': 'fit',
-                'message': 'Do not commit fit. Use "it" instead for tests.'
+                name: 'fit',
+                message: 'Do not commit fit. Use "it" instead for tests.'
             }],
 
         /*
