@@ -62,4 +62,4 @@ Follow the [instructions in the WebStorm documentation](https://www.jetbrains.co
 
 ## License
 
-[MIT (c) 2020 National Instruments Corporation](./LICENSE)
+[MIT (c) 2021 National Instruments Corporation](./LICENSE)
