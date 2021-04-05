@@ -53,7 +53,7 @@ Modern IDEs can be configured to provide live feedback about ESLint errors.
 
 Install the [ESLint Extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
 
-![VSCode Extension](./resources/VSCodeESLintExtension.png)
+![VSCode Extension](https://raw.githubusercontent.com/ni/javascript-styleguide/HEAD/resources/VSCodeESLintExtension.png)
 
 **JetBrains WebStorm**
 
