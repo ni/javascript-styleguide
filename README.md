@@ -24,7 +24,7 @@ npx install-peerdeps --dev @ni/eslint-config
 
 ### JavaScript
 
-Extend @ni in the ESLint configuration.
+Extend @ni in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats).
 
 ```json
 {
