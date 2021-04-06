@@ -142,13 +142,27 @@ module.exports = {
         'no-prototype-builtins': 'error',
 
         /*
+            The Jasmine 'fdescribe' and 'fit' functions are handy for local development but should
+            not be committed to production.
+        */
+        'no-restricted-globals': ['error',
+            {
+                name: 'fdescribe',
+                message: 'Do not commit fdescribe. Use "describe" instead for tests.'
+            },
+            {
+                name: 'fit',
+                message: 'Do not commit fit. Use "it" instead for tests.'
+            }],
+
+        /*
             Higher-order function composition, like Array.forEach(), is preferred for iterative
             loops. For...in statements can be used when performance is a consideration as long as
             guard-for-in is enabled. For...of statements can be used when break is required for
             control flow or the iteration produces side-effects.
         */
-        'no-restricted-syntax': [
-            'error', {
+        'no-restricted-syntax': ['error',
+            {
                 selector: 'LabeledStatement',
                 message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
             }, {
