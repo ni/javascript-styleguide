@@ -78,6 +78,13 @@ module.exports = {
         'max-classes-per-file': ['error', 1],
 
         /*
+            Line length is not enforced, because of developer preference, lack of consistent enforcement,
+            and lack of a fixer. Developers should consider readability and may impose a length in their
+            own writing without strict enforcement.
+        */
+        'max-len': 'off',
+
+        /*
             Errors from this rule will identify issues more often than not. However, there may be
             unique exceptions, like bad third-party API design, where this rule can be disabled
             with an inline comment.
