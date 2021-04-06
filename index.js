@@ -97,6 +97,11 @@ module.exports = {
         'no-console': 'error',
 
         /*
+            Continue statements are a common, useful, and can improve readability. Use of labels is disallowed.
+        */
+        'no-continue': 'off',
+
+        /*
             There may be exceptions, like array iterators, where it is appropriate to disable this
             rule with an inline comment.
         */
