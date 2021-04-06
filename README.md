@@ -1,5 +1,5 @@
 # NI JavaScript and TypeScript Style Guide
-
+<!-- Load images from raw.githubusercontent.com to enable image rendering when viewed from https://www.npmjs.com/package/@ni/eslint-config -->
 ![Logo](https://raw.githubusercontent.com/ni/javascript-styleguide/HEAD/resources/logo.svg)
 
 Welcome to NI's JavaScript and TypeScript linter rules for [ESLint](https://eslint.org/docs/user-guide/getting-started).
@@ -24,7 +24,7 @@ npx install-peerdeps --dev @ni/eslint-config
 
 ### JavaScript
 
-Extend @ni in the ESLint configuration.
+Extend @ni in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats).
 
 ```json
 {
@@ -46,6 +46,20 @@ Extend @ni/eslint-config/typescript in the ESLint configuration. Configure the @
 }
 ```
 
+## Recommended Development Environment Configuration
+Modern IDEs can be configured to provide live feedback about ESLint errors.
+
+**Visual Studio Code**
+
+Install the [ESLint Extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
+
+![VSCode Extension](https://raw.githubusercontent.com/ni/javascript-styleguide/HEAD/resources/VSCodeESLintExtension.png)
+
+**JetBrains WebStorm**
+
+Follow the [instructions in the WebStorm documentation](https://www.jetbrains.com/help/webstorm/eslint.html#ws_js_eslint_activate) to activate and configure ESLint automatically in the Settings/Preferences dialog.
+
+
 ## License
 
-[MIT (c) 2020 National Instruments Corporation](./LICENSE)
+[MIT (c) 2021 National Instruments Corporation](./LICENSE)
