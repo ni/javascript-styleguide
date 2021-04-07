@@ -1,6 +1,6 @@
 # NI JavaScript and TypeScript Style Guide
 <!-- Load images from raw.githubusercontent.com to enable image rendering when viewed from https://www.npmjs.com/package/@ni/eslint-config -->
-<img src="resources/ni-js-logo.svg" alt="JS logo" width="200px" style="margin-right: 50px">
+<img src="resources/ni-js-logo.svg" alt="JS logo" width="200px" style="margin-right: 50px;">
 <img src="resources/ni-ts-logo.svg" alt="JS logo" width="200px">
 
 
