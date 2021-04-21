@@ -219,6 +219,12 @@ module.exports = {
         'object-shorthand': ['error', 'properties', { avoidQuotes: true }],
 
         /*
+            Destructuring should be considered for multi-variable declarations and assignments while simple single
+            variable declarations and assignments likely don't require it.
+        */
+        'prefer-destructuring': 'off',
+
+        /*
             This configuration already supports the JSDoc syntax. Add additional syntax as line or
             block exceptions or markers when necessary.
         */
