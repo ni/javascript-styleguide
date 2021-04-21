@@ -97,7 +97,8 @@ module.exports = {
         'no-console': 'error',
 
         /*
-            Continue statements are a common, useful, and can improve readability. Use of labels is disallowed.
+            `continue` statements can improve readability but care should be taken to avoid confusing control flow.
+            They should generally be the only statement within an `if` block and should never use labels.
         */
         'no-continue': 'off',
 
