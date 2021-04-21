@@ -97,6 +97,12 @@ module.exports = {
         'no-console': 'error',
 
         /*
+            `continue` statements can improve readability but care should be taken to avoid confusing control flow.
+            They should generally be the only statement within an `if` block and should never use labels.
+        */
+        'no-continue': 'off',
+
+        /*
             There may be exceptions, like array iterators, where it is appropriate to disable this
             rule with an inline comment.
         */
