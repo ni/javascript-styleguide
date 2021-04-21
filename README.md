@@ -1,9 +1,11 @@
+<div align="center">
+    <div>
+        <!-- Load images from raw.githubusercontent.com to enable image rendering when viewed from https://www.npmjs.com/package/@ni/eslint-config -->
+        <img src="https://raw.githubusercontent.com/ni/javascript-styleguide/HEAD/resources/logo.svg" alt="JavaScript, TypeScript, and NI logo" width="200px">
+    </div>
+</div>
+
 # NI JavaScript and TypeScript Style Guide
-<!-- Load images from raw.githubusercontent.com to enable image rendering when viewed from https://www.npmjs.com/package/@ni/eslint-config -->
-<img src="https://raw.githubusercontent.com/ni/javascript-styleguide/HEAD/resources/ni-js-logo.svg" alt="JS logo" width="200px">
-<img src="https://raw.githubusercontent.com/ni/javascript-styleguide/HEAD/resources/ni-ts-logo.svg" alt="TS logo" width="200px">
-
-
 Welcome to NI's JavaScript and TypeScript linter rules for [ESLint](https://eslint.org/docs/user-guide/getting-started).
 
 ## Installation
