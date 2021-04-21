@@ -78,6 +78,13 @@ module.exports = {
         'max-classes-per-file': ['error', 1],
 
         /*
+            Line length is not enforced, because of developer preference, lack of consistent enforcement,
+            and lack of a fixer. Developers should consider readability and may impose a length in their
+            own writing without strict enforcement.
+        */
+        'max-len': 'off',
+
+        /*
             Errors from this rule will identify issues more often than not. However, there may be
             unique exceptions, like bad third-party API design, where this rule can be disabled
             with an inline comment.
@@ -88,6 +95,12 @@ module.exports = {
             Console logs should not be exposed in production environments.
         */
         'no-console': 'error',
+
+        /*
+            `continue` statements can improve readability but care should be taken to avoid confusing control flow.
+            They should generally be the only statement within an `if` block and should never use labels.
+        */
+        'no-continue': 'off',
 
         /*
             There may be exceptions, like array iterators, where it is appropriate to disable this
@@ -135,13 +148,27 @@ module.exports = {
         'no-prototype-builtins': 'error',
 
         /*
+            The Jasmine 'fdescribe' and 'fit' functions are handy for local development but should
+            not be committed to production.
+        */
+        'no-restricted-globals': ['error',
+            {
+                name: 'fdescribe',
+                message: 'Do not commit fdescribe. Use "describe" instead for tests.'
+            },
+            {
+                name: 'fit',
+                message: 'Do not commit fit. Use "it" instead for tests.'
+            }],
+
+        /*
             Higher-order function composition, like Array.forEach(), is preferred for iterative
             loops. For...in statements can be used when performance is a consideration as long as
             guard-for-in is enabled. For...of statements can be used when break is required for
             control flow or the iteration produces side-effects.
         */
-        'no-restricted-syntax': [
-            'error', {
+        'no-restricted-syntax': ['error',
+            {
                 selector: 'LabeledStatement',
                 message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
             }, {
@@ -190,6 +217,12 @@ module.exports = {
             shorthands, so they should be corrected in review.
         */
         'object-shorthand': ['error', 'properties', { avoidQuotes: true }],
+
+        /*
+            Destructuring should be considered for multi-variable declarations and assignments while simple single
+            variable declarations and assignments likely don't require it.
+        */
+        'prefer-destructuring': 'off',
 
         /*
             This configuration already supports the JSDoc syntax. Add additional syntax as line or
