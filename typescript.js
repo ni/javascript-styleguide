@@ -19,7 +19,11 @@ module.exports = {
             https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.ts
         */
 
-        // None
+        // The following elevate recommended rules from warning to error
+        '@typescript-eslint/explicit-module-boundary-types': 'error',
+        '@typescript-eslint/no-explicit-any': 'error',
+        '@typescript-eslint/no-non-null-assertion': 'error',
+        '@typescript-eslint/no-unused-vars': 'error',
 
         /*
             TypeScript rules outside of the recommended configuration
