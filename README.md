@@ -58,46 +58,27 @@ Extend @ni/eslint-config/typescript in the ESLint configuration. Configure the @
 ### Angular
 
 ESLint support for Angular is provided by [@angular-eslint](https://github.com/angular-eslint/angular-eslint#readme). It's recommended to use @angular-eslint/schematics to
-configure ESLint for Angular projects especially when migrating from TSLint.
+configure ESLint for Angular projects especially when migrating from TSLint. [Use version 1.x.x](https://github.com/angular-eslint/angular-eslint#supported-angular-cli-versions) for Angular versions less than 11.2.0.
 
-[Use version 1.x.x](https://github.com/angular-eslint/angular-eslint#supported-angular-cli-versions) for Angular versions less than 11.1.0.
-
-#### Generating a Workspace
-
-Workspaces [generated with @angular-eslint](https://github.com/angular-eslint/angular-eslint#quick-start-with-angular-and-eslint) will generate projects with @angular-eslint.
-
-```bash
-> npm i -g @angular/cli @angular-devkit/core @angular-devkit/schematics @angular-eslint/schematics
-> ng new --collection=@angular-eslint/schematics
-```
-
-Extend @ni/eslint-config/typescript in .eslintrc.json for TypeScript and templates.
-```json
-"overrides": [{
-    "files": ["*.ts"],
-    ...
-    "extends": ["@ni/eslint-config/typescript"]
-},
-    ...
-]
-```
-
-#### Migrating a Workspace
-
-1. Install @angular-eslint/schematics and @ni/eslint-config.
-
-    ```bash
-    npm install --save-dev @angular-eslint/schematics @ni/eslint-config.
-    ```
-
-2. Follow the @angular-eslint [instructions](https://github.com/angular-eslint/angular-eslint#migrating-an-angular-cli-project-from-codelyzer-and-tslint) to run the schematic, listed here for convenience.
-
+1. [Use the schematic](https://github.com/angular-eslint/angular-eslint#quick-start-with-angular-and-eslint) to add ESLint to new workspaces, and new applications and libraries will be generated with ESLint as well.
     ```bash
     > ng add @angular-eslint/schematics
-    > ng g @angular-eslint/schematics:convert-tslint-to-eslint <PROJECT NAME>
+    > ng g @angular-eslint/schematics:convert-tslint-to-eslint --remove-tslint-if-no-more-tslint-targets --ignore-existing-tslint-config
     ```
-
-3. Extend @ni/eslint-config/typescript in .eslintrc.json for TypeScript and templates, [see above](#generating-a-workspace).
+2. Extend @ni/eslint-config/typescript in .eslintrc.json for TypeScript and templates.
+    ```json
+    "overrides": [{
+        "files": ["*.ts"],
+        ...
+        "extends": ["@ni/eslint-config/typescript"]
+    },
+        ...
+    ]
+    ```
+3. For existing workspaces, [migrate each project](https://github.com/angular-eslint/angular-eslint#migrating-an-angular-cli-project-from-codelyzer-and-tslint). When all projects have been migrated, new applications and libraries will be generated with ESLint as well.
+    ```bash
+    ng g @angular-eslint/schematics:convert-tslint-to-eslint <PROJECT NAME>
+    ```
 4. Remove the rules configured in .eslintrc.json for TypeScript and templates. They are not required with @ni/eslint-config.
 5. Remove the root tslint.json configuration file, and uninstall TSLint.
 
