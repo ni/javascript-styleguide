@@ -20,10 +20,10 @@ module.exports = {
         */
 
         // The following elevate recommended rules from warning to error
+        // Note: The recommended rule '@typescript-eslint/no-unused-vars' is already overriden by extension rule configuration
         '@typescript-eslint/explicit-module-boundary-types': 'error',
         '@typescript-eslint/no-explicit-any': 'error',
         '@typescript-eslint/no-non-null-assertion': 'error',
-        '@typescript-eslint/no-unused-vars': 'error',
 
         /*
             TypeScript rules outside of the recommended configuration
