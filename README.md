@@ -10,7 +10,7 @@ Welcome to NI's JavaScript and TypeScript linter rules for [ESLint](https://esli
 
 ## Installation
 
-Install @ni/eslint-config and its peer dependencies.
+Install ```@ni/eslint-config``` and its peer dependencies.
 
 Use [npm view](https://docs.npmjs.com/cli/view.html) to list the correct versions of each package to install yourself.
 
@@ -42,7 +42,7 @@ Extend @ni in the [ESLint configuration](https://eslint.org/docs/user-guide/conf
 
 ### TypeScript
 
-Extend @ni/eslint-config/typescript in the ESLint configuration. Configure the @typescript-eslint plugin and the project's TypeScript configuration.
+Extend ```@ni/eslint-config/typescript``` in the ESLint configuration. Configure the @typescript-eslint plugin and the project's TypeScript configuration.
 
 ```json
 {
@@ -57,7 +57,7 @@ Extend @ni/eslint-config/typescript in the ESLint configuration. Configure the @
 <a name="usage-angular"></a>
 ### Angular
 
-ESLint support for Angular is provided by [@angular-eslint](https://github.com/angular-eslint/angular-eslint#readme). It's recommended to use @angular-eslint/schematics to
+ESLint support for Angular is provided by [@angular-eslint](https://github.com/angular-eslint/angular-eslint#readme). It's recommended to use ```@angular-eslint/schematics``` to
 configure ESLint for Angular projects especially when migrating from TSLint. [Use version 1.x.x](https://github.com/angular-eslint/angular-eslint#supported-angular-cli-versions) for Angular versions less than 11.2.0.
 
 1. [Use the schematic](https://github.com/angular-eslint/angular-eslint#quick-start-with-angular-and-eslint) to add ESLint to new workspaces, and new applications and libraries will be generated with ESLint as well.
@@ -79,8 +79,8 @@ configure ESLint for Angular projects especially when migrating from TSLint. [Us
     ```bash
     ng g @angular-eslint/schematics:convert-tslint-to-eslint <PROJECT NAME>
     ```
-4. Remove the rules configured in .eslintrc.json for TypeScript and templates. They are not required with @ni/eslint-config.
-5. Remove the root tslint.json configuration file, and uninstall TSLint.
+4. Remove the rules configured in ```.eslintrc.json``` for TypeScript and templates. They are not required with @ni/eslint-config.
+5. Remove the root ```tslint.json``` configuration file, and uninstall TSLint.
 
 ## Recommended Development Environment Configuration
 Modern IDEs can be configured to provide live feedback about ESLint errors.
@@ -112,7 +112,7 @@ This option can be adapted for npm scripts, for example.
 
 ### Angular Notes on Performance
 
-Deviations from the @angular-eslint schematic, @ni/eslint-config, and the [parserOptions.project](https://www.npmjs.com/package/@typescript-eslint/parser#user-content-parseroptionsproject) configurations can result in significant performance degredation. Fully manual configuration [is not recommended](https://github.com/angular-eslint/angular-eslint#going-fully-manual-not-recommended). Read @angular-eslint's [section on performance](https://github.com/angular-eslint/angular-eslint#eslint-configs-and-performance) for information on addressing slow linting processes.
+Deviations from the ```@angular-eslint schematic```, ```@ni/eslint-config```, and the [parserOptions.project](https://www.npmjs.com/package/@typescript-eslint/parser#user-content-parseroptionsproject) configurations can result in significant performance degredation. Fully manual configuration [is not recommended](https://github.com/angular-eslint/angular-eslint#going-fully-manual-not-recommended). Read @angular-eslint's [section on performance](https://github.com/angular-eslint/angular-eslint#eslint-configs-and-performance) for information on addressing slow linting processes.
 
 ## License
 
