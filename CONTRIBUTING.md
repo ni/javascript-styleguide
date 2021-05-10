@@ -1,10 +1,10 @@
 # Contributing
 
-This document covers information needed for contribution to and release of the eslint rules.
+This document covers information needed for the contribution to and release of the eslint rules.
 
 ## Guiding Principles
 
-Some overarching principles that are used for defining the rulesets.
+Some overarching principles that are used for defining the rulesets:
 
 1. Start strict and then loosen. We prefer to start with a strict set of opinionated rules and then loosen the ruleset with experience developing under them.
 2. Use `error` or `off`; no `warn`. Allowing `warn` tends to increase noise when running lints and hide new or useful messages. 
