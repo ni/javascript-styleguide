@@ -30,8 +30,8 @@ jobs:
     # Test
     - run: npm run test-typescript
     - run: npm run test-typescript-typed
-    - run: npm run dev-print-typescript-props
-    - run: npm run dev-has-warn
+    - run: npm run print-typescript-properties
+    - run: npm run print-evaluated-rules
 
     # Publish
     - if: startsWith(github.ref, 'refs/tags/v')

@@ -8,8 +8,8 @@
     "test": "eslint .",
     "test-typescript": "eslint ./test/typescript/",
     "test-typescript-typed": "eslint ./test/typescript-type-checking/",
-    "dev-print-typescript-props": "node ./tools/print-typescript-properties",
-    "dev-has-warn": "node ./tools/has-warn"
+    "print-typescript-properties": "node ./tools/print-typescript-properties",
+    "print-evaluated-rules": "node ./tools/print-evaluated-rules"
   },
   "repository": {
     "type": "git",
