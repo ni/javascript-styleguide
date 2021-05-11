@@ -19,7 +19,16 @@ module.exports = {
             https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.ts
         */
 
-        // None
+        // The following elevate recommended rules from warning to error
+        // Note: The recommended rule '@typescript-eslint/no-unused-vars' is already overriden by extension rule configuration
+        '@typescript-eslint/explicit-module-boundary-types': 'error',
+        '@typescript-eslint/no-explicit-any': 'error',
+        /*
+            With `stickNullChecks` disabled, non-null assertions are discouraged as they do not provide additional type safety
+            and if used inconsistently add to visual noise. With `strictNullChecks` enabled, the non-null assertion operator
+            is useful for asserting that a value will no longer be null and usage of operator should be allowed.
+        */
+        '@typescript-eslint/no-non-null-assertion': 'error',
 
         /*
             TypeScript rules outside of the recommended configuration
