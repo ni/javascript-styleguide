@@ -32,7 +32,12 @@ module.exports = {
         */
         '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'off',
 
-        '@typescript-eslint/no-unnecessary-condition': 'error',
+        /*
+            This rule requires the TypeScript strictNullChecks compiler flag. If strictNullChecks is enabled,
+            consider enabling this rule.
+        */
+        '@typescript-eslint/no-unnecessary-condition': 'off',
+
         '@typescript-eslint/no-unnecessary-qualifier': 'error',
         '@typescript-eslint/no-unnecessary-type-arguments': 'error',
         '@typescript-eslint/non-nullable-type-assertion-style': 'error',
