@@ -116,14 +116,14 @@ module.exports = {
 
         /*
             Disallow duplicate conditions in if-else-if chain.
-            This rule does not need to be explicilty set after enabled in airbnb:
+            This rule does not need to be explicitly set after enabled in airbnb:
             https://github.com/airbnb/javascript/blob/1eadb93e377da1e56c3f91f26610e5d0a00738a9/packages/eslint-config-airbnb-base/rules/errors.js#L44
         */
         'no-dupe-else-if': 'error',
 
         /*
             Disallow assigning to imported bindings.
-            This rule does not need to be explicilty set after enabled in airbnb:
+            This rule does not need to be explicitly set after enabled in airbnb:
             https://github.com/airbnb/javascript/blob/5641278fa1df75ba3b6af2959a553bd682c0ad42/packages/eslint-config-airbnb-base/rules/errors.js#L83
         */
         'no-import-assign': 'error',
@@ -207,7 +207,7 @@ module.exports = {
 
         /*
             Disallow returning values from setters.
-            This rule does not need to be explicilty set after enabled in airbnb:
+            This rule does not need to be explicitly set after enabled in airbnb:
             https://github.com/airbnb/javascript/blob/5641278fa1df75ba3b6af2959a553bd682c0ad42/packages/eslint-config-airbnb-base/rules/errors.js#L121
         */
         'no-setter-return': 'error',
