@@ -1,7 +1,7 @@
 {
     "files": ["./index.ts"],
     "compilerOptions": {
-        "strictNullChecks": true,
+        "strictNullChecks": false,
         "target": "ES2020"
     },
 }

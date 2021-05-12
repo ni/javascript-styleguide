@@ -1,5 +1,5 @@
 module.exports = {
-    extends: '../../typescript-requiring-type-checking',
+    extends: ['../../typescript', '../../typescript-requiring-type-checking'],
     root: true,
     ignorePatterns: ['*.js'],
     parserOptions: {
