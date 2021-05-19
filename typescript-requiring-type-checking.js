@@ -97,7 +97,7 @@ module.exports = {
 
         /*
             This rule requires adding `readonly` keywords to all levels of non-primitive parameters in order to prevent
-             any part of the parameter from being mutated. While the spirit of preferring not to mutate inputs is correct,
+            any part of the parameter from being mutated. While the spirit of preferring not to mutate inputs is correct,
             requiring it to be encoded via `readonly` is overly burdensome.
         */
         '@typescript-eslint/prefer-readonly-parameter-types': 'off',
