@@ -56,7 +56,19 @@ module.exports = {
         '@typescript-eslint/prefer-string-starts-ends-with': 'error',
         '@typescript-eslint/promise-function-async': 'error',
         '@typescript-eslint/require-array-sort-compare': 'error',
-        '@typescript-eslint/strict-boolean-expressions': 'error',
+
+        /*
+            This rule requires the TypeScript strictNullChecks compiler flag. If strictNullChecks is enabled, disallow numbers
+            with the following configuration.
+            '@typescript-eslint/strict-boolean-expressions': ['error', {
+                allowNumber: false,
+                allowNullableBoolean: true,
+                allowNullableString: true,
+                allowNullableNumber: false
+            }]
+        */
+        '@typescript-eslint/strict-boolean-expressions': 'off',
+
         '@typescript-eslint/switch-exhaustiveness-check': 'error'
     }
 };
