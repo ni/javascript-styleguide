@@ -27,6 +27,14 @@ module.exports = {
         'comma-dangle': ['error', 'only-multiline'],
 
         /*
+            Always provide a `default` case in `switch` statements.
+            If the default case is logically unreachable, throw an Error.
+            If the default case should do nothing, add a comment explaining why
+            to indicate that it is an intentional decision.
+        */
+        // Notes for the Airbnb 'default-case' rule configuration
+
+        /*
             Do not require a newline at the end of every file in favor of reducing the effort to
             satisfy the rule over the proposed advantages on UNIX and with concatenation.
         */
