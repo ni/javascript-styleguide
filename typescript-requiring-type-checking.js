@@ -16,6 +16,11 @@ module.exports = {
         */
         // Notes for typescript-eslint recommended '@typescript-eslint/no-floating-promises' configuration
 
+        /*
+            Allow usage of String.prototype.match for regular expression matching
+        */
+        '@typescript-eslint/prefer-regexp-exec': 'off',
+
         '@typescript-eslint/unbound-method': ['error', { ignoreStatic: true }],
 
         /*
