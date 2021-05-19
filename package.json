@@ -1,6 +1,6 @@
 {
   "name": "@ni/eslint-config",
-  "version": "1.0.0-alpha.14",
+  "version": "1.0.0-alpha.16",
   "description": "NI's ESLint Shareable Config",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "test": "eslint .",
     "test-typescript": "eslint ./test/typescript/",
     "test-typescript-typed": "eslint ./test/typescript-type-checking/",
-    "dev-print-typescript-props": "node ./tools/print-typescript-properties"
+    "print-typescript-properties": "node ./tools/print-typescript-properties",
+    "print-evaluated-rules": "node ./tools/print-evaluated-rules"
   },
   "repository": {
     "type": "git",
