@@ -122,7 +122,7 @@ This option can be adapted for npm scripts, for example.
 
 ### Angular Notes on Performance
 
-Deviations from the `@angular-eslint schematic`, `@ni/eslint-config`, and the [`parserOptions.project`](https://www.npmjs.com/package/@typescript-eslint/parser#user-content-parseroptionsproject) configurations can result in significant performance degredation. Fully manual configuration [is not recommended](https://github.com/angular-eslint/angular-eslint#going-fully-manual-not-recommended). Read `@angular-eslint`'s [section on performance](https://github.com/angular-eslint/angular-eslint#eslint-configs-and-performance) for information on addressing slow linting processes.
+Deviations from the `@angular-eslint schematic`, `@ni/eslint-config`, and the [`parserOptions.project`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser#parseroptionsproject) configurations can result in significant performance degredation. Fully manual configuration [is not recommended](https://github.com/angular-eslint/angular-eslint#going-fully-manual-not-recommended). Read `@angular-eslint`'s [section on performance](https://github.com/angular-eslint/angular-eslint#eslint-configs-and-performance) for information on addressing slow linting processes.
 
 ## License
 
