@@ -6,25 +6,25 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     rules: {
         /*
-            Overrides to TypeScript recommended rules
+            Overrides to TypeScript recommended rules:
             https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended-requiring-type-checking.ts
         */
 
         /*
+            '@typescript-eslint/no-floating-promises' configuration from typescript-eslint recommended notes:
             The jasminewd2 library used by Angular applications will result in a significant number of floating promises.
             Consider disabling the '@typescript-eslint/no-floating-promises' rule for tests that utilize jasmine expects.
         */
-        // Notes for typescript-eslint recommended '@typescript-eslint/no-floating-promises' configuration
 
         /*
-            Allow usage of String.prototype.match for regular expression matching
+            Allow usage of String.prototype.match for regular expression matching.
         */
         '@typescript-eslint/prefer-regexp-exec': 'off',
 
         '@typescript-eslint/unbound-method': ['error', { ignoreStatic: true }],
 
         /*
-            TypeScript rules outside of the recommended configuration
+            Overrides to Typescript rules outside of the recommended configuration:
         */
 
         /*

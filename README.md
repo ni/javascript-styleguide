@@ -27,9 +27,9 @@ Alternatively, use [`npx install-peerdeps`](https://www.npmjs.com/package/instal
 npx install-peerdeps --dev @ni/eslint-config
 ```
 
-### Angular
+### Angular-specific Installation
 
-See [instructions below](#usage-angular) to use a schematic to install dependencies.
+See [instructions below](#angular) to use a schematic to install dependencies.
 
 ## Usage
 
@@ -45,28 +45,23 @@ Extend `@ni` in the [ESLint configuration](https://eslint.org/docs/user-guide/co
 
 ### TypeScript
 
-Extend `@ni/eslint-config/typescript` in the default ESLint configuration. The default ESLint configuration is used during development (for example, in IDEs) and should only extend the TypeScript rules. The TypeScript rules requiring type checking should be run explicitly as an npm script to avoid performance issues during development.
+Extend `@ni/eslint-config/typescript` and `@ni/eslint-config/typescript-requiring-type-checking` (type checked rules) in the ESLint configuration.
+
+The type checked rules will also require the `parserOptions.project` configuration to be set to the project's TypeScript configuration. The type checked rules run a bit slower as they utilize the TypeScript compiler for type information.
 
 ```js
 {
-    extends: '@ni/eslint-config/typescript'
-}
-```
-
-### TypeScript Rules Requiring Type Checking
-
-Extend `@ni/eslint-config/typescript-requiring-type-checking` in a separate ESLint configuration file (such as `.eslintrc-requiring-type-checking.js`) that includes a TypeScript configuration for `parserOptions.project`. Due to the longer execution time, the configuration requiring type checking should only be run from a `npm run lint` command explicitly invoked by developers and on CIs.
-
-```js
-{
-    extends: '@ni/eslint-config/typescript-requiring-type-checking',
+    extends: [
+        '@ni/eslint-config/typescript',
+        `@ni/eslint-config/typescript-requiring-type-checking`
+    ],
     parserOptions: {
         project: 'tsconfig.json'
     }
 }
 ```
+Note: If there are situations where the analysis time for enabling the type checked rules is an excessive burden you may consider creating a separate eslint configuration that avoids extending the type checked rules and omits the `parserOptions.project` configuration to run in specific scenarios. See discussion in the [performance section](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md#performance) of the Getting Started - Linting with Type Information guide.
 
-<a name="usage-angular"></a>
 ### Angular
 
 ESLint support for Angular is provided by [`@angular-eslint`](https://github.com/angular-eslint/angular-eslint#readme). It's recommended to use `@angular-eslint/schematics` to
