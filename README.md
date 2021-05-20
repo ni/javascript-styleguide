@@ -45,7 +45,7 @@ Extend `@ni` in the [ESLint configuration](https://eslint.org/docs/user-guide/co
 
 ### TypeScript
 
-Extend `@ni/eslint-config/typescript` and `@ni/eslint-config/typescript-requiring-type-checking` (type checked rules) in the ESLint configuration.
+Extend `@ni/eslint-config/typescript` and `@ni/eslint-config/typescript-requiring-type-checking` (type checked rules) in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats).
 
 The type checked rules will also require the `parserOptions.project` configuration to be set to the project's TypeScript configuration. The type checked rules run a bit slower as they utilize the TypeScript compiler for type information.
 
@@ -53,7 +53,7 @@ The type checked rules will also require the `parserOptions.project` configurati
 {
     extends: [
         '@ni/eslint-config/typescript',
-        `@ni/eslint-config/typescript-requiring-type-checking`
+        '@ni/eslint-config/typescript-requiring-type-checking'
     ],
     parserOptions: {
         project: 'tsconfig.json'
@@ -79,7 +79,7 @@ configure ESLint for Angular projects especially when migrating from TSLint. [Us
         // ...
         extends: [
             '@ni/eslint-config/typescript',
-            `@ni/eslint-config/typescript-requiring-type-checking`
+            '@ni/eslint-config/typescript-requiring-type-checking'
         ]
     },
         // ...
