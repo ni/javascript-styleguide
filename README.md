@@ -72,14 +72,17 @@ configure ESLint for Angular projects especially when migrating from TSLint. [Us
     > ng add @angular-eslint/schematics
     > ng g @angular-eslint/schematics:convert-tslint-to-eslint --remove-tslint-if-no-more-tslint-targets --ignore-existing-tslint-config
     ```
-2. Extend `@ni/eslint-config/typescript` in `.eslintrc.json` for TypeScript and templates.
-    ```json
-    "overrides": [{
-        "files": ["*.ts"],
-        ...
-        "extends": ["@ni/eslint-config/typescript"]
+2. Extend `@ni/eslint-config/typescript` and `@ni/eslint-config/typescript-requiring-type-checking` in the ESlint configuration for TypeScript and templates.
+    ```js
+    overrides: [{
+        files: ['*.ts'],
+        // ...
+        extends: [
+            '@ni/eslint-config/typescript',
+            `@ni/eslint-config/typescript-requiring-type-checking`
+        ]
     },
-        ...
+        // ...
     ]
     ```
 3. For existing workspaces, [migrate each project](https://github.com/angular-eslint/angular-eslint#migrating-an-angular-cli-project-from-codelyzer-and-tslint). When all projects have been migrated, new applications and libraries will be generated with ESLint as well.
