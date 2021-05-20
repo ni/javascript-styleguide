@@ -1,7 +1,7 @@
 <div align="center">
     <div>
         <!-- Load images from raw.githubusercontent.com to enable image rendering when viewed from https://www.npmjs.com/package/@ni/eslint-config -->
-        <img src="https://raw.githubusercontent.com/ni/javascript-styleguide/HEAD/resources/logo.svg" alt="JavaScript, TypeScript, and NI logo" width="200px">
+        <img src="https://raw.githubusercontent.com/ni/javascript-styleguide/HEAD/resources/logo.svg" alt="JavaScript, TypeScript, and NI logo" width="300" height="100">
     </div>
 </div>
 
@@ -27,7 +27,7 @@ Alternatively, use [`npx install-peerdeps`](https://www.npmjs.com/package/instal
 npx install-peerdeps --dev @ni/eslint-config
 ```
 
-### Angular-specific Installation
+### Additional Angular-specific Installation
 
 See [instructions below](#angular) to use a schematic to install dependencies.
 
