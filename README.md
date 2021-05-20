@@ -27,7 +27,7 @@ Alternatively, use [`npx install-peerdeps`](https://www.npmjs.com/package/instal
 npx install-peerdeps --dev @ni/eslint-config
 ```
 
-### Additional Angular-specific Installation
+### Angular Installation
 
 See [instructions below](#angular) to use a schematic to install dependencies.
 
@@ -45,9 +45,7 @@ Extend `@ni` in the [ESLint configuration](https://eslint.org/docs/user-guide/co
 
 ### TypeScript
 
-Extend `@ni/eslint-config/typescript` and `@ni/eslint-config/typescript-requiring-type-checking` (type checked rules) in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats).
-
-The type checked rules will also require the `parserOptions.project` configuration to be set to the project's TypeScript configuration. The type checked rules run a bit slower as they utilize the TypeScript compiler for type information.
+Extend `@ni/eslint-config/typescript` and `@ni/eslint-config/typescript-requiring-type-checking` in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
 
 ```js
 {
@@ -60,7 +58,7 @@ The type checked rules will also require the `parserOptions.project` configurati
     }
 }
 ```
-Note: If there are situations where the analysis time for enabling the type checked rules is an excessive burden you may consider creating a separate eslint configuration that avoids extending the type checked rules and omits the `parserOptions.project` configuration to run in specific scenarios. See discussion in the [performance section](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md#performance) of the Getting Started - Linting with Type Information guide.
+
 
 ### Angular
 
@@ -120,7 +118,17 @@ This option can be adapted for npm scripts, for example.
 "lint": "npm run ng -- lint"
 ```
 
-### Angular Notes on Performance
+## Performance
+
+### TypeScript linting performance
+
+`@ni/eslint-config/typescript-requiring-type-checking` includes rules that require type checking that run slower as they utilize the TypeScript compiler for type information.
+
+If there are situations where the analysis time for enabling the type checked rules is an excessive burden you may consider creating a separate eslint configuration that avoids extending the type checked rules and omits the `parserOptions.project` configuration to run in specific scenarios.
+
+See discussion in the [performance section](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md#performance) of the Getting Started - Linting with Type Information guide.
+
+### Angular linting performance
 
 Deviations from the `@angular-eslint schematic`, `@ni/eslint-config`, and the [`parserOptions.project`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser#parseroptionsproject) configurations can result in significant performance degredation. Fully manual configuration [is not recommended](https://github.com/angular-eslint/angular-eslint#going-fully-manual-not-recommended). Read `@angular-eslint`'s [section on performance](https://github.com/angular-eslint/angular-eslint#eslint-configs-and-performance) for information on addressing slow linting processes.
 
