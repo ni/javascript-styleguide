@@ -89,7 +89,7 @@ configure ESLint for Angular projects especially when migrating from TSLint. [Us
     ```bash
     ng g @angular-eslint/schematics:convert-tslint-to-eslint <PROJECT NAME>
     ```
-4. Remove the rules configured in `.eslintrc.json` for TypeScript and templates. They are not required with `@ni/eslint-config`.
+4. Remove the rules configured in the ESlint configuration for TypeScript and templates. They are not required with `@ni/eslint-config`.
 5. Remove the root `tslint.json` configuration file, and uninstall TSLint.
 
 ## Recommended Development Environment Configuration
