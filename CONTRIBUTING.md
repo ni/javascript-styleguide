@@ -30,9 +30,9 @@ When the command is run it will print a JSON representation of each of the maint
 ## Release workflow
 
 A manual versioning strategy is used based on the `npm version` command workflow.
-After one or more changes have been merged into master a project administrator will create a release using the following workflow:
+After one or more changes have been merged into the default branch a project administrator will create a release using the following workflow:
 
-1. Sync a local clone of the repository checked out on master with the latest commits to release.
+1. Sync a local clone of the repository checked out on the default branch with the latest commits to release.
 2. Run the npm version command in the following format:
 
    `npm version <version_change> -m "%s <change_description>"`
