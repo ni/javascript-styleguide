@@ -1,12 +1,13 @@
 module.exports = {
     extends: [
-        /*
-            airbnb-base source:
-            https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/index.js
-        */
         'airbnb-base'
     ],
     rules: {
+        /*
+            Overrides to airbnb rules:
+            https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/index.js
+        */
+
         /*
             Omit arrow function parenthesis where they are not required to improve readability.
         */
@@ -25,6 +26,14 @@ module.exports = {
             may be used if preferred.
         */
         'comma-dangle': ['error', 'only-multiline'],
+
+        /*
+            'default-case' Airbnb rule configuration notes:
+            Always provide a `default` case in `switch` statements.
+            If the default case is logically unreachable, throw an Error.
+            If the default case should do nothing, add a comment explaining why
+            to indicate that it is an intentional decision.
+        */
 
         /*
             Do not require a newline at the end of every file in favor of reducing the effort to

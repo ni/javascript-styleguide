@@ -8,21 +8,23 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     rules: {
         /*
-            Overrides to import rules (already handled by the TypeScript compiler)
+            Overrides to import rules (already handled by the TypeScript compiler):
             https://github.com/benmosher/eslint-plugin-import/blob/master/config/typescript.js
         */
+
         'import/named': 'off',
+
         'import/no-unresolved': 'off',
 
         /*
-            Overrides to TypeScript recommended rules
+            Overrides to TypeScript recommended rules:
             https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.ts
         */
 
-        // The following elevate recommended rules from warning to error
-        // Note: The recommended rule '@typescript-eslint/no-unused-vars' is already overriden by extension rule configuration
         '@typescript-eslint/explicit-module-boundary-types': 'error',
+
         '@typescript-eslint/no-explicit-any': 'error',
+
         /*
             With `stickNullChecks` disabled, non-null assertions are discouraged as they do not provide additional type safety
             and if used inconsistently add to visual noise. With `strictNullChecks` enabled, the non-null assertion operator
@@ -31,7 +33,7 @@ module.exports = {
         '@typescript-eslint/no-non-null-assertion': 'error',
 
         /*
-            TypeScript rules outside of the recommended configuration
+            Overrides to Typescript rules outside of the recommended configuration:
         */
 
         /*
