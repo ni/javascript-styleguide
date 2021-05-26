@@ -6,8 +6,10 @@
   "scripts": {
     "prepare": "npm test",
     "test": "eslint .",
+    "test-angular": "eslint ./test/angular/",
     "test-typescript": "eslint ./test/typescript/",
     "test-typescript-typed": "eslint ./test/typescript-type-checking/",
+    "print-angular-properties": "node ./tools/print-angular-properties",
     "print-typescript-properties": "node ./tools/print-typescript-properties",
     "print-evaluated-rules": "node ./tools/print-evaluated-rules"
   },
@@ -38,12 +40,25 @@
     "eslint-config-airbnb-base": "~14.2.1"
   },
   "devDependencies": {
+    "@angular-eslint/builder": "^12.0.0",
+    "@angular-eslint/eslint-plugin": "^12.0.0",
+    "@angular-eslint/eslint-plugin-template": "^12.0.0",
+    "@angular-eslint/schematics": "^12.0.0",
+    "@angular-eslint/template-parser": "^12.0.0",
+    "@angular/cli": "^12.0.0",
+    "@angular/compiler": "^12.0.0",
+    "@angular/core": "^12.0.0",
     "@typescript-eslint/eslint-plugin": "^4.24.0",
     "eslint": "^7.26.0",
     "eslint-plugin-import": "^2.23.2",
     "typescript": "^4.2.4"
   },
   "peerDependencies": {
+    "@angular-eslint/builder": "^4.3.0 || ^12.0.0",
+    "@angular-eslint/eslint-plugin": "^4.3.0 || ^12.0.0",
+    "@angular-eslint/eslint-plugin-template": "^4.3.0 || ^12.0.0",
+    "@angular-eslint/schematics": "^4.3.0 || ^12.0.0",
+    "@angular-eslint/template-parser": "^4.3.0 || ^12.0.0",
     "@typescript-eslint/eslint-plugin": "^4.24.0",
     "eslint": "^7.26.0",
     "eslint-plugin-import": "^2.23.2"
