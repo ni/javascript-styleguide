@@ -222,11 +222,18 @@ module.exports = {
         'no-setter-return': 'error',
 
         /*
-            Underscore prefixes are permitted only to indicate fields that are for private internal
-            use. Trailing or prefixed underscores that signify other use cases are not allowed.
-            Different guidelines may exist for languages that support private fields, such as
-            TypeScript. The JavaScript guidelines are subject to change if availability of private
-            fields changes in the JavaScript ecosystem.
+            Trailing and prefixed underscores in identifiers are discouraged, with the following exceptions:
+
+            1. An underscore prefix is permitted on a parameter name to indicate that the parameter is intentionally unused.
+
+            2. In JavaScript code, an underscore prefix is permitted on a field to indicate when it is for private internal
+            use. This guideline may change if the JavaScript ecosystem provides a native way to specify private fields.
+
+            3. In TypeScript code, an underscore prefix is permitted on a field when it backs a property of the same name.
+            Prefixing other fields to indicate they're private is not necessary.
+
+            Unfortunately this ESLint rule doesn't support the above configuration so the rule is disabled and
+            the policy must be enforced manually by developers and code reviewers.
          */
         'no-underscore-dangle': 'off',
 
