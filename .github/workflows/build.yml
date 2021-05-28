@@ -30,7 +30,9 @@ jobs:
     # Test
     - run: npm run test-typescript
     - run: npm run test-typescript-typed
+    - run: npm run test-angular
     - run: npm run print-typescript-properties
+    - run: npm run print-angular-properties
     - run: npm run print-evaluated-rules
 
     # Publish

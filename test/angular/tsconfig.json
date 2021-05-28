@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true
+    },
+    "files": [
+        "index.ts"
+    ]
+}
