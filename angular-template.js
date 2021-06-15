@@ -7,5 +7,28 @@ module.exports = {
             Overrides to Angular template recommended rules:
             https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/src/configs/recommended.json
         */
+
+        /*
+            Overrides to Angular rules outside of the recommended configuration:
+        */
+
+        '@angular-eslint/template/accessibility-alt-text': 'error',
+        '@angular-eslint/template/accessibility-elements-content': 'error',
+        '@angular-eslint/template/accessibility-label-for': 'error',
+        '@angular-eslint/template/accessibility-label-has-associated-control': 'error',
+        '@angular-eslint/template/accessibility-table-scope': 'error',
+        '@angular-eslint/template/accessibility-valid-aria': 'error',
+        '@angular-eslint/template/click-events-have-key-events': 'error',
+        '@angular-eslint/template/conditional-complexity': 'error',
+        '@angular-eslint/template/cyclomatic-complexity': 'error',
+        '@angular-eslint/template/i18n': 'error',
+        '@angular-eslint/template/mouse-events-have-key-events': 'error',
+        '@angular-eslint/template/no-any': 'error',
+        '@angular-eslint/template/no-autofocus': 'error',
+        '@angular-eslint/template/no-call-expression': 'error',
+        '@angular-eslint/template/no-distracting-elements': 'error',
+        '@angular-eslint/template/no-duplicate-attributes': 'error',
+        '@angular-eslint/template/no-positive-tabindex': 'error',
+        '@angular-eslint/template/use-track-by-function': 'error'
     }
 };
