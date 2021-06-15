@@ -196,6 +196,17 @@ module.exports = {
                 message: 'Do not commit fit. Use "it" instead for tests.'
             }],
 
+        'no-restricted-imports': [
+            'error',
+            {
+                paths: [{
+                    // The following is recommended by the @angular-eslint/recommended--extra configuration.
+                    // https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/src/configs/recommended--extra.json
+                    name: 'rxjs/Rx',
+                    message: 'Please import directly from \'rxjs\' instead'
+                }]
+            }],
+
         /*
             Higher-order function composition, like Array.forEach(), is preferred for iterative
             loops. For...in statements can be used when performance is a consideration as long as
@@ -212,6 +223,9 @@ module.exports = {
             }, {
                 selector: 'WithStatement',
                 message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
+            }, {
+                selector: 'CallExpression[callee.object.name=\'console\'][callee.property.name=/^(debug|info|time|timeEnd|trace)$/]',
+                message: 'Unexpected property on console object was called'
             }],
 
         /*
