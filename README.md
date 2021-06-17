@@ -103,6 +103,24 @@ Install the [ESLint Extension](https://marketplace.visualstudio.com/items?itemNa
 
 Follow the [instructions in the WebStorm documentation](https://www.jetbrains.com/help/webstorm/eslint.html#ws_js_eslint_activate) to activate and configure ESLint automatically in the Settings ≫ Preferences dialog.
 
+### TSConfig
+Depending on the JavaScript runtime environment in which you intend to run your code, there may be a base configuration which you can extend from at github.com/tsconfig/bases. New TypeScript applications should extend from the recommended `tsconfig.json`, like so:
+
+Install:
+```sh
+npm install --save-dev @tsconfig/recommended
+yarn add --dev @tsconfig/recommended
+```
+
+Add to your tsconfig.json:
+```json
+"extends": "@tsconfig/recommended/tsconfig.json"
+```
+
+The recommended config turns on several strict compiler flags, such as `strictNullChecks` and `noImplicitAny` ([more info here](https://www.typescriptlang.org/tsconfig#strict)). While these checks are strongly encouraged to help prevent runtime errors, it may be difficult for existing projects to adopt them. If `strictNullChecks` is disabled, some linter rules that depend on its presence will also need to be turned off:
+
+*List Rules here*
+
 ## Troubleshooting
 
 ### JavaScript Heap Out of Memory
