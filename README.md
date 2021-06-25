@@ -29,7 +29,7 @@ npx install-peerdeps --dev @ni/eslint-config
 
 ### Angular Installation
 
-See [instructions below](#angular) to use a schematic to install dependencies.
+Follow the [instructions below](#angular) to use a schematic to install dependencies.
 
 ## Usage
 
@@ -98,6 +98,8 @@ Modern IDEs can be configured to provide live feedback about ESLint errors.
 Install the [ESLint Extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
 
 ![VSCode Extension](https://raw.githubusercontent.com/ni/javascript-styleguide/HEAD/resources/VSCodeESLintExtension.png)
+
+Follow the `@angular-eslint` [instructions](https://github.com/angular-eslint/angular-eslint#linting-html-files-and-inline-templates-with-the-vscode-extension-for-eslint) for linting HTML files and inline-templates with Angular.
 
 **JetBrains WebStorm**
 
