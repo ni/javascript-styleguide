@@ -61,6 +61,23 @@ module.exports = {
         }],
 
         /*
+            With prefer-default-export disabled, disallow default exports and prefer named exports to enforce consistency,
+            consistent names, require more explicit renaming, and reduce the effort spent refactoring. Multi-export files are
+            expected, and a trend to prefer named imports was seen in practice.
+        */
+        'import/no-default-export': 'error',
+
+        /*
+            The primary argument for default exports, promoting single export files, was not experienced in practice.
+            Developers were not compelled to exercise this practice, and instead, found defining a default when there is only
+            one export to be counterintuitive. While defining a class per file is recommended, multiple exports are not
+            disallowed. It was also found that another benefit, renaming an export doesn't affect imports, is usually
+            irrelevant, because the import and export names are preferred to be the same. See no-default-export for more
+            information.
+        */
+        'import/prefer-default-export': 'off',
+
+        /*
             This indentation size is used to promote consistency.
         */
         indent: ['error', 4],
