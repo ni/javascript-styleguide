@@ -264,6 +264,13 @@ module.exports = {
         'no-var': 'error',
 
         /*
+            'void' shouldn't be used to get an 'undefined' value, but can be used to
+            explicitly mark a promise as intentionally not awaited. This aligns with
+            the '@typescript-eslint/no-floating-promises' rule configuration.
+        */
+        'no-void': ['error', { allowAsStatement: true }],
+
+        /*
             Defining classes and variables before their use can cause errors. However, placing
             function declarations at the end of a file is a common programming practice for
             readability.
