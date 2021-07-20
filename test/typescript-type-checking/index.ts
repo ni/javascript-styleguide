@@ -1,6 +1,6 @@
 // TypeScript Smoke Test
 
-export default class NI {
+export class NI {
     private _awesomeLevel = 1;
 
     public get awesome(): boolean {

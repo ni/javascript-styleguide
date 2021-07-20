@@ -1,6 +1,6 @@
 // TypeScript Smoke Test
 
-export default class NI {
+export class NI {
     constructor() {
         this._awesomeLevel = 1;
     }

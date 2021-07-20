@@ -10,6 +10,6 @@ import { Component, Input } from '@angular/core';
         }
     `]
 })
-export default class AppComponent {
+export class AppComponent {
     @Input() public name = 'Angular';
 }
