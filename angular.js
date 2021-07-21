@@ -32,5 +32,28 @@ module.exports = {
             Overrides to Angular extra recommended rules:
             https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/src/configs/recommended--extra.json
         */
+
+        /*
+            Overrides to Angular rules outside of the recommended configuration:
+        */
+
+        '@angular-eslint/component-max-inline-declarations': 'error',
+        '@angular-eslint/component-selector': 'error',
+        '@angular-eslint/contextual-decorator': 'error',
+        '@angular-eslint/directive-selector': 'error',
+        '@angular-eslint/no-attribute-decorator': 'error',
+        '@angular-eslint/no-forward-ref': 'error',
+        '@angular-eslint/no-input-prefix': 'error',
+        '@angular-eslint/no-lifecycle-call': 'error',
+        '@angular-eslint/no-pipe-impure': 'error',
+        '@angular-eslint/no-queries-metadata-property': 'error',
+        '@angular-eslint/pipe-prefix': 'error',
+        '@angular-eslint/prefer-on-push-component-change-detection': 'error',
+        '@angular-eslint/prefer-output-readonly': 'error',
+        '@angular-eslint/relative-url-prefix': 'error',
+        '@angular-eslint/sort-ngmodule-metadata-arrays': 'error',
+        '@angular-eslint/use-component-selector': 'error',
+        '@angular-eslint/use-component-view-encapsulation': 'error',
+        '@angular-eslint/use-injectable-provided-in': 'error'
     }
 };
