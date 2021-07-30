@@ -76,12 +76,15 @@ configure ESLint for Angular projects** especially when migrating from TSLint. [
         files: ['*.ts'],
         // ...
         extends: [
+            'plugin:@angular-eslint/base',
             '@ni/eslint-config/typescript',
             '@ni/eslint-config/typescript-requiring-type-checking'
         ]
-    },
+    }, {
+        files: ['*.html']
         // ...
-    ]
+        extends: ['plugin:@angular-eslint/template/base'],
+    }]
     ```
 3. **For existing workspaces**, [migrate each project](https://github.com/angular-eslint/angular-eslint#migrating-an-angular-cli-project-from-codelyzer-and-tslint). When all projects have been migrated, new applications and libraries will be generated with ESLint as well. Enter yes for both options to remove TSLint and ignore its configuration.
     ```bash
