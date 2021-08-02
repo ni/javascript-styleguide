@@ -65,10 +65,9 @@ Extend `@ni/eslint-config/typescript` and `@ni/eslint-config/typescript-requirin
 ESLint support for Angular is provided by [`@angular-eslint`](https://github.com/angular-eslint/angular-eslint#readme). **It's recommended to use `@angular-eslint/schematics` to
 configure ESLint for Angular projects** especially when migrating from TSLint. [Use version 1.x.x](https://github.com/angular-eslint/angular-eslint#supported-angular-cli-versions) for Angular versions less than 11.2.0.
 
-1. [Use the schematic](https://github.com/angular-eslint/angular-eslint#quick-start-with-angular-and-eslint) to add ESLint to new workspaces, and new applications and libraries will be generated with ESLint as well.
+1. [Use the schematic](https://github.com/angular-eslint/angular-eslint#quick-start-with-angular-and-eslint) to add ESLint to new workspaces **version 12+**, and new applications and libraries will be generated with ESLint as well.
     ```bash
     > ng add @angular-eslint/schematics
-    > ng g @angular-eslint/schematics:convert-tslint-to-eslint --remove-tslint-if-no-more-tslint-targets --ignore-existing-tslint-config
     ```
 2. Extend `@ni/eslint-config/typescript` and `@ni/eslint-config/typescript-requiring-type-checking` in the ESlint configuration for TypeScript and templates.
     ```js
