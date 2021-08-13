@@ -11,6 +11,8 @@
 
 Welcome to NI's JavaScript and TypeScript linter rules for [ESLint](https://eslint.org/docs/user-guide/getting-started).
 
+[[_TOC_]]
+
 ## Installation
 
 Install `@ni/eslint-config` and its peer dependencies.
