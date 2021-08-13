@@ -91,7 +91,7 @@ configure ESLint for Angular projects** especially when migrating from TSLint. [
 
 ## Usage
 
-You should now be able to run the linter from the command line using `npx eslint .`
+After following the above steps to install and configure the linter, you be able to run it from the command line using `npx eslint .`
 
 ### NPM commands
 
@@ -110,7 +110,7 @@ This allows developers to lint using `npm run lint` and to run the automatic fix
 
 ### Add linting to your PR build
 
-Each project's pull request build pipeline should ensure there are no lint errors. Invoke `npm run lint` from your GitHub Actions or Azure Pipelines YML.
+Each project's pull request build pipeline should ensure no lint errors can be committed to the repository. Invoke `npm run lint` from your GitHub Actions or Azure Pipelines YML.
 
 ## Tips for Adopting this Style Guide
 
@@ -141,7 +141,7 @@ To disable a rule globally, modify the `rules` section of the [ESLint configurat
 ```js
     rules: {
         // This rule is disabled as an example
-        'import/prefer-default-export': 'off',
+        'import/prefer-default-export': 'off'
     }
 ```
 
