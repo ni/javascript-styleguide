@@ -120,9 +120,9 @@ Each project's pull request build pipeline should ensure no lint errors can be c
 
 **Existing projects** are likely to have numerous violations even if they already used a different linter (for example, the deprecated [TSLint](https://www.npmjs.com/package/tslint)) as this ruleset is more strict than most. The recommended flow for adopting this ruleset in an existing repository is:
 1. Install the tooling as described above.
-1. Disable existing lint tooling.
-1. Fix as many simple violations as possible by running the automated fixer and doing targeted manual fixes.
-1. If necessary, suppress the remaining violations but fix them as soon as possible in follow up submissions.
+2. Disable existing lint tooling.
+3. Fix as many simple violations as possible by running the automated fixer and doing targeted manual fixes.
+4. If necessary, suppress the remaining violations but fix them as soon as possible in follow up submissions.
 
 Typically steps 1-3 will happen in a single pull request (or a few in quick succession) while step 4 will be split across many subsequent submissions as time permits.
 
@@ -130,10 +130,10 @@ Typically steps 1-3 will happen in a single pull request (or a few in quick succ
 
 A project should strive to adopt this configuration as fully as possible, but there are valid reasons to disable a rule across a codebase or specific directory:
 1. As a temporary measure to stage adoption of the tooling.
-1. As a permanent measure if the rule is incompatible with a project's configuration. The rule configuration files in this package (`index.js`, `typescript.js`, etc) contain comments on each rule if it might commonly be disabled. Some examples include:
+2. As a permanent measure if the rule is incompatible with a project's configuration. The rule configuration files in this package (`index.js`, `typescript.js`, etc) contain comments on each rule if it might commonly be disabled. Some examples include:
    - consider disabling `@typescript-eslint/no-floating-promises` in test code for Angular projects because it is incompatible with the `jasminewd2` library
    - consider disabling `func-names` in older JavaScript projects that make use of immediately-invoked function expressions (IIFEs) where providing a name is not useful
-1. As a permanent measure for an existing codebase if the Technical Lead determines it is too costly to fix the violations of that rule.
+3. As a permanent measure for an existing codebase if the Technical Lead determines it is too costly to fix the violations of that rule.
 
 Each disabled rule (or group of similar rules) should include a comment explaining why it is disabled.
 
