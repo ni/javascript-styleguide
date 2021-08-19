@@ -91,7 +91,7 @@ configure ESLint for Angular projects** especially when migrating from TSLint. [
 
 ## Usage
 
-After following the above steps to install and configure the linter, you be able to run it from the command line using `npx eslint .`
+After following the above steps to install and configure the linter, you should be able to run it from the command line using `npx eslint .`
 
 ### NPM commands
 
