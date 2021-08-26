@@ -88,6 +88,9 @@ configure ESLint for Angular projects** especially when migrating from TSLint. [
     ```bash
     ng g @angular-eslint/schematics:convert-tslint-to-eslint <PROJECT NAME>
     ```
+4. Enable these application-specific rules if your application uses a specific prefix for components or pipes.
+    - [@angular-eslint/component-selector](http://codelyzer.com/rules/component-selector)
+    - [@angular-eslint/pipe-prefix](http://codelyzer.com/rules/pipe-prefix)
 
 ## Usage
 
