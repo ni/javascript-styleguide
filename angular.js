@@ -32,5 +32,41 @@ module.exports = {
             Overrides to Angular extra recommended rules:
             https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/src/configs/recommended--extra.json
         */
+
+        /*
+            Overrides to Angular rules outside of the recommended configuration:
+        */
+
+        /*
+            Extract templates and styles into a separate files. In rare cases, allow for inline templates of a few
+            elements with attributes and three minimal CSS declarations.
+        */
+        '@angular-eslint/component-max-inline-declarations': ['error', { animations: 15, styles: 15, template: 15 }],
+
+        '@angular-eslint/contextual-decorator': 'error',
+
+        /*
+            Do not require a directive to select an element or attribute exclusively, because there are valid use cases
+            for both.
+        */
+        '@angular-eslint/directive-selector': 'off',
+
+        '@angular-eslint/no-attribute-decorator': 'error',
+
+        '@angular-eslint/no-lifecycle-call': 'error',
+        '@angular-eslint/no-pipe-impure': 'error',
+        '@angular-eslint/no-queries-metadata-property': 'error',
+        '@angular-eslint/pipe-prefix': 'error',
+        '@angular-eslint/relative-url-prefix': 'error',
+        '@angular-eslint/use-component-selector': 'error',
+        '@angular-eslint/use-component-view-encapsulation': 'error',
+
+        /*
+            Provide root services with the application root injector in the Injectable decorator. However, NgModule
+            providers are frequently preferred for non-root, module scoped services in applications where tree-shaking
+            is usually irrelevant. Additionally, libraries commonly export services from modules in order to manage
+            dependencies. Consider enabling this rule for libraries to ensure proper tree-shaking when appropriate.
+        */
+        '@angular-eslint/use-injectable-provided-in': 'off'
     }
 };
