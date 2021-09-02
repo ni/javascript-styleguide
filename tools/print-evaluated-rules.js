@@ -13,6 +13,7 @@ const angularTemplateRules = require('../angular-template').rules;
     const configTypescript = await eslint.calculateConfigForFile(`${__dirname}/../test/typescript/index.js`);
     const configTypescriptTypechecked = await eslint.calculateConfigForFile(`${__dirname}/../test/typescript-type-checking/index.js`);
     const configAngular = await eslint.calculateConfigForFile(`${__dirname}/../test/angular/index.ts`);
+    const configAngularTemplate = await eslint.calculateConfigForFile(`${__dirname}/../test/angular/index.html`);
 
     const getDivergedRules = rules => (
         Object.keys(rules)
@@ -46,5 +47,6 @@ const angularTemplateRules = require('../angular-template').rules;
     global.console.log(`Evaluated TypeScript rules has warn?: ${hasWarn(configTypescript)}`);
     global.console.log(`Evaluated TypeScript type checking rules has warn?: ${hasWarn(configTypescriptTypechecked)}`);
     global.console.log(`Evaluated Angular rules has warn?: ${hasWarn(configAngular)}`);
+    global.console.log(`Evaluated Angular Template rules has warn?: ${hasWarn(configAngularTemplate)}`);
     global.console.log(`Angular has diverged rules?: ${angularHasDivergedRules}`);
 })();

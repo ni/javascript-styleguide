@@ -77,6 +77,8 @@ module.exports = {
 
         '@typescript-eslint/no-unnecessary-type-arguments': 'error',
 
+        '@typescript-eslint/no-unsafe-argument': 'error',
+
         '@typescript-eslint/non-nullable-type-assertion-style': 'error',
 
         '@typescript-eslint/prefer-includes': 'error',
@@ -103,6 +105,8 @@ module.exports = {
         '@typescript-eslint/prefer-readonly-parameter-types': 'off',
 
         '@typescript-eslint/prefer-reduce-type-parameter': 'error',
+
+        '@typescript-eslint/prefer-return-this-type': 'error',
 
         '@typescript-eslint/prefer-string-starts-ends-with': 'error',
 

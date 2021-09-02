@@ -16,18 +16,26 @@ module.exports = {
             There currently isn't an NI organization wide requirement to enforce accessibility in applications. These
             rules should be considered if individual applications prioritize it. They may be enabled in the future as
             the priority of accessibility increases.
-
-            '@angular-eslint/template/accessibility-alt-text': 'error',
-            '@angular-eslint/template/accessibility-elements-content': 'error',
-            '@angular-eslint/template/accessibility-label-has-associated-control': 'error',
-            '@angular-eslint/template/accessibility-table-scope': 'error',
-            '@angular-eslint/template/click-events-have-key-events': 'error',
-            '@angular-eslint/template/mouse-events-have-key-events': 'error',
-            '@angular-eslint/template/no-autofocus': 'error',
-            '@angular-eslint/template/no-positive-tabindex': 'error'
         */
+        '@angular-eslint/template/accessibility-alt-text': 'off',
 
+        '@angular-eslint/template/accessibility-elements-content': 'off',
+
+        '@angular-eslint/template/accessibility-label-for': 'off',
+
+        '@angular-eslint/template/accessibility-label-has-associated-control': 'off',
+
+        '@angular-eslint/template/accessibility-table-scope': 'off',
+
+        /*
+            Enabled as the rule validates usage of aria attributes when used but does not require their usage.
+        */
         '@angular-eslint/template/accessibility-valid-aria': 'error',
+
+        /*
+            This rule primarily impacts accessibility so currently requires enforcement per project.
+        */
+        '@angular-eslint/template/click-events-have-key-events': 'off',
 
         '@angular-eslint/template/conditional-complexity': 'error',
 
@@ -40,7 +48,17 @@ module.exports = {
         */
         '@angular-eslint/template/i18n': ['error', { checkText: true }],
 
+        /*
+            This rule primarily impacts accessibility so currently requires enforcement per project.
+        */
+        '@angular-eslint/template/mouse-events-have-key-events': 'off',
+
         '@angular-eslint/template/no-any': 'error',
+
+        /*
+            This rule primarily impacts accessibility so currently requires enforcement per project.
+        */
+        '@angular-eslint/template/no-autofocus': 'off',
 
         /*
             When considering efficient bindings use memoization and pipes. Avoid heavy array iteratoration, nested
@@ -52,6 +70,13 @@ module.exports = {
 
         '@angular-eslint/template/no-distracting-elements': 'error',
 
-        '@angular-eslint/template/no-duplicate-attributes': 'error'
+        '@angular-eslint/template/no-duplicate-attributes': 'error',
+
+        /*
+            This rule primarily impacts accessibility so currently requires enforcement per project.
+        */
+        '@angular-eslint/template/no-positive-tabindex': 'off',
+
+        '@angular-eslint/template/use-track-by-function': 'off'
     }
 };

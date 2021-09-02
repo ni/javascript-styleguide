@@ -24,7 +24,7 @@ module.exports = {
         */
 
         /*
-            Configure this rule as an error.
+            Upgrade the recommended rule configuration from a warning to an error.
         */
         '@angular-eslint/use-lifecycle-interface': 'error',
 
@@ -43,6 +43,11 @@ module.exports = {
         */
         '@angular-eslint/component-max-inline-declarations': ['error', { animations: 15, styles: 15, template: 15 }],
 
+        /*
+            If your application uses a specific prefix for components you may want to enable this rule
+        */
+        '@angular-eslint/component-selector': 'off',
+
         '@angular-eslint/contextual-decorator': 'error',
 
         /*
@@ -53,12 +58,28 @@ module.exports = {
 
         '@angular-eslint/no-attribute-decorator': 'error',
 
+        '@angular-eslint/no-forward-ref': 'off',
+
+        '@angular-eslint/no-input-prefix': 'off',
+
         '@angular-eslint/no-lifecycle-call': 'error',
+
         '@angular-eslint/no-pipe-impure': 'error',
+
         '@angular-eslint/no-queries-metadata-property': 'error',
+
         '@angular-eslint/pipe-prefix': 'error',
+
+        '@angular-eslint/prefer-on-push-component-change-detection': 'off',
+
+        '@angular-eslint/prefer-output-readonly': 'off',
+
         '@angular-eslint/relative-url-prefix': 'error',
+
+        '@angular-eslint/sort-ngmodule-metadata-arrays': 'off',
+
         '@angular-eslint/use-component-selector': 'error',
+
         '@angular-eslint/use-component-view-encapsulation': 'error',
 
         /*
