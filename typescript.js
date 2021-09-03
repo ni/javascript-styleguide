@@ -12,8 +12,14 @@ module.exports = {
             https://github.com/benmosher/eslint-plugin-import/blob/master/config/typescript.js
         */
 
+        /*
+            Already enforced by TypeScript compiler.
+        */
         'import/named': 'off',
 
+        /*
+            Already enforced by TypeScript compiler.
+        */
         'import/no-unresolved': 'off',
 
         /*
@@ -165,10 +171,17 @@ module.exports = {
 
         '@typescript-eslint/no-require-imports': 'error',
 
+        /*
+            Type aliases are in-use in many applications and do not seem to generally be abused
+            by, for example, aliasing built-in types unnecessarily.
+        */
         '@typescript-eslint/no-type-alias': 'off',
 
         '@typescript-eslint/no-unnecessary-type-constraint': 'error',
 
+        /*
+            As the rule is experimental it is not enabled by default.
+        */
         '@typescript-eslint/no-unused-vars-experimental': 'off',
 
         /*
@@ -188,10 +201,18 @@ module.exports = {
 
         '@typescript-eslint/prefer-ts-expect-error': 'error',
 
+        /*
+            Generally not expected in practice to sort union intersection members.
+            Projects may enable if desired.
+        */
         '@typescript-eslint/sort-type-union-intersection-members': 'off',
 
         '@typescript-eslint/type-annotation-spacing': 'error',
 
+        /*
+            This rule is better enforced with the TypeScript `noImplicitAny` and
+            `strictPropertyInitialization` compiler options.
+        */
         '@typescript-eslint/typedef': 'off',
 
         '@typescript-eslint/unified-signatures': 'error'
