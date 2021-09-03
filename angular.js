@@ -43,9 +43,7 @@ module.exports = {
         */
         '@angular-eslint/component-max-inline-declarations': ['error', { animations: 15, styles: 15, template: 15 }],
 
-        /*
-            If your application uses a specific prefix for components you may want to enable this rule
-        */
+        /* [application-prefix] */
         '@angular-eslint/component-selector': 'off',
 
         '@angular-eslint/contextual-decorator': 'error',
@@ -74,6 +72,7 @@ module.exports = {
 
         '@angular-eslint/no-queries-metadata-property': 'error',
 
+        /* [application-prefix] */
         '@angular-eslint/pipe-prefix': 'error',
 
         '@angular-eslint/prefer-on-push-component-change-detection': 'off',

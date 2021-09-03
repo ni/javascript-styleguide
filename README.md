@@ -88,9 +88,7 @@ configure ESLint for Angular projects** especially when migrating from TSLint. [
     ```bash
     ng g @angular-eslint/schematics:convert-tslint-to-eslint <PROJECT NAME>
     ```
-4. Enable these application-specific rules if your application uses a specific prefix for components or pipes.
-    - [@angular-eslint/component-selector](http://codelyzer.com/rules/component-selector)
-    - [@angular-eslint/pipe-prefix](http://codelyzer.com/rules/pipe-prefix)
+4. Evaluate the [project specific rule groups](#evaluate-project-specific-rule-groups) to manually add to your lint configuration. For Angular applications in particular, consider enabling the [`[application-prefix]`](#application-prefix) rule group.
 
 ## Usage
 
@@ -135,7 +133,13 @@ Several sets of rules may be enabled based on requirements of a given project. B
 
 Text search for the tag associated with a specific rule group in the repository to find the related rules. If enabling a rule group, the rules should be toggled from `'off'` to `'error'` unless the rule comment says otherwise.
 
-#### Strict null checking
+#### Application prefix
+
+Tag: `[application-prefix]`
+
+Prefixes are generally added to named objects such as the selector for Components in Angular applications. Projects should consider enabling this rule group so that names can be consistently prefixed making them easier to share between applications and to minimize the chance of conflicts when using shared libraries.
+
+#### Strict null checks
 
 Tag: `[strict-null-checks]`
 
@@ -195,7 +199,7 @@ ESLint offers several [ways to disable a rule for a line or file](https://eslint
 
 Modern IDEs can be configured to provide live feedback about ESLint errors.
 
-**Visual Studio Code**
+#### Visual Studio Code
 
 Install the [ESLint Extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
 
@@ -213,7 +217,7 @@ You can [configure a repository to prompt developers to install this extension](
 
 Follow the `@angular-eslint` [instructions](https://github.com/angular-eslint/angular-eslint#linting-html-files-and-inline-templates-with-the-vscode-extension-for-eslint) for linting HTML files and inline-templates with Angular.
 
-**JetBrains WebStorm**
+#### JetBrains WebStorm
 
 Follow the [instructions in the WebStorm documentation](https://www.jetbrains.com/help/webstorm/eslint.html#ws_js_eslint_activate) to activate and configure ESLint automatically in the Settings ≫ Preferences dialog.
 
