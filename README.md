@@ -129,6 +129,30 @@ Each project's pull request build pipeline should ensure no lint errors can be c
 
 Typically steps 1-3 will happen in a single pull request (or a few in quick succession) while step 4 will be split across many subsequent submissions as time permits.
 
+### Evaluate project-specific rule groups
+
+Several sets of rules may be enabled based on requirements of a given project. By default the following sets of rules are in an inert / disabled state, but should be evaluated for your integration.
+
+Text search for the tag associated with a specific rule group in the repository to find the related rules. If enabling a rule group, the rules should be toggled from `'off'` to `'error'` unless the rule comment says otherwise.
+
+#### Strict null checking
+
+Tag: `[strict-null-checks]`
+
+When `strictNullChecks` are enabled the values `null` and `undefined` are treated as distinct types by the compiler. For example, with `strictNullChecks` enabled, the value `null` could not be directly assigned to a binding of a `Cat` object, ie `const cat: Cat = null` would be a compile error. The `null` value is a distinct type and the binding would have to explicitly state that it can have a `null` value, ie `const cat: Cat | null = null;`.
+
+`strictNullChecks` are a powerful tool for code correctness and give us a way to avoid ["The Billion Dollar Mistake"](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/). However, it can be impractical to retrofit `strictNullChecks` configuration into an existing application and requires expanding your mental model for software development for use in new applications.
+
+As such, `strictNullChecks` are not recommended by default in order to prevent overhead of rule adoption for existing applications.
+
+However, we encourage new applications to leverage `strictNullChecks` for development. Enabling `strictNullChecks` is the TypeScript compiler recommendation and it is enabled by default in new Angular applications.
+
+#### Accessibility
+
+Tag: `[accessibility]`
+
+There currently isn't an NI organization wide requirement to enforce accessibility in applications. The rule group should be enabled if individual applications prioritize accessibility.
+
 ### Globally disable rules that don't apply to a codebase or directory
 
 A project should strive to adopt this configuration as fully as possible, but there are valid reasons to disable a rule across a codebase or specific directory:

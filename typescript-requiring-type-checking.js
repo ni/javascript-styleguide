@@ -61,16 +61,10 @@ module.exports = {
 
         '@typescript-eslint/no-confusing-void-expression': ['error', { ignoreArrowShorthand: true }],
 
-        /*
-            This rule requires the TypeScript strictNullChecks compiler flag. If strictNullChecks is enabled,
-            consider enabling this rule.
-        */
+        /* [strict-null-checks] */
         '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'off',
 
-        /*
-            This rule requires the TypeScript strictNullChecks compiler flag. If strictNullChecks is enabled,
-            consider enabling this rule.
-        */
+        /* [strict-null-checks] */
         '@typescript-eslint/no-unnecessary-condition': 'off',
 
         '@typescript-eslint/no-unnecessary-qualifier': 'error',
@@ -115,7 +109,7 @@ module.exports = {
         '@typescript-eslint/require-array-sort-compare': 'error',
 
         /*
-            This rule requires the TypeScript strictNullChecks compiler flag. If strictNullChecks is enabled, disallow numbers
+            [strict-null-checks] This rule requires the TypeScript strictNullChecks compiler flag. If strictNullChecks is enabled, disallow numbers
             with the following configuration:
             '@typescript-eslint/strict-boolean-expressions': ['error', {
                 allowNumber: false,
