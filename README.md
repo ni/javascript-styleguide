@@ -135,13 +135,13 @@ Text search for the tag associated with a specific rule group in the repository 
 
 #### Application prefix
 
-Tag: [`[application-prefix]`](https://github.com/ni/javascript-styleguide/search?q=%5Bapplication-prefix%5D)
+Tag: [`[application-prefix]`](https://github.com/ni/javascript-styleguide/search?q=%5Bapplication-prefix%5D&type=code)
 
 Prefixes are generally added to named objects such as the selector for Components in Angular applications. Projects should consider enabling this rule group so that names can be consistently prefixed making them easier to share between applications and to minimize the chance of conflicts when using shared libraries.
 
 #### Strict null checks
 
-Tag: [`[strict-null-checks]`](https://github.com/ni/javascript-styleguide/search?q=%5Bstrict-null-checks%5D)
+Tag: [`[strict-null-checks]`](https://github.com/ni/javascript-styleguide/search?q=%5Bstrict-null-checks%5D&type=code)
 
 When `strictNullChecks` are enabled the values `null` and `undefined` are treated as distinct types by the compiler. For example, with `strictNullChecks` enabled, the value `null` could not be directly assigned to a binding of a `Cat` object, ie `const cat: Cat = null` would be a compile error. The `null` value is a distinct type and the binding would have to explicitly state that it can have a `null` value, ie `const cat: Cat | null = null;`.
 
@@ -153,7 +153,7 @@ However, we encourage new applications to leverage `strictNullChecks` for develo
 
 #### Accessibility
 
-Tag: [`[accessibility]`](https://github.com/ni/javascript-styleguide/search?q=%5Baccessibility%5D)
+Tag: [`[accessibility]`](https://github.com/ni/javascript-styleguide/search?q=%5Baccessibility%5D&type=code)
 
 There currently isn't an NI organization wide requirement to enforce accessibility in applications. The rule group should be enabled if individual applications prioritize accessibility.
 
