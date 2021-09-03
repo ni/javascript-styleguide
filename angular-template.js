@@ -69,6 +69,9 @@ module.exports = {
         /* [accessibility] */
         '@angular-eslint/template/no-positive-tabindex': 'off',
 
+        /*
+            Providing a `trackBy` function in `ngFor` loops can improve performance in specific cases where Angular can't track references, but it's overkill to require it for every `ngFor` so this rule is disabled.
+        */
         '@angular-eslint/template/use-track-by-function': 'off'
     }
 };

@@ -58,8 +58,14 @@ module.exports = {
 
         '@angular-eslint/no-attribute-decorator': 'error',
 
+        /*
+            `forwardRef` is needed for certain Dependency Injection use cases and abuse is not widespread so its use is permitted.
+        */
         '@angular-eslint/no-forward-ref': 'off',
 
+        /*
+            We don't yet have a general naming conventions so enforcing a convention just for inputs would be inconsistent.
+        */
         '@angular-eslint/no-input-prefix': 'off',
 
         '@angular-eslint/no-lifecycle-call': 'error',
