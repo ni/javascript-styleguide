@@ -24,7 +24,7 @@ module.exports = {
         */
 
         /*
-            Configure this rule as an error.
+            Upgrade the recommended rule configuration from a warning to an error.
         */
         '@angular-eslint/use-lifecycle-interface': 'error',
 
@@ -43,6 +43,9 @@ module.exports = {
         */
         '@angular-eslint/component-max-inline-declarations': ['error', { animations: 15, styles: 15, template: 15 }],
 
+        /* [application-prefix] */
+        '@angular-eslint/component-selector': 'off',
+
         '@angular-eslint/contextual-decorator': 'error',
 
         /*
@@ -53,12 +56,47 @@ module.exports = {
 
         '@angular-eslint/no-attribute-decorator': 'error',
 
+        /*
+            `forwardRef` is needed for certain Dependency Injection use cases and abuse is not widespread so its use is permitted.
+        */
+        '@angular-eslint/no-forward-ref': 'off',
+
+        /*
+            We don't yet have a general naming conventions so enforcing a convention just for inputs would be inconsistent.
+        */
+        '@angular-eslint/no-input-prefix': 'off',
+
         '@angular-eslint/no-lifecycle-call': 'error',
+
         '@angular-eslint/no-pipe-impure': 'error',
+
         '@angular-eslint/no-queries-metadata-property': 'error',
+
+        /* [application-prefix] */
         '@angular-eslint/pipe-prefix': 'error',
+
+        /*
+            This rule is for specific applications such as libraries that want to minimize global dependencies or parts
+            of an application that have specific performance goals.
+        */
+        '@angular-eslint/prefer-on-push-component-change-detection': 'off',
+
+        /*
+            While marking @Output properties as readonly does better capture the intention of how they should generally be used,
+            it does not appear that there is wide-spread abuse of not marking @Output properties readonly. Marking them readonly
+            would deviate from the style given in most Angular docs and examples so this rule is not enabled.
+        */
+        '@angular-eslint/prefer-output-readonly': 'off',
+
         '@angular-eslint/relative-url-prefix': 'error',
+
+        /*
+            Generally not expected in practice to sort NgModule metadata arrays. Projects may enable if desired.
+        */
+        '@angular-eslint/sort-ngmodule-metadata-arrays': 'off',
+
         '@angular-eslint/use-component-selector': 'error',
+
         '@angular-eslint/use-component-view-encapsulation': 'error',
 
         /*
