@@ -1,9 +1,9 @@
 module.exports = {
     extends: [
-        './index',
+        '@ni/eslint-config-javascript',
         'plugin:@typescript-eslint/recommended',
         'plugin:import/typescript',
-        './lib/typescript-extensions'
+        './lib/extensions'
     ],
     parser: '@typescript-eslint/parser',
     rules: {

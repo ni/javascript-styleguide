@@ -1,7 +1,7 @@
 module.exports = {
     extends: [
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
-        './lib/typescript-extensions-requiring-type-checking'
+        './lib/extensions-requiring-type-checking'
     ],
     parser: '@typescript-eslint/parser',
     rules: {

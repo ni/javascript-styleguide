@@ -1,6 +1,8 @@
 module.exports = {
-    extends: ['../../typescript', '../../typescript-requiring-type-checking'],
-    root: true,
+    extends: [
+        '@ni/eslint-config-typescript',
+        '@ni/eslint-config-typescript/requiring-type-checking'
+    ],
     ignorePatterns: ['*.js'],
     parserOptions: {
         project: ['./tsconfig.json'],
@@ -8,4 +10,5 @@ module.exports = {
         // https://stackoverflow.com/questions/64933543/parsing-error-cannot-read-file-tsconfig-json-eslint
         tsconfigRootDir: __dirname,
     },
+    root: true
 };

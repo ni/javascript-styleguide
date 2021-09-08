@@ -27,6 +27,7 @@ The rules build on several exisiting rulesets such as the airbnb ruleset, the es
 
 When the command is run it will print a JSON representation of each of the maintained rulesets. In addition the command will print the result of some audits that try to detect patterns we want to avoid, such as rules configured with a `warn` severity level.
 
+<!--
 ## Release workflow
 
 A manual versioning strategy is used based on the `npm version` command workflow.
@@ -57,6 +58,7 @@ Example running the release commands as a project administrator:
 > npm version minor -m "%s Whitespace for function parameters changed"
 > git push --follow-tags
 ```
+-->
 
 ### Rules for version change
 
