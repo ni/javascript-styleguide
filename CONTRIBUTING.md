@@ -13,9 +13,9 @@ Some overarching principles that are used for defining the rulesets:
 
 Several scripts are provided for local development to help audit changes to the ruleset.
 
-### Checking for new TypeScript rules
+### Checking for new rules
 
-When updating the TypeScript rule npm packages the `npm run print-typescript-properties` command can be used to print all the available rules.
+When updating dependencies the `npm run print-available-rules` command can be used to print all the available rules.
 
 **Note:** This command does not print what rules are currently used but instead prints all the rules that are available.
 
@@ -25,7 +25,7 @@ The TypeScript extension rules (which are rules that extend the behavior of exis
 
 The rules build on several exisiting rulesets such as the airbnb ruleset, the eslint recommended ruleset, the TypeScript recommended ruleset, etc. The `npm run print-evaluated-rules` commands helps to audit the final resolved rule values.
 
-When the command is run it will print a JSON representation of each of the maintained rulesets. In addition the command will print the result of some audits that try to detect patterns we want to avoid, such as rules configured with a `warn` severity level.
+When the command is run it will print the result of some audits that try to detect patterns we want to avoid, such as rules configured with a `warn` severity level.
 
 <!--
 ## Release workflow
