@@ -8,9 +8,11 @@
     },
     "dependencies": {
         "@angular-eslint/eslint-plugin": "*",
+        "@ni/angular-test": "*",
         "@ni/eslint-config-angular": "*",
-        "@ni/eslint-config-javascript": "*",
-        "@ni/eslint-config-typescript": "*",
+        "@ni/javascript-test": "*",
+        "@ni/typescript-test": "*",
+        "@ni/typescript-requiring-type-checking-test": "*",
         "eslint": "*"
     }
 }

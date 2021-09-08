@@ -9,11 +9,11 @@ const angularTemplateRules = require('@ni/eslint-config-angular/template').rules
     };
 
     const eslint = new ESLint();
-    const configEslint = await eslint.calculateConfigForFile(`${__dirname}/../javascript/index.js`);
-    const configTypescript = await eslint.calculateConfigForFile(`${__dirname}/../typescript/index.ts`);
-    const configTypescriptTypechecked = await eslint.calculateConfigForFile(`${__dirname}/../typescript-requiring-type-checking/index.ts`);
-    const configAngular = await eslint.calculateConfigForFile(`${__dirname}/../angular/index.ts`);
-    const configAngularTemplate = await eslint.calculateConfigForFile(`${__dirname}/../angular/index.html`);
+    const configEslint = await eslint.calculateConfigForFile(require.resolve('@ni/javascript-test/index.js'));
+    const configTypescript = await eslint.calculateConfigForFile(require.resolve('@ni/typescript-test/index.ts'));
+    const configTypescriptTypechecked = await eslint.calculateConfigForFile(require.resolve('@ni/typescript-requiring-type-checking-test/index.ts'));
+    const configAngular = await eslint.calculateConfigForFile(require.resolve('@ni/angular-test/index.ts'));
+    const configAngularTemplate = await eslint.calculateConfigForFile(require.resolve('@ni/angular-test/index.html'));
 
     const getDivergedRules = rules => (
         Object.keys(rules)
