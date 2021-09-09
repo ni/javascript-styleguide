@@ -22,11 +22,11 @@ module.exports = {
         '@typescript-eslint/prefer-regexp-exec': 'off',
 
         /*
-            This rule can be confusing if you're not familiar with JavaScript's rules for binding `this`, 
+            This rule can be confusing if you're not familiar with JavaScript's rules for binding `this`,
             but in our experience when it reports an error it is usually indicitave of a real bug.
             
             Common ways to resolve this error include:
-            1. Wrapping the function with an arrow function, which establishes `this` based on the context 
+            1. Wrapping the function with an arrow function, which establishes `this` based on the context
                the function is defined in rather than where it's called from.
                ```
                     // Good, this will refer to the class where this code is defined
