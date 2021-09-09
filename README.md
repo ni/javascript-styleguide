@@ -129,7 +129,7 @@ jobs:
 
 ### Azure Pipelines
 
-Use the [npm task](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/package/npm?view=azure-devops).
+Use the [npm task](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/package/npm?view=azure-devops) to run the lint command.
 
 ```yml
   - task: Npm@1
