@@ -50,6 +50,7 @@ module.exports = {
                     // Bad, removeEventListener isn't removing the original handler
                     elt.addEventListener('click', event => this.clickHandler());
                     elt.removeEventListener('click', event => this.clickHandler());
+            3. Changing the function to be static if it doesn't need to refer to the `this` instance.
         */
         '@typescript-eslint/unbound-method': ['error', { ignoreStatic: true }],
 
