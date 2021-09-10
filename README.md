@@ -68,20 +68,19 @@ configure ESLint for Angular projects** especially when migrating from TSLint. [
     ```bash
     > ng add @angular-eslint/schematics
     ```
-2. Extend `@ni/eslint-config/typescript` and `@ni/eslint-config/typescript-requiring-type-checking` in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats) for TypeScript and templates.
+2. Extend `@ni/eslint-config/angular` and `@ni/eslint-config/typescript-requiring-type-checking` in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats) for TypeScript and `@ni/eslint-config/angular-template` for templates.
     ```js
     overrides: [{
         files: ['*.ts'],
         // ...
         extends: [
-            'plugin:@angular-eslint/base',
-            '@ni/eslint-config/typescript',
+            '@ni/eslint-config/angular',
             '@ni/eslint-config/typescript-requiring-type-checking'
         ]
     }, {
         files: ['*.html']
         // ...
-        extends: ['plugin:@angular-eslint/template/base'],
+        extends: ['@ni/eslint-config/angular-template'],
     }]
     ```
 3. **For existing workspaces**, [migrate each project](https://github.com/angular-eslint/angular-eslint#migrating-an-angular-cli-project-from-codelyzer-and-tslint). When all projects have been migrated, new applications and libraries will be generated with ESLint as well. Enter yes for both options to remove TSLint and ignore its configuration.
@@ -117,7 +116,7 @@ Each project's pull request build pipeline should ensure no lint errors can be c
 
 ### Enable as early as possible
 
-**New projects** should turn on linting before writing any code. It's easier to fix violations as developers add new code than it is to fix large numbers of lint errors across an existing codebase. 
+**New projects** should turn on linting before writing any code. It's easier to fix violations as developers add new code than it is to fix large numbers of lint errors across an existing codebase.
 
 **Existing projects** are likely to have numerous violations even if they already used a different linter (for example, the deprecated [TSLint](https://www.npmjs.com/package/tslint)) as this ruleset is more strict than most. The recommended flow for adopting this ruleset in an existing repository is:
 1. Install the tooling as described above.
