@@ -50,7 +50,7 @@ module.exports = {
                     // Bad, removeEventListener isn't removing the original handler
                     elt.addEventListener('click', event => this.clickHandler());
                     elt.removeEventListener('click', event => this.clickHandler());
-            3. Changing the function to be static if it doesn't need to refer to the `this` instance.
+            3. If the function doesn't use `this` to refer to an instance or other static members, you can change the function to be static and the rule will ignore it.
         */
         '@typescript-eslint/unbound-method': ['error', { ignoreStatic: true }],
 
