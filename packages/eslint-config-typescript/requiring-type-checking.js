@@ -21,6 +21,37 @@ module.exports = {
         */
         '@typescript-eslint/prefer-regexp-exec': 'off',
 
+        /*
+            This rule can be confusing if you're not familiar with JavaScript's rules for binding `this`,
+            but in our experience when it reports an error it is usually indicitave of a real bug.
+
+            Common ways to resolve this error include:
+            1. Wrapping the function with an arrow function, which establishes `this` based on the context
+               the function is defined in rather than where it's called from.
+               ```
+                    // Good, this will refer to the class where this code is defined
+                    array.sort(() => this.compare());
+
+                    // Bad, this will refer to the context where this code is invoked from
+                    array.sort(this.compare);
+                ```
+            2. For callbacks passed to `addEventListener` which need to be referenced in `removeEventListener`,
+               the arrow function should be stored in a variable since it must refer to the same instance of the function.
+               ```
+                    // Good
+                    const handler = event => this.clickHandler();
+                    elt.addEventListener('click', handler);
+                    elt.removeEventListener('click', handler);
+
+                    // Bad, violates this rule
+                    elt.addEventListener('click', this.clickHandler);
+                    elt.removeEventListener('click', this.clickHandler);
+
+                    // Bad, removeEventListener isn't removing the original handler
+                    elt.addEventListener('click', event => this.clickHandler());
+                    elt.removeEventListener('click', event => this.clickHandler());
+            3. If the function doesn't use `this` to refer to an instance or other static members, you can change the function to be static and the rule will ignore it.
+        */
         '@typescript-eslint/unbound-method': ['error', { ignoreStatic: true }],
 
         /*

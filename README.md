@@ -140,7 +140,7 @@ Each project's pull request build pipeline should ensure no lint errors can be c
 
 ### Enable as early as possible
 
-**New projects** should turn on linting before writing any code. It's easier to fix violations as developers add new code than it is to fix large numbers of lint errors across an existing codebase. 
+**New projects** should turn on linting before writing any code. It's easier to fix violations as developers add new code than it is to fix large numbers of lint errors across an existing codebase.
 
 **Existing projects** are likely to have numerous violations even if they already used a different linter (for example, the deprecated [TSLint](https://www.npmjs.com/package/tslint)) as this ruleset is more strict than most. The recommended flow for adopting this ruleset in an existing repository is:
 1. Install the tooling as described above.
