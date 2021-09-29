@@ -8,7 +8,11 @@
     "pack": "npm --workspaces --if-present run pack",
     "print-available-rules": "npm --workspaces --if-present run print-available-rules",
     "print-evaluated-rules": "npm --workspaces --if-present run print-evaluated-rules",
-    "test": "npm --workspaces --if-present test"
+    "test": "npm --workspaces --if-present test",
+    "change": "beachball change",
+    "check": "beachball check --changehint \"Run 'npm run change' to generate a change file\"",
+    "publish": "beachball publish --message \"applying package updates [skip ci]\"",
+    "publish-ci": "beachball publish --yes --access public --message \"applying package updates [skip ci]\""
   },
   "repository": {
     "type": "git",
@@ -37,5 +41,8 @@
     "tests/typescript-requiring-type-checking",
     "tests/angular",
     "tests/print-evaluated-rules"
-  ]
+  ],
+  "devDependencies": {
+    "beachball": "^2.6.2"
+  }
 }

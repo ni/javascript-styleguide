@@ -35,36 +35,12 @@ The goal of the smoke tests is basic validation that the eslint configurations c
 
 ## Release workflow
 
-<!--
-A manual versioning strategy is used based on the `npm version` command workflow.
-After one or more changes have been merged into the default branch a project administrator will create a release using the following workflow:
+### Beachball change file
 
-1. Sync a local clone of the repository checked out on the default branch with the latest commits to release.
-2. Run the npm version command in the following format:
+This repository uses [beachball](https://microsoft.github.io/beachball/) to automate publishing its packages to NPM. The basic workflow is as follows:
 
-   `npm version <version_change> -m "%s <change_description>"`
-
-   Note: See [rules for version change](#rules-for-version-change) for notes on choosing the value of `<version_change>`.
-
-   The `npm version` command will perform the following actions:
-
-   1. `npm version` will update the version field in the package.json and package-lock.json.
-   2. `npm version` will create a commit message for the updated files using the value passed to the `-m` parameter.
-
-       Note: the literal string `%s` will be substituted with the new version number.
-   3. `npm version` will create an annotated git tag on the commit with the version number and message.
-3. Push the changes to GitHub with the newly created tag using:
-
-   `git push --follow-tags`
-4. The release pipeline will be triggered by the new tag and publish the new package.
-
-Example running the release commands as a project administrator:
-
-```bash
-> npm version minor -m "%s Whitespace for function parameters changed"
-> git push --follow-tags
-```
--->
+1. Every pull request that affects a published package must contain a "change file" which specifies how it affects the versions of each package and includes a description of the change. Developers generate this change file by running `npm run change` before creating the pull request.
+1. After the pull request completes, a CI pipeline will inspect the change files to generate changelogs, bump versions in package.json, and publish the newly built packages to NPM.
 
 ### Rules for version change
 
