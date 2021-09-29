@@ -15,31 +15,33 @@ Welcome to NI's JavaScript and TypeScript linter rules for [ESLint](https://esli
 
 ## Installation
 
-If you are using npm 7 or greater, install the package for your corresponding language:
+Install the package for your corresponding language as a development dependency:
 
 - For JavaScript run: 
 
     ```bash
-    npm install @ni/eslint-config-javascript
+    npm install -D @ni/eslint-config-javascript
     ```
 
    Then follow the [JavaScript configuration](#javascript-configuration) instructions.
 - For TypeScript run:
 
     ```bash
-    npm install @ni/eslint-config-typescript
+    npm install -D @ni/eslint-config-typescript
     ```
 
     Then follow the [TypeScript configuration](#typescript-configuration) instructions.
 - For Angular run:
 
     ```bash
-    npm install @ni/eslint-config-angular
+    npm install -D @ni/eslint-config-angular
     ```
 
     Then follow the [Angular configuration](#angular-configuration) instructions.
 
-If you are using npm 6 or lower, use the following instructions to manually install peer dependencies:
+With npm 7 and up the required peer dependencies will be installed automatically and you can move on to [Configuration](#configuration).
+
+If you are using npm 6 or lower, use the following instructions to manually install the required peer dependencies:
 
 Use [`npm view`](https://docs.npmjs.com/cli/view.html) to list the correct versions of each peer package to install yourself. For example, with a JavaScript project run:
 

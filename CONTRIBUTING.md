@@ -27,9 +27,15 @@ The rules build on several exisiting rulesets such as the airbnb ruleset, the es
 
 When the command is run it will print the result of some audits that try to detect patterns we want to avoid, such as rules configured with a `warn` severity level.
 
-<!--
+## Smoke tests
+
+The `/tests` folder contains different smoke tests for basic validation of the lint rules. The smoke tests represent a project that has integrated the relevant eslint configuration and has a simple test file that the toolchain is evaluated on.
+
+The goal of the smoke tests is basic validation that the eslint configurations can be run in a project without error.
+
 ## Release workflow
 
+<!--
 A manual versioning strategy is used based on the `npm version` command workflow.
 After one or more changes have been merged into the default branch a project administrator will create a release using the following workflow:
 
