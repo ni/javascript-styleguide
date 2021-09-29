@@ -1,0 +1,12 @@
+{
+    "name": "@ni/typescript-requiring-type-checking-test",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Smoke test for TypeScript projects using type checking.",
+    "scripts": {
+        "test": "eslint ."
+    },
+    "devDependencies": {
+        "@ni/eslint-config-typescript": "^3.0.0"
+    }
+}

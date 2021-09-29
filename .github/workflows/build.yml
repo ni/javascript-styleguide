@@ -21,23 +21,14 @@ jobs:
     - run: npm ci
 
     # Build
-    - run: npm pack
+    - run: npm run pack
     - uses: actions/upload-artifact@v2
       with:
-        name: npm package
-        path: ./ni-eslint-config-*.tgz
+        name: packages
+        path: packages/**/*.tgz
         if-no-files-found: error
 
     # Test
-    - run: npm run test-typescript
-    - run: npm run test-typescript-typed
-    - run: npm run test-angular
-    - run: npm run print-typescript-properties
-    - run: npm run print-angular-properties
+    - run: npm test
+    - run: npm run print-available-rules
     - run: npm run print-evaluated-rules
-
-    # Publish
-    - if: startsWith(github.ref, 'refs/tags/v')
-      run: npm publish
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

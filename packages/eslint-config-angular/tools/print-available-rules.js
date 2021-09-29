@@ -16,9 +16,9 @@ const angularRecommended = sortedRules.filter(key => recommended(plugin.rules[ke
 const template = sortedTemplateRules.filter(key => !recommended(templatePlugin.rules[key]));
 const templateRecommended = sortedTemplateRules.filter(key => recommended(templatePlugin.rules[key]));
 
-global.console.log('Angular TypeScript Recommended:');
+global.console.log('Angular Recommended:');
 print(angularRecommended);
-global.console.log('Remaining Angular TypeScript Rules:');
+global.console.log('Remaining Angular Rules:');
 print(angular);
 global.console.log('Angular Template Recommended:');
 print(templateRecommended, '@angular-eslint/template');

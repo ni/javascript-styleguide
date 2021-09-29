@@ -1,7 +1,10 @@
 // Test TypeScript and templates together to process inline templates.
 module.exports = {
     overrides: [{
-        extends: '../../angular',
+        extends: [
+            '@ni/eslint-config-angular',
+            '@ni/eslint-config-typescript/requiring-type-checking'
+        ],
         files: ['*.ts'],
         parserOptions: {
             project: './tsconfig.json',
@@ -10,7 +13,7 @@ module.exports = {
             tsconfigRootDir: __dirname
         }
     }, {
-        extends: '../../angular-template',
+        extends: '@ni/eslint-config-angular/template',
         files: ['*.html']
     }],
     root: true

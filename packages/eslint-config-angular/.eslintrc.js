@@ -1,5 +1,5 @@
 module.exports = {
-    extends: './index',
+    extends: '@ni/eslint-config-javascript',
     rules: {
         'import/no-default-export': 'error'
     }

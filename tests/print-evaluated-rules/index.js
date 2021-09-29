@@ -1,7 +1,7 @@
 const { ESLint } = require('eslint');
 const angularExtraRules = require('@angular-eslint/eslint-plugin/dist/configs/recommended--extra.json').rules;
-const angularRules = require('../angular').rules;
-const angularTemplateRules = require('../angular-template').rules;
+const angularRules = require('@ni/eslint-config-angular').rules;
+const angularTemplateRules = require('@ni/eslint-config-angular/template').rules;
 
 (async () => {
     const hasWarn = function (config) {
@@ -9,11 +9,11 @@ const angularTemplateRules = require('../angular-template').rules;
     };
 
     const eslint = new ESLint();
-    const configEslint = await eslint.calculateConfigForFile(`${__dirname}/../test/eslint/index.js`);
-    const configTypescript = await eslint.calculateConfigForFile(`${__dirname}/../test/typescript/index.js`);
-    const configTypescriptTypechecked = await eslint.calculateConfigForFile(`${__dirname}/../test/typescript-type-checking/index.js`);
-    const configAngular = await eslint.calculateConfigForFile(`${__dirname}/../test/angular/index.ts`);
-    const configAngularTemplate = await eslint.calculateConfigForFile(`${__dirname}/../test/angular/index.html`);
+    const configEslint = await eslint.calculateConfigForFile(require.resolve('@ni/javascript-test/index.js'));
+    const configTypescript = await eslint.calculateConfigForFile(require.resolve('@ni/typescript-test/index.ts'));
+    const configTypescriptTypechecked = await eslint.calculateConfigForFile(require.resolve('@ni/typescript-requiring-type-checking-test/index.ts'));
+    const configAngular = await eslint.calculateConfigForFile(require.resolve('@ni/angular-test/index.ts'));
+    const configAngularTemplate = await eslint.calculateConfigForFile(require.resolve('@ni/angular-test/index.html'));
 
     const getDivergedRules = rules => (
         Object.keys(rules)
@@ -27,20 +27,6 @@ const angularTemplateRules = require('../angular-template').rules;
     const angularDivergedRules = Object.assign(getDivergedRules(angularRules), getDivergedRules(angularExtraRules));
     const angularTemplateDivergedRules = getDivergedRules(angularTemplateRules);
     const angularHasDivergedRules = !!Object.keys(angularDivergedRules).length || !!Object.keys(angularTemplateDivergedRules).length;
-
-    global.console.log('-------- Evaluated rules:');
-    global.console.log('Evaluated ESLint rules:');
-    global.console.log(JSON.stringify(configEslint, undefined, 4));
-    global.console.log('Evaluated TypeScript rules:');
-    global.console.log(JSON.stringify(configTypescript, undefined, 4));
-    global.console.log('Evaluated TypeScript type checking rules:');
-    global.console.log(JSON.stringify(configTypescriptTypechecked, undefined, 4));
-    global.console.log('Evaluated Angular rules:');
-    global.console.log(JSON.stringify(configAngular, undefined, 4));
-    global.console.log('Evaluated diverged Angular rules:');
-    global.console.log(JSON.stringify(angularDivergedRules, undefined, 4));
-    global.console.log('Evaluated diverged Angular template rules:');
-    global.console.log(JSON.stringify(angularTemplateDivergedRules, undefined, 4));
 
     global.console.log('-------- Audits:');
     global.console.log(`Evaluated ESLint rules has warn?: ${hasWarn(configEslint)}`);

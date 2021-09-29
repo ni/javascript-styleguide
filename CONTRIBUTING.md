@@ -13,9 +13,9 @@ Some overarching principles that are used for defining the rulesets:
 
 Several scripts are provided for local development to help audit changes to the ruleset.
 
-### Checking for new TypeScript rules
+### Checking for new rules
 
-When updating the TypeScript rule npm packages the `npm run print-typescript-properties` command can be used to print all the available rules.
+When updating dependencies the `npm run print-available-rules` command can be used to print all the available rules.
 
 **Note:** This command does not print what rules are currently used but instead prints all the rules that are available.
 
@@ -25,10 +25,17 @@ The TypeScript extension rules (which are rules that extend the behavior of exis
 
 The rules build on several exisiting rulesets such as the airbnb ruleset, the eslint recommended ruleset, the TypeScript recommended ruleset, etc. The `npm run print-evaluated-rules` commands helps to audit the final resolved rule values.
 
-When the command is run it will print a JSON representation of each of the maintained rulesets. In addition the command will print the result of some audits that try to detect patterns we want to avoid, such as rules configured with a `warn` severity level.
+When the command is run it will print the result of some audits that try to detect patterns we want to avoid, such as rules configured with a `warn` severity level.
+
+## Smoke tests
+
+The `/tests` folder contains different smoke tests for basic validation of the lint rules. The smoke tests represent a project that has integrated the relevant eslint configuration and has a simple test file that the toolchain is evaluated on.
+
+The goal of the smoke tests is basic validation that the eslint configurations can be run in a project without error.
 
 ## Release workflow
 
+<!--
 A manual versioning strategy is used based on the `npm version` command workflow.
 After one or more changes have been merged into the default branch a project administrator will create a release using the following workflow:
 
@@ -57,6 +64,7 @@ Example running the release commands as a project administrator:
 > npm version minor -m "%s Whitespace for function parameters changed"
 > git push --follow-tags
 ```
+-->
 
 ### Rules for version change
 
