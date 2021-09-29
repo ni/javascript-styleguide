@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "Place character in quotes in comment",
+  "packageName": "@ni/eslint-config-javascript",
+  "email": "rajsite@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
