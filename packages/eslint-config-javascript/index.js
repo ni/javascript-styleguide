@@ -278,7 +278,7 @@ module.exports = {
         /*
             Unused variables are not allowed as they're usually an indication of a programming error.
             In situations where they are required like unused callback function arguments,
-            indicate that the unused variable is intentional by pre-pending its name with _.
+            indicate that the unused variable is intentional by pre-pending its name with `_`.
         */
         'no-unused-vars': ['error', { vars: 'all', args: 'all', argsIgnorePattern: '^_', ignoreRestSiblings: true }],
 
