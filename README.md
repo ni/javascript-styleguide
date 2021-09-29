@@ -7,9 +7,9 @@
 
 # NI JavaScript and TypeScript Style Guide
 
-[![NPM Version](https://img.shields.io/npm/v/@ni/eslint-config-javascript.svg)](https://www.npmjs.com/package/@ni/eslint-config-javascript)
-[![NPM Version](https://img.shields.io/npm/v/@ni/eslint-config-typescript.svg)](https://www.npmjs.com/package/@ni/eslint-config-typescript)
-[![NPM Version](https://img.shields.io/npm/v/@ni/eslint-config-angular.svg)](https://www.npmjs.com/package/@ni/eslint-config-angular)
+[![NPM Version](https://img.shields.io/npm/v/@ni/eslint-config-javascript.svg?label=@ni/eslint-config-javascript)](https://www.npmjs.com/package/@ni/eslint-config-javascript)
+[![NPM Version](https://img.shields.io/npm/v/@ni/eslint-config-typescript.svg?label=@ni/eslint-config-typescript)](https://www.npmjs.com/package/@ni/eslint-config-typescript)
+[![NPM Version](https://img.shields.io/npm/v/@ni/eslint-config-angular.svg?label=@ni/eslint-config-angular)](https://www.npmjs.com/package/@ni/eslint-config-angular)
 
 Welcome to NI's JavaScript and TypeScript linter rules for [ESLint](https://eslint.org/docs/user-guide/getting-started).
 
