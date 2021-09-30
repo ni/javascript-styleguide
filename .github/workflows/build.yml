@@ -36,4 +36,5 @@ jobs:
     - run: npm run print-evaluated-rules
 
     # Check Changelog
-    - run: npm run check
+    - if: github.repository_owner == 'ni'
+      run: npm run check
