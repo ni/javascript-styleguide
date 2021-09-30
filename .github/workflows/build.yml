@@ -37,4 +37,4 @@ jobs:
 
     # Check Changelog
     - if: github.repository_owner == 'ni'
-    - run: npm run check
+      run: npm run check
