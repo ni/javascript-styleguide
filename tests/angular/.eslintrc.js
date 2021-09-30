@@ -14,7 +14,10 @@ module.exports = {
         }
     }, {
         extends: '@ni/eslint-config-angular/template',
-        files: ['*.html']
+        files: ['*.html'],
+        rules: {
+            '@angular-eslint/template/i18n': 'off'
+        }
     }],
     root: true
 };
