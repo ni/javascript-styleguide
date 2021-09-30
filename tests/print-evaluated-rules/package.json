@@ -1,0 +1,19 @@
+{
+    "name": "@ni/print-evaluated-rules-test",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Meta project used to analyze the integration tests.",
+    "scripts": {
+        "lint": "eslint .",
+        "print-evaluated-rules": "node index.js"
+    },
+    "dependencies": {
+        "@angular-eslint/eslint-plugin": "*",
+        "@ni/angular-test": "*",
+        "@ni/eslint-config-angular": "*",
+        "@ni/javascript-test": "*",
+        "@ni/typescript-test": "*",
+        "@ni/typescript-requiring-type-checking-test": "*",
+        "eslint": "*"
+    }
+}

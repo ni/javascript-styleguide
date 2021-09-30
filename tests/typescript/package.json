@@ -1,0 +1,12 @@
+{
+  "name": "@ni/typescript-test",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Smoke test for TypeScript project integration.",
+  "scripts": {
+    "test": "eslint ."
+  },
+  "devDependencies": {
+    "@ni/eslint-config-typescript": "^3.0.1"
+  }
+}
