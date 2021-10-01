@@ -1,0 +1,39 @@
+{
+  "name": "@ni/eslint-config-javascript",
+  "version": "3.0.1",
+  "description": "NI's JavaScript ESLint Shareable Config",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "pack": "npm pack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ni/javascript-styleguide.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "ni"
+  ],
+  "author": "National Instruments",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ni/javascript-styleguide/issues"
+  },
+  "homepage": "https://github.com/ni/javascript-styleguide#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "/*.js",
+    "!/.*.js"
+  ],
+  "dependencies": {
+    "eslint-config-airbnb-base": "~14.2.1"
+  },
+  "peerDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.24.2"
+  }
+}

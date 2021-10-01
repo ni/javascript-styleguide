@@ -1,57 +1,83 @@
 <div align="center">
     <div>
-        <!-- Load images from raw.githubusercontent.com to enable image rendering when viewed from https://www.npmjs.com/package/@ni/eslint-config -->
-        <img src="https://raw.githubusercontent.com/ni/javascript-styleguide/HEAD/resources/logo.svg" alt="JavaScript, TypeScript, and NI logo" width="300" height="100">
+        <!-- Load images from raw.githubusercontent.com to enable image rendering when viewed from npmjs.com -->
+        <img src="https://raw.githubusercontent.com/ni/javascript-styleguide/HEAD/docs/logo.svg" alt="JavaScript, TypeScript, and NI logo" width="300" height="100">
     </div>
 </div>
 
 # NI JavaScript and TypeScript Style Guide
 
-[![NPM Version](https://img.shields.io/npm/v/@ni/eslint-config.svg)](https://www.npmjs.com/package/@ni/eslint-config)
+[![NPM Version](https://img.shields.io/npm/v/@ni/eslint-config-javascript.svg?label=@ni/eslint-config-javascript)](https://www.npmjs.com/package/@ni/eslint-config-javascript)
+[![NPM Version](https://img.shields.io/npm/v/@ni/eslint-config-typescript.svg?label=@ni/eslint-config-typescript)](https://www.npmjs.com/package/@ni/eslint-config-typescript)
+[![NPM Version](https://img.shields.io/npm/v/@ni/eslint-config-angular.svg?label=@ni/eslint-config-angular)](https://www.npmjs.com/package/@ni/eslint-config-angular)
 
 Welcome to NI's JavaScript and TypeScript linter rules for [ESLint](https://eslint.org/docs/user-guide/getting-started).
 
 ## Installation
 
-Install `@ni/eslint-config` and its peer dependencies.
+Install the package for your corresponding language as a development dependency:
 
-Use [`npm view`](https://docs.npmjs.com/cli/view.html) to list the correct versions of each package to install yourself.
+- For JavaScript run: 
+
+    ```bash
+    npm install -D @ni/eslint-config-javascript
+    ```
+
+   Then follow the [JavaScript configuration](#javascript-configuration) instructions.
+- For TypeScript run:
+
+    ```bash
+    npm install -D @ni/eslint-config-typescript
+    ```
+
+    Then follow the [TypeScript configuration](#typescript-configuration) instructions.
+- For Angular run:
+
+    ```bash
+    npm install -D @ni/eslint-config-angular
+    ```
+
+    Then follow the [Angular configuration](#angular-configuration) instructions.
+
+With npm 7 and up the required peer dependencies will be installed automatically and you can move on to [Configuration](#configuration).
+
+If you are using npm 6 or lower, use the following instructions to manually install the required peer dependencies:
+
+Use [`npm view`](https://docs.npmjs.com/cli/view.html) to list the correct versions of each peer package to install yourself. For example, with a JavaScript project run:
 
 ```bash
-npm view @ni/eslint-config peerDependencies
+npm view @ni/eslint-config-javascript peerDependencies
 ```
 
-Alternatively, use [`npx install-peerdeps`](https://www.npmjs.com/package/install-peerdeps) as a shortcut to install the packages for you.
+Alternatively, use [`npx install-peerdeps`](https://www.npmjs.com/package/install-peerdeps) as a shortcut to install the peer packages for you. For example, with a JavaScript project run:
 
 ```bash
-npx install-peerdeps --dev @ni/eslint-config
+npx install-peerdeps --dev @ni/eslint-config-javascript
 ```
-
-### Angular Installation
-
-Follow the [instructions below](#angular) to use a schematic to install dependencies.
 
 ## Configuration
 
-### JavaScript
+After installing the lint configuration packages, follow the configuration instructions for your project language:
 
-Extend `@ni` in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats).
+### JavaScript configuration
+
+Extend `@ni/eslint-config-javascript` in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats).
 
 ```js
 {
-    extends: '@ni'
+    extends: '@ni/eslint-config-javascript'
 }
 ```
 
-### TypeScript
+### TypeScript configuration
 
-Extend `@ni/eslint-config/typescript` and `@ni/eslint-config/typescript-requiring-type-checking` in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
+Extend `@ni/eslint-config-typescript` and `@ni/eslint-config-typescript/requiring-type-checking` in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
 
 ```js
 {
     extends: [
-        '@ni/eslint-config/typescript',
-        '@ni/eslint-config/typescript-requiring-type-checking'
+        '@ni/eslint-config-typescript',
+        '@ni/eslint-config-typescript/requiring-type-checking'
     ],
     parserOptions: {
         project: 'tsconfig.json'
@@ -59,7 +85,7 @@ Extend `@ni/eslint-config/typescript` and `@ni/eslint-config/typescript-requirin
 }
 ```
 
-### Angular
+### Angular configuration
 
 ESLint support for Angular is provided by [`@angular-eslint`](https://github.com/angular-eslint/angular-eslint#readme). **It's recommended to use `@angular-eslint/schematics` to
 configure ESLint for Angular projects** especially when migrating from TSLint. [Use version 1.x.x](https://github.com/angular-eslint/angular-eslint#supported-angular-cli-versions) for Angular versions less than 11.2.0.
@@ -68,20 +94,19 @@ configure ESLint for Angular projects** especially when migrating from TSLint. [
     ```bash
     > ng add @angular-eslint/schematics
     ```
-2. Extend `@ni/eslint-config/typescript` and `@ni/eslint-config/typescript-requiring-type-checking` in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats) for TypeScript and templates.
+2. Extend the NI configured rules for Angular and Angular templates in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats) as follows:
     ```js
     overrides: [{
         files: ['*.ts'],
         // ...
         extends: [
-            'plugin:@angular-eslint/base',
-            '@ni/eslint-config/typescript',
-            '@ni/eslint-config/typescript-requiring-type-checking'
+            '@ni/eslint-config-angular',
+            '@ni/eslint-config-typescript/requiring-type-checking'
         ]
     }, {
         files: ['*.html']
         // ...
-        extends: ['plugin:@angular-eslint/template/base'],
+        extends: ['@ni/eslint-config-angular/template'],
     }]
     ```
 3. **For existing workspaces**, [migrate each project](https://github.com/angular-eslint/angular-eslint#migrating-an-angular-cli-project-from-codelyzer-and-tslint). When all projects have been migrated, new applications and libraries will be generated with ESLint as well. Enter yes for both options to remove TSLint and ignore its configuration.
@@ -143,7 +168,7 @@ Use the [npm task](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks
 
 ### Enable as early as possible
 
-**New projects** should turn on linting before writing any code. It's easier to fix violations as developers add new code than it is to fix large numbers of lint errors across an existing codebase. 
+**New projects** should turn on linting before writing any code. It's easier to fix violations as developers add new code than it is to fix large numbers of lint errors across an existing codebase.
 
 **Existing projects** are likely to have numerous violations even if they already used a different linter (for example, the deprecated [TSLint](https://www.npmjs.com/package/tslint)) as this ruleset is more strict than most. The recommended flow for adopting this ruleset in an existing repository is:
 1. Install the tooling as described above.
@@ -188,7 +213,9 @@ There currently isn't an NI organization wide requirement to enforce accessibili
 A project should strive to adopt this configuration as fully as possible, but there are valid reasons to disable a rule across a codebase or specific directory:
 1. As a temporary measure to stage adoption of the tooling.
 2. As a permanent measure if the rule is incompatible with a project's configuration. The rule configuration files in this package (`index.js`, `typescript.js`, etc) contain comments on each rule if it might commonly be disabled. Some examples include:
-   - consider disabling `@typescript-eslint/no-floating-promises` in test code for Angular projects because it is incompatible with the `jasminewd2` library
+   - consider disabling the following rules for test code that uses `jasminewd2` because of an incompatibility and method spies
+     - `@typescript-eslint/no-floating-promises`
+     - `@typescript-eslint/unbound-method`
    - consider disabling `func-names` in older JavaScript projects that make use of immediately-invoked function expressions (IIFEs) where providing a name is not useful
 3. As a permanent measure for an existing codebase if the Technical Lead determines it is too costly to fix the violations of that rule.
 
@@ -229,7 +256,8 @@ Modern IDEs can be configured to provide live feedback about ESLint errors.
 
 Install the [ESLint Extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
 
-![VSCode Extension](https://raw.githubusercontent.com/ni/javascript-styleguide/HEAD/resources/VSCodeESLintExtension.png)
+<!-- Load images from raw.githubusercontent.com to enable image rendering when viewed from npmjs.com -->
+![VSCode Extension](https://raw.githubusercontent.com/ni/javascript-styleguide/HEAD/docs/VSCodeESLintExtension.png)
 
 You can [configure a repository to prompt developers to install this extension](https://code.visualstudio.com/docs/editor/extension-marketplace#_workspace-recommended-extensions) by adding a file called `.vscode/extensions.json` with the following contents:
 
@@ -274,7 +302,7 @@ See discussion in the [performance section](https://github.com/typescript-eslint
 
 ### Angular linting performance
 
-Deviations from the `@angular-eslint schematic`, `@ni/eslint-config`, and the [`parserOptions.project`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser#parseroptionsproject) configurations can result in significant performance degredation. Fully manual configuration [is not recommended](https://github.com/angular-eslint/angular-eslint#going-fully-manual-not-recommended). Read `@angular-eslint`'s [section on performance](https://github.com/angular-eslint/angular-eslint#eslint-configs-and-performance) for information on addressing slow linting processes.
+Deviations from the `@angular-eslint schematic`, `@ni/eslint-config-angular`, and the [`parserOptions.project`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser#parseroptionsproject) configurations can result in significant performance degredation. Fully manual configuration [is not recommended](https://github.com/angular-eslint/angular-eslint#going-fully-manual-not-recommended). Read `@angular-eslint`'s [section on performance](https://github.com/angular-eslint/angular-eslint#eslint-configs-and-performance) for information on addressing slow linting processes.
 
 ## License
 

@@ -1,0 +1,20 @@
+{
+  "name": "@ni/typescript-requiring-type-checking-test",
+  "entries": [
+    {
+      "date": "Wed, 29 Sep 2021 22:10:29 GMT",
+      "tag": "@ni/typescript-requiring-type-checking-test_v1.0.0",
+      "version": "1.0.0",
+      "comments": {
+        "patch": [
+          {
+            "author": "beachball",
+            "package": "@ni/typescript-requiring-type-checking-test",
+            "comment": "Bump @ni/eslint-config-typescript to v3.0.1",
+            "commit": "2eefa5b8f9bd3e68031cdb0e928cd97254a45ba6"
+          }
+        ]
+      }
+    }
+  ]
+}

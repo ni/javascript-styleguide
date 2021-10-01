@@ -1,17 +1,18 @@
 {
-  "name": "@ni/eslint-config",
-  "version": "2.0.0",
-  "description": "NI's ESLint Shareable Config",
-  "main": "index.js",
+  "name": "@ni/javascript-styleguide",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NI's styleguides for JavaScript, TypeScript, and Angular projects",
   "scripts": {
-    "prepare": "npm test",
-    "test": "eslint .",
-    "test-angular": "eslint ./test/angular/",
-    "test-typescript": "eslint ./test/typescript/",
-    "test-typescript-typed": "eslint ./test/typescript-type-checking/",
-    "print-angular-properties": "node ./tools/print-angular-properties",
-    "print-typescript-properties": "node ./tools/print-typescript-properties",
-    "print-evaluated-rules": "node ./tools/print-evaluated-rules"
+    "lint": "npm --workspaces --if-present run lint",
+    "pack": "npm --workspaces --if-present run pack",
+    "print-available-rules": "npm --workspaces --if-present run print-available-rules",
+    "print-evaluated-rules": "npm --workspaces --if-present run print-evaluated-rules",
+    "test": "npm --workspaces --if-present test",
+    "change": "beachball change",
+    "check": "beachball check --changehint \"Run 'npm run change' to generate a change file\"",
+    "publish": "beachball publish --message \"applying package updates [skip ci]\"",
+    "publish-ci": "beachball publish --yes --access public --message \"applying package updates [skip ci]\""
   },
   "repository": {
     "type": "git",
@@ -22,45 +23,26 @@
     "eslintconfig",
     "ni"
   ],
-  "author": "NI",
+  "author": "National Instruments",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ni/javascript-styleguide/issues"
   },
   "homepage": "https://github.com/ni/javascript-styleguide#readme",
-  "publishConfig": {
-    "access": "public"
-  },
   "files": [
-    "/*.js",
-    "/lib/*"
+    "!*"
   ],
-  "dependencies": {
-    "@typescript-eslint/parser": "^4.30.0",
-    "eslint-config-airbnb-base": "~14.2.1"
-  },
+  "workspaces": [
+    "packages/eslint-config-javascript",
+    "packages/eslint-config-typescript",
+    "packages/eslint-config-angular",
+    "tests/javascript",
+    "tests/typescript",
+    "tests/typescript-requiring-type-checking",
+    "tests/angular",
+    "tests/print-evaluated-rules"
+  ],
   "devDependencies": {
-    "@angular-eslint/builder": "^12.3.1",
-    "@angular-eslint/eslint-plugin": "^12.3.1",
-    "@angular-eslint/eslint-plugin-template": "^12.3.1",
-    "@angular-eslint/schematics": "^12.3.1",
-    "@angular-eslint/template-parser": "^12.3.1",
-    "@angular/cli": "^12.2.4",
-    "@angular/compiler": "^12.2.4",
-    "@angular/core": "^12.2.4",
-    "@typescript-eslint/eslint-plugin": "^4.30.0",
-    "eslint": "^7.32.0",
-    "eslint-plugin-import": "^2.24.2",
-    "typescript": "^4.4.2"
-  },
-  "peerDependencies": {
-    "@angular-eslint/builder": "^4.3.0 || ^12.3.1",
-    "@angular-eslint/eslint-plugin": "^4.3.0 || ^12.3.1",
-    "@angular-eslint/eslint-plugin-template": "^4.3.0 || ^12.3.1",
-    "@angular-eslint/schematics": "^4.3.0 || ^12.3.1",
-    "@angular-eslint/template-parser": "^4.3.0 || ^12.3.1",
-    "@typescript-eslint/eslint-plugin": "^4.30.0",
-    "eslint": "^7.32.0",
-    "eslint-plugin-import": "^2.24.2"
+    "beachball": "^2.6.2"
   }
 }
