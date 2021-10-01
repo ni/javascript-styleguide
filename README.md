@@ -136,7 +136,33 @@ This allows developers to lint using `npm run lint` and to run the automatic fix
 
 ### Add linting to your PR build
 
-Each project's pull request build pipeline should ensure no lint errors can be committed to the repository. Invoke `npm run lint` from your GitHub Actions or Azure Pipelines YML.
+Each project's pull request build pipeline should ensure no lint errors can be committed to the repository. Invoke `npm run lint` from your GitHub Actions or Azure Pipelines YML after installing dependencies and building your application (not shown in the examples).
+
+### GitHub Actions
+
+[Ensure NPM is present on the agent](https://github.com/actions/setup-node/) then run the lint command. 
+
+```yml
+jobs:
+  build:
+    steps:
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '16'
+      - run: npm run lint
+```
+
+### Azure Pipelines
+
+Use the [npm task](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/package/npm?view=azure-devops) to run the lint command.
+
+```yml
+  - task: Npm@1
+    displayName: 'Lint'
+    inputs:
+      command: custom
+      customCommand: 'run lint'
+```
 
 ## Tips for Adopting this Style Guide
 
