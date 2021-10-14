@@ -104,7 +104,7 @@ configure ESLint for Angular projects** especially when migrating from TSLint. [
             '@ni/eslint-config-typescript/requiring-type-checking'
         ]
     }, {
-        files: ['*.html']
+        files: ['*.html'],
         // ...
         extends: ['@ni/eslint-config-angular/template'],
     }]
