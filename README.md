@@ -127,12 +127,12 @@ To avoid developers needing to remember tooling-specific commands, each project 
 {
   "scripts": {
     "lint": "eslint .",
-    "lint-fix": "eslint . --fix",
+    "lint:fix": "eslint . --fix",
   }
 }
 ```
 
-This allows developers to lint using `npm run lint` and to run the automatic fixer using `npm run lint-fix`.
+This allows developers to lint using `npm run lint` and to run the automatic fixer using `npm run lint:fix`.
 
 ### Add linting to your PR build
 
