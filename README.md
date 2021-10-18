@@ -212,10 +212,8 @@ There currently isn't an NI organization wide requirement to enforce accessibili
 
 A project should strive to adopt this configuration as fully as possible, but there are valid reasons to disable a rule across a codebase or specific directory:
 1. As a temporary measure to stage adoption of the tooling.
-2. As a permanent measure if the rule is incompatible with a project's configuration. The rule configuration files in this package (`index.js`, `typescript.js`, etc) contain comments on each rule if it might commonly be disabled. Some examples include:
-   - consider disabling the following rules for test code that uses `jasminewd2` because of an incompatibility and method spies
-     - `@typescript-eslint/no-floating-promises`
-     - `@typescript-eslint/unbound-method`
+2. As a permanent measure if the rule is incompatible with a project's configuration. The rule configuration files in each package (`index.js`, `typescript.js`, etc) contain comments on each rule if it might commonly be disabled. Some examples include:
+   - consider disabling `@angular-eslint/template/i18n` if a project will never be localized
    - consider disabling `func-names` in older JavaScript projects that make use of immediately-invoked function expressions (IIFEs) where providing a name is not useful
 3. As a permanent measure for an existing codebase if the Technical Lead determines it is too costly to fix the violations of that rule.
 

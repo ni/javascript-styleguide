@@ -112,11 +112,18 @@ module.exports = {
             files: ['*.spec.ts'],
             rules: {
                 /*
-                    Components defined in tests are typically only used within a single test file so don't need 
+                    Components defined in tests are typically only used within a single test file so don't need.
                     a compontent selector.
                 */
-                '@angular-eslint/use-component-selector': 'off'
+                '@angular-eslint/use-component-selector': 'off',
+
+                /*
+                    The jasminewd2 library used by Angular applications results in a significant number of
+                    floating promises and unbound methods so these rules are disabled for test specs in Angular projects.
+                */
+                '@typescript-eslint/no-floating-promises': 'off',
+                '@typescript-eslint/unbound-method': 'off'
             }
-        }   
+        }
     ]
 };
