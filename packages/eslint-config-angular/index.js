@@ -106,5 +106,17 @@ module.exports = {
             dependencies. Consider enabling this rule for libraries to ensure proper tree-shaking when appropriate.
         */
         '@angular-eslint/use-injectable-provided-in': 'off'
-    }
+    },
+    overrides: [
+        {
+            files: ['*.spec.ts'],
+            rules: {
+                /*
+                    Components defined in tests are typically only used within a single test file so don't need 
+                    a compontent selector.
+                */
+                '@angular-eslint/use-component-selector': 'off'
+            }
+        }   
+    ]
 };
