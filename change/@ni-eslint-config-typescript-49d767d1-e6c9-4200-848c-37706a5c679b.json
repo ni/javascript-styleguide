@@ -1,5 +1,6 @@
 {
-  "type": "minor",
+  "type": "patch",
+  "comment": "Remove comment since manually suppressing rules in jasminewd2 tests is no longer necessary",
   "packageName": "@ni/eslint-config-typescript",
   "email": "jattasNI@users.noreply.github.com",
   "dependentChangeType": "patch"
