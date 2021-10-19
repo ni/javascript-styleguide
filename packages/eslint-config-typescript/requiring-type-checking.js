@@ -11,12 +11,6 @@ module.exports = {
         */
 
         /*
-            '@typescript-eslint/no-floating-promises' configuration from typescript-eslint recommended notes:
-            The jasminewd2 library used by Angular applications will result in a significant number of floating promises.
-            Consider disabling the '@typescript-eslint/no-floating-promises' rule for tests that utilize jasmine expects.
-        */
-
-        /*
             Allow usage of String.prototype.match for regular expression matching.
         */
         '@typescript-eslint/prefer-regexp-exec': 'off',

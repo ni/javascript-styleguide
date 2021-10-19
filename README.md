@@ -94,15 +94,18 @@ configure ESLint for Angular projects** especially when migrating from TSLint. [
     ```bash
     > ng add @angular-eslint/schematics
     ```
-2. Extend the NI configured rules for Angular and Angular templates in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats) as follows:
+2. Extend the NI configured rules for Angular and Angular templates in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
     ```js
     overrides: [{
         files: ['*.ts'],
         // ...
         extends: [
             '@ni/eslint-config-angular',
-            '@ni/eslint-config-typescript/requiring-type-checking'
-        ]
+            '@ni/eslint-config-angular/requiring-type-checking'
+        ],
+        parserOptions: {
+            project: 'tsconfig.json'
+        }
     }, {
         files: ['*.html'],
         // ...

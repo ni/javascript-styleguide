@@ -3,7 +3,7 @@ module.exports = {
     overrides: [{
         extends: [
             '@ni/eslint-config-angular',
-            '@ni/eslint-config-typescript/requiring-type-checking'
+            '@ni/eslint-config-angular/requiring-type-checking'
         ],
         files: ['*.ts'],
         parserOptions: {

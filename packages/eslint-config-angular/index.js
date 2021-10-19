@@ -116,14 +116,7 @@ module.exports = {
                     a compontent selector.
                 */
                 '@angular-eslint/use-component-selector': 'off',
-
-                /*
-                    The jasminewd2 library used by Angular applications results in a significant number of
-                    floating promises and unbound methods so these rules are disabled for test specs in Angular projects.
-                */
-                '@typescript-eslint/no-floating-promises': 'off',
-                '@typescript-eslint/unbound-method': 'off'
             }
-        }
+        },
     ]
 };

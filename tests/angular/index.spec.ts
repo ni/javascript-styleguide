@@ -9,7 +9,7 @@ class MyComponent {
     @Input() public attr = false;
     @ViewChild('div') public div: HTMLDivElement;
 }
-/* tslint:disable-next-line */
+
 describe('MyComponent', () => {
     let hostComponent: MyComponent;
     let fixture: ComponentFixture<MyComponent>;
