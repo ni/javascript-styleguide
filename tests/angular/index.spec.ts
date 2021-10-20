@@ -8,6 +8,7 @@ import { ComponentFixture } from '@angular/core/testing';
 class MyComponent {
     @Input() public attr = false;
     @ViewChild('div') public div: HTMLDivElement;
+    public myMethod(): void {}
 }
 
 describe('MyComponent', () => {
@@ -18,5 +19,6 @@ describe('MyComponent', () => {
         await fixture.whenStable();
 
         expect(hostComponent.div).toBeDefined();
+        expect(hostComponent.myMethod).not.toHaveBeenCalled();
     });
 });
