@@ -3,6 +3,7 @@
         "experimentalDecorators": true
     },
     "files": [
-        "index.ts"
+        "index.ts",
+        "index.spec.ts"
     ]
 }
