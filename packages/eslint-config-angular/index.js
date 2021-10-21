@@ -116,6 +116,12 @@ module.exports = {
                     a compontent selector.
                 */
                 '@angular-eslint/use-component-selector': 'off',
+
+                /*
+                    Tests often define additional classes as mocks or helper components and it improves test readability
+                    if those are in the same file as the tests.
+                */
+                'max-classes-per-file': 'off'
             }
         },
     ]
