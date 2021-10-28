@@ -1,7 +1,0 @@
-{
-  "type": "minor",
-  "comment": "Add new config for rules requiring type checking and disable 3 rules in tests",
-  "packageName": "@ni/eslint-config-angular",
-  "email": "jattasNI@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}

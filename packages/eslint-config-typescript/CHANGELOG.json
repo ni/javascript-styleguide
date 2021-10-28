@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-typescript",
   "entries": [
     {
+      "date": "Thu, 28 Oct 2021 15:59:19 GMT",
+      "tag": "@ni/eslint-config-typescript_v3.0.2",
+      "version": "3.0.2",
+      "comments": {
+        "patch": [
+          {
+            "author": "jattasNI@users.noreply.github.com",
+            "package": "@ni/eslint-config-typescript",
+            "comment": "Remove comment since manually suppressing rules in jasminewd2 tests is no longer necessary",
+            "commit": "772f17b65e83107fd8682087c87b9619a5c2ea38"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 29 Sep 2021 22:10:29 GMT",
       "tag": "@ni/eslint-config-typescript_v3.0.1",
       "version": "3.0.1",

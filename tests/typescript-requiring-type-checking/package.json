@@ -7,6 +7,6 @@
     "test": "eslint ."
   },
   "devDependencies": {
-    "@ni/eslint-config-typescript": "^3.0.1"
+    "@ni/eslint-config-typescript": "^3.0.2"
   }
 }
