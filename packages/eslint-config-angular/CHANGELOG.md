@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Thu, 28 Oct 2021 15:59:19 GMT and should not be manually modified.
+This log was last generated on Tue, 09 Nov 2021 18:23:18 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 3.2.0
+
+Tue, 09 Nov 2021 18:23:18 GMT
+
+### Minor changes
+
+- Don't require i18n attributes to have custom IDs (molly.kreis@ni.com)
 
 ## 3.1.0
 

@@ -1,7 +1,0 @@
-{
-  "type": "minor",
-  "comment": "Don't require i18n attributes to have custom IDs",
-  "packageName": "@ni/eslint-config-angular",
-  "email": "molly.kreis@ni.com",
-  "dependentChangeType": "patch"
-}

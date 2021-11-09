@@ -1,8 +1,16 @@
 # Change Log - @ni/angular-test
 
-This log was last generated on Thu, 28 Oct 2021 15:59:19 GMT and should not be manually modified.
+This log was last generated on Tue, 09 Nov 2021 18:23:18 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 1.0.0
+
+Tue, 09 Nov 2021 18:23:18 GMT
+
+### Patches
+
+- Bump @ni/eslint-config-angular to v3.2.0
 
 ## 1.0.0
 

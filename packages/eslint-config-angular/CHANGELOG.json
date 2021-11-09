@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Tue, 09 Nov 2021 18:23:18 GMT",
+      "tag": "@ni/eslint-config-angular_v3.2.0",
+      "version": "3.2.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "molly.kreis@ni.com",
+            "package": "@ni/eslint-config-angular",
+            "comment": "Don't require i18n attributes to have custom IDs",
+            "commit": "e4eed9978948e04ce51a4e20c7c841e688433fc5"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 28 Oct 2021 15:59:19 GMT",
       "tag": "@ni/eslint-config-angular_v3.1.0",
       "version": "3.1.0",
