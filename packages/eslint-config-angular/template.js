@@ -44,7 +44,7 @@ module.exports = {
             and new applications in the chance that they'll need to be localized in the future. Disable this rule
             if an application will never be localized.
         */
-        '@angular-eslint/template/i18n': ['error', { checkText: true }],
+        '@angular-eslint/template/i18n': ['error', { checkId: false }],
 
         /* [accessibility] */
         '@angular-eslint/template/mouse-events-have-key-events': 'off',
