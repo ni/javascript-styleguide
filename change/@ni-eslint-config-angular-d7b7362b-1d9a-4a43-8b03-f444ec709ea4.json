@@ -1,0 +1,7 @@
+{
+  "type": "minor",
+  "comment": "Disable @angular-eslint/component-max-inline-declarations in tests",
+  "packageName": "@ni/eslint-config-angular",
+  "email": "jattasNI@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
