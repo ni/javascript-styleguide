@@ -112,6 +112,12 @@ module.exports = {
             files: ['*.spec.ts'],
             rules: {
                 /*
+                    Tests often define helper components and it improves test readability if they are in the same
+                    file as the tests.
+                */
+                '@angular-eslint/component-max-inline-declarations': 'off',
+
+                /*
                     Components defined in tests are typically only used within a single test file so don't need.
                     a compontent selector.
                 */
