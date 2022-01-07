@@ -1,7 +1,0 @@
-{
-  "type": "minor",
-  "comment": "Add noUselessIndex to no-useless-path-segments",
-  "packageName": "@ni/eslint-config-javascript",
-  "email": "rajsite@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}

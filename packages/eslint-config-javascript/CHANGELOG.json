@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-javascript",
   "entries": [
     {
+      "date": "Fri, 07 Jan 2022 16:15:18 GMT",
+      "tag": "@ni/eslint-config-javascript_v3.1.0",
+      "version": "3.1.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "rajsite@users.noreply.github.com",
+            "package": "@ni/eslint-config-javascript",
+            "commit": "975043b3da174b4cea3f7ba468827a75ced61e7f",
+            "comment": "Add noUselessIndex to no-useless-path-segments"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 07 Jan 2022 01:15:45 GMT",
       "tag": "@ni/eslint-config-javascript_v3.0.3",
       "version": "3.0.3",

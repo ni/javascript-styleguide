@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Fri, 07 Jan 2022 16:15:18 GMT",
+      "tag": "@ni/eslint-config-angular_v3.3.1",
+      "version": "3.3.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-angular",
+            "comment": "Bump @ni/eslint-config-typescript to v3.0.5",
+            "commit": "975043b3da174b4cea3f7ba468827a75ced61e7f"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 07 Jan 2022 01:54:08 GMT",
       "tag": "@ni/eslint-config-angular_v3.3.0",
       "version": "3.3.0",
