@@ -43,6 +43,6 @@
     "tests/print-evaluated-rules"
   ],
   "devDependencies": {
-    "beachball": "^2.6.2"
+    "beachball": "^2.21.0"
   }
 }

@@ -2,6 +2,27 @@
   "name": "@ni/eslint-config-javascript",
   "entries": [
     {
+      "date": "Fri, 07 Jan 2022 01:15:45 GMT",
+      "tag": "@ni/eslint-config-javascript_v3.0.3",
+      "version": "3.0.3",
+      "comments": {
+        "patch": [
+          {
+            "author": "rajsite@users.noreply.github.com",
+            "package": "@ni/eslint-config-javascript",
+            "commit": "53c0708cf4aec13996750f9e0b0c97927e37ea20",
+            "comment": "Update year to trigger build"
+          },
+          {
+            "author": "rajsite@users.noreply.github.com",
+            "package": "@ni/eslint-config-javascript",
+            "commit": "7de549aaf4e518e50a83e30d7a7fa1a20fdd48e4",
+            "comment": "Update year to trigger publish"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 29 Sep 2021 22:10:29 GMT",
       "tag": "@ni/eslint-config-javascript_v3.0.1",
       "version": "3.0.1",
