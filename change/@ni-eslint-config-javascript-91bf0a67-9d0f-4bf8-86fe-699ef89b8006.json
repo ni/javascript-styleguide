@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "Update year to trigger build",
-  "packageName": "@ni/eslint-config-javascript",
-  "email": "rajsite@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}
