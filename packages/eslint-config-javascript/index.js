@@ -75,6 +75,18 @@ module.exports = {
         'import/no-default-export': 'error',
 
         /*
+            Keep path names short and consistent by avoiding unnecessary relative path segments and consistently
+            avoiding usage of index files when possible.
+        */
+        'import/no-useless-path-segments': [
+            'error',
+            {
+                noUselessIndex: true,
+                commonjs: true
+            }
+        ],
+
+        /*
             The primary argument for default exports, promoting single export files, was not experienced in practice.
             Developers were not compelled to exercise this practice, and instead, found defining a default when there is only
             one export to be counterintuitive. While defining a class per file is recommended, multiple exports are not
