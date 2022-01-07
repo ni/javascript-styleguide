@@ -1,6 +1,6 @@
 {
   "name": "@ni/eslint-config-typescript",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "NI's TypeScript ESLint Shareable Config",
   "main": "index.js",
   "scripts": {
