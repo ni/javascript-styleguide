@@ -1,8 +1,24 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Tue, 09 Nov 2021 18:23:18 GMT and should not be manually modified.
+This log was last generated on Fri, 07 Jan 2022 01:54:08 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 3.3.0
+
+Fri, 07 Jan 2022 01:54:08 GMT
+
+### Minor changes
+
+- Disable @angular-eslint/component-max-inline-declarations in tests (jattasNI@users.noreply.github.com)
+
+## 3.2.2
+
+Fri, 07 Jan 2022 01:15:45 GMT
+
+### Patches
+
+- Bump @ni/eslint-config-typescript to v3.0.4
 
 ## 3.2.0
 
