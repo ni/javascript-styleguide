@@ -75,7 +75,7 @@ module.exports = {
         'import/no-default-export': 'error',
 
         /*
-            Keep path names short and consistent by avoiding unnecessary realtive path segments and consistently
+            Keep path names short and consistent by avoiding unnecessary relative path segments and consistently
             avoiding usage of index files when possible.
         */
         'import/no-useless-path-segments': [
