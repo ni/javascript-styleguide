@@ -43,6 +43,7 @@
     "tests/print-evaluated-rules"
   ],
   "devDependencies": {
+    "@ni/beachball-lock-update": "^1.0.0-beta.0",
     "beachball": "^2.21.0"
   }
 }
