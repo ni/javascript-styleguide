@@ -17,7 +17,7 @@ Welcome to NI's JavaScript and TypeScript linter rules for [ESLint](https://esli
 
 Install the package for your corresponding language as a development dependency:
 
-- For JavaScript run: 
+- For JavaScript run:
 
     ```bash
     npm install -D @ni/eslint-config-javascript
@@ -122,7 +122,7 @@ configure ESLint for Angular projects** especially when migrating from TSLint. [
 
 After following the above steps to install and configure the linter, you should be able to run it from the command line using `npx eslint .`
 
-### NPM commands
+### Scripts
 
 To avoid developers needing to remember tooling-specific commands, each project should add standard aliases to its `package.json`:
 
@@ -143,7 +143,7 @@ Each project's pull request build pipeline should ensure no lint errors can be c
 
 ### GitHub Actions
 
-[Ensure NPM is present on the agent](https://github.com/actions/setup-node/) then run the lint command. 
+[Ensure npm is present on the agent](https://github.com/actions/setup-node/) then run the lint command.
 
 ```yml
 jobs:
