@@ -35,6 +35,11 @@ module.exports = {
         'comma-dangle': ['error', 'only-multiline'],
 
         /*
+            Require curly braces {} for all blocks (e.g. if, else, while).
+        */
+        curly: ['error', 'all'],
+
+        /*
             'default-case' Airbnb rule configuration notes:
             Always provide a `default` case in `switch` statements.
             If the default case is logically unreachable, throw an Error.
