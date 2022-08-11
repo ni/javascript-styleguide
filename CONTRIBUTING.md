@@ -19,13 +19,15 @@ When updating dependencies the `npm run print-available-rules` command can be us
 
 **Note:** This command does not print what rules are currently used but instead prints all the rules that are available.
 
-The TypeScript extension rules (which are rules that extend the behavior of exisiting ESlint rules) must be used in place of corresponding ESlint rules. Printing the available rules is useful for manually auditing what extension rules need to be used.
+The TypeScript extension rules (which are rules that extend the behavior of existing ESlint rules) must be used in place of corresponding ESlint rules. Printing the available rules is useful for manually auditing what extension rules need to be used.
 
 ### Checking the evaluated rules
 
-The rules build on several existing rulesets such as the airbnb ruleset, the ESlint recommended ruleset, the TypeScript recommended ruleset, etc. The `npm run print-evaluated-rules` command helps to audit the final resolved rule values.
+The rules build on several existing rulesets such as the airbnb ruleset, the ESlint recommended ruleset, the TypeScript recommended ruleset, etc. The `npm run print-evaluated-rules` command helps to audit the final resolved rule values. It will print the result of some audits that try to detect patterns we want to avoid, such as rules configured with a `warn` severity level.
 
-When the command is run it will print the result of some audits that try to detect patterns we want to avoid, such as rules configured with a `warn` severity level.
+#### Upgrades
+
+There are two commands for diff'ing evaluated rules when upgrading dependencies. Before upgrading, run `npm run print-evaluated-rules:no-audit` to print the current rule set to file. Upgrade the dependencies, and run `npm run print-evaluated-rules:diff` to print the difference.
 
 ## Smoke tests
 
