@@ -8,6 +8,8 @@
     "pack": "npm --workspaces --if-present run pack",
     "print-available-rules": "npm --workspaces --if-present run print-available-rules",
     "print-evaluated-rules": "npm --workspaces --if-present run print-evaluated-rules",
+    "print-evaluated-rules:diff": "npm --workspaces --if-present run print-evaluated-rules:diff",
+    "print-evaluated-rules:no-audit": "npm --workspaces --if-present run print-evaluated-rules:no-audit",
     "test": "npm --workspaces --if-present test",
     "change": "beachball change",
     "check": "beachball check --changehint \"Run 'npm run change' to generate a change file\"",
