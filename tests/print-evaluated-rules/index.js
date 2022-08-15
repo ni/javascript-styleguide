@@ -3,6 +3,7 @@ const angularExtraRules = require('@angular-eslint/eslint-plugin/dist/configs/re
 const angularRules = require('@ni/eslint-config-angular').rules;
 const angularTemplateRules = require('@ni/eslint-config-angular/template').rules;
 const fs = require('fs');
+const path = require('path');
 const yargs = require('yargs/yargs');
 const { hideBin } = require('yargs/helpers');
 
@@ -36,9 +37,10 @@ const { hideBin } = require('yargs/helpers');
         };
     };
 
+    const dir = path.resolve(__dirname, 'results');
     if (argv.diff) {
         const logs = [];
-        const old = JSON.parse(fs.readFileSync('../../rules.txt', 'utf8'));
+        const old = JSON.parse(fs.readFileSync(path.join(dir, 'rules.txt'), 'utf8'));
         Object.entries(getRules()).forEach(([key, value]) => {
             if (old[key]) {
                 if (JSON.stringify(value) !== JSON.stringify(old[key])
@@ -57,7 +59,7 @@ const { hideBin } = require('yargs/helpers');
         Object.entries(old).forEach(([key, value]) => logs.push(`${key} was removed:\n\told: ${JSON.stringify(value)}\n\n`));
 
         if (logs.length) {
-            fs.writeFileSync('../../rules-diff.txt', logs.join(''));
+            fs.writeFileSync(path.join(dir, 'rules-diff.txt'), logs.join(''));
             global.console.log(logs.join(''));
         } else {
             global.console.log('There were no changes.');
@@ -68,7 +70,8 @@ const { hideBin } = require('yargs/helpers');
 
     if (!argv.audit) {
         const json = JSON.stringify(getRules(), null, 4);
-        fs.writeFileSync('../../rules.txt', json);
+        if (!fs.existsSync(dir)) fs.mkdirSync(dir);
+        fs.writeFileSync(path.join(dir, 'rules.txt'), json);
         global.console.log(json);
         return;
     }
