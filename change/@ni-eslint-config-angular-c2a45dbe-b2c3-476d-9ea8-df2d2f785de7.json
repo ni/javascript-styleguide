@@ -1,0 +1,7 @@
+{
+  "type": "major",
+  "comment": "Upgrade eslint, @typescript-eslint, @angular-eslint, and eslint-config-airbnb-base major versions.",
+  "packageName": "@ni/eslint-config-angular",
+  "email": "2351292+TrevorKarjanis@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
