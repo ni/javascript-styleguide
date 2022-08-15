@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "Fix npm character casing.",
+  "packageName": "@ni/eslint-config-typescript",
+  "email": "2351292+TrevorKarjanis@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
