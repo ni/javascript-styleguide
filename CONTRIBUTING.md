@@ -35,6 +35,10 @@ The goal of the smoke tests is basic validation that the eslint configurations c
 
 ## Release workflow
 
+### Creating a pull request
+
+Currently the repository only supports contributions by creating a branch and pull request (we hope to support a fork-pull workflow soon). Not all users can create a branch in this repo; contact @rajsite to be granted the necessary privileges.
+
 ### Beachball change file
 
 This repository uses [beachball](https://microsoft.github.io/beachball/) to automate publishing its packages to NPM. The basic workflow is as follows:
