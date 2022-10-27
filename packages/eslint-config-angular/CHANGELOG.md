@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Fri, 07 Jan 2022 16:15:18 GMT and should not be manually modified.
+This log was last generated on Thu, 27 Oct 2022 19:11:59 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 3.4.0
+
+Thu, 27 Oct 2022 19:11:59 GMT
+
+### Minor changes
+
+- Disable and document @angular-eslint/template/cyclomatic-complexity. (2351292+TrevorKarjanis@users.noreply.github.com)
 
 ## 3.3.1
 

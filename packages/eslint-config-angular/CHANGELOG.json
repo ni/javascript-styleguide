@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Thu, 27 Oct 2022 19:11:59 GMT",
+      "tag": "@ni/eslint-config-angular_v3.4.0",
+      "version": "3.4.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "2351292+TrevorKarjanis@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "468b931497128da825c84903120550d84d3669f1",
+            "comment": "Disable and document @angular-eslint/template/cyclomatic-complexity."
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 07 Jan 2022 16:15:18 GMT",
       "tag": "@ni/eslint-config-angular_v3.3.1",
       "version": "3.3.1",

@@ -1,7 +1,0 @@
-{
-  "type": "minor",
-  "comment": "Disable and document @angular-eslint/template/cyclomatic-complexity.",
-  "packageName": "@ni/eslint-config-angular",
-  "email": "2351292+TrevorKarjanis@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}
