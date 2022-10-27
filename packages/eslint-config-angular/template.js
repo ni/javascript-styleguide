@@ -37,7 +37,13 @@ module.exports = {
 
         '@angular-eslint/template/conditional-complexity': 'error',
 
-        '@angular-eslint/template/cyclomatic-complexity': 'error',
+        /*
+            In practice, independent paths in templates tend to be parallel rather than linear. Templates are
+            declarative whereas procedural code is more likely to result in cyclomatic complexity. While this rule may
+            be applicable to specific features, a template should not result in an error simply because it exceeds the
+            number of statements allotted by this rule.
+        */
+        '@angular-eslint/template/cyclomatic-complexity': 'off',
 
         /*
             Enable this rule by default to enforce internationalization for existing applications that are localized
