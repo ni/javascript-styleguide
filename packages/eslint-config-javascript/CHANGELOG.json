@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-javascript",
   "entries": [
     {
+      "date": "Thu, 10 Nov 2022 17:18:40 GMT",
+      "tag": "@ni/eslint-config-javascript_v4.0.0",
+      "version": "4.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "2351292+TrevorKarjanis@users.noreply.github.com",
+            "package": "@ni/eslint-config-javascript",
+            "commit": "c305646b425cd9c39ea043268666de3597ed1d82",
+            "comment": "Upgrade eslint, @typescript-eslint, @angular-eslint, and eslint-config-airbnb-base with support for Angular 13."
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 07 Jan 2022 16:15:18 GMT",
       "tag": "@ni/eslint-config-javascript_v3.1.0",
       "version": "3.1.0",

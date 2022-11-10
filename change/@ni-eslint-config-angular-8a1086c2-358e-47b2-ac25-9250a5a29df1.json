@@ -1,7 +1,0 @@
-{
-  "type": "major",
-  "comment": "Upgrade eslint, @typescript-eslint, @angular-eslint, and eslint-config-airbnb-base with support for Angular 13.",
-  "packageName": "@ni/eslint-config-angular",
-  "email": "2351292+TrevorKarjanis@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}

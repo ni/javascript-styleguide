@@ -1,6 +1,6 @@
 {
   "name": "@ni/eslint-config-angular",
-  "version": "3.4.0",
+  "version": "4.0.0",
   "description": "NI's Angular ESLint Shareable Config",
   "main": "index.js",
   "scripts": {
@@ -31,7 +31,7 @@
     "!/.*.js"
   ],
   "dependencies": {
-    "@ni/eslint-config-typescript": "^3.0.5"
+    "@ni/eslint-config-typescript": "^4.0.0"
   },
   "peerDependencies": {
     "@angular-eslint/builder": "^13.5.0",
