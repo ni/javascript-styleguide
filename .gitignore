@@ -3,3 +3,5 @@ node_modules
 *.tgz
 .vscode
 .npmrc
+./rules.txt
+./rules-diff.txt
