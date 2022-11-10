@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Thu, 10 Nov 2022 17:31:16 GMT",
+      "tag": "@ni/eslint-config-angular_v5.0.0",
+      "version": "5.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "2351292+TrevorKarjanis@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "b03056577df81c0a88d280fb8bf56cb1d31e305b",
+            "comment": "Upgrade eslint, @typescript-eslint, @angular-eslint, and eslint-config-airbnb-base with support for Angular 14."
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 10 Nov 2022 17:18:40 GMT",
       "tag": "@ni/eslint-config-angular_v4.0.0",
       "version": "4.0.0",

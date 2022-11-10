@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Thu, 10 Nov 2022 17:18:40 GMT and should not be manually modified.
+This log was last generated on Thu, 10 Nov 2022 17:31:16 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 5.0.0
+
+Thu, 10 Nov 2022 17:31:16 GMT
+
+### Major changes
+
+- Upgrade eslint, @typescript-eslint, @angular-eslint, and eslint-config-airbnb-base with support for Angular 14. (2351292+TrevorKarjanis@users.noreply.github.com)
 
 ## 4.0.0
 
