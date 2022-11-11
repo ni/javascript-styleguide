@@ -53,13 +53,23 @@ module.exports = {
         */
 
         /*
-            The default configuration for this rule requires that enum members
-            follow the camelCase style, which doesn't match the existing convention
-            within NI and the broader TS community to use PascalCase. The rest of the
-            configuration is identitical to the default.
+            Most of this configuration is identitical to the default with exceptions called out in comments below
         */
         '@typescript-eslint/naming-convention': [
             'error',
+            // Allow properties with custom-element-names, commonly used in HTMLElementNameTagMap
+            {
+                selector: 'property',
+                format: null,
+                filter: {
+                    // custom element regex from https://html-validate.org/rules/element-name.html
+                    regex: '[a-z][a-z0-9\\-._]*-[a-z0-9\\-._]*$',
+                    match: true
+                }
+            },
+            // The default configuration for this rule requires that enum members
+            // follow the camelCase style, which doesn't match the existing convention
+            // within NI and the broader TS community to use PascalCase.
             {
                 selector: 'enumMember',
                 format: ['PascalCase'],
