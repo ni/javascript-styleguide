@@ -62,8 +62,8 @@ module.exports = {
                 selector: 'property',
                 format: null,
                 filter: {
-                    // custom element regex from https://html-validate.org/rules/element-name.html
-                    regex: '[a-z][a-z0-9\\-._]*-[a-z0-9\\-._]*$',
+                    // custom element regex adapted from https://html-validate.org/rules/element-name.html
+                    regex: '^[a-z][a-z0-9\\-._]*-[a-z0-9\\-._]*$',
                     match: true
                 }
             },
