@@ -1,7 +1,0 @@
-{
-  "type": "minor",
-  "comment": "@typescript-eslint/naming-convention now allows properties with custom-element-style-names, commonly used in HTMLElementNameTagMap interfaces",
-  "packageName": "@ni/eslint-config-typescript",
-  "email": "jattasNI@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}
