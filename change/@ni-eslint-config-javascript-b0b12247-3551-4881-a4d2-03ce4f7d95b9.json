@@ -1,0 +1,7 @@
+{
+  "type": "minor",
+  "comment": "Enabling several new rules from ESLint 8",
+  "packageName": "@ni/eslint-config-javascript",
+  "email": "jattasNI@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
