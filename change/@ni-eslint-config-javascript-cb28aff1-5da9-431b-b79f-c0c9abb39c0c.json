@@ -1,6 +1,6 @@
 {
   "type": "minor",
-  "comment": "Require curly braces and newlines for all blocks",
+  "comment": "Require curly braces and newlines for all blocks. This modifies the configuration for rules `brace-style` and `curly`.",
   "packageName": "@ni/eslint-config-javascript",
   "email": "jattasNI@users.noreply.github.com",
   "dependentChangeType": "patch"
