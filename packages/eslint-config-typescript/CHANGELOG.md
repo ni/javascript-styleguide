@@ -1,8 +1,25 @@
 # Change Log - @ni/eslint-config-typescript
 
-This log was last generated on Fri, 07 Jan 2022 16:15:18 GMT and should not be manually modified.
+This log was last generated on Fri, 11 Nov 2022 21:48:26 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 4.1.0
+
+Fri, 11 Nov 2022 21:48:26 GMT
+
+### Minor changes
+
+- @typescript-eslint/naming-convention now allows properties with custom-element-style-names, commonly used in HTMLElementNameTagMap interfaces (jattasNI@users.noreply.github.com)
+
+## 4.0.0
+
+Thu, 10 Nov 2022 17:18:40 GMT
+
+### Major changes
+
+- Upgrade eslint, @typescript-eslint, @angular-eslint, and eslint-config-airbnb-base with support for Angular 13. (2351292+TrevorKarjanis@users.noreply.github.com)
+- Bump @ni/eslint-config-javascript to v4.0.0
 
 ## 3.0.5
 

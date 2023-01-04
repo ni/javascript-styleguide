@@ -1,6 +1,6 @@
 {
   "name": "@ni/eslint-config-angular",
-  "version": "3.3.1",
+  "version": "5.0.1",
   "description": "NI's Angular ESLint Shareable Config",
   "main": "index.js",
   "scripts": {
@@ -31,13 +31,13 @@
     "!/.*.js"
   ],
   "dependencies": {
-    "@ni/eslint-config-typescript": "^3.0.5"
+    "@ni/eslint-config-typescript": "^4.1.0"
   },
   "peerDependencies": {
-    "@angular-eslint/builder": "^4.3.0 || ^12.3.1",
-    "@angular-eslint/eslint-plugin": "^4.3.0 || ^12.3.1",
-    "@angular-eslint/eslint-plugin-template": "^4.3.0 || ^12.3.1",
-    "@angular-eslint/schematics": "^4.3.0 || ^12.3.1",
-    "@angular-eslint/template-parser": "^4.3.0 || ^12.3.1"
+    "@angular-eslint/builder": "^14.0.2",
+    "@angular-eslint/eslint-plugin": "^14.0.2",
+    "@angular-eslint/eslint-plugin-template": "^14.0.2",
+    "@angular-eslint/schematics": "^14.0.2",
+    "@angular-eslint/template-parser": "^14.0.2"
   }
 }

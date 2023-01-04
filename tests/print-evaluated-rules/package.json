@@ -5,7 +5,9 @@
     "description": "Meta project used to analyze the integration tests.",
     "scripts": {
         "lint": "eslint .",
-        "print-evaluated-rules": "node index.js"
+        "print-evaluated-rules": "node index.js",
+        "print-evaluated-rules:diff": "node index.js --diff",
+        "print-evaluated-rules:no-audit": "node index.js --no-audit"
     },
     "dependencies": {
         "@angular-eslint/eslint-plugin": "*",
@@ -14,6 +16,7 @@
         "@ni/javascript-test": "*",
         "@ni/typescript-test": "*",
         "@ni/typescript-requiring-type-checking-test": "*",
-        "eslint": "*"
+        "eslint": "*",
+        "yargs": "^17.5.1"
     }
 }

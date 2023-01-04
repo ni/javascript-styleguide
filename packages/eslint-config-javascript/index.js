@@ -370,6 +370,27 @@ module.exports = {
             anonymous: 'always',
             named: 'never',
             asyncArrow: 'always'
-        }]
+        }],
+
+        /*
+            The following are rules that would be enabled or the configuration changed as part of the upgrade to ESLint
+            8.21.0.
+            https://github.com/ni/javascript-styleguide/issues/112
+        */
+        'default-case-last': 'off',
+        'function-call-argument-newline': 'off',
+        'function-paren-newline': ['error', 'consistent'],
+        'grouped-accessor-pairs': 'off',
+        'import/no-import-module-exports': 'off',
+        'import/no-relative-packages': 'off',
+        'no-promise-executor-return': 'off',
+        'no-restricted-exports': 'off',
+        'no-unreachable-loop': 'off',
+        'no-unsafe-optional-chaining': 'off',
+        'no-useless-backreference': 'off',
+        'no-constructor-return': 'off',
+        'no-nonoctal-decimal-escape': 'off',
+        'prefer-exponentiation-operator': 'off',
+        'prefer-regex-literals': 'off'
     },
 };

@@ -7,7 +7,9 @@
     "lint": "npm --workspaces --if-present run lint",
     "pack": "npm --workspaces --if-present run pack",
     "print-available-rules": "npm --workspaces --if-present run print-available-rules",
-    "print-evaluated-rules": "npm --workspaces --if-present run print-evaluated-rules",
+    "print-evaluated-rules": "npm -w tests/print-evaluated-rules run print-evaluated-rules",
+    "print-evaluated-rules:diff": "npm -w tests/print-evaluated-rules run print-evaluated-rules:diff",
+    "print-evaluated-rules:no-audit": "npm -w tests/print-evaluated-rules run print-evaluated-rules:no-audit",
     "test": "npm --workspaces --if-present test",
     "change": "beachball change",
     "check": "beachball check --changehint \"Run 'npm run change' to generate a change file\"",
@@ -43,7 +45,6 @@
     "tests/print-evaluated-rules"
   ],
   "devDependencies": {
-    "@ni/beachball-lock-update": "^1.0.1",
-    "beachball": "^2.21.0"
+    "beachball": "^2.31.3"
   }
 }
