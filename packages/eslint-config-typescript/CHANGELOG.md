@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-typescript
 
-This log was last generated on Fri, 11 Nov 2022 21:48:26 GMT and should not be manually modified.
+This log was last generated on Tue, 10 Jan 2023 17:24:45 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 4.1.1
+
+Tue, 10 Jan 2023 17:24:45 GMT
+
+### Patches
+
+- Bump @ni/eslint-config-javascript to v4.1.0
 
 ## 4.1.0
 
