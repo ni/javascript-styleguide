@@ -21,6 +21,13 @@ module.exports = {
         'arrow-parens': ['error', 'as-needed'],
 
         /*
+            Use the "one true brace style" in which in which the opening brace of a block is placed 
+            on the same line as its corresponding statement or declaration (this matches Airbnb).
+            Also require the body within the braces to be on a new line.
+        */
+        'brace-style': ['error', '1tbs', { allowSingleLine: false }],
+
+        /*
             A method's use of the this keyword does not always dictate that it should be static,
             particularly when the class must satisfy a derived interface or the caller has an
             instance. However, there are other cases, like when functionality is required without
@@ -33,6 +40,11 @@ module.exports = {
             may be used if preferred.
         */
         'comma-dangle': ['error', 'only-multiline'],
+
+        /*
+            Require curly braces {} for all blocks (e.g. if, else, while).
+        */
+        curly: ['error', 'all'],
 
         /*
             'default-case' Airbnb rule configuration notes:

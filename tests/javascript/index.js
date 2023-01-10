@@ -1,4 +1,4 @@
-// TypeScript Smoke Test
+// JavaScript Smoke Test
 
 export class NI {
     constructor() {

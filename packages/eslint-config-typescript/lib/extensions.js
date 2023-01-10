@@ -12,9 +12,9 @@ module.exports = {
               JavaScript / Airbnb configuration.
         */
 
-        // Defined by Airbnb
+        // Defined by NI
         'brace-style': 'off',
-        '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: true }],
+        '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: false }],
 
         // Defined by NI
         'comma-dangle': 'off',
