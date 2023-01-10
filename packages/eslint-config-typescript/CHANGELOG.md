@@ -1,8 +1,17 @@
 # Change Log - @ni/eslint-config-typescript
 
-This log was last generated on Tue, 10 Jan 2023 17:24:45 GMT and should not be manually modified.
+This log was last generated on Tue, 10 Jan 2023 19:27:28 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 4.2.0
+
+Tue, 10 Jan 2023 19:27:28 GMT
+
+### Minor changes
+
+- Require curly braces and newlines for all blocks.  This modifies the configuration for rules `brace-style`/`@typescript-eslint/brace-style` and `curly`. (jattasNI@users.noreply.github.com)
+- Bump @ni/eslint-config-javascript to v4.2.0
 
 ## 4.1.1
 

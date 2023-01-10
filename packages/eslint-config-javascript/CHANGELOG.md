@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-javascript
 
-This log was last generated on Tue, 10 Jan 2023 17:24:45 GMT and should not be manually modified.
+This log was last generated on Tue, 10 Jan 2023 19:27:28 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 4.2.0
+
+Tue, 10 Jan 2023 19:27:28 GMT
+
+### Minor changes
+
+- Require curly braces and newlines for all blocks. This modifies the configuration for rules `brace-style` and `curly`. (jattasNI@users.noreply.github.com)
 
 ## 4.1.0
 

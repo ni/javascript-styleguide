@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-javascript",
   "entries": [
     {
+      "date": "Tue, 10 Jan 2023 19:27:28 GMT",
+      "tag": "@ni/eslint-config-javascript_v4.2.0",
+      "version": "4.2.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "jattasNI@users.noreply.github.com",
+            "package": "@ni/eslint-config-javascript",
+            "commit": "ee8c6c8f91dacaf8798021d750d22e7b366a6140",
+            "comment": "Require curly braces and newlines for all blocks. This modifies the configuration for rules `brace-style` and `curly`."
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 10 Jan 2023 17:24:45 GMT",
       "tag": "@ni/eslint-config-javascript_v4.1.0",
       "version": "4.1.0",

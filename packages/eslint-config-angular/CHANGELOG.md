@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Tue, 10 Jan 2023 17:24:45 GMT and should not be manually modified.
+This log was last generated on Tue, 10 Jan 2023 19:27:28 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 5.0.3
+
+Tue, 10 Jan 2023 19:27:28 GMT
+
+### Patches
+
+- Bump @ni/eslint-config-typescript to v4.2.0
 
 ## 5.0.2
 
