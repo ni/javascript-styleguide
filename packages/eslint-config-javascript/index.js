@@ -43,6 +43,11 @@ module.exports = {
         */
 
         /*
+            Enforces that the default case of a switch statement should be listed last, matching common practice.
+        */
+        'default-case-last': 'error',
+
+        /*
             Do not require a newline at the end of every file in favor of reducing the effort to
             satisfy the rule over the proposed advantages on UNIX and with concatenation.
         */
@@ -53,6 +58,22 @@ module.exports = {
             that make use of Immediately Invoked Function Expressions (IIFE).
         */
         'func-names': ['error', 'as-needed'],
+
+        /*
+            This enforces that function call args should either all be on one line or each be on separate lines.
+        */
+        'function-call-argument-newline': ['error', 'consistent'],
+
+        /*
+            This enforces consistent line breaks inside function parentheses. Requires either all or none of the
+            arguments to have a newline between them (with newlines permitted around a single argument)
+        */
+        'function-paren-newline': ['error', 'multiline-arguments'],
+
+        /*
+            This enforces that the get and set methods of an accessor be defined next to each other.
+        */
+        'grouped-accessor-pairs': 'error',
 
         /*
             There may be exceptions where it is appropriate to disable this rule for projects that
@@ -73,6 +94,16 @@ module.exports = {
             expected, and a trend to prefer named imports was seen in practice.
         */
         'import/no-default-export': 'error',
+
+        /*
+            This prevents files from mixing CommonJS exports with ES module imports
+        */
+        'import/no-import-module-exports': 'error',
+
+        /*
+            This prevents imports of packages via a relative path. Packages should always be imported with their scoped name.
+        */
+        'import/no-relative-packages': 'error',
 
         /*
             Keep path names short and consistent by avoiding unnecessary relative path segments and consistently
@@ -160,6 +191,10 @@ module.exports = {
         'no-constant-condition': 'error',
 
         /*
+            Constructors should not typically return a value.
+        */
+        'no-constructor-return': 'error',
+        /*
             Disallow duplicate conditions in if-else-if chain.
             This rule does not need to be explicitly set after enabled in airbnb:
             https://github.com/airbnb/javascript/blob/1eadb93e377da1e56c3f91f26610e5d0a00738a9/packages/eslint-config-airbnb-base/rules/errors.js#L44
@@ -198,6 +233,11 @@ module.exports = {
         }],
 
         /*
+            This disallows \8 and \9 escape sequences in string literals, which fixes an ambiguity in browser behavior.
+        */
+        'no-nonoctal-decimal-escape': 'error',
+
+        /*
             This rule disallows assigning to function parameters; function parameters are
             treated as const bindings. Some more readable or type-safe alternatives to
             parameter assignment are:
@@ -213,10 +253,20 @@ module.exports = {
         'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
 
         /*
+            This enforces that the function you pass to new Promise() should not return a value (it should call reject/resolve instead).
+        */
+        'no-promise-executor-return': 'error',
+
+        /*
             This rule defends against prototype pollution vulnerabilities that are exploitable with
             XSS.
         */
         'no-prototype-builtins': 'error',
+
+        /*
+            This rule would ban exports with specific names. Projects can configure it as-needed, but there are no NI-wide restricted exports
+        */
+        'no-restricted-exports': 'off',
 
         /*
             The Jasmine 'fdescribe' and 'fit' functions are handy for local development but should
@@ -288,11 +338,26 @@ module.exports = {
         'no-underscore-dangle': 'off',
 
         /*
+            This rule detects when all code paths within a loop return early, making the loop unneccessary.
+        */
+        'no-unreachable-loop': 'error',
+
+        /*
+            This rule helps find cases where the .? optional chaining operator might result in undefined which isn't being handled.
+        */
+        'no-unsafe-optional-chaining': ['error', { disallowArithmeticOperators: true }],
+
+        /*
             Unused variables are not allowed as they're usually an indication of a programming error.
             In situations where they are required like unused callback function arguments,
             indicate that the unused variable is intentional by pre-pending its name with `_`.
         */
         'no-unused-vars': ['error', { vars: 'all', args: 'all', argsIgnorePattern: '^_', ignoreRestSiblings: true }],
+
+        /*
+            This rule prevents certain useless syntax in regular expressions.
+        */
+        'no-useless-backreference': 'error',
 
         /*
             Migrating from var is not trivial, so there may be exceptions for older projects.
@@ -338,6 +403,16 @@ module.exports = {
         'prefer-destructuring': 'off',
 
         /*
+            For consistency, when we do exponentiation we should prefer the ** operator over the Math.pow() function.
+        */
+        'prefer-exponentiation-operator': 'error',
+
+        /*
+            For consistency, when we create regular expressions we should use the literal syntax rather than the RexExp() constructor.
+        */
+        'prefer-regex-literals': 'error',
+
+        /*
             This configuration already supports the JSDoc syntax. Add additional syntax as line or
             block exceptions or markers when necessary.
         */
@@ -359,26 +434,5 @@ module.exports = {
             named: 'never',
             asyncArrow: 'always'
         }],
-
-        /*
-            The following are rules that would be enabled or the configuration changed as part of the upgrade to ESLint
-            8.21.0.
-            https://github.com/ni/javascript-styleguide/issues/112
-        */
-        'default-case-last': 'off',
-        'function-call-argument-newline': 'off',
-        'function-paren-newline': ['error', 'consistent'],
-        'grouped-accessor-pairs': 'off',
-        'import/no-import-module-exports': 'off',
-        'import/no-relative-packages': 'off',
-        'no-promise-executor-return': 'off',
-        'no-restricted-exports': 'off',
-        'no-unreachable-loop': 'off',
-        'no-unsafe-optional-chaining': 'off',
-        'no-useless-backreference': 'off',
-        'no-constructor-return': 'off',
-        'no-nonoctal-decimal-escape': 'off',
-        'prefer-exponentiation-operator': 'off',
-        'prefer-regex-literals': 'off'
     },
 };

@@ -1,0 +1,7 @@
+{
+  "type": "minor",
+  "comment": "Enabling several new rules from ESLint 8. These rules have new configuration which may result in new errors:\n- `default-case-last`\n- `function-call-argument-newline`\n- `function-paren-newline`\n- `grouped-accessor-pairs`\n- `import/no-import-module-exports`\n- `import/no-relative-packages`\n- `no-constructor-return`\n- `no-nonoctal-decimal-escape`\n- `no-promise-executor-return`\n- `no-unreachable-loop`\n- `no-unsafe-optional-chaining`\n- `no-useless-backreference`\n- `prefer-exponentiation-operator`\n- `prefer-regex-literals`",
+  "packageName": "@ni/eslint-config-javascript",
+  "email": "jattasNI@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
