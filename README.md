@@ -88,17 +88,21 @@ Extend `@ni/eslint-config-typescript` and `@ni/eslint-config-typescript/requirin
 ### Angular configuration
 
 ESLint support for Angular is provided by [`@angular-eslint`](https://github.com/angular-eslint/angular-eslint#readme). **It's recommended to use `@angular-eslint/schematics` to
-configure ESLint for Angular projects** especially when migrating from TSLint. [Use version 1.x.x](https://github.com/angular-eslint/angular-eslint#supported-angular-cli-versions) for Angular versions less than 11.2.0.
+configure ESLint for Angular projects**.
 
-1. [Use the schematic](https://github.com/angular-eslint/angular-eslint#quick-start-with-angular-and-eslint) to add ESLint to new workspaces **version 12+**, and new applications and libraries will be generated with ESLint as well.
+1. **For single and multi-project workspaces**, [add the schematic](https://github.com/angular-eslint/angular-eslint#quick-start). Remove the `@angular-eslint`, `@typescript-eslint`, and `eslint` dependencies from `package.json`.
     ```bash
-    > ng add @angular-eslint/schematics
+    ng add @angular-eslint/schematics
     ```
-2. Extend the NI configured rules for Angular and Angular templates in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
+2. **For multi-project workspaces**, [configure each project](https://github.com/angular-eslint/angular-eslint#adding-eslint-configuration-to-an-existing-angular-cli-project-which-has-no-existing-linter), and then enable future generated projects to be configured as well.
+    ```bash
+    > ng g @angular-eslint/schematics:add-eslint-to-project <PROJECT NAME>
+    > ng config cli.schematicCollections "[\"@angular-eslint/schematics\"]"
+    ```
+3. Extend the NI configured rules for Angular and Angular templates in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
     ```js
     overrides: [{
         files: ['*.ts'],
-        // ...
         extends: [
             '@ni/eslint-config-angular',
             '@ni/eslint-config-angular/requiring-type-checking'
@@ -108,13 +112,8 @@ configure ESLint for Angular projects** especially when migrating from TSLint. [
         }
     }, {
         files: ['*.html'],
-        // ...
-        extends: ['@ni/eslint-config-angular/template'],
+        extends: ['@ni/eslint-config-angular/template']
     }]
-    ```
-3. **For existing workspaces**, [migrate each project](https://github.com/angular-eslint/angular-eslint#migrating-an-angular-cli-project-from-codelyzer-and-tslint). When all projects have been migrated, new applications and libraries will be generated with ESLint as well. Enter yes for both options to remove TSLint and ignore its configuration.
-    ```bash
-    ng g @angular-eslint/schematics:convert-tslint-to-eslint <PROJECT NAME>
     ```
 4. Evaluate the [project specific rule groups](#evaluate-project-specific-rule-groups) to manually add to your lint configuration. For Angular applications in particular, consider enabling the [`[application-prefix]`](#application-prefix) rule group.
 
