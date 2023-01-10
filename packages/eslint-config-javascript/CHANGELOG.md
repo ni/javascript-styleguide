@@ -1,8 +1,30 @@
 # Change Log - @ni/eslint-config-javascript
 
-This log was last generated on Thu, 10 Nov 2022 17:18:40 GMT and should not be manually modified.
+This log was last generated on Tue, 10 Jan 2023 17:24:45 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 4.1.0
+
+Tue, 10 Jan 2023 17:24:45 GMT
+
+### Minor changes
+
+- Enabling several new rules from ESLint 8. These rules have new configuration which may result in new errors:
+- `default-case-last`
+- `function-call-argument-newline`
+- `function-paren-newline`
+- `grouped-accessor-pairs`
+- `import/no-import-module-exports`
+- `import/no-relative-packages`
+- `no-constructor-return`
+- `no-nonoctal-decimal-escape`
+- `no-promise-executor-return`
+- `no-unreachable-loop`
+- `no-unsafe-optional-chaining`
+- `no-useless-backreference`
+- `prefer-exponentiation-operator`
+- `prefer-regex-literals` (jattasNI@users.noreply.github.com)
 
 ## 4.0.0
 
