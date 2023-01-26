@@ -38,6 +38,7 @@
     "packages/eslint-config-javascript",
     "packages/eslint-config-typescript",
     "packages/eslint-config-angular",
+    "packages/eslint-config-playwright",
     "tests/javascript",
     "tests/typescript",
     "tests/typescript-requiring-type-checking",
