@@ -5,30 +5,33 @@ on:
     - '**'
 
 env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   GITHUB_SERVICE_USER: "rajsite"
   GITHUB_SERVICE_EMAIL: "rajsite@users.noreply.github.com"
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
-        fetch-depth: 0 # Required for changelog detection
-        token: ${{ secrets.GITHUBPAGESDEPLOYTOKEN }} # Required for beachball to push changes
+        # Required for beachball changelog detection
+        fetch-depth: 0
+        # Must checkout with a token that can push to protected branches for beachball
+        # Cannot rely on GITHUB_TOKEN with workflow contents permission
+        # See: https://github.com/orgs/community/discussions/40971
+        token: ${{ secrets.GITHUBPAGESDEPLOYTOKEN }}
 
     # Install dependencies
-    - uses: actions/setup-node@v1
+    - uses: actions/setup-node@v3
       with:
-        node-version: '12'
+        node-version: '16'
         registry-url: 'https://registry.npmjs.org'
-    - run: npm install --global npm@7
+        cache: 'npm'
     - run: npm ci
 
     # Build
     - run: npm run pack
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
         name: packages
         path: packages/**/*.tgz
