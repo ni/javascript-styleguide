@@ -8,7 +8,6 @@ module.exports = {
             Deeply nested describe blocks are likely an indication that test files are too complicated.
         */
         'playwright/max-nested-describe': 'error',
-        'playwright/missing-playwright-await': '',
 
         /*
             Playwright marks this as recommended but configures it as 'warn'.
@@ -28,7 +27,6 @@ module.exports = {
             Instead of page.$eval use locators (page.locator).
         */
         'playwright/no-eval': 'error',
-        'playwright/no-focused-test': '',
 
         /*
             Playwright marks this as recommended but configures it as 'warn'.
@@ -54,14 +52,13 @@ module.exports = {
             Playwright marks this as recommended but configures it as 'warn'.
             Assertions are easier to read when using a dedicated matcher rather than negating the opposite matcher.
         */
-        'playwright/no-useless-not': '',
+        'playwright/no-useless-not': 'error',
 
         /*
             Playwright marks this as recommended but configures it as 'warn'.
             Waiting for arbitrary amounts of time can cause test intermittency. Instead wait for a specific condition.
         */
         'playwright/no-wait-for-timeout': 'error',
-        'playwright/valid-expect': '',
 
         'playwright/no-restricted-matchers': '',
         'playwright/prefer-lowercase-title': '',
