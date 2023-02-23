@@ -1,6 +1,7 @@
 module.exports = {
     extends: [
-        '@ni/eslint-config-typescript'
+        '@ni/eslint-config-typescript',
+        'plugin:playwright/playwright-test'
     ],
     rules: {
         /*
