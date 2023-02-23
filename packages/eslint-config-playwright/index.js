@@ -61,13 +61,15 @@ module.exports = {
         */
         'playwright/no-wait-for-timeout': 'error',
 
-        'playwright/no-restricted-matchers': '',
-        'playwright/prefer-lowercase-title': '',
-        'playwright/prefer-strict-equal': '',
-        'playwright/prefer-to-be': '',
-        'playwright/prefer-to-have-length': '',
-        'playwright/require-soft-assertions': '',
-        'playwright/require-top-level-describe': ''
+        /*
+            In order to have a better failure message, toHaveLength() should be used when asserting expectations on objects length property.
+        */
+        'playwright/prefer-to-have-length': 'error',
+
+        /*
+            Having a top-level describe block in each test file is common practice which aligns with patterns we use in Jasmine
+        */
+        'playwright/require-top-level-describe': 'error'
     },
     overrides: [
     ]
