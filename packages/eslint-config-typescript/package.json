@@ -31,10 +31,8 @@
     "!/.*.js",
     "/lib/*"
   ],
-  "dependencies": {
-    "@ni/eslint-config-javascript": "^4.2.0"
-  },
   "peerDependencies": {
+    "@ni/eslint-config-javascript": "^4.2.0",
     "@typescript-eslint/parser": "^5.36.1",
     "@typescript-eslint/eslint-plugin": "^5.36.1"
   }

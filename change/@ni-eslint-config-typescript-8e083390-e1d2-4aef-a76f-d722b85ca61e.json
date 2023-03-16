@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "Make all eslint config deps peers",
+  "packageName": "@ni/eslint-config-typescript",
+  "email": "rajsite@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
