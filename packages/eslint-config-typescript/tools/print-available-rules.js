@@ -6,7 +6,9 @@ const requiresTypeChecking = key => isTrue(plugin.rules[key].meta.docs.requiresT
 const extendsBaseRule = key => isTrue(plugin.rules[key].meta.docs.extendsBaseRule);
 const print = keys => {
     const results = {};
-    keys.forEach(key => { results[`@typescript-eslint/${key}`] = ''; });
+    keys.forEach(key => {
+        results[`@typescript-eslint/${key}`] = '';
+    });
     global.console.log(JSON.stringify(results, null, 4));
 };
 const sortedRules = Object.keys(plugin.rules).sort();
