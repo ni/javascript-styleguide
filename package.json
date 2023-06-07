@@ -43,6 +43,7 @@
     "tests/typescript",
     "tests/typescript-requiring-type-checking",
     "tests/angular",
+    "tests/playwright",
     "tests/print-evaluated-rules"
   ],
   "devDependencies": {
