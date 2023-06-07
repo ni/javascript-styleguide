@@ -3,8 +3,4 @@ module.exports = {
         '@ni/eslint-config-typescript/requiring-type-checking'
     ],
     parser: '@typescript-eslint/parser',
-    overrides: [
-        {
-        },
-    ]
 };
