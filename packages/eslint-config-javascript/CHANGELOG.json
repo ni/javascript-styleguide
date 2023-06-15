@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-javascript",
   "entries": [
     {
+      "date": "Thu, 16 Mar 2023 18:44:04 GMT",
+      "tag": "@ni/eslint-config-javascript_v4.2.1",
+      "version": "4.2.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "rajsite@users.noreply.github.com",
+            "package": "@ni/eslint-config-javascript",
+            "commit": "0c417c7fc8c091fec3a27c01c07498c2134aade9",
+            "comment": "Make all eslint config deps peers"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 10 Jan 2023 19:27:28 GMT",
       "tag": "@ni/eslint-config-javascript_v4.2.0",
       "version": "4.2.0",
