@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Fri, 16 Jun 2023 20:48:21 GMT",
+      "tag": "@ni/eslint-config-angular_v5.0.4",
+      "version": "5.0.4",
+      "comments": {
+        "none": [
+          {
+            "author": "jattasNI@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "31bc6e297543185a9c50390dbfc04ed7cc8fddd4",
+            "comment": "Fix lint error in tools"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 16 Mar 2023 18:44:04 GMT",
       "tag": "@ni/eslint-config-angular_v5.0.4",
       "version": "5.0.4",

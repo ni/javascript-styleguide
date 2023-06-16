@@ -1,7 +1,0 @@
-{
-  "type": "none",
-  "comment": "Fix lint error in tools",
-  "packageName": "@ni/eslint-config-typescript",
-  "email": "jattasNI@users.noreply.github.com",
-  "dependentChangeType": "none"
-}

@@ -1,7 +1,0 @@
-{
-  "type": "none",
-  "comment": "Fix lint error in comment",
-  "packageName": "@ni/eslint-config-javascript",
-  "email": "jattasNI@users.noreply.github.com",
-  "dependentChangeType": "none"
-}
