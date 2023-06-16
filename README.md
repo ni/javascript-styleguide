@@ -10,6 +10,7 @@
 [![NPM Version](https://img.shields.io/npm/v/@ni/eslint-config-javascript.svg?label=@ni/eslint-config-javascript)](https://www.npmjs.com/package/@ni/eslint-config-javascript)
 [![NPM Version](https://img.shields.io/npm/v/@ni/eslint-config-typescript.svg?label=@ni/eslint-config-typescript)](https://www.npmjs.com/package/@ni/eslint-config-typescript)
 [![NPM Version](https://img.shields.io/npm/v/@ni/eslint-config-angular.svg?label=@ni/eslint-config-angular)](https://www.npmjs.com/package/@ni/eslint-config-angular)
+[![NPM Version](https://img.shields.io/npm/v/@ni/eslint-config-playwright.svg?label=@ni/eslint-config-playwright)](https://www.npmjs.com/package/@ni/eslint-config-playwright)
 
 Welcome to NI's JavaScript and TypeScript linter rules for [ESLint](https://eslint.org/docs/user-guide/getting-started).
 
@@ -38,6 +39,13 @@ Install the package for your corresponding language as a development dependency:
     ```
 
     Then follow the [Angular configuration](#angular-configuration) instructions.
+- For Playwright run:
+
+    ```bash
+    npm install -D @ni/eslint-config-playwright
+    ```
+
+    Then follow the [Playwright configuration](#playwright-configuration) instructions.
 
 With npm 7 and up the required peer dependencies will be installed automatically and you can move on to [Configuration](#configuration).
 
@@ -116,6 +124,24 @@ configure ESLint for Angular projects**.
     }]
     ```
 4. Evaluate the [project specific rule groups](#evaluate-project-specific-rule-groups) to manually add to your lint configuration. For Angular applications in particular, consider enabling the [`[application-prefix]`](#application-prefix) rule group.
+
+### Playwright configuration
+
+Extend `@ni/eslint-config-playwright` and `@ni/eslint-config-playwright/requiring-type-checking` in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
+
+**Note:** The Playwright configurations extend the TypeScript configurations, so it is not necessary for an application to extend them both.
+
+```js
+{
+    extends: [
+        '@ni/eslint-config-playwright',
+        '@ni/eslint-config-playwright/requiring-type-checking'
+    ],
+    parserOptions: {
+        project: 'tsconfig.json'
+    }
+}
+```
 
 ## Usage
 

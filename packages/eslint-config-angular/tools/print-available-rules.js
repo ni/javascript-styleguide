@@ -5,7 +5,9 @@ const isTrue = val => val !== undefined && val !== false;
 const recommended = rule => isTrue(rule.meta.docs.recommended);
 const print = (keys, prefix = '@angular-eslint') => {
     const results = {};
-    keys.forEach(key => { results[`${prefix}/${key}`] = ''; });
+    keys.forEach(key => {
+        results[`${prefix}/${key}`] = '';
+    });
     global.console.log(JSON.stringify(results, null, 4));
 };
 const sortedRules = Object.keys(plugin.rules).sort();

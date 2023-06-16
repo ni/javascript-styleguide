@@ -70,7 +70,9 @@ const { hideBin } = require('yargs/helpers');
 
     if (!argv.audit) {
         const json = JSON.stringify(getRules(), null, 4);
-        if (!fs.existsSync(dir)) fs.mkdirSync(dir);
+        if (!fs.existsSync(dir)) {
+            fs.mkdirSync(dir);
+        }
         fs.writeFileSync(path.join(dir, 'rules.txt'), json);
         global.console.log(json);
         return;

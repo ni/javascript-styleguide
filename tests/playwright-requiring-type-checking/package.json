@@ -1,0 +1,13 @@
+{
+  "name": "@ni/playwright-requiring-type-checking-test",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Smoke test for Playwright requiring type checking project integration.",
+  "scripts": {
+    "test": "eslint ."
+  },
+  "devDependencies": {
+    "@ni/eslint-config-playwright": "*",
+    "@playwright/test": "^1.34.3"
+  }
+}

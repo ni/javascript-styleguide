@@ -1,0 +1,7 @@
+{
+  "type": "major",
+  "comment": "Introduce Playwright configuration",
+  "packageName": "@ni/eslint-config-playwright",
+  "email": "jattasNI@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}

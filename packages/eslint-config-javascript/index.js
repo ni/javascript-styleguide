@@ -21,7 +21,7 @@ module.exports = {
         'arrow-parens': ['error', 'as-needed'],
 
         /*
-            Use the "one true brace style" in which in which the opening brace of a block is placed 
+            Use the "one true brace style" in which in which the opening brace of a block is placed
             on the same line as its corresponding statement or declaration (this matches Airbnb).
             Also require the body within the braces to be on a new line.
         */
