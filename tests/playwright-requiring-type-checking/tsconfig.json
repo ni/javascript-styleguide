@@ -1,5 +1,5 @@
 {
-    "files": ["./index.ts", "./playwright.config.ts"],
+    "files": ["./index.ts"],
     "include": ["../"],
     "compilerOptions": {
         "strictNullChecks": false,
