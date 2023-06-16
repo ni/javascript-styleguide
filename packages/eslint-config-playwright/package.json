@@ -30,10 +30,8 @@
     "/*.js",
     "!/.*.js"
   ],
-  "dependencies": {
+  "peerDependencies": {
     "@ni/eslint-config-typescript": "^4.2.0",
     "eslint-plugin-playwright": "^0.12.0"
-  },
-  "peerDependencies": {
   }
 }
