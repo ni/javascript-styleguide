@@ -71,6 +71,4 @@ module.exports = {
         */
         'playwright/require-top-level-describe': 'error'
     },
-    overrides: [
-    ]
 };
