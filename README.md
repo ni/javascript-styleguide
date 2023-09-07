@@ -129,7 +129,7 @@ configure ESLint for Angular projects**.
 
 Extend `@ni/eslint-config-playwright` and `@ni/eslint-config-playwright/requiring-type-checking` in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
 
-**Note:** The Playwright configurations extend the TypeScript configurations, so it is not necessary for an application to extend them both.
+**Note:** The Playwright configurations extend the TypeScript configurations, so it is not necessary for an application to extend them both. However, the Playwright configurations should only be applied to directories that contain Playwright tests.
 
 ```js
 {
