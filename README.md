@@ -133,7 +133,7 @@ Extend `@ni/eslint-config-playwright` and `@ni/eslint-config-playwright/requirin
 
 ```js
 // This is an example .eslintrc.js in a Playwright-specific directory.
-// If Playwright files are mixed with other code, use an "overrides" file pattern to match only Playwright code
+// If Playwright files are mixed with other code, use an "overrides" file pattern to match only Playwright code.
 {
     extends: [
         '@ni/eslint-config-playwright',
