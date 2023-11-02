@@ -48,6 +48,6 @@
     "tests/print-evaluated-rules"
   ],
   "devDependencies": {
-    "beachball": "^2.39.0"
+    "beachball": "^2.31.3"
   }
 }
