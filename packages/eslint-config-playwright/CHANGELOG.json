@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-playwright",
   "entries": [
     {
+      "date": "Thu, 02 Nov 2023 17:32:58 GMT",
+      "tag": "@ni/eslint-config-playwright_v1.0.1",
+      "version": "1.0.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "rajsite@users.noreply.github.com",
+            "package": "@ni/eslint-config-playwright",
+            "commit": "439c18214de9e3046b6fbc7d04d86d5e2b22b6e5",
+            "comment": "Update typescript config version"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 16 Jun 2023 20:48:21 GMT",
       "tag": "@ni/eslint-config-playwright_v1.0.0",
       "version": "1.0.0",
