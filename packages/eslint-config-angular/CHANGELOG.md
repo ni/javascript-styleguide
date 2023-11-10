@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Thu, 02 Nov 2023 17:32:58 GMT and should not be manually modified.
+This log was last generated on Fri, 10 Nov 2023 21:04:10 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 5.1.1
+
+Fri, 10 Nov 2023 21:04:10 GMT
+
+### Patches
+
+- Revert addition of Angular 15 support (20542556+mollykreis@users.noreply.github.com)
 
 ## 5.1.0
 

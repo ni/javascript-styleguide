@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Fri, 10 Nov 2023 21:04:10 GMT",
+      "tag": "@ni/eslint-config-angular_v5.1.1",
+      "version": "5.1.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "20542556+mollykreis@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "50e768716873c4f2352fc09a450a7db68180b1b7",
+            "comment": "Revert addition of Angular 15 support"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 02 Nov 2023 17:32:58 GMT",
       "tag": "@ni/eslint-config-angular_v5.1.0",
       "version": "5.1.0",
