@@ -1,5 +1,5 @@
 {
-  "type": "major",
+  "type": "patch",
   "comment": "Remove support for Angular 15",
   "packageName": "@ni/eslint-config-angular",
   "email": "20542556+mollykreis@users.noreply.github.com",
