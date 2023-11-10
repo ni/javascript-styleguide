@@ -7,7 +7,7 @@
     "test": "eslint ."
   },
   "dependencies": {
-    "@angular/core": "^15.2.0"
+    "@angular/core": "^14.1.2"
   },
   "devDependencies": {
     "@ni/eslint-config-angular": "*",

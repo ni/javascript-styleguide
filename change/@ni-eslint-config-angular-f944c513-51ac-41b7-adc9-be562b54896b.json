@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "Revert addition of Angular 15 support",
+  "packageName": "@ni/eslint-config-angular",
+  "email": "20542556+mollykreis@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
