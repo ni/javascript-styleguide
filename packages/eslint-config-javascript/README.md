@@ -11,6 +11,8 @@
 
 See the [ni/javascript-styleguide](https://github.com/ni/javascript-styleguide#readme) repository for instructions on using this package.
 
+It rocks! 
+
 ## License
 
 [MIT (c) 2021 National Instruments Corporation](./LICENSE)
