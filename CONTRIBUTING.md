@@ -39,7 +39,15 @@ The goal of the smoke tests is basic validation that the eslint configurations c
 
 ### Creating a pull request
 
-Currently the repository only supports contributions by creating a branch and pull request (we hope to support a fork-pull workflow soon). Not all users can create a branch in this repo; contact @rajsite to be granted the necessary privileges.
+1. Create a fork of the repository.
+2. (optional, but recommended) On the Actions tab of your repository enable actions for the repo. This allows the tests to run in the branches of your fork.
+3. Create and edit a branch in your fork.
+4. Open a pull request to Nimble for the branch.
+   - (optional, but recommended) While creating the pull request enable the "Allow edits and access to secrets by maintainers" option. This will allow maintainers to push small changes to the branch to resolve needed changes quicker.
+5. Create a beachball change file for your project by doing one of the following:
+   1. Follow the [Beachball change file](#beachball-change-file) instructions below to create a change file and push to your branch.
+   2. If you allowed maintainers to edit your branch, they may add a change file for you or request that you add one.
+6. Maintainers will review the PR, may request updates, and eventually merge and release the changes.
 
 ### Beachball change file
 
