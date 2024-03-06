@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-javascript
 
-This log was last generated on Thu, 16 Mar 2023 18:44:04 GMT and should not be manually modified.
+This log was last generated on Wed, 06 Mar 2024 19:12:39 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 4.2.2
+
+Wed, 06 Mar 2024 19:12:39 GMT
+
+### Patches
+
+- Update to latest in semantic version range (rajsite@users.noreply.github.com)
 
 ## 4.2.1
 
