@@ -49,7 +49,7 @@ jobs:
     - run: npm run lint
 
     # Check Changelog
-    - if: env.HAS_GITHUBPAGESDEPLOYTOKEN == 'true'
+    - if: github.repository_owner == 'ni'
       run: npm run check
 
     # Publish updates
