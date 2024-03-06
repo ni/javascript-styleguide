@@ -2,6 +2,27 @@
   "name": "@ni/eslint-config-typescript",
   "entries": [
     {
+      "date": "Wed, 06 Mar 2024 19:12:39 GMT",
+      "version": "4.2.2",
+      "tag": "@ni/eslint-config-typescript_v4.2.2",
+      "comments": {
+        "patch": [
+          {
+            "author": "rajsite@users.noreply.github.com",
+            "package": "@ni/eslint-config-typescript",
+            "commit": "c1a1267b200d7ff009bb82fc28dc666a449304c3",
+            "comment": "Update to latest in semantic version range"
+          },
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-typescript",
+            "comment": "Bump @ni/eslint-config-javascript to v4.2.2",
+            "commit": "not available"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 16 Jun 2023 20:48:21 GMT",
       "tag": "@ni/eslint-config-typescript_v4.2.1",
       "version": "4.2.1",

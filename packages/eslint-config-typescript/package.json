@@ -1,6 +1,6 @@
 {
   "name": "@ni/eslint-config-typescript",
-  "version": "4.2.1",
+  "version": "4.2.2",
   "description": "NI's TypeScript ESLint Shareable Config",
   "main": "index.js",
   "scripts": {
@@ -32,7 +32,7 @@
     "/lib/*"
   ],
   "peerDependencies": {
-    "@ni/eslint-config-javascript": "^4.2.1",
+    "@ni/eslint-config-javascript": "^4.2.2",
     "@typescript-eslint/parser": "^5.62.0",
     "@typescript-eslint/eslint-plugin": "^5.62.0"
   }

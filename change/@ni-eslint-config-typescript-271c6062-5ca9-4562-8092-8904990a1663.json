@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "Update to latest in semantic version range",
-  "packageName": "@ni/eslint-config-typescript",
-  "email": "rajsite@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}
