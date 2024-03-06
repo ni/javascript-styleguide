@@ -48,6 +48,9 @@
     "tests/print-evaluated-rules"
   ],
   "devDependencies": {
-    "beachball": "^2.31.3"
+    "beachball": "^2.41.0"
+  },
+  "peerDependencies": {
+    "typescript": "~4.8.2"
   }
 }
