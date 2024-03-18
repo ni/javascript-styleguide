@@ -31,11 +31,11 @@
     "!/.*.js"
   ],
   "peerDependencies": {
-    "@angular-eslint/builder": "^15.0.0",
-    "@angular-eslint/eslint-plugin": "^15.0.0",
-    "@angular-eslint/eslint-plugin-template": "^15.0.0",
-    "@angular-eslint/schematics": "^15.0.0",
-    "@angular-eslint/template-parser": "^15.0.0",
+    "@angular-eslint/builder": "^16.3.1",
+    "@angular-eslint/eslint-plugin": "^16.3.1",
+    "@angular-eslint/eslint-plugin-template": "^16.3.1",
+    "@angular-eslint/schematics": "^16.3.1",
+    "@angular-eslint/template-parser": "^16.3.1",
     "@ni/eslint-config-typescript": "^4.2.2"
   }
 }
