@@ -1,14 +1,13 @@
 module.exports = {
     extends: [
         'plugin:@angular-eslint/recommended',
-        'plugin:@angular-eslint/recommended--extra',
         'plugin:@angular-eslint/template/process-inline-templates',
         '@ni/eslint-config-typescript'
     ],
     rules: {
         /*
             Overrides to Angular recommended rules:
-            https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.json
+            https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/src/configs/recommended.json
         */
 
         /*
@@ -29,9 +28,44 @@ module.exports = {
         '@angular-eslint/use-lifecycle-interface': 'error',
 
         /*
-            Overrides to Angular extra recommended rules:
-            https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/src/configs/recommended--extra.json
+            Formerly recommended "extra" Angular rules:
+            https://github.com/angular-eslint/angular-eslint/blob/v15.2.1/packages/eslint-plugin/src/configs/recommended--extra.json
         */
+        'no-restricted-imports': [
+            'error',
+            {
+                paths: [
+                    {
+                        name: 'rxjs/Rx',
+                        message: "Please import directly from 'rxjs' instead"
+                    }
+                ]
+            }
+        ],
+        '@typescript-eslint/member-ordering': [
+            'error',
+            {
+                default: [
+                    'static-field',
+                    'instance-field',
+                    'static-method',
+                    'instance-method'
+                ]
+            }
+        ],
+        'no-restricted-syntax': [
+            'error',
+            {
+                selector: 'CallExpression[callee.object.name="console"][callee.property.name=/^(debug|info|time|timeEnd|trace)$/]',
+                message: 'Unexpected property on console object was called'
+            }
+        ],
+        '@typescript-eslint/no-inferrable-types': [
+            'error',
+            { ignoreParameters: true }
+        ],
+        '@typescript-eslint/no-non-null-assertion': 'error',
+        'no-fallthrough': 'error',
 
         /*
             Overrides to Angular rules outside of the recommended configuration:

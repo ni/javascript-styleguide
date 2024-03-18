@@ -5,7 +5,7 @@ module.exports = {
     rules: {
         /*
             Overrides to airbnb rules:
-            https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/index.js
+            https://github.com/airbnb/javascript/blob/main/packages/eslint-config-airbnb-base/index.js
         */
 
         /*
@@ -299,7 +299,7 @@ module.exports = {
             {
                 paths: [{
                     // The following is recommended by the @angular-eslint/recommended--extra configuration.
-                    // https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/src/configs/recommended--extra.json
+                    // https://github.com/angular-eslint/angular-eslint/blob/v15.2.1/packages/eslint-plugin/src/configs/recommended--extra.json
                     name: 'rxjs/Rx',
                     message: 'Please import directly from \'rxjs\' instead'
                 }]

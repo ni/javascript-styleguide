@@ -9,7 +9,7 @@ module.exports = {
     rules: {
         /*
             Overrides to import rules (already handled by the TypeScript compiler):
-            https://github.com/benmosher/eslint-plugin-import/blob/master/config/typescript.js
+            https://github.com/benmosher/eslint-plugin-import/blob/main/config/typescript.js
         */
 
         /*
@@ -24,7 +24,7 @@ module.exports = {
 
         /*
             Overrides to TypeScript recommended rules:
-            https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.ts
+            https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended.ts
         */
 
         '@typescript-eslint/explicit-module-boundary-types': 'error',

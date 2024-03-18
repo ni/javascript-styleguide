@@ -1,39 +1,31 @@
 module.exports = {
     extends: [
-        'plugin:@angular-eslint/template/recommended'
+        'plugin:@angular-eslint/template/recommended',
+        'plugin:@angular-eslint/template/accessibility'
     ],
     rules: {
         /*
             Overrides to Angular template recommended rules:
-            https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/src/configs/recommended.json
+            https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/src/configs/recommended.json
         */
+
+        /*
+            Overrides to Angular template accessibility rules:
+            https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/src/configs/accessibility.json
+        */
+
+        '@angular-eslint/template/alt-text': 'off',
+        '@angular-eslint/template/click-events-have-key-events': 'off',
+        '@angular-eslint/template/elements-content': 'off',
+        '@angular-eslint/template/label-has-associated-control': 'off',
+        '@angular-eslint/template/mouse-events-have-key-events': 'off',
+        '@angular-eslint/template/no-autofocus': 'off',
+        '@angular-eslint/template/no-positive-tabindex': 'off',
+        '@angular-eslint/template/table-scope': 'off',
 
         /*
             Overrides to Angular rules outside of the recommended configuration:
         */
-
-        /* [accessibility] */
-        '@angular-eslint/template/accessibility-alt-text': 'off',
-
-        /* [accessibility] */
-        '@angular-eslint/template/accessibility-elements-content': 'off',
-
-        /* [accessibility] */
-        '@angular-eslint/template/accessibility-label-for': 'off',
-
-        /* [accessibility] */
-        '@angular-eslint/template/accessibility-label-has-associated-control': 'off',
-
-        /* [accessibility] */
-        '@angular-eslint/template/accessibility-table-scope': 'off',
-
-        /*
-            Enabled as the rule validates usage of aria attributes when used but does not require their usage.
-        */
-        '@angular-eslint/template/accessibility-valid-aria': 'error',
-
-        /* [accessibility] */
-        '@angular-eslint/template/click-events-have-key-events': 'off',
 
         '@angular-eslint/template/conditional-complexity': 'error',
 
@@ -52,13 +44,7 @@ module.exports = {
         */
         '@angular-eslint/template/i18n': ['error', { checkId: false }],
 
-        /* [accessibility] */
-        '@angular-eslint/template/mouse-events-have-key-events': 'off',
-
         '@angular-eslint/template/no-any': 'error',
-
-        /* [accessibility] */
-        '@angular-eslint/template/no-autofocus': 'off',
 
         /*
             When considering efficient bindings use memoization and pipes. Avoid heavy array iteratoration, nested
@@ -68,12 +54,7 @@ module.exports = {
         */
         '@angular-eslint/template/no-call-expression': 'off',
 
-        '@angular-eslint/template/no-distracting-elements': 'error',
-
         '@angular-eslint/template/no-duplicate-attributes': 'error',
-
-        /* [accessibility] */
-        '@angular-eslint/template/no-positive-tabindex': 'off',
 
         /*
             Providing a `trackBy` function in `ngFor` loops can improve performance in specific cases where Angular can't track references, but it's overkill to require it for every `ngFor` so this rule is disabled.
