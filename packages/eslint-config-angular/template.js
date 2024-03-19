@@ -41,7 +41,7 @@ module.exports = {
         '@angular-eslint/template/no-positive-tabindex': 'off',
 
         /* [accessibility] */
-        '@angular-eslint/template/role-has-required-aria': 'error',
+        '@angular-eslint/template/role-has-required-aria': 'off',
 
         /* [accessibility] */
         '@angular-eslint/template/table-scope': 'off',
