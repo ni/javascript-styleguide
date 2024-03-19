@@ -1,7 +1,6 @@
 module.exports = {
     extends: [
-        'plugin:@angular-eslint/template/recommended',
-        'plugin:@angular-eslint/template/accessibility'
+        'plugin:@angular-eslint/template/recommended'
     ],
     rules: {
         /*
@@ -10,18 +9,42 @@ module.exports = {
         */
 
         /*
-            Overrides to Angular template accessibility rules:
+            Angular template accessibility rules:
             https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/src/configs/accessibility.json
         */
 
+        /* [accessibility] */
         '@angular-eslint/template/alt-text': 'off',
+
+        /* [accessibility] */
         '@angular-eslint/template/click-events-have-key-events': 'off',
+
+        /* [accessibility] */
         '@angular-eslint/template/elements-content': 'off',
+
+        /* [accessibility] */
         '@angular-eslint/template/interactive-supports-focus': 'off',
+
+        /* [accessibility] */
         '@angular-eslint/template/label-has-associated-control': 'off',
+
+        /* [accessibility] */
         '@angular-eslint/template/mouse-events-have-key-events': 'off',
+
+        /* [accessibility] */
         '@angular-eslint/template/no-autofocus': 'off',
+
+        /* [accessibility] */
+        '@angular-eslint/template/no-distracting-elements': 'error',
+
+        /* [accessibility] */
+        '@angular-eslint/template/role-has-required-aria': 'error',
+
+        /* [accessibility] */
         '@angular-eslint/template/table-scope': 'off',
+
+        /* [accessibility] */
+        '@angular-eslint/template/valid-aria': 'error',
 
         /*
             Overrides to Angular rules outside of the recommended configuration:
