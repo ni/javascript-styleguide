@@ -7,7 +7,7 @@ module.exports = {
     rules: {
         /*
             Overrides to TypeScript recommended rules:
-            https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended-requiring-type-checking.ts
+            https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended-requiring-type-checking.ts
         */
 
         /*

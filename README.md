@@ -324,11 +324,11 @@ This option can be adapted for npm scripts, for example.
 
 If there are situations where the analysis time for enabling the type checked rules is an excessive burden you may consider creating a separate ESLint configuration that avoids extending the type checked rules and omits the `parserOptions.project` configuration to run in specific scenarios.
 
-See discussion in the [performance section](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md#performance) of the Getting Started - Linting with Type Information guide.
+See discussion in the [performance section](https://github.com/typescript-eslint/typescript-eslint/blob/main/docs/getting-started/linting/TYPED_LINTING.md#performance) of the Getting Started - Linting with Type Information guide.
 
 ### Angular linting performance
 
-Deviations from the `@angular-eslint schematic`, `@ni/eslint-config-angular`, and the [`parserOptions.project`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser#parseroptionsproject) configurations can result in significant performance degredation. Fully manual configuration [is not recommended](https://github.com/angular-eslint/angular-eslint#going-fully-manual-not-recommended). Read `@angular-eslint`'s [section on performance](https://github.com/angular-eslint/angular-eslint#eslint-configs-and-performance) for information on addressing slow linting processes.
+Deviations from the `@angular-eslint schematic`, `@ni/eslint-config-angular`, and the [`parserOptions.project`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/parser#parseroptionsproject) configurations can result in significant performance degredation. Fully manual configuration [is not recommended](https://github.com/angular-eslint/angular-eslint#going-fully-manual-not-recommended). Read `@angular-eslint`'s [section on performance](https://github.com/angular-eslint/angular-eslint#eslint-configs-and-performance) for information on addressing slow linting processes.
 
 ## License
 
