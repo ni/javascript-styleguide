@@ -30,6 +30,8 @@ module.exports = {
         /*
             Formerly recommended "extra" Angular rules:
             https://github.com/angular-eslint/angular-eslint/blob/v15.2.1/packages/eslint-plugin/src/configs/recommended--extra.json
+            - @typescript-eslint/member-ordering already set by @ni/eslint-config-typescript
+            - no-restricted-syntax already set by @ni/eslint-config-javascript
         */
         'no-restricted-imports': [
             'error',
@@ -40,24 +42,6 @@ module.exports = {
                         message: "Please import directly from 'rxjs' instead"
                     }
                 ]
-            }
-        ],
-        '@typescript-eslint/member-ordering': [
-            'error',
-            {
-                default: [
-                    'static-field',
-                    'instance-field',
-                    'static-method',
-                    'instance-method'
-                ]
-            }
-        ],
-        'no-restricted-syntax': [
-            'error',
-            {
-                selector: 'CallExpression[callee.object.name="console"][callee.property.name=/^(debug|info|time|timeEnd|trace)$/]',
-                message: 'Unexpected property on console object was called'
             }
         ],
         '@typescript-eslint/no-inferrable-types': [
