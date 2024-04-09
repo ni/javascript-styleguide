@@ -27,29 +27,12 @@ module.exports = {
         */
         '@angular-eslint/use-lifecycle-interface': 'error',
 
-        /*
-            Formerly recommended "extra" Angular rules:
-            https://github.com/angular-eslint/angular-eslint/blob/v15.2.1/packages/eslint-plugin/src/configs/recommended--extra.json
-            - @typescript-eslint/member-ordering already set by @ni/eslint-config-typescript
-            - no-restricted-syntax already set by @ni/eslint-config-javascript
-        */
-        'no-restricted-imports': [
-            'error',
-            {
-                paths: [
-                    {
-                        name: 'rxjs/Rx',
-                        message: "Please import directly from 'rxjs' instead"
-                    }
-                ]
-            }
-        ],
+        // We intended to use the default from @typescript-eslint/recommended, but we adopted this override accidentally.
+        // See https://github.com/ni/javascript-styleguide/issues/139
         '@typescript-eslint/no-inferrable-types': [
             'error',
             { ignoreParameters: true }
         ],
-        '@typescript-eslint/no-non-null-assertion': 'error',
-        'no-fallthrough': 'error',
 
         /*
             Overrides to Angular rules outside of the recommended configuration:
