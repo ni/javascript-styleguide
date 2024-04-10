@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Wed, 10 Apr 2024 17:56:39 GMT",
+      "version": "7.0.0",
+      "tag": "@ni/eslint-config-angular_v7.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "7282195+m-akinc@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "107ef3b1364eeebabb4fd6833c906a18538d66a0",
+            "comment": "Update to Angular 16"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 06 Mar 2024 19:12:39 GMT",
       "version": "6.0.1",
       "tag": "@ni/eslint-config-angular_v6.0.1",

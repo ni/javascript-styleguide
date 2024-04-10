@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-typescript",
   "entries": [
     {
+      "date": "Wed, 10 Apr 2024 17:56:39 GMT",
+      "version": "4.2.2",
+      "tag": "@ni/eslint-config-typescript_v4.2.2",
+      "comments": {
+        "none": [
+          {
+            "author": "7282195+m-akinc@users.noreply.github.com",
+            "package": "@ni/eslint-config-typescript",
+            "commit": "107ef3b1364eeebabb4fd6833c906a18538d66a0",
+            "comment": "Url updates in comments"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 06 Mar 2024 19:12:39 GMT",
       "version": "4.2.2",
       "tag": "@ni/eslint-config-typescript_v4.2.2",

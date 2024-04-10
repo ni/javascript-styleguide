@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Wed, 06 Mar 2024 19:12:39 GMT and should not be manually modified.
+This log was last generated on Wed, 10 Apr 2024 17:56:39 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 7.0.0
+
+Wed, 10 Apr 2024 17:56:39 GMT
+
+### Major changes
+
+- Update to Angular 16 (7282195+m-akinc@users.noreply.github.com)
 
 ## 6.0.1
 
