@@ -1,5 +1,4 @@
 const { ESLint } = require('eslint');
-const angularExtraRules = require('@angular-eslint/eslint-plugin/dist/configs/recommended--extra.json').rules;
 const angularRules = require('@ni/eslint-config-angular').rules;
 const angularTemplateRules = require('@ni/eslint-config-angular/template').rules;
 const fs = require('fs');
@@ -87,7 +86,7 @@ const { hideBin } = require('yargs/helpers');
                 return config;
             }, {})
     );
-    const angularDivergedRules = Object.assign(getDivergedRules(angularRules), getDivergedRules(angularExtraRules));
+    const angularDivergedRules = getDivergedRules(angularRules);
     const angularTemplateDivergedRules = getDivergedRules(angularTemplateRules);
     const angularHasDivergedRules = !!Object.keys(angularDivergedRules).length || !!Object.keys(angularTemplateDivergedRules).length;
 

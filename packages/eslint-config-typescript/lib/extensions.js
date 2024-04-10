@@ -5,7 +5,7 @@ module.exports = {
             TypeScript.
             * When upgrading, changes to these rules can be identified in the typescript-eslint
               changelog under features and breaking changes:
-              https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
+              https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin#extension-rules
             * In addition, the `npm run dev-print-typescript-props` command can be used to list
               the expected extension properties.
             * The value of the extension properties should match the value chosen by the

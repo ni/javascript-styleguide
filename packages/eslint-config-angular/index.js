@@ -1,14 +1,13 @@
 module.exports = {
     extends: [
         'plugin:@angular-eslint/recommended',
-        'plugin:@angular-eslint/recommended--extra',
         'plugin:@angular-eslint/template/process-inline-templates',
         '@ni/eslint-config-typescript'
     ],
     rules: {
         /*
             Overrides to Angular recommended rules:
-            https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.json
+            https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/src/configs/recommended.json
         */
 
         /*
@@ -28,10 +27,12 @@ module.exports = {
         */
         '@angular-eslint/use-lifecycle-interface': 'error',
 
-        /*
-            Overrides to Angular extra recommended rules:
-            https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/src/configs/recommended--extra.json
-        */
+        // We intended to use the default from @typescript-eslint/recommended, but we adopted this override accidentally.
+        // See https://github.com/ni/javascript-styleguide/issues/139
+        '@typescript-eslint/no-inferrable-types': [
+            'error',
+            { ignoreParameters: true }
+        ],
 
         /*
             Overrides to Angular rules outside of the recommended configuration:
