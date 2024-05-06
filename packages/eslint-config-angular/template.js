@@ -1,3 +1,5 @@
+const ignoreAttributes = require('./i18n-attributes-ignore');
+
 module.exports = {
     extends: [
         'plugin:@angular-eslint/template/recommended'
@@ -68,7 +70,13 @@ module.exports = {
             and new applications in the chance that they'll need to be localized in the future. Disable this rule
             if an application will never be localized.
         */
-        '@angular-eslint/template/i18n': ['error', { checkId: false }],
+        '@angular-eslint/template/i18n': [
+            'error',
+            {
+                checkId: false,
+                ignoreAttributes: [...ignoreAttributes.nimble, ...ignoreAttributes['systemlink-lib-angular'], ...ignoreAttributes.jqx, ...ignoreAttributes.material]
+            }
+        ],
 
         '@angular-eslint/template/no-any': 'error',
 

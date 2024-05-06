@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "Update @angular-eslint/template/i18n to ignore common nimble and sl-lib attributes",
+  "packageName": "@ni/eslint-config-angular",
+  "email": "418101+rbell517@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
