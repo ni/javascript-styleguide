@@ -3,7 +3,7 @@ import { Component, Input, ViewChild } from '@angular/core';
 import { ComponentFixture } from '@angular/core/testing';
 
 @Component({
-    template: '<div custom-attribute="i18n-should-be-ignored-in-test"></div>'
+    template: '<div custom-attribute="i18n-should-be-ignored-in-test">missing i18n should be ignored</div>'
 })
 class MyComponent {
     @Input() public attr = false;
