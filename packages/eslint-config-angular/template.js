@@ -74,7 +74,7 @@ module.exports = {
             'error',
             {
                 checkId: false,
-                ignoreAttributes: [ignoreAttributes.all]
+                ignoreAttributes: [...ignoreAttributes.all]
             }
         ],
 
