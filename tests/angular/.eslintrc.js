@@ -1,5 +1,6 @@
 // Test TypeScript and templates together to process inline templates.
 module.exports = {
+    ignorePatterns: ['*.js'],
     overrides: [{
         extends: [
             '@ni/eslint-config-angular',

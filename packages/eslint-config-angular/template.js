@@ -1,4 +1,4 @@
-const ignoreAttributes = require('./i18n-attributes-ignore');
+const { ignoreAttributes } = require('./options');
 
 module.exports = {
     extends: [
@@ -94,5 +94,18 @@ module.exports = {
             Providing a `trackBy` function in `ngFor` loops can improve performance in specific cases where Angular can't track references, but it's overkill to require it for every `ngFor` so this rule is disabled.
         */
         '@angular-eslint/template/use-track-by-function': 'off'
-    }
+    },
+    overrides: [
+        {
+            // Ignore inline templates in tests using the inline template naming convention
+            // See naming details: https://github.com/angular-eslint/angular-eslint/releases/tag/v14.0.0
+            files: ['*.spec.ts*.html'],
+            rules: {
+                /*
+                    Tests often define helper components that don't need to be marked for i18n.
+                */
+                '@angular-eslint/template/i18n': 'off'
+            }
+        },
+    ]
 };

@@ -60,8 +60,8 @@ const ignoreAttributes = {
         'matTooltipClass',
     ]
 };
+ignoreAttributes.all = Object.values(ignoreAttributes).flat();
 
 module.exports = {
-    ...ignoreAttributes,
-    all: [...ignoreAttributes.nimble, ...ignoreAttributes.systemlink, ...ignoreAttributes.jqx, ...ignoreAttributes.material]
+    ignoreAttributes
 };
