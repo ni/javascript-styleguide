@@ -1,6 +1,6 @@
 {
   "name": "@ni/eslint-config-playwright",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "NI's Playwright ESLint Shareable Config",
   "main": "index.js",
   "scripts": {

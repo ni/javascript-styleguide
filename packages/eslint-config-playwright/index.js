@@ -5,6 +5,14 @@ module.exports = {
     ],
     rules: {
         /*
+            In UI tests it is common to have a loop that performs async operations which must be sequential.
+            For example, clicking on a list of elements one after another.
+            While there are still some cases where the rule would suggest valid improvements, they are not common
+            enough to justify the noise that comes from needing to suppress it.
+        */
+        'no-await-in-loop': 'off',
+
+        /*
             Playwright marks this as recommended but configures it as 'warn'.
             Deeply nested describe blocks are likely an indication that test files are too complicated.
         */

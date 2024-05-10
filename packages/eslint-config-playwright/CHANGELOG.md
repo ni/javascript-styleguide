@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-playwright
 
-This log was last generated on Wed, 06 Mar 2024 19:12:39 GMT and should not be manually modified.
+This log was last generated on Fri, 10 May 2024 22:42:13 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 1.0.3
+
+Fri, 10 May 2024 22:42:13 GMT
+
+### Patches
+
+- Disable no-await-in-loop for Playwright (jattasNI@users.noreply.github.com)
 
 ## 1.0.2
 
