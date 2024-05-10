@@ -74,7 +74,7 @@ module.exports = {
             'error',
             {
                 checkId: false,
-                ignoreAttributes: [...ignoreAttributes.nimble, ...ignoreAttributes['systemlink-lib-angular'], ...ignoreAttributes.jqx, ...ignoreAttributes.material]
+                ignoreAttributes: [ignoreAttributes.all]
             }
         ],
 

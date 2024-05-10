@@ -1,4 +1,16 @@
-module.exports = {
+// This is a list of standard element attributes to ignore
+// when applying the @angular-eslint/template/i18n rule
+// that requires attributes to be tagged as localizable.
+//
+// New attributes can be added here that are for element
+// configuration and not for display, where localizing
+// the attribute value would result in broken functionality.
+//
+// In cases of attribute collisions, the rule supports
+// CSS selector style element[attribute] ignore entries
+// which can be used to scope attribute ignores to specific
+// elements.
+const ignoreAttributes = {
     nimble: [
         'action-menu-slot',
         'appearance',
@@ -15,7 +27,7 @@ module.exports = {
         'slot',
         'theme'
     ],
-    'systemlink-lib-angular': [
+    systemlink: [
         // sl-workspace-selector
         'action',
 
@@ -47,4 +59,9 @@ module.exports = {
         'matColumnDef',
         'matTooltipClass',
     ]
+};
+
+module.exports = {
+    ...ignoreAttributes,
+    all: [...ignoreAttributes.nimble, ...ignoreAttributes.systemlink, ...ignoreAttributes.jqx, ...ignoreAttributes.material]
 };
