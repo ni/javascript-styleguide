@@ -1,4 +1,4 @@
-// Angular TypeScript and Inline Template Smoke Test
+// Angular TypeScript and Inline Template Custom Ignore Attributes Test
 import { Component, Input } from '@angular/core';
 
 @Component({
