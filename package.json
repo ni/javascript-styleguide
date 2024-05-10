@@ -11,10 +11,10 @@
     "print-evaluated-rules:diff": "npm -w tests/print-evaluated-rules run print-evaluated-rules:diff",
     "print-evaluated-rules:no-audit": "npm -w tests/print-evaluated-rules run print-evaluated-rules:no-audit",
     "test": "npm --workspaces --if-present test",
-    "change": "beachball change",
-    "check": "beachball check --changehint \"Run 'npm run change' to generate a change file\"",
-    "publish": "beachball publish --message \"applying package updates [skip ci]\"",
-    "publish:ci": "beachball publish --yes --access public --message \"applying package updates [skip ci]\""
+    "change": "beachball change --verbose",
+    "check": "beachball check --verbose --changehint \"Run 'npm run change' to generate a change file\"",
+    "publish": "beachball publish --verbose --message \"applying package updates [skip ci]\"",
+    "publish:ci": "beachball publish --verbose --yes --access public --message \"applying package updates [skip ci]\""
   },
   "repository": {
     "type": "git",
@@ -48,6 +48,9 @@
     "tests/print-evaluated-rules"
   ],
   "devDependencies": {
-    "beachball": "^2.31.3"
+    "beachball": "^2.41.0"
+  },
+  "peerDependencies": {
+    "typescript": "~4.8.2"
   }
 }

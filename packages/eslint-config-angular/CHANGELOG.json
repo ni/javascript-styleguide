@@ -2,6 +2,81 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Wed, 10 Apr 2024 17:56:39 GMT",
+      "version": "7.0.0",
+      "tag": "@ni/eslint-config-angular_v7.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "7282195+m-akinc@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "107ef3b1364eeebabb4fd6833c906a18538d66a0",
+            "comment": "Update to Angular 16"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Wed, 06 Mar 2024 19:12:39 GMT",
+      "version": "6.0.1",
+      "tag": "@ni/eslint-config-angular_v6.0.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-angular",
+            "comment": "Bump @ni/eslint-config-typescript to v4.2.2",
+            "commit": "not available"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Mon, 13 Nov 2023 18:26:28 GMT",
+      "tag": "@ni/eslint-config-angular_v6.0.0",
+      "version": "6.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "20542556+mollykreis@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "a0c457d32dff363bcc2774ce9f9091943b5d9898",
+            "comment": "Update to Angular 15"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Fri, 10 Nov 2023 21:04:10 GMT",
+      "tag": "@ni/eslint-config-angular_v5.1.1",
+      "version": "5.1.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "20542556+mollykreis@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "50e768716873c4f2352fc09a450a7db68180b1b7",
+            "comment": "Revert addition of Angular 15 support"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Thu, 02 Nov 2023 17:32:58 GMT",
+      "tag": "@ni/eslint-config-angular_v5.1.0",
+      "version": "5.1.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "20542556+mollykreis@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "c92b44b932a7a0d8e4bc37720f8941d874055f9a",
+            "comment": "Add support for Angular 15"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 16 Jun 2023 20:48:21 GMT",
       "tag": "@ni/eslint-config-angular_v5.0.4",
       "version": "5.0.4",

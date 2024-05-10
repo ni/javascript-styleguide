@@ -1,6 +1,6 @@
 {
   "name": "@ni/eslint-config-javascript",
-  "version": "4.2.1",
+  "version": "4.2.2",
   "description": "NI's JavaScript ESLint Shareable Config",
   "main": "index.js",
   "scripts": {
@@ -30,8 +30,8 @@
     "!/.*.js"
   ],
   "peerDependencies": {
-    "eslint": "^8.23.0",
+    "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "~15.0.0",
-    "eslint-plugin-import": "^2.26.0"
+    "eslint-plugin-import": "^2.29.1"
   }
 }

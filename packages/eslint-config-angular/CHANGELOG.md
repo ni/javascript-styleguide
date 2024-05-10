@@ -1,8 +1,48 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Thu, 16 Mar 2023 18:44:04 GMT and should not be manually modified.
+This log was last generated on Wed, 10 Apr 2024 17:56:39 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 7.0.0
+
+Wed, 10 Apr 2024 17:56:39 GMT
+
+### Major changes
+
+- Update to Angular 16 (7282195+m-akinc@users.noreply.github.com)
+
+## 6.0.1
+
+Wed, 06 Mar 2024 19:12:39 GMT
+
+### Patches
+
+- Bump @ni/eslint-config-typescript to v4.2.2
+
+## 6.0.0
+
+Mon, 13 Nov 2023 18:26:28 GMT
+
+### Major changes
+
+- Update to Angular 15 (20542556+mollykreis@users.noreply.github.com)
+
+## 5.1.1
+
+Fri, 10 Nov 2023 21:04:10 GMT
+
+### Patches
+
+- Revert addition of Angular 15 support (20542556+mollykreis@users.noreply.github.com)
+
+## 5.1.0
+
+Thu, 02 Nov 2023 17:32:58 GMT
+
+### Minor changes
+
+- Add support for Angular 15 (20542556+mollykreis@users.noreply.github.com)
 
 ## 5.0.4
 

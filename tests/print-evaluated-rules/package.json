@@ -9,14 +9,16 @@
         "print-evaluated-rules:diff": "node index.js --diff",
         "print-evaluated-rules:no-audit": "node index.js --no-audit"
     },
-    "dependencies": {
-        "@angular-eslint/eslint-plugin": "*",
+    "peerDependencies": {
+        "@angular-eslint/eslint-plugin": "^16.3.1",
         "@ni/angular-test": "*",
         "@ni/eslint-config-angular": "*",
         "@ni/javascript-test": "*",
         "@ni/typescript-test": "*",
         "@ni/typescript-requiring-type-checking-test": "*",
-        "eslint": "*",
-        "yargs": "^17.5.1"
+        "eslint": "^8.57.0"
+    },
+    "dependencies": {
+        "yargs": "^17.7.2"
     }
 }
