@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "Disable no-await-in-loop for Playwright",
-  "packageName": "@ni/eslint-config-playwright",
-  "email": "jattasNI@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}

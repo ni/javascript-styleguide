@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-playwright",
   "entries": [
     {
+      "date": "Fri, 10 May 2024 22:42:13 GMT",
+      "version": "1.0.3",
+      "tag": "@ni/eslint-config-playwright_v1.0.3",
+      "comments": {
+        "patch": [
+          {
+            "author": "jattasNI@users.noreply.github.com",
+            "package": "@ni/eslint-config-playwright",
+            "commit": "319b3ba377d0e13f68bbb3a24cc8f35d7b36af56",
+            "comment": "Disable no-await-in-loop for Playwright"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 06 Mar 2024 19:12:39 GMT",
       "version": "1.0.2",
       "tag": "@ni/eslint-config-playwright_v1.0.2",
