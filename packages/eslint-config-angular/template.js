@@ -1,4 +1,4 @@
-const { ignoreAttributes } = require('./options');
+const { ignoreAttributes } = require('./template/options');
 
 module.exports = {
     extends: [

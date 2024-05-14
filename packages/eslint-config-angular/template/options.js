@@ -10,7 +10,7 @@
 // CSS selector style element[attribute] ignore entries
 // which can be used to scope attribute ignores to specific
 // elements.
-const ignoreAttributes = {
+const ignoreAttributeSets = {
     nimble: [
         'action-menu-slot',
         'appearance',
@@ -60,7 +60,11 @@ const ignoreAttributes = {
         'matTooltipClass',
     ]
 };
-ignoreAttributes.all = Object.values(ignoreAttributes).flat();
+
+const ignoreAttributes = {
+    ...ignoreAttributeSets,
+    all: Object.values(ignoreAttributeSets).flat()
+};
 
 module.exports = {
     ignoreAttributes

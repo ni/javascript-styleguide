@@ -1,4 +1,4 @@
-const {ignoreAttributes} = require('@ni/eslint-config-angular/options');
+const {ignoreAttributes} = require('@ni/eslint-config-angular/template/options');
 
 module.exports = {
     overrides: [{
