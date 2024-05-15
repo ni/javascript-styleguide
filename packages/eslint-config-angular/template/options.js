@@ -13,8 +13,10 @@
 const ignoreAttributeSets = {
     nimble: [
         'action-menu-slot',
+        'activeid',
         'appearance',
         'appearance-variant',
+        'autocomplete',
         'column-id',
         'field-name',
         'format',
@@ -22,7 +24,11 @@ const ignoreAttributeSets = {
         'id-field-name',
         'key',
         'key-type',
+        'nimbleRouterLink',
         'orientation',
+        'queryParamsHandling',
+        'resize',
+        'selection-mode',
         'severity',
         'slot',
         'theme'
@@ -33,15 +39,26 @@ const ignoreAttributeSets = {
 
         // sl-table
         'columnId',
+        'decimalDigits',
         'fieldName',
+        'format',
+        'hrefFieldName',
         'idFieldName',
+        'keyType',
+        'labelFieldName',
         'selectionMode',
         'slTableColumnId',
 
         // sl-grid
+        'columnSizeMode',
         'dataRowId',
+        'dataSourceFingerprint',
+        'gridId',
         'loadColumnStateBehavior',
-        'parentDataField'
+        'parentDataField',
+
+        // sl-query-builder
+        'dropdownWidth',
     ],
     jqx: [
         // smart-table
