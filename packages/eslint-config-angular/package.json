@@ -27,8 +27,9 @@
     "access": "public"
   },
   "files": [
-    "/*.js",
-    "!/.*.js"
+    "**/*.js",
+    "!/.*.js",
+    "!/tools"
   ],
   "peerDependencies": {
     "@angular-eslint/builder": "^16.3.1",

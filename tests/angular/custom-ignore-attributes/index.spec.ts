@@ -1,4 +1,4 @@
-// Angular test spec smoke test
+// Angular Test Spec Custom Ignore Attributes Test
 import { Component, Input, ViewChild } from '@angular/core';
 import { ComponentFixture } from '@angular/core/testing';
 
