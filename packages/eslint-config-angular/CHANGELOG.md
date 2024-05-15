@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Wed, 10 Apr 2024 17:56:39 GMT and should not be manually modified.
+This log was last generated on Wed, 15 May 2024 23:12:28 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 7.0.1
+
+Wed, 15 May 2024 23:12:28 GMT
+
+### Patches
+
+- Update @angular-eslint/template/i18n to ignore common nimble and sl-lib attributes (418101+rbell517@users.noreply.github.com)
 
 ## 7.0.0
 
