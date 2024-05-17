@@ -19,6 +19,7 @@ const ignoreAttributeSets = {
         'autocomplete',
         'column-id',
         'field-name',
+        'filter-mode',
         'format',
         'icon',
         'id-field-name',
@@ -31,6 +32,7 @@ const ignoreAttributeSets = {
         'selection-mode',
         'severity',
         'slot',
+        'sort-direction',
         'theme'
     ],
     systemlink: [
@@ -62,6 +64,10 @@ const ignoreAttributeSets = {
 
         // sl-query-builder
         'dropdownWidth',
+
+        // native element attributes used by sl components
+        'accept',
+        'aria-live',
     ],
     jqx: [
         // smart-table

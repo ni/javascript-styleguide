@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "Add missing i18n attributes for SystemLinkShared",
+  "packageName": "@ni/eslint-config-angular",
+  "email": "jattasNI@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
