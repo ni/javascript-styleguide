@@ -50,6 +50,7 @@ const ignoreAttributeSets = {
         'labelFieldName',
         'selectionMode',
         'slTableColumnId',
+        'widthMode',
 
         // sl-grid
         'columnSizeMode',
