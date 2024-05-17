@@ -60,6 +60,9 @@ const ignoreAttributeSets = {
         'loadColumnStateBehavior',
         'parentDataField',
 
+        // sl-split-button
+        'appearanceVariant',
+
         // sl-query-builder
         'dropdownWidth',
 
