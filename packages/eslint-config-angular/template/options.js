@@ -66,9 +66,6 @@ const ignoreAttributeSets = {
         // sl-query-builder
         'dropdownWidth',
 
-        // sl-split-button
-        'appearanceVariant',
-
         // native element attributes used by sl components
         'accept',
         'aria-live',
