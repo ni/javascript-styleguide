@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "Move appearanceVariant to systemlink list",
-  "packageName": "@ni/eslint-config-angular",
-  "email": "rajsite@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}

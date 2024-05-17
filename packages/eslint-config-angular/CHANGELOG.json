@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Fri, 17 May 2024 15:14:38 GMT",
+      "version": "7.0.3",
+      "tag": "@ni/eslint-config-angular_v7.0.3",
+      "comments": {
+        "patch": [
+          {
+            "author": "rajsite@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "d515a0d595ac118b882b4b2ef91a6a5fa308b591",
+            "comment": "Move appearanceVariant to systemlink list"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 17 May 2024 14:16:39 GMT",
       "version": "7.0.2",
       "tag": "@ni/eslint-config-angular_v7.0.2",

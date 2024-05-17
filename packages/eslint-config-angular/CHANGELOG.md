@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Fri, 17 May 2024 14:16:39 GMT and should not be manually modified.
+This log was last generated on Fri, 17 May 2024 15:14:38 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 7.0.3
+
+Fri, 17 May 2024 15:14:38 GMT
+
+### Patches
+
+- Move appearanceVariant to systemlink list (rajsite@users.noreply.github.com)
 
 ## 7.0.2
 
