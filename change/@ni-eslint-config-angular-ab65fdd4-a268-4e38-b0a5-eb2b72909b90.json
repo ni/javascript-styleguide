@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "Add another SystemLink attribute for template/i18n",
-  "packageName": "@ni/eslint-config-angular",
-  "email": "jattasNI@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}

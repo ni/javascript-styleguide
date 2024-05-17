@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Fri, 17 May 2024 16:23:37 GMT and should not be manually modified.
+This log was last generated on Fri, 17 May 2024 21:03:50 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 7.0.5
+
+Fri, 17 May 2024 21:03:50 GMT
+
+### Patches
+
+- Add another SystemLink attribute for template/i18n (jattasNI@users.noreply.github.com)
 
 ## 7.0.4
 

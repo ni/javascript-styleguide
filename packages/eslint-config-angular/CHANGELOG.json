@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Fri, 17 May 2024 21:03:50 GMT",
+      "version": "7.0.5",
+      "tag": "@ni/eslint-config-angular_v7.0.5",
+      "comments": {
+        "patch": [
+          {
+            "author": "jattasNI@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "3dba5ca7d817ec9a9ae50ea412dc73fec110903d",
+            "comment": "Add another SystemLink attribute for template/i18n"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 17 May 2024 16:23:37 GMT",
       "version": "7.0.4",
       "tag": "@ni/eslint-config-angular_v7.0.4",
