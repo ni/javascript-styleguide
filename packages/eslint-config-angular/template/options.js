@@ -16,6 +16,7 @@ const ignoreAttributeSets = {
         'activeid',
         'appearance',
         'appearance-variant',
+        'appearanceVariant',
         'autocomplete',
         'column-id',
         'field-name',

@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "Add appearanceVariant to the list of i18n attributes to ignore.",
+  "packageName": "@ni/eslint-config-angular",
+  "email": "2351292+TrevorKarjanis@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
