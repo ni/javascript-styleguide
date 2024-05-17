@@ -18,7 +18,6 @@ const ignoreAttributeSets = {
         'appearance-variant',
         'autocomplete',
         'column-id',
-        'error-text',
         'field-name',
         'filter-mode',
         'format',
