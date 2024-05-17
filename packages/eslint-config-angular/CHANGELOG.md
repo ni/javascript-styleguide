@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Wed, 15 May 2024 23:12:28 GMT and should not be manually modified.
+This log was last generated on Fri, 17 May 2024 14:16:39 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 7.0.2
+
+Fri, 17 May 2024 14:16:39 GMT
+
+### Patches
+
+- Add appearanceVariant to the list of i18n attributes to ignore. (2351292+TrevorKarjanis@users.noreply.github.com)
 
 ## 7.0.1
 

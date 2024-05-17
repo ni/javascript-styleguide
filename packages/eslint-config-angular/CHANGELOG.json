@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Fri, 17 May 2024 14:16:39 GMT",
+      "version": "7.0.2",
+      "tag": "@ni/eslint-config-angular_v7.0.2",
+      "comments": {
+        "patch": [
+          {
+            "author": "2351292+TrevorKarjanis@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "8d7a8256ba456320a9bd8d3ff5b74b4bc2968232",
+            "comment": "Add appearanceVariant to the list of i18n attributes to ignore."
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 15 May 2024 23:12:28 GMT",
       "version": "7.0.1",
       "tag": "@ni/eslint-config-angular_v7.0.1",
