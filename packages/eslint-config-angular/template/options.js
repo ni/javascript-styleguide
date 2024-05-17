@@ -16,7 +16,6 @@ const ignoreAttributeSets = {
         'activeid',
         'appearance',
         'appearance-variant',
-        'appearanceVariant',
         'autocomplete',
         'column-id',
         'field-name',
@@ -57,6 +56,9 @@ const ignoreAttributeSets = {
         'gridId',
         'loadColumnStateBehavior',
         'parentDataField',
+
+        // sl-split-button
+        'appearanceVariant',
 
         // sl-query-builder
         'dropdownWidth',
