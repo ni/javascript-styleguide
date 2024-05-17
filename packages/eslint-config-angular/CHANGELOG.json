@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Fri, 17 May 2024 16:23:37 GMT",
+      "version": "7.0.4",
+      "tag": "@ni/eslint-config-angular_v7.0.4",
+      "comments": {
+        "patch": [
+          {
+            "author": "jattasNI@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "46843c362fe6809049ad1b09d74ab4e5df3fb7bb",
+            "comment": "Add missing i18n attributes for SystemLinkShared"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 17 May 2024 15:14:38 GMT",
       "version": "7.0.3",
       "tag": "@ni/eslint-config-angular_v7.0.3",

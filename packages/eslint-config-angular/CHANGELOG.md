@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Fri, 17 May 2024 15:14:38 GMT and should not be manually modified.
+This log was last generated on Fri, 17 May 2024 16:23:37 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 7.0.4
+
+Fri, 17 May 2024 16:23:37 GMT
+
+### Patches
+
+- Add missing i18n attributes for SystemLinkShared (jattasNI@users.noreply.github.com)
 
 ## 7.0.3
 
