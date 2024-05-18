@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "Add more nimble i18n attr exceptions",
+  "packageName": "@ni/eslint-config-angular",
+  "email": "rajsite@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
