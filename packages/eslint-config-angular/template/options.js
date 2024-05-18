@@ -32,9 +32,7 @@ const ignoreAttributeSets = {
         'location',
         'orientation',
         'resize',
-        'selection-mode',
         'severity',
-        'sort-direction',
         'theme',
 
         // rich text
@@ -53,6 +51,8 @@ const ignoreAttributeSets = {
         'key-type',
         'label-field-name',
         'parent-id-field-name',
+        'selection-mode',
+        'sort-direction',
         'width-mode',
 
         // nimble-angular
