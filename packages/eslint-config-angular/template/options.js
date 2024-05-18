@@ -11,29 +11,54 @@
 // which can be used to scope attribute ignores to specific
 // elements.
 const ignoreAttributeSets = {
+    web: [
+        'aria-labelledby',
+        'rel',
+        'sizes',
+        'slot',
+        // Not possible for Angular i18n to handle meta tags yet
+        // https://github.com/angular/angular-cli/issues/8947
+        'meta[content]'
+    ],
     nimble: [
-        'action-menu-slot',
+        // shared
         'activeid',
+        'anchor',
         'appearance',
         'appearance-variant',
         'autocomplete',
-        'column-id',
-        'field-name',
         'filter-mode',
         'format',
+        'location',
+        'orientation',
+        'resize',
+        'selection-mode',
+        'severity',
+        'sort-direction',
+        'theme',
+
+        // rich text
+        'button-label',
+        'display-name',
+        'pattern',
+
+        // table
+        'action-menu-slot',
+        'column-id',
+        'field-name',
+        'href-field-name',
         'icon',
         'id-field-name',
         'key',
         'key-type',
+        'label-field-name',
+        'parent-id-field-name',
+        'width-mode',
+
+        // nimble-angular
         'nimbleRouterLink',
-        'orientation',
-        'queryParamsHandling',
-        'resize',
-        'selection-mode',
-        'severity',
-        'slot',
-        'sort-direction',
-        'theme'
+        'queryParamsHandling'
+
     ],
     systemlink: [
         // sl-workspace-selector
