@@ -12,8 +12,10 @@
 // elements.
 const ignoreAttributeSets = {
     web: [
+        'accept',
         'aria-describedby',
         'aria-labelledby',
+        'aria-live',
         'rel',
         'sizes',
         // Not possible for Angular i18n to handle meta tags yet
@@ -35,7 +37,7 @@ const ignoreAttributeSets = {
         'location',
 
         // rich text
-        'nimble-rich-text-mention-users[display-name]',
+        'nimble-mapping-user[display-name]',
         'pattern',
 
         // select
@@ -104,10 +106,6 @@ const ignoreAttributeSets = {
 
         // sl-query-builder
         'dropdownWidth',
-
-        // native element attributes used by sl components
-        'accept',
-        'aria-live',
     ],
     jqx: [
         // smart-table
