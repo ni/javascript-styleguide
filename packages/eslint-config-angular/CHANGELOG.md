@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Fri, 17 May 2024 21:03:50 GMT and should not be manually modified.
+This log was last generated on Mon, 20 May 2024 14:25:28 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 7.0.6
+
+Mon, 20 May 2024 14:25:28 GMT
+
+### Patches
+
+- Add more nimble i18n attr exceptions (rajsite@users.noreply.github.com)
 
 ## 7.0.5
 
