@@ -11,29 +11,70 @@
 // which can be used to scope attribute ignores to specific
 // elements.
 const ignoreAttributeSets = {
+    web: [
+        'accept',
+        'aria-describedby',
+        'aria-labelledby',
+        'aria-live',
+        'rel',
+        'sizes',
+        // Not possible for Angular i18n to handle meta tags yet
+        // https://github.com/angular/angular-cli/issues/8947
+        'meta[content]'
+    ],
     nimble: [
-        'action-menu-slot',
-        'activeid',
+        // shared
         'appearance',
         'appearance-variant',
+        'orientation',
+        'severity',
+        'slot',
+
+        // combobox
         'autocomplete',
+
+        // drawer
+        'location',
+
+        // rich text
+        'nimble-mapping-user[display-name]',
+        'pattern',
+
+        // select
+        'filter-mode',
+
+        // table
+        'action-menu-slot',
         'column-id',
         'field-name',
-        'filter-mode',
         'format',
+        'href-field-name',
         'icon',
         'id-field-name',
         'key',
         'key-type',
-        'nimbleRouterLink',
-        'orientation',
-        'queryParamsHandling',
-        'resize',
+        'label-field-name',
+        'parent-id-field-name',
         'selection-mode',
-        'severity',
-        'slot',
         'sort-direction',
-        'theme'
+        'width-mode',
+
+        // tabs
+        'activeid',
+
+        // text area
+        'resize',
+
+        // theme provider
+        'theme',
+
+        // tooltips
+        'anchor',
+
+        // angular-specific
+        'nimbleRouterLink',
+        'queryParamsHandling'
+
     ],
     systemlink: [
         // sl-workspace-selector
@@ -65,10 +106,6 @@ const ignoreAttributeSets = {
 
         // sl-query-builder
         'dropdownWidth',
-
-        // native element attributes used by sl components
-        'accept',
-        'aria-live',
     ],
     jqx: [
         // smart-table
