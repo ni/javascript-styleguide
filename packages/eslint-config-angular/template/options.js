@@ -12,40 +12,40 @@
 // elements.
 const ignoreAttributeSets = {
     web: [
+        'aria-describedby',
         'aria-labelledby',
         'rel',
         'sizes',
-        'slot',
         // Not possible for Angular i18n to handle meta tags yet
         // https://github.com/angular/angular-cli/issues/8947
         'meta[content]'
     ],
     nimble: [
         // shared
-        'activeid',
-        'anchor',
         'appearance',
         'appearance-variant',
-        'autocomplete',
-        'filter-mode',
-        'format',
-        'location',
         'orientation',
-        'resize',
-        'selection-mode',
         'severity',
-        'sort-direction',
-        'theme',
+        'slot',
+
+        // combobox
+        'autocomplete',
+
+        // drawer
+        'location',
 
         // rich text
-        'button-label',
-        'display-name',
+        'nimble-rich-text-mention-users[display-name]',
         'pattern',
+
+        // select
+        'filter-mode',
 
         // table
         'action-menu-slot',
         'column-id',
         'field-name',
+        'format',
         'href-field-name',
         'icon',
         'id-field-name',
@@ -53,9 +53,23 @@ const ignoreAttributeSets = {
         'key-type',
         'label-field-name',
         'parent-id-field-name',
+        'selection-mode',
+        'sort-direction',
         'width-mode',
 
-        // nimble-angular
+        // tabs
+        'activeid',
+
+        // text area
+        'resize',
+
+        // theme provider
+        'theme',
+
+        // tooltips
+        'anchor',
+
+        // angular-specific
         'nimbleRouterLink',
         'queryParamsHandling'
 
