@@ -1,24 +1,24 @@
 {
-    "name": "@ni/print-evaluated-rules-test",
-    "version": "1.0.0",
-    "private": true,
-    "description": "Meta project used to analyze the integration tests.",
-    "scripts": {
-        "lint": "eslint .",
-        "print-evaluated-rules": "node index.js",
-        "print-evaluated-rules:diff": "node index.js --diff",
-        "print-evaluated-rules:no-audit": "node index.js --no-audit"
-    },
-    "peerDependencies": {
-        "@angular-eslint/eslint-plugin": "^16.3.1",
-        "@ni/angular-test": "*",
-        "@ni/eslint-config-angular": "*",
-        "@ni/javascript-test": "*",
-        "@ni/typescript-test": "*",
-        "@ni/typescript-requiring-type-checking-test": "*",
-        "eslint": "^8.57.0"
-    },
-    "dependencies": {
-        "yargs": "^17.7.2"
-    }
+  "name": "@ni/print-evaluated-rules-test",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Meta project used to analyze the integration tests.",
+  "scripts": {
+    "lint": "eslint .",
+    "print-evaluated-rules": "node index.js",
+    "print-evaluated-rules:diff": "node index.js --diff",
+    "print-evaluated-rules:no-audit": "node index.js --no-audit"
+  },
+  "peerDependencies": {
+    "@angular-eslint/eslint-plugin": "^17.5.2",
+    "@ni/angular-test": "*",
+    "@ni/eslint-config-angular": "*",
+    "@ni/javascript-test": "*",
+    "@ni/typescript-test": "*",
+    "@ni/typescript-requiring-type-checking-test": "*",
+    "eslint": "^8.57.0"
+  },
+  "dependencies": {
+    "yargs": "^17.7.2"
+  }
 }
