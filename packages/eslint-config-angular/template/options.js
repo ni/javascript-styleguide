@@ -58,6 +58,7 @@ const ignoreAttributeSets = {
         'selection-mode',
         'sort-direction',
         'width-mode',
+        'menu-slot',
 
         // tabs
         'activeid',
