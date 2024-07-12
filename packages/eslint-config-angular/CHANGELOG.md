@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Mon, 20 May 2024 14:25:28 GMT and should not be manually modified.
+This log was last generated on Fri, 12 Jul 2024 15:38:31 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 7.0.7
+
+Fri, 12 Jul 2024 15:38:31 GMT
+
+### Patches
+
+- Add 'menu-slot' i18n exception for the menu-button table column (20542556+mollykreis@users.noreply.github.com)
 
 ## 7.0.6
 

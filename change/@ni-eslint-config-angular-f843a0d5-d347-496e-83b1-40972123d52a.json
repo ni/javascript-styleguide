@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "Add 'menu-slot' i18n exception for the menu-button table column",
-  "packageName": "@ni/eslint-config-angular",
-  "email": "20542556+mollykreis@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}
