@@ -54,6 +54,7 @@ const ignoreAttributeSets = {
         'key',
         'key-type',
         'label-field-name',
+        'menu-slot',
         'parent-id-field-name',
         'selection-mode',
         'sort-direction',
