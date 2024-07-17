@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Fri, 12 Jul 2024 15:38:31 GMT",
+      "version": "7.0.7",
+      "tag": "@ni/eslint-config-angular_v7.0.7",
+      "comments": {
+        "patch": [
+          {
+            "author": "20542556+mollykreis@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "d74a0d92bb0dae5de77523ce197167075668d93e",
+            "comment": "Add 'menu-slot' i18n exception for the menu-button table column"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 20 May 2024 14:25:28 GMT",
       "version": "7.0.6",
       "tag": "@ni/eslint-config-angular_v7.0.6",
