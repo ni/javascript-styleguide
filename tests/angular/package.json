@@ -10,7 +10,7 @@
     "@ni/eslint-config-angular": "*"
   },
   "dependencies": {
-    "@angular/core": "^16.2.12"
+    "@angular/core": "^17.3.12"
   },
   "devDependencies": {
     "@types/jasminewd2": "^2.0.13"
