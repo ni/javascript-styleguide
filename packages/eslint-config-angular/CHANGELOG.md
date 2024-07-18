@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Fri, 12 Jul 2024 15:38:31 GMT and should not be manually modified.
+This log was last generated on Thu, 18 Jul 2024 15:42:14 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 8.0.0
+
+Thu, 18 Jul 2024 15:42:14 GMT
+
+### Major changes
+
+- Update to Angular 17 (7282195+m-akinc@users.noreply.github.com)
 
 ## 7.0.7
 

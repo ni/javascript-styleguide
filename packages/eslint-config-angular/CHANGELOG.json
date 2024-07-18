@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Thu, 18 Jul 2024 15:42:14 GMT",
+      "version": "8.0.0",
+      "tag": "@ni/eslint-config-angular_v8.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "7282195+m-akinc@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "b4294635f5b1f6a6dcf5fa901f2d21bcb6000e98",
+            "comment": "Update to Angular 17"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 12 Jul 2024 15:38:31 GMT",
       "version": "7.0.7",
       "tag": "@ni/eslint-config-angular_v7.0.7",
