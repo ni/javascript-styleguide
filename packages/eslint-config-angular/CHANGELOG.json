@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Thu, 08 Aug 2024 22:33:17 GMT",
+      "version": "8.0.1",
+      "tag": "@ni/eslint-config-angular_v8.0.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "7282195+m-akinc@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "b32bd0d5b7f043243e461908f33f782dd6dc2198",
+            "comment": "Exempt parentIdFieldName from i18n rule"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 18 Jul 2024 15:42:14 GMT",
       "version": "8.0.0",
       "tag": "@ni/eslint-config-angular_v8.0.0",

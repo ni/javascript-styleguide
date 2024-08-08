@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Thu, 18 Jul 2024 15:42:14 GMT and should not be manually modified.
+This log was last generated on Thu, 08 Aug 2024 22:33:17 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 8.0.1
+
+Thu, 08 Aug 2024 22:33:17 GMT
+
+### Patches
+
+- Exempt parentIdFieldName from i18n rule (7282195+m-akinc@users.noreply.github.com)
 
 ## 8.0.0
 
