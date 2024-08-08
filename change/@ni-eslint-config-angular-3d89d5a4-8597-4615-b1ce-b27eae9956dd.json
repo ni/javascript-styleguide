@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "Exempt parentIdFieldName from i18n rule",
+  "packageName": "@ni/eslint-config-angular",
+  "email": "7282195+m-akinc@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
