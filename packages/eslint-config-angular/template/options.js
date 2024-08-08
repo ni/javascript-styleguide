@@ -90,6 +90,7 @@ const ignoreAttributeSets = {
         'idFieldName',
         'keyType',
         'labelFieldName',
+        'parentIdFieldName',
         'selectionMode',
         'slTableColumnId',
         'widthMode',
