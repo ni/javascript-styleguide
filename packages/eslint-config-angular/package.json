@@ -33,8 +33,8 @@
   ],
   "peerDependencies": {
     "@angular-eslint/builder": "^17.5.2",
-    "@angular-eslint/eslint-plugin": "^17.5.2",
-    "@angular-eslint/eslint-plugin-template": "^17.5.2",
+    "@angular-eslint/eslint-plugin": "^18.3.1",
+    "@angular-eslint/eslint-plugin-template": "^18.3.1",
     "@angular-eslint/schematics": "^17.5.2",
     "@angular-eslint/template-parser": "^17.5.2",
     "@ni/eslint-config-typescript": "^4.2.2"
