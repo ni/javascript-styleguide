@@ -1,7 +1,7 @@
 {
   "type": "minor",
-  "comment": "Disable explicit-member-accessibility for ctors",
+  "comment": "Disable `@typescript-eslint/explicit-member-accessibility` for constructors",
   "packageName": "@ni/eslint-config-typescript",
   "email": "jattasNI@users.noreply.github.com",
-  "dependentChangeType": "patch"
+  "dependentChangeType": "minor"
 }
