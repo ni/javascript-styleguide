@@ -10,4 +10,10 @@ export class NI {
     public makeAwesomer(): void {
         this._awesomeLevel += 1;
     }
+
+    public async asyncAwesomeness(): Promise<void> {
+        await new Promise(resolve => {
+            resolve(true);
+        });
+    }
 }

@@ -12,4 +12,8 @@ export class NI {
     makeAwesomer() {
         this._awesomeLevel += 1;
     }
+
+    async asyncAwesomeness() {
+        await new Promise();
+    }
 }

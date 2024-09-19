@@ -424,6 +424,8 @@ module.exports = {
         */
         'prefer-regex-literals': 'error',
 
+        'require-await': 'error',
+
         /*
             This configuration already supports the JSDoc syntax. Add additional syntax as line or
             block exceptions or markers when necessary.
