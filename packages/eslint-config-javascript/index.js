@@ -325,6 +325,11 @@ module.exports = {
                 selector: 'CallExpression[callee.object.name=\'console\'][callee.property.name=/^(debug|info|time|timeEnd|trace)$/]',
                 message: 'Unexpected property on console object was called'
             }],
+        /*
+            This rule is deprecated since ESLint 8.46.0 because returning an awaited value no longer generates an extra microtask.
+            https://eslint.org/docs/latest/rules/no-return-await
+        */
+        'no-return-await': 'off',
 
         /*
             Disallow returning values from setters.
