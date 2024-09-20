@@ -429,6 +429,9 @@ module.exports = {
         */
         'prefer-regex-literals': 'error',
 
+        /*
+            Asynchronous functions that don’t use await might not need to be asynchronous functions and could be the unintentional result of refactoring.
+        */
         'require-await': 'error',
 
         /*
