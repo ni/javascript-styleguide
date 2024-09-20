@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-describe('AssetDisplayPropertiesSidenavWrapperComponent', () => {
+test.describe('AssetDisplayPropertiesSidenavWrapperComponent', () => {
     test('has title', async ({ page }) => {
         await page.goto('https://playwright.dev/');
 

@@ -13,6 +13,6 @@
     "@angular/core": "^17.3.12"
   },
   "devDependencies": {
-    "@types/jasminewd2": "^2.0.13"
+    "@types/jasmine": "^5.1.4"
   }
 }

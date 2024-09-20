@@ -18,7 +18,7 @@ describe('MyComponent', () => {
     it('should have a div', async () => {
         await fixture.whenStable();
 
-        await expect(hostComponent.div).toBeDefined();
-        await expect(hostComponent.myMethod).not.toHaveBeenCalled();
+        expect(hostComponent.div).toBeDefined();
+        expect(hostComponent.myMethod).not.toHaveBeenCalled();
     });
 });
