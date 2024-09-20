@@ -12,8 +12,6 @@ export class NI {
     }
 
     public async asyncAwesomeness(): Promise<void> {
-        await new Promise(resolve => {
-            resolve(true);
-        });
+        await Promise.resolve(true);
     }
 }
