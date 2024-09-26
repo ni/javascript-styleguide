@@ -18,6 +18,6 @@ module.exports = {
 
         // Defined by Airbnb
         'no-return-await': 'off',
-        '@typescript-eslint/return-await': 'error',
+        '@typescript-eslint/return-await': ['error', 'always'],
     }
 };
