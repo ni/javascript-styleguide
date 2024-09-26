@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-playwright",
   "entries": [
     {
+      "date": "Thu, 26 Sep 2024 17:15:21 GMT",
+      "version": "1.1.0",
+      "tag": "@ni/eslint-config-playwright_v1.1.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-playwright",
+            "comment": "Bump @ni/eslint-config-typescript to v4.3.0",
+            "commit": "not available"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 10 May 2024 22:42:13 GMT",
       "version": "1.0.3",
       "tag": "@ni/eslint-config-playwright_v1.0.3",

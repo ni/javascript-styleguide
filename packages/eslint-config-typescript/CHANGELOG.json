@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-typescript",
   "entries": [
     {
+      "date": "Thu, 26 Sep 2024 17:15:21 GMT",
+      "version": "4.3.0",
+      "tag": "@ni/eslint-config-typescript_v4.3.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "jattasNI@users.noreply.github.com",
+            "package": "@ni/eslint-config-typescript",
+            "commit": "bd1f97ecbc162826266d4f0bef9ea336e31deb8c",
+            "comment": "Disable `@typescript-eslint/explicit-member-accessibility` for constructors"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 10 Apr 2024 17:56:39 GMT",
       "version": "4.2.2",
       "tag": "@ni/eslint-config-typescript_v4.2.2",

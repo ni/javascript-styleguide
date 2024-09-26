@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-playwright
 
-This log was last generated on Fri, 10 May 2024 22:42:13 GMT and should not be manually modified.
+This log was last generated on Thu, 26 Sep 2024 17:15:21 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 1.1.0
+
+Thu, 26 Sep 2024 17:15:21 GMT
+
+### Minor changes
+
+- Bump @ni/eslint-config-typescript to v4.3.0
 
 ## 1.0.3
 
