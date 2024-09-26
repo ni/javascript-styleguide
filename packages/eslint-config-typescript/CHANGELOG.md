@@ -1,8 +1,17 @@
 # Change Log - @ni/eslint-config-typescript
 
-This log was last generated on Thu, 26 Sep 2024 17:15:21 GMT and should not be manually modified.
+This log was last generated on Thu, 26 Sep 2024 17:18:02 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 4.4.0
+
+Thu, 26 Sep 2024 17:18:02 GMT
+
+### Minor changes
+
+- Rule changes for asynchronous code:\n 1. Functions marked `async` must now include an `await`. The rule `'@typescript-eslint/require-await'` changed from `'off'` to `'error'`. (jattasNI@users.noreply.github.com)
+- Bump @ni/eslint-config-javascript to v4.3.0
 
 ## 4.3.0
 

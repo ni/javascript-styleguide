@@ -1,6 +1,6 @@
 {
   "name": "@ni/eslint-config-javascript",
-  "version": "4.2.2",
+  "version": "4.3.0",
   "description": "NI's JavaScript ESLint Shareable Config",
   "main": "index.js",
   "scripts": {

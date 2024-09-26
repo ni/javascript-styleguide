@@ -1,7 +1,0 @@
-{
-  "type": "minor",
-  "comment": "Rule changes for asynchronous code:\\n 1. Functions marked `async` must now include an `await`. The rule `'@typescript-eslint/require-await'` changed from `'off'` to `'error'`.\\n 2. Test code must now correctly handle promises. The rule `'@typescript-eslint/no-floating-promises'` changed from `'off'` to `'error'`.",
-  "packageName": "@ni/eslint-config-angular",
-  "email": "jattasNI@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}

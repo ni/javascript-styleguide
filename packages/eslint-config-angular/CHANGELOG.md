@@ -1,8 +1,17 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Thu, 26 Sep 2024 17:15:21 GMT and should not be manually modified.
+This log was last generated on Thu, 26 Sep 2024 17:18:02 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 8.2.0
+
+Thu, 26 Sep 2024 17:18:02 GMT
+
+### Minor changes
+
+- Rule changes for asynchronous code:\n 1. Functions marked `async` must now include an `await`. The rule `'@typescript-eslint/require-await'` changed from `'off'` to `'error'`.\n 2. Test code must now correctly handle promises. The rule `'@typescript-eslint/no-floating-promises'` changed from `'off'` to `'error'`. (jattasNI@users.noreply.github.com)
+- Bump @ni/eslint-config-typescript to v4.4.0
 
 ## 8.1.0
 

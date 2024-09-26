@@ -2,6 +2,27 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Thu, 26 Sep 2024 17:18:02 GMT",
+      "version": "8.2.0",
+      "tag": "@ni/eslint-config-angular_v8.2.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "jattasNI@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "2fbb47b12aa37cb8237828343e2f0c36c02b815a",
+            "comment": "Rule changes for asynchronous code:\\n 1. Functions marked `async` must now include an `await`. The rule `'@typescript-eslint/require-await'` changed from `'off'` to `'error'`.\\n 2. Test code must now correctly handle promises. The rule `'@typescript-eslint/no-floating-promises'` changed from `'off'` to `'error'`."
+          },
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-angular",
+            "comment": "Bump @ni/eslint-config-typescript to v4.4.0",
+            "commit": "not available"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 26 Sep 2024 17:15:21 GMT",
       "version": "8.1.0",
       "tag": "@ni/eslint-config-angular_v8.1.0",

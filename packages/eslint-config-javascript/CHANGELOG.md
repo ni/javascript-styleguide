@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-javascript
 
-This log was last generated on Wed, 06 Mar 2024 19:12:39 GMT and should not be manually modified.
+This log was last generated on Thu, 26 Sep 2024 17:18:02 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 4.3.0
+
+Thu, 26 Sep 2024 17:18:02 GMT
+
+### Minor changes
+
+- Rule changes for asynchronous code:\n 1. Functions marked `async` must now include an `await`. The rule `'require-await'` changed from `'off'` to `'error'`.\n 2. It is now acceptable for a function to return an awaited promise. The rule `'no-return-await'` changed from `'error'` to `'off'`. (jattasNI@users.noreply.github.com)
 
 ## 4.2.2
 

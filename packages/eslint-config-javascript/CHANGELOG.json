@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-javascript",
   "entries": [
     {
+      "date": "Thu, 26 Sep 2024 17:18:02 GMT",
+      "version": "4.3.0",
+      "tag": "@ni/eslint-config-javascript_v4.3.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "jattasNI@users.noreply.github.com",
+            "package": "@ni/eslint-config-javascript",
+            "commit": "2fbb47b12aa37cb8237828343e2f0c36c02b815a",
+            "comment": "Rule changes for asynchronous code:\\n 1. Functions marked `async` must now include an `await`. The rule `'require-await'` changed from `'off'` to `'error'`.\\n 2. It is now acceptable for a function to return an awaited promise. The rule `'no-return-await'` changed from `'error'` to `'off'`."
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 10 Apr 2024 17:56:39 GMT",
       "version": "4.2.2",
       "tag": "@ni/eslint-config-javascript_v4.2.2",
