@@ -74,9 +74,12 @@ module.exports = {
         /*
             Requiring an accessibility modifier helps when creating classes to ensure the
             accessibility of a class member is intentionally decided and not relying on
-            the default of public accessibility.
+            the default of public accessibility. Constructors are omitted because they are
+            almost always public.
         */
-        '@typescript-eslint/explicit-member-accessibility': 'error',
+        '@typescript-eslint/explicit-member-accessibility': ['error',
+            { accessibility: 'explicit', overrides: { constructors: 'off' } }
+        ],
 
         /*
             All interface members should be terminated with a semicolon including single line
