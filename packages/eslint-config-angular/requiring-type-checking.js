@@ -8,10 +8,9 @@ module.exports = {
             files: ['*.spec.ts'],
             rules: {
                 /*
-                    The jasminewd2 library used by Angular applications results in a significant number of
-                    floating promises and unbound methods so these rules are disabled for test specs in Angular projects.
+                    Spies used by Angular application tests result in a significant number of
+                    unbound methods so this rule is disabled for test specs in Angular projects.
                 */
-                '@typescript-eslint/no-floating-promises': 'off',
                 '@typescript-eslint/unbound-method': 'off',
             }
         },

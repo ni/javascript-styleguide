@@ -1,0 +1,7 @@
+{
+  "type": "minor",
+  "comment": "Rule changes for asynchronous code:\\n 1. Functions marked `async` must now include an `await`. The rule `'require-await'` changed from `'off'` to `'error'`.\\n 2. It is now acceptable for a function to return an awaited promise. The rule `'no-return-await'` changed from `'error'` to `'off'`.",
+  "packageName": "@ni/eslint-config-javascript",
+  "email": "jattasNI@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}

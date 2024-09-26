@@ -12,12 +12,12 @@ module.exports = {
         'no-throw-literal': 'off',
         '@typescript-eslint/no-throw-literal': 'error',
 
-        // Defined by Airbnb
+        // Defined by NI
         'require-await': 'off',
-        '@typescript-eslint/require-await': 'off',
+        '@typescript-eslint/require-await': 'error',
 
         // Defined by Airbnb
         'no-return-await': 'off',
-        '@typescript-eslint/return-await': 'error',
+        '@typescript-eslint/return-await': ['error', 'always'],
     }
 };
