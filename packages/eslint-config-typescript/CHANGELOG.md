@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-typescript
 
-This log was last generated on Wed, 06 Mar 2024 19:12:39 GMT and should not be manually modified.
+This log was last generated on Thu, 26 Sep 2024 17:15:21 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 4.3.0
+
+Thu, 26 Sep 2024 17:15:21 GMT
+
+### Minor changes
+
+- Disable `@typescript-eslint/explicit-member-accessibility` for constructors (jattasNI@users.noreply.github.com)
 
 ## 4.2.2
 
