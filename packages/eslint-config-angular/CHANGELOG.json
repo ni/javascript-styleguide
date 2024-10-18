@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Fri, 18 Oct 2024 22:00:56 GMT",
+      "version": "8.2.1",
+      "tag": "@ni/eslint-config-angular_v8.2.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "7282195+m-akinc@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "ef3faf97089ee70e223e9bf4e8a1b3dd774cf53a",
+            "comment": "Exempt groupableParentColumnId from i18n rule"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 26 Sep 2024 17:18:02 GMT",
       "version": "8.2.0",
       "tag": "@ni/eslint-config-angular_v8.2.0",

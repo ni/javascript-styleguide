@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Thu, 26 Sep 2024 17:18:02 GMT and should not be manually modified.
+This log was last generated on Fri, 18 Oct 2024 22:00:56 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 8.2.1
+
+Fri, 18 Oct 2024 22:00:56 GMT
+
+### Patches
+
+- Exempt groupableParentColumnId from i18n rule (7282195+m-akinc@users.noreply.github.com)
 
 ## 8.2.0
 
