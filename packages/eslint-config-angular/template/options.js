@@ -86,6 +86,7 @@ const ignoreAttributeSets = {
         'decimalDigits',
         'fieldName',
         'format',
+        'groupableParentColumnId',
         'hrefFieldName',
         'idFieldName',
         'keyType',
