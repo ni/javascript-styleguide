@@ -1,4 +1,4 @@
-const plugin = require('@typescript-eslint/eslint-plugin');
+const plugin = require('@typescript-eslint/eslint-plugin/dist');
 
 const isTrue = val => val !== undefined && val !== false;
 const recommended = key => isTrue(plugin.rules[key].meta.docs.recommended);
