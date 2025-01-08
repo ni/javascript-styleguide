@@ -91,6 +91,8 @@ module.exports = {
 
         '@angular-eslint/relative-url-prefix': 'error',
 
+        '@angular-eslint/runtime-localize': 'error',
+
         /*
             Generally not expected in practice to sort NgModule metadata arrays. Projects may enable if desired.
         */
