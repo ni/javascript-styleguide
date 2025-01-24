@@ -200,8 +200,6 @@ module.exports = {
 
         '@typescript-eslint/prefer-literal-enum-member': 'error',
 
-        '@typescript-eslint/prefer-optional-chain': 'error',
-
         '@typescript-eslint/prefer-ts-expect-error': 'error',
 
         /*

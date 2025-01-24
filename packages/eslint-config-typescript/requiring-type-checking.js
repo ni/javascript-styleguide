@@ -1,19 +1,14 @@
 module.exports = {
     extends: [
-        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        'plugin:@typescript-eslint/recommended-type-checked',
         './lib/extensions-requiring-type-checking'
     ],
     parser: '@typescript-eslint/parser',
     rules: {
         /*
             Overrides to TypeScript recommended rules:
-            https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended-requiring-type-checking.ts
+            https://github.com/typescript-eslint/typescript-eslint/tree/v7.18.0/packages/eslint-plugin/src/configs/recommended-type-checked.ts
         */
-
-        /*
-            Allow usage of String.prototype.match for regular expression matching.
-        */
-        '@typescript-eslint/prefer-regexp-exec': 'off',
 
         /*
             This rule can be confusing if you're not familiar with JavaScript's rules for binding `this`,
@@ -123,6 +118,8 @@ module.exports = {
             Logical OR checks should not be used for other falsy values such as numbers (0, -0, 0n, NaN).
         */
         '@typescript-eslint/prefer-nullish-coalescing': 'off',
+
+        '@typescript-eslint/prefer-optional-chain': 'error',
 
         '@typescript-eslint/prefer-readonly': 'error',
 
