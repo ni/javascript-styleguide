@@ -2,6 +2,7 @@ module.exports = {
     extends: [
         '@ni/eslint-config-javascript',
         'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/stylistic',
         'plugin:import/typescript',
         './lib/extensions'
     ],
@@ -29,8 +30,6 @@ module.exports = {
 
         '@typescript-eslint/explicit-module-boundary-types': 'error',
 
-        '@typescript-eslint/no-explicit-any': 'error',
-
         /*
             [strict-null-checks]
             With `stickNullChecks` disabled, non-null assertions are discouraged (this rule is configured as 'error')
@@ -39,6 +38,15 @@ module.exports = {
             is useful for asserting that a value will no longer be null and usage of operator should be allowed.
         */
         '@typescript-eslint/no-non-null-assertion': 'error',
+
+        'valid-typeof': 'off',
+
+        /*
+            Overrides to TypeScript stylistic rules:
+            https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/stylistic.ts
+        */
+
+        '@typescript-eslint/consistent-generic-constructors': 'off',
 
         /*
             Overrides to Typescript rules outside of the recommended configuration:
@@ -216,6 +224,6 @@ module.exports = {
         */
         '@typescript-eslint/typedef': 'off',
 
-        '@typescript-eslint/unified-signatures': 'error'
+        '@typescript-eslint/unified-signatures': 'error',
     }
 };
