@@ -10,6 +10,8 @@ module.exports = {
             https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/src/configs/recommended.json
         */
 
+        '@angular-eslint/no-host-metadata-property': 'error',
+
         /*
             '@angular-eslint/no-input-rename' rule notes:
             Disallow renaming directive inputs generally. Use an inline comment to disable the rule for exceptions where the
@@ -90,6 +92,8 @@ module.exports = {
         '@angular-eslint/prefer-output-readonly': 'off',
 
         '@angular-eslint/relative-url-prefix': 'error',
+
+        '@angular-eslint/runtime-localize': 'error',
 
         /*
             Generally not expected in practice to sort NgModule metadata arrays. Projects may enable if desired.
