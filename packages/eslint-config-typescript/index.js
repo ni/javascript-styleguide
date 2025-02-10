@@ -46,8 +46,6 @@ module.exports = {
             https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/stylistic.ts
         */
 
-        '@typescript-eslint/consistent-generic-constructors': 'off',
-
         /*
             Overrides to Typescript rules outside of the recommended configuration:
         */
