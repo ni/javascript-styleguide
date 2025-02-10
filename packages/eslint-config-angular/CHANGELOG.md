@@ -1,8 +1,17 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Fri, 18 Oct 2024 22:00:56 GMT and should not be manually modified.
+This log was last generated on Mon, 10 Feb 2025 19:23:38 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 9.0.0
+
+Mon, 10 Feb 2025 19:23:38 GMT
+
+### Major changes
+
+- Update to Angular 18 (7282195+m-akinc@users.noreply.github.com)
+- Bump @ni/eslint-config-typescript to v4.4.1
 
 ## 8.2.1
 

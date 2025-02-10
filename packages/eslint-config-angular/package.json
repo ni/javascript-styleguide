@@ -1,6 +1,6 @@
 {
   "name": "@ni/eslint-config-angular",
-  "version": "8.2.1",
+  "version": "9.0.0",
   "description": "NI's Angular ESLint Shareable Config",
   "main": "index.js",
   "scripts": {
@@ -37,6 +37,6 @@
     "@angular-eslint/eslint-plugin-template": "^18.4.3",
     "@angular-eslint/schematics": "^18.4.3",
     "@angular-eslint/template-parser": "^18.4.3",
-    "@ni/eslint-config-typescript": "^4.4.0"
+    "@ni/eslint-config-typescript": "^4.4.1"
   }
 }
