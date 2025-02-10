@@ -32,11 +32,11 @@
     "!/tools"
   ],
   "peerDependencies": {
-    "@angular-eslint/builder": "^17.5.2",
-    "@angular-eslint/eslint-plugin": "^17.5.2",
-    "@angular-eslint/eslint-plugin-template": "^17.5.2",
-    "@angular-eslint/schematics": "^17.5.2",
-    "@angular-eslint/template-parser": "^17.5.2",
+    "@angular-eslint/builder": "^18.4.3",
+    "@angular-eslint/eslint-plugin": "^18.4.3",
+    "@angular-eslint/eslint-plugin-template": "^18.4.3",
+    "@angular-eslint/schematics": "^18.4.3",
+    "@angular-eslint/template-parser": "^18.4.3",
     "@ni/eslint-config-typescript": "^4.4.0"
   }
 }

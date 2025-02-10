@@ -1,3 +1,8 @@
+// eslint-plugin-import doesn't know how to resolve entry points in commonjs modules that are
+// declared using "export" rather than the old "main" syntax in package.json.
+// See https://github.com/typescript-eslint/typescript-eslint/issues/7565
+//  and https://github.com/import-js/eslint-plugin-import/issues/2703
+// eslint-disable-next-line import/no-unresolved
 const plugin = require('@typescript-eslint/eslint-plugin');
 
 const isTrue = val => val !== undefined && val !== false;
