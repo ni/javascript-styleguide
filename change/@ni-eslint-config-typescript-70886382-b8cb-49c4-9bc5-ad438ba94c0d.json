@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "Allow pascal-case imports and disable consistent-generic-constructors",
-  "packageName": "@ni/eslint-config-typescript",
-  "email": "7282195+m-akinc@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}

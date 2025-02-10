@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Mon, 10 Feb 2025 23:13:27 GMT",
+      "version": "9.0.1",
+      "tag": "@ni/eslint-config-angular_v9.0.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-angular",
+            "comment": "Bump @ni/eslint-config-typescript to v4.4.2",
+            "commit": "not available"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 10 Feb 2025 19:23:38 GMT",
       "version": "9.0.0",
       "tag": "@ni/eslint-config-angular_v9.0.0",

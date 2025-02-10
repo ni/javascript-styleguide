@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-typescript
 
-This log was last generated on Mon, 10 Feb 2025 19:23:38 GMT and should not be manually modified.
+This log was last generated on Mon, 10 Feb 2025 23:13:27 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 4.4.2
+
+Mon, 10 Feb 2025 23:13:27 GMT
+
+### Patches
+
+- Allow pascal-case imports and disable consistent-generic-constructors (7282195+m-akinc@users.noreply.github.com)
 
 ## 4.4.1
 
