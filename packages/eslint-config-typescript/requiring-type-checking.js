@@ -56,6 +56,7 @@ module.exports = {
             https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/stylistic-type-checked.ts
         */
 
+        '@typescript-eslint/consistent-generic-constructors': 'off',
         '@typescript-eslint/prefer-regexp-exec': 'off',
 
         /*
@@ -85,12 +86,6 @@ module.exports = {
                 format: ['PascalCase'],
             },
             {
-                selector: 'default',
-                format: ['camelCase'],
-                leadingUnderscore: 'allow',
-                trailingUnderscore: 'allow',
-            },
-            {
                 selector: 'variable',
                 format: ['camelCase', 'UPPER_CASE'],
                 leadingUnderscore: 'allow',
@@ -99,6 +94,16 @@ module.exports = {
             {
                 selector: 'typeLike',
                 format: ['PascalCase'],
+            },
+            {
+                selector: 'import',
+                format: ['camelCase', 'PascalCase'],
+            },
+            {
+                selector: 'default',
+                format: ['camelCase'],
+                leadingUnderscore: 'allow',
+                trailingUnderscore: 'allow',
             },
         ],
 
