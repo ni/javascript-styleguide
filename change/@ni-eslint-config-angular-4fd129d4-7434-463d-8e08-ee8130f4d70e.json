@@ -1,6 +1,6 @@
 {
   "type": "patch",
-  "comment": "Add cdkDragLockAxis to material set.",
+  "comment": "Add cdkDragLockAxis to material set to silence @angular-eslint/template/i18n rule",
   "packageName": "@ni/eslint-config-angular",
   "email": "jonathan.meyer@ni.com",
   "dependentChangeType": "patch"
