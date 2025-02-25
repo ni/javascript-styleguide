@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Mon, 10 Feb 2025 23:13:27 GMT and should not be manually modified.
+This log was last generated on Tue, 25 Feb 2025 19:54:57 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 9.0.2
+
+Tue, 25 Feb 2025 19:54:57 GMT
+
+### Patches
+
+- Add cdkDragLockAxis to material set to silence @angular-eslint/template/i18n rule (26874831+atmgrifter00@users.noreply.github.com)
 
 ## 9.0.1
 
