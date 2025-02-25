@@ -120,6 +120,7 @@ const ignoreAttributeSets = {
     ],
     material: [
         'cdkDragPreviewContainer',
+        'cdkDragLockAxis',
         'floatLabel',
         'fontIcon',
         'fontSet',
