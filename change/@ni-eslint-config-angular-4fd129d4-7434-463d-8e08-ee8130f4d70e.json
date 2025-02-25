@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "Add cdkDragLockAxis to material set.",
+  "packageName": "@ni/eslint-config-angular",
+  "email": "jonathan.meyer@ni.com",
+  "dependentChangeType": "patch"
+}
