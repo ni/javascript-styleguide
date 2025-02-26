@@ -123,7 +123,7 @@ const ignoreAttributeSets = {
         'cdkDragLockAxis',
         'cdkDragPreviewContainer',
         'cdkDragPreviewClass',
-        'cdkDragRootElement'
+        'cdkDragRootElement',
         'floatLabel',
         'fontIcon',
         'fontSet',
