@@ -119,9 +119,11 @@ const ignoreAttributeSets = {
         'fieldsMode'
     ],
     material: [
-        'cdkDragPreviewContainer',
-        'cdkDragLockAxis',
         'cdkDragBoundary',
+        'cdkDragLockAxis',
+        'cdkDragPreviewContainer',
+        'cdkDragPreviewClass',
+        'cdkDragRootElement'
         'floatLabel',
         'fontIcon',
         'fontSet',
