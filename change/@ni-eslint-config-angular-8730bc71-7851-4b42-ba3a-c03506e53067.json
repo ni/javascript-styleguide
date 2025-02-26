@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "Add cdkDragBoundary to material options to silence @angular-eslint/template/i18n rule.",
+  "packageName": "@ni/eslint-config-angular",
+  "email": "jonathan.meyer@ni.com",
+  "dependentChangeType": "patch"
+}
