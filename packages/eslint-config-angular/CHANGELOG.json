@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Wed, 26 Feb 2025 22:50:09 GMT",
+      "version": "9.0.3",
+      "tag": "@ni/eslint-config-angular_v9.0.3",
+      "comments": {
+        "patch": [
+          {
+            "author": "26874831+atmgrifter00@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "095f92304848221aa1faa1ef28cc5c15ca5990ff",
+            "comment": "Add more cdk attributes to material options to silence @angular-eslint/template/i18n rule."
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 25 Feb 2025 19:54:57 GMT",
       "version": "9.0.2",
       "tag": "@ni/eslint-config-angular_v9.0.2",

@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "Add more cdk attributes to material options to silence @angular-eslint/template/i18n rule.",
-  "packageName": "@ni/eslint-config-angular",
-  "email": "26874831+atmgrifter00@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}

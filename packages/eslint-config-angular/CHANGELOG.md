@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Tue, 25 Feb 2025 19:54:57 GMT and should not be manually modified.
+This log was last generated on Wed, 26 Feb 2025 22:50:09 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 9.0.3
+
+Wed, 26 Feb 2025 22:50:09 GMT
+
+### Patches
+
+- Add more cdk attributes to material options to silence @angular-eslint/template/i18n rule. (26874831+atmgrifter00@users.noreply.github.com)
 
 ## 9.0.2
 
