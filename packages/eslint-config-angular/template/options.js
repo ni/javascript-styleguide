@@ -77,6 +77,10 @@ const ignoreAttributeSets = {
         'queryParamsHandling'
 
     ],
+    spright: [
+        // chat
+        'message-type'
+    ],
     systemlink: [
         // sl-workspace-selector
         'action',
