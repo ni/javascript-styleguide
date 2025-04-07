@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "Add Spright chat attribute to i18n ignore list",
-  "packageName": "@ni/eslint-config-angular",
-  "email": "jattasNI@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}

@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Mon, 07 Apr 2025 17:22:43 GMT",
+      "version": "9.0.4",
+      "tag": "@ni/eslint-config-angular_v9.0.4",
+      "comments": {
+        "patch": [
+          {
+            "author": "jattasNI@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "47b4f14b271982a0fd2c2723a53d80c9feb2d724",
+            "comment": "Add Spright chat attribute to i18n ignore list"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 26 Feb 2025 22:50:09 GMT",
       "version": "9.0.3",
       "tag": "@ni/eslint-config-angular_v9.0.3",

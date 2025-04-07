@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Wed, 26 Feb 2025 22:50:09 GMT and should not be manually modified.
+This log was last generated on Mon, 07 Apr 2025 17:22:43 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 9.0.4
+
+Mon, 07 Apr 2025 17:22:43 GMT
+
+### Patches
+
+- Add Spright chat attribute to i18n ignore list (jattasNI@users.noreply.github.com)
 
 ## 9.0.3
 
