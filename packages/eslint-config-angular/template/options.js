@@ -20,7 +20,8 @@ const ignoreAttributeSets = {
         'sizes',
         // Not possible for Angular i18n to handle meta tags yet
         // https://github.com/angular/angular-cli/issues/8947
-        'meta[content]'
+        'meta[content]',
+        'data-telemetry-id'
     ],
     nimble: [
         // shared
