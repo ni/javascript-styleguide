@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-This log was last generated on Mon, 07 Apr 2025 17:22:43 GMT and should not be manually modified.
+This log was last generated on Thu, 10 Apr 2025 18:44:41 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 9.0.5
+
+Thu, 10 Apr 2025 18:44:41 GMT
+
+### Patches
+
+- Add 'data-telemetry-id' to support telemetry use-cases. (jonathan.meyer@ni.com)
 
 ## 9.0.4
 

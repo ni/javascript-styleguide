@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "Add 'data-telemetry-id' to support telemetry use-cases.",
-  "packageName": "@ni/eslint-config-angular",
-  "email": "jonathan.meyer@ni.com",
-  "dependentChangeType": "patch"
-}

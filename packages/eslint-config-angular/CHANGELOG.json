@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Thu, 10 Apr 2025 18:44:41 GMT",
+      "version": "9.0.5",
+      "tag": "@ni/eslint-config-angular_v9.0.5",
+      "comments": {
+        "patch": [
+          {
+            "author": "jonathan.meyer@ni.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "664a386c747d5c2dff03eb3c7bcdb199306a9884",
+            "comment": "Add 'data-telemetry-id' to support telemetry use-cases."
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 07 Apr 2025 17:22:43 GMT",
       "version": "9.0.4",
       "tag": "@ni/eslint-config-angular_v9.0.4",
