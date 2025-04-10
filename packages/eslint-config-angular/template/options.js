@@ -82,6 +82,9 @@ const ignoreAttributeSets = {
         'message-type'
     ],
     systemlink: [
+        // gainsights telemetry
+        'data-telemetry',
+
         // sl-workspace-selector
         'action',
 
