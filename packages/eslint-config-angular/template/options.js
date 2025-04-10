@@ -20,8 +20,7 @@ const ignoreAttributeSets = {
         'sizes',
         // Not possible for Angular i18n to handle meta tags yet
         // https://github.com/angular/angular-cli/issues/8947
-        'meta[content]',
-        'data-telemetry'
+        'meta[content]'
     ],
     nimble: [
         // shared
@@ -83,6 +82,9 @@ const ignoreAttributeSets = {
         'message-type'
     ],
     systemlink: [
+        // gainsights telemetry
+        'data-telemetry',
+
         // sl-workspace-selector
         'action',
 
