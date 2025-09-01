@@ -1,6 +1,3 @@
-module.exports = {
-    extends: [
-        '@ni/eslint-config-typescript/requiring-type-checking'
-    ],
-    parser: '@typescript-eslint/parser',
-};
+import typescriptRequiringTypeChecking from '@ni/eslint-config-typescript/requiring-type-checking';
+
+export default [...typescriptRequiringTypeChecking];

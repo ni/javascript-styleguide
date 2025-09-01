@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "@ni/eslint-config-javascript",
   "version": "4.3.0",
   "description": "NI's JavaScript ESLint Shareable Config",
@@ -27,11 +28,11 @@
   },
   "files": [
     "/*.js",
+    "rules/*.js",
     "!/.*.js"
   ],
   "peerDependencies": {
-    "eslint": "^8.57.0",
-    "eslint-config-airbnb-base": "~15.0.0",
-    "eslint-plugin-import": "^2.29.1"
+    "eslint": "^9.0.0",
+    "eslint-plugin-import": "^2.31.0"
   }
 }

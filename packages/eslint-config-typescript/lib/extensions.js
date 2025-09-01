@@ -1,6 +1,6 @@
-module.exports = {
+export default [{
     rules: {
-        /*
+    /*
             The following are extension rules that replace core JavaScript rules to support
             TypeScript.
             * When upgrading, changes to these rules can be identified in the typescript-eslint
@@ -14,15 +14,15 @@ module.exports = {
 
         // Defined by NI
         'brace-style': 'off',
-        '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: false }],
+        '@stylistic/brace-style': ['error', '1tbs', { allowSingleLine: false }],
 
         // Defined by NI
         'comma-dangle': 'off',
-        '@typescript-eslint/comma-dangle': ['error', 'only-multiline'],
+        '@stylistic/comma-dangle': ['error', 'only-multiline'],
 
         // Defined by Airbnb
         'comma-spacing': 'off',
-        '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],
+        '@stylistic/comma-spacing': ['error', { before: false, after: true }],
 
         // Defined by Airbnb
         'default-param-last': 'off',
@@ -30,11 +30,11 @@ module.exports = {
 
         // Defined by Airbnb
         'func-call-spacing': 'off',
-        '@typescript-eslint/func-call-spacing': ['error', 'never'],
+        '@stylistic/func-call-spacing': ['error', 'never'],
 
         // Defined by NI
         indent: 'off',
-        '@typescript-eslint/indent': ['error', 4],
+        '@stylistic/indent': ['error', 4],
 
         // Defined by Airbnb
         'init-declarations': 'off',
@@ -42,7 +42,7 @@ module.exports = {
 
         // Defined by Airbnb
         'keyword-spacing': 'off',
-        '@typescript-eslint/keyword-spacing': ['error', {
+        '@stylistic/keyword-spacing': ['error', {
             before: true,
             after: true,
             overrides: {
@@ -54,7 +54,7 @@ module.exports = {
 
         // Defined by NI
         'lines-between-class-members': 'off',
-        '@typescript-eslint/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
+        '@stylistic/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
 
         // Defined by Airbnb
         'no-array-constructor': 'off',
@@ -80,7 +80,7 @@ module.exports = {
 
         // Defined by Airbnb
         'no-extra-parens': 'off',
-        '@typescript-eslint/no-extra-parens': ['off', 'all', {
+        '@stylistic/no-extra-parens': ['off', 'all', {
             conditionalAssign: true,
             nestedBinaryExpressions: false,
             returnAssign: false,
@@ -90,7 +90,7 @@ module.exports = {
 
         // Defined by Airbnb
         'no-extra-semi': 'off',
-        '@typescript-eslint/no-extra-semi': 'error',
+        '@stylistic/no-extra-semi': 'error',
 
         // Defined by Airbnb
         'no-invalid-this': 'off',
@@ -131,7 +131,9 @@ module.exports = {
 
         // Defined by NI
         'no-unused-vars': 'off',
-        '@typescript-eslint/no-unused-vars': ['error', { vars: 'all', args: 'all', argsIgnorePattern: '^_', ignoreRestSiblings: true }],
+        '@typescript-eslint/no-unused-vars': ['error', {
+            vars: 'all', args: 'all', argsIgnorePattern: '^_', ignoreRestSiblings: true
+        }],
 
         // Defined by NI
         'no-use-before-define': 'off',
@@ -143,19 +145,19 @@ module.exports = {
 
         // Defined by Airbnb
         'object-curly-spacing': 'off',
-        '@typescript-eslint/object-curly-spacing': ['error', 'always'],
+        '@stylistic/object-curly-spacing': ['error', 'always'],
 
         // Defined by Airbnb
         quotes: 'off',
-        '@typescript-eslint/quotes': ['error', 'single', { avoidEscape: true }],
+        '@stylistic/quotes': ['error', 'single', { avoidEscape: true }],
 
         // Defined by Airbnb
         semi: 'off',
-        '@typescript-eslint/semi': ['error', 'always'],
+        '@stylistic/semi': ['error', 'always'],
 
         // Defined by NI
         'space-before-function-paren': 'off',
-        '@typescript-eslint/space-before-function-paren': ['error', {
+        '@stylistic/space-before-function-paren': ['error', {
             anonymous: 'always',
             named: 'never',
             asyncArrow: 'always'
@@ -163,6 +165,6 @@ module.exports = {
 
         // Defined by Airbnb
         'space-infix-ops': 'off',
-        '@typescript-eslint/space-infix-ops': 'error',
+        '@stylistic/space-infix-ops': 'error',
     }
-};
+}];

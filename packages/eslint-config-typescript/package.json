@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "@ni/eslint-config-typescript",
   "version": "4.4.2",
   "description": "NI's TypeScript ESLint Shareable Config",
@@ -32,8 +33,13 @@
     "/lib/*"
   ],
   "peerDependencies": {
-    "@ni/eslint-config-javascript": "^4.3.0",
-    "@typescript-eslint/parser": "^7.18.0",
-    "@typescript-eslint/eslint-plugin": "^7.18.0"
+    "@ni/eslint-config-javascript": "file:../eslint-config-javascript",
+    "@typescript-eslint/parser": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@stylistic/eslint-plugin": "^3.0.0"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./requiring-type-checking": "./requiring-type-checking.js"
   }
 }

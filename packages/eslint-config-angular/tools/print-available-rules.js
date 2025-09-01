@@ -1,5 +1,7 @@
-const plugin = require('@angular-eslint/eslint-plugin');
-const templatePlugin = require('@angular-eslint/eslint-plugin-template');
+/* eslint-disable no-undef */
+/* eslint-disable no-console */
+import angularPlugin from '@angular-eslint/eslint-plugin';
+import templatePlugin from '@angular-eslint/eslint-plugin-template';
 
 const isTrue = val => val !== undefined && val !== false;
 const recommended = rule => isTrue(rule.meta.docs.recommended);
@@ -8,21 +10,25 @@ const print = (keys, prefix = '@angular-eslint') => {
     keys.forEach(key => {
         results[`${prefix}/${key}`] = '';
     });
-    global.console.log(JSON.stringify(results, null, 4));
+    console.log(JSON.stringify(results, null, 4));
 };
-const sortedRules = Object.keys(plugin.rules).sort();
+const sortedRules = Object.keys(angularPlugin.rules).sort();
 const sortedTemplateRules = Object.keys(templatePlugin.rules).sort();
 
-const angular = sortedRules.filter(key => !recommended(plugin.rules[key]));
-const angularRecommended = sortedRules.filter(key => recommended(plugin.rules[key]));
-const template = sortedTemplateRules.filter(key => !recommended(templatePlugin.rules[key]));
+const angular = sortedRules.filter(
+    key => !recommended(angularPlugin.rules[key])
+);
+const angularRecommended = sortedRules.filter(key => recommended(angularPlugin.rules[key]));
+const template = sortedTemplateRules.filter(
+    key => !recommended(templatePlugin.rules[key])
+);
 const templateRecommended = sortedTemplateRules.filter(key => recommended(templatePlugin.rules[key]));
 
-global.console.log('Angular Recommended:');
+console.log('Angular Recommended:');
 print(angularRecommended);
-global.console.log('Remaining Angular Rules:');
+console.log('Remaining Angular Rules:');
 print(angular);
-global.console.log('Angular Template Recommended:');
+console.log('Angular Template Recommended:');
 print(templateRecommended, '@angular-eslint/template');
-global.console.log('Remaining Angular Template Rules:');
+console.log('Remaining Angular Template Rules:');
 print(template, '@angular-eslint/template');

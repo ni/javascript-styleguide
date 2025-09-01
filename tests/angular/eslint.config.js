@@ -1,0 +1,54 @@
+import { fileURLToPath } from 'url';
+import path from 'path';
+import angularIndex from '@ni/eslint-config-angular';
+import { defineConfig } from 'eslint/config';
+import angularRequiringTypeChecking from '@ni/eslint-config-angular/requiring-type-checking';
+import angularTemplate from '@ni/eslint-config-angular/template';
+import { ignoreAttributes } from '@ni/eslint-config-angular/template/options';
+import angular from 'angular-eslint';
+import tsParser from '@typescript-eslint/parser';
+
+const tsconfigRootDir = path.dirname(fileURLToPath(import.meta.url));
+
+export default defineConfig([
+	{
+		ignores: ['*.js'],
+	},
+	{
+		files: ['**/*spec.ts, **/*.ts'],
+		extends: [...angularIndex, ...angularRequiringTypeChecking],
+		languageOptions: {
+			parser: tsParser,
+			parserOptions: {
+				project: ['./tsconfig.json'],
+				tsconfigRootDir,
+			},
+		},
+	},
+	{
+		files: ['**/*.html'],
+		extends: [...angularTemplate],
+		languageOptions: {
+			parser: angular.templateParser,
+		},
+		rules: {
+			'@angular-eslint/template/i18n': [
+				'error',
+				{
+					checkId: false,
+					ignoreAttributes: [...ignoreAttributes.all, 'custom-field'],
+				},
+			]
+		},
+	},
+	{
+		files: ['**/*.spec.ts*.html'],
+		extends: [...angularTemplate],
+		languageOptions: {
+			parser: tsParser,
+		},
+		rules: {
+			'@angular-eslint/template/i18n': 'off',
+		},
+	},
+]);

@@ -139,11 +139,7 @@ const ignoreAttributeSets = {
     ]
 };
 
-const ignoreAttributes = {
+export const ignoreAttributes = {
     ...ignoreAttributeSets,
     all: Object.values(ignoreAttributeSets).flat()
-};
-
-module.exports = {
-    ignoreAttributes
 };
