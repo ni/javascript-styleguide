@@ -1,7 +1,7 @@
 {
-  "type": "patch",
+  "type": "none",
   "comment": "Remove Airbnb based comments",
   "packageName": "@ni/eslint-config-typescript",
   "email": "131153319+gokulprasanth-ni@users.noreply.github.com",
-  "dependentChangeType": "patch"
+  "dependentChangeType": "none"
 }
