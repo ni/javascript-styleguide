@@ -1,8 +1,11 @@
-module.exports = {
-    env: {
-        node: true
-    },
+import globals from 'globals';
 
+export const nodeRules = {
+    languageOptions: {
+        globals: {
+            ...globals.nodeRules,
+        },
+    },
     rules: {
         /*
             enforce return after a callback

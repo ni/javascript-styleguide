@@ -1,4 +1,4 @@
-module.exports = {
+export const styleRules = {
     rules: {
         /*
             enforce line breaks after opening and before closing array brackets

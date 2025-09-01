@@ -1,15 +1,17 @@
-module.exports = {
-    env: {
-        es6: true
-    },
-    parserOptions: {
-        ecmaVersion: 6,
-        sourceType: 'module'
-    },
-    plugins: [
-        'import'
-    ],
+import importPlugin from 'eslint-plugin-import';
+import globals from 'globals';
 
+export const imports = {
+    languageOptions: {
+        ecmaVersion: 6,
+        sourceType: 'module',
+        globals: {
+            ...globals.es6,
+        },
+    },
+    plugins: {
+        import: importPlugin,
+    },
     settings: {
         'import/resolver': {
             node: {

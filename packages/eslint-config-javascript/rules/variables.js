@@ -1,4 +1,4 @@
-module.exports = {
+export const variables = {
     rules: {
         /*
             enforce or disallow variable initializations at definition

@@ -1,4 +1,4 @@
-module.exports = {
+export const bestPractices = {
     rules: {
         /*
             enforces getter/setter pairs in objects
