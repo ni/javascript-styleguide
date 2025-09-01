@@ -24,8 +24,9 @@ module.exports = {
         'block-spacing': ['error', 'always'],
 
         /*
-            Enforce "one true brace style" (opening brace on same line).
-            Require block body on a new line.
+            Use the "one true brace style" in which in which the opening brace of a block is placed
+            on the same line as its corresponding statement or declaration.
+            Also require the body within the braces to be on a new line.
         */
         'brace-style': ['error', '1tbs', { allowSingleLine: false }],
 
@@ -92,8 +93,8 @@ module.exports = {
         'consistent-this': 'off',
 
         /*
-            Disabled to avoid enforcing a newline at EOF; the minor benefits (UNIX tools, concatenation)
-            don’t outweigh the effort required.
+            Do not require a newline at the end of every file in favor of reducing the effort to
+            satisfy the rule over the proposed advantages on UNIX and with concatenation.
         */
         'eol-last': 'off',
 
@@ -567,7 +568,7 @@ module.exports = {
         'padding-line-between-statements': 'off',
 
         /*
-            for consistency, when we do exponentiation we should prefer the ** operator over the Math.pow() function.
+            For consistency, when we do exponentiation we should prefer the ** operator over the Math.pow() function.
             https://eslint.org/docs/rules/prefer-exponentiation-operator
         */
         'prefer-exponentiation-operator': 'error',
@@ -661,7 +662,8 @@ module.exports = {
         }],
 
         /*
-            this config already supports JSDoc syntax. Add extra exceptions/markers if needed.
+            This configuration already supports the JSDoc syntax. Add additional syntax as line or
+            block exceptions or markers when necessary.
             https://eslint.org/docs/rules/spaced-comment
         */
         'spaced-comment': 'error',

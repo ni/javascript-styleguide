@@ -25,9 +25,10 @@ module.exports = {
         complexity: ['off', 20],
 
         /*
-            The presence of `this` does not always determine whether a method should be static.
-            Some classes must conform to an interface or be called on an instance.
-            Static methods are only appropriate when functionality is independent of instances.
+            A method's use of the this keyword does not always dictate that it should be static,
+            particularly when the class must satisfy a derived interface or the caller has an
+            instance. However, there are other cases, like when functionality is required without
+            an instance, when a static type is appropriate.
             https://eslint.org/docs/rules/class-methods-use-this
         */
         'class-methods-use-this': 'off',
@@ -51,7 +52,6 @@ module.exports = {
         'default-case': ['error', { commentPattern: '^no default$' }],
 
         /*
-            'default-case' Airbnb rule configuration notes:
             Always provide a `default` case in `switch` statements.
             If the default case is logically unreachable, throw an Error.
             If the default case should do nothing, add a comment explaining why
