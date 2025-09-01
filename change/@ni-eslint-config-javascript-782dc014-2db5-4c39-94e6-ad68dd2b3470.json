@@ -1,0 +1,7 @@
+{
+  "type": "major",
+  "comment": "Remove Airbnb dependency from style guide",
+  "packageName": "@ni/eslint-config-javascript",
+  "email": "gokulprasanth.ravi@emerson.com",
+  "dependentChangeType": "patch"
+}
