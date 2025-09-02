@@ -7,7 +7,7 @@ import angularRequiringTypeChecking from '@ni/eslint-config-angular/requiring-ty
 import angularTemplate from '@ni/eslint-config-angular/template';
 import { ignoreAttributes } from '@ni/eslint-config-angular/template/options';
 import angularPlugin from 'angular-eslint';
-import tsParser from '@typescript-eslint/parser';
+import typescriptPlugin from 'typescript-eslint';
 
 const tsconfigRootDir = path.dirname(fileURLToPath(import.meta.url));
 
@@ -19,7 +19,7 @@ export default defineConfig([
 		files: ['**/*spec.ts, **/*.ts'],
 		extends: [...angularIndex, ...angularRequiringTypeChecking],
 		languageOptions: {
-			parser: tsParser,
+			parser: typescriptPlugin.parser,
 			parserOptions: {
 				project: ['./tsconfig.json'],
 				tsconfigRootDir,

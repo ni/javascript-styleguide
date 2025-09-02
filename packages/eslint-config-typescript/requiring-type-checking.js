@@ -1,5 +1,4 @@
 import typescriptPlugin from 'typescript-eslint';
-import tsParser from '@typescript-eslint/parser';
 import extensionsTypeChecked from './lib/extensions-requiring-type-checking.js';
 
 export default [
@@ -10,7 +9,7 @@ export default [
         files: ['**/*.ts'],
         languageOptions: {
             parserOptions: {
-                parser: tsParser,
+                parser: typescriptPlugin.parser,
             },
         },
         rules: {

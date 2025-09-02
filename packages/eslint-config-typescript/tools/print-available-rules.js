@@ -2,8 +2,7 @@
 // declared using "export" rather than the old "main" syntax in package.json.
 // See https://github.com/typescript-eslint/typescript-eslint/issues/7565
 //  and https://github.com/import-js/eslint-plugin-import/issues/2703
-// eslint-disable-next-line import/no-unresolved
-const plugin = require('@typescript-eslint/eslint-plugin');
+const plugin = require('typescript-eslint');
 
 const isTrue = val => val !== undefined && val !== false;
 const recommended = key => isTrue(plugin.rules[key].meta.docs.recommended);
@@ -12,7 +11,7 @@ const extendsBaseRule = key => isTrue(plugin.rules[key].meta.docs.extendsBaseRul
 const print = keys => {
     const results = {};
     keys.forEach(key => {
-        results[`@typescript-eslint/${key}`] = '';
+        results[`typescript-eslint/${key}`] = '';
     });
     global.console.log(JSON.stringify(results, null, 4));
 };

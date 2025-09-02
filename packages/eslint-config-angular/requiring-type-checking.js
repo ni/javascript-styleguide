@@ -1,5 +1,5 @@
 import typescriptRequiringTypeChecking from '@ni/eslint-config-typescript/requiring-type-checking';
-import tsParser from '@typescript-eslint/parser';
+import typescriptPlugin from 'typescript-eslint';
 
 export default [
     ...typescriptRequiringTypeChecking,
@@ -7,7 +7,7 @@ export default [
         files: ['**/*.ts'],
         languageOptions: {
             parserOptions: {
-                parser: tsParser,
+                parser: typescriptPlugin.parser,
             },
         },
     },

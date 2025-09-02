@@ -8,6 +8,7 @@ export default [
     {
         rules: {
             'import/no-default-export': 'off',
+            'import/no-extraneous-dependencies': 'off',
         },
     },
 ];

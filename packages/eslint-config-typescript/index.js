@@ -1,6 +1,5 @@
 import javascript from '@ni/eslint-config-javascript';
 import typescriptPlugin from 'typescript-eslint';
-import tsParser from '@typescript-eslint/parser';
 import stylisticPlugin from '@stylistic/eslint-plugin';
 import extensions from './lib/extensions.js';
 
@@ -13,7 +12,7 @@ export default [
         files: ['**/*.ts'],
         languageOptions: {
             parserOptions: {
-                parser: tsParser,
+                parser: typescriptPlugin.parser,
             },
         },
         rules: {
