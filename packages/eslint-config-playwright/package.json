@@ -1,37 +1,42 @@
 {
-  "name": "@ni/eslint-config-playwright",
-  "version": "1.1.3",
-  "description": "NI's Playwright ESLint Shareable Config",
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint .",
-    "pack": "npm pack",
-    "print-available-rules": "node tools/print-available-rules"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ni/javascript-styleguide.git"
-  },
-  "keywords": [
-    "eslint",
-    "eslintconfig",
-    "ni"
-  ],
-  "author": "National Instruments",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ni/javascript-styleguide/issues"
-  },
-  "homepage": "https://github.com/ni/javascript-styleguide#readme",
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "/*.js",
-    "!/.*.js"
-  ],
-  "peerDependencies": {
-    "@ni/eslint-config-typescript": "^4.4.2",
-    "eslint-plugin-playwright": "^0.12.0"
-  }
+	"type": "module",
+	"name": "@ni/eslint-config-playwright",
+	"version": "1.1.3",
+	"description": "NI's Playwright ESLint Shareable Config",
+	"main": "index.js",
+	"scripts": {
+		"lint": "eslint .",
+		"pack": "npm pack",
+		"print-available-rules": "node tools/print-available-rules"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ni/javascript-styleguide.git"
+	},
+	"keywords": [
+		"eslint",
+		"eslintconfig",
+		"ni"
+	],
+	"author": "National Instruments",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/ni/javascript-styleguide/issues"
+	},
+	"homepage": "https://github.com/ni/javascript-styleguide#readme",
+	"publishConfig": {
+		"access": "public"
+	},
+	"files": [
+		"/*.js",
+		"!/.*.js"
+	],
+	"peerDependencies": {
+		"@ni/eslint-config-typescript": "file:../eslint-config-typescript",
+		"eslint-plugin-playwright": "^1.0.0"
+	},
+	"exports": {
+		".": "./index.js",
+		"./requiring-type-checking": "./requiring-type-checking.js"
+	}
 }

@@ -1,12 +1,13 @@
 {
-  "name": "@ni/javascript-test",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Smoke test for JavaScript project integration.",
-  "scripts": {
-    "test": "eslint ."
-  },
-  "peerDependencies": {
-    "@ni/eslint-config-javascript": "*"
-  }
+  "type": "module",
+	"name": "@ni/javascript-test",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Smoke test for JavaScript project integration.",
+	"scripts": {
+		"test": "eslint ."
+	},
+	"peerDependencies": {
+		"@ni/eslint-config-javascript": "file:../../packages/eslint-config-javascript"
+	}
 }

@@ -1,12 +1,13 @@
 {
-  "name": "@ni/typescript-requiring-type-checking-test",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Smoke test for TypeScript projects using type checking.",
-  "scripts": {
-    "test": "eslint ."
-  },
-  "peerDependencies": {
-    "@ni/eslint-config-typescript": "*"
-  }
+  "type": "module",
+	"name": "@ni/typescript-requiring-type-checking-test",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Smoke test for TypeScript projects using type checking.",
+	"scripts": {
+		"test": "eslint ."
+	},
+	"peerDependencies": {
+		"@ni/eslint-config-typescript": "file:../../packages/eslint-config-typescript"
+	}
 }

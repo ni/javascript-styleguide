@@ -1,4 +1,4 @@
-module.exports = {
+export default [{
     rules: {
         /*
             The following are extension rules that replace core JavaScript rules to support
@@ -13,28 +13,28 @@ module.exports = {
         */
 
         'brace-style': 'off',
-        '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: false }],
+        '@stylistic/brace-style': ['error', '1tbs', { allowSingleLine: false }],
 
         'comma-dangle': 'off',
-        '@typescript-eslint/comma-dangle': ['error', 'only-multiline'],
+        '@stylistic/comma-dangle': ['error', 'only-multiline'],
 
         'comma-spacing': 'off',
-        '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],
+        '@stylistic/comma-spacing': ['error', { before: false, after: true }],
 
         'default-param-last': 'off',
         '@typescript-eslint/default-param-last': 'off',
 
         'func-call-spacing': 'off',
-        '@typescript-eslint/func-call-spacing': ['error', 'never'],
+        '@stylistic/func-call-spacing': ['error', 'never'],
 
         indent: 'off',
-        '@typescript-eslint/indent': ['error', 4],
+        '@stylistic/indent': ['error', 4],
 
         'init-declarations': 'off',
         '@typescript-eslint/init-declarations': 'off',
 
         'keyword-spacing': 'off',
-        '@typescript-eslint/keyword-spacing': ['error', {
+        '@stylistic/keyword-spacing': ['error', {
             before: true,
             after: true,
             overrides: {
@@ -45,7 +45,7 @@ module.exports = {
         }],
 
         'lines-between-class-members': 'off',
-        '@typescript-eslint/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
+        '@stylistic/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
 
         'no-array-constructor': 'off',
         '@typescript-eslint/no-array-constructor': 'error',
@@ -66,7 +66,7 @@ module.exports = {
         }],
 
         'no-extra-parens': 'off',
-        '@typescript-eslint/no-extra-parens': ['off', 'all', {
+        '@stylistic/no-extra-parens': ['off', 'all', {
             conditionalAssign: true,
             nestedBinaryExpressions: false,
             returnAssign: false,
@@ -75,7 +75,7 @@ module.exports = {
         }],
 
         'no-extra-semi': 'off',
-        '@typescript-eslint/no-extra-semi': 'error',
+        '@stylistic/no-extra-semi': 'error',
 
         'no-invalid-this': 'off',
         '@typescript-eslint/no-invalid-this': 'off',
@@ -117,22 +117,22 @@ module.exports = {
         '@typescript-eslint/no-useless-constructor': 'error',
 
         'object-curly-spacing': 'off',
-        '@typescript-eslint/object-curly-spacing': ['error', 'always'],
+        '@stylistic/object-curly-spacing': ['error', 'always'],
 
         quotes: 'off',
-        '@typescript-eslint/quotes': ['error', 'single', { avoidEscape: true }],
+        '@stylistic/quotes': ['error', 'single', { avoidEscape: true }],
 
         semi: 'off',
-        '@typescript-eslint/semi': ['error', 'always'],
+        '@stylistic/semi': ['error', 'always'],
 
         'space-before-function-paren': 'off',
-        '@typescript-eslint/space-before-function-paren': ['error', {
+        '@stylistic/space-before-function-paren': ['error', {
             anonymous: 'always',
             named: 'never',
             asyncArrow: 'always'
         }],
 
         'space-infix-ops': 'off',
-        '@typescript-eslint/space-infix-ops': 'error',
+        '@stylistic/space-infix-ops': 'error',
     }
-};
+}];
