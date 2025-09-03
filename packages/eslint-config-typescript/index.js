@@ -11,10 +11,9 @@ export default [
     {
         files: ['**/*.ts'],
         languageOptions: {
-            parserOptions: {
-                parser: typescriptPlugin.parser,
-            },
+            parser: typescriptPlugin.parser
         },
+        plugins: { '@typescript-eslint': typescriptPlugin.plugin },
         rules: {
             /*
                 Overrides to import rules (already handled by the TypeScript compiler):

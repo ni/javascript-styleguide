@@ -1,0 +1,8 @@
+{
+	"files": ["./index.ts"],
+	"include": ["**/*.ts"],
+	"compilerOptions": {
+		"strictNullChecks": false,
+		"target": "ES2020"
+	}
+}

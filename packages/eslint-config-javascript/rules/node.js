@@ -1,11 +1,4 @@
-import globals from 'globals';
-
 export const nodeRules = {
-    languageOptions: {
-        globals: {
-            ...globals.nodeRules,
-        },
-    },
     rules: {
         /*
             enforce return after a callback
@@ -16,7 +9,7 @@ export const nodeRules = {
             require all requires be top-level
             https://eslint.org/docs/rules/global-require
         */
-        'global-require': 'error',
+        'n/global-require': 'error',
 
         /*
             enforces error handling in callbacks (node environment)
@@ -32,18 +25,18 @@ export const nodeRules = {
         /*
             disallow mixing regular variable and require declarations
         */
-        'no-mixed-requires': ['off', false],
+        'n/no-mixed-requires': ['off', false],
 
         /*
             disallow use of new operator with the require function
         */
-        'no-new-require': 'error',
+        'n/no-new-require': 'error',
 
         /*
             disallow string concatenation with __dirname and __filename
             https://eslint.org/docs/rules/no-path-concat
         */
-        'no-path-concat': 'error',
+        'n/no-path-concat': 'error',
 
         /*
             disallow use of process.env

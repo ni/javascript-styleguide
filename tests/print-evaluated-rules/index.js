@@ -1,30 +1,48 @@
-const { ESLint } = require('eslint');
-const angularRules = require('@ni/eslint-config-angular').rules;
-const angularTemplateRules = require('@ni/eslint-config-angular/template').rules;
-const fs = require('fs');
-const path = require('path');
-const yargs = require('yargs/yargs');
-const { hideBin } = require('yargs/helpers');
+/* eslint-disable no-console */
+/* eslint-disable no-undef */
+import { ESLint } from 'eslint';
+import angularRules from '@ni/eslint-config-angular';
+import angularTemplateRules from '@ni/eslint-config-angular/template';
+import fs from 'fs';
+import path from 'path';
+import yargs from 'yargs/yargs';
+import { hideBin } from 'yargs/helpers';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 (async () => {
     const argv = yargs(hideBin(process.argv))
         .option('audit', { default: true, type: 'boolean' })
-        .option('diff', { default: false, description: 'diff the evaluated rules with old rules from rules.txt', type: 'boolean' })
-        .option('no-audit', { description: 'return the evaluated rules only', type: 'boolean' })
+        .option('diff', {
+            default: false,
+            description: 'diff the evaluated rules with old rules from rules.txt',
+            type: 'boolean',
+        })
+        .option('no-audit', {
+            description: 'return the evaluated rules only',
+            type: 'boolean',
+        })
         .scriptName('')
-        .wrap(null)
-        .argv;
+        .wrap(null).argv;
 
     const hasWarn = function (config) {
-        return JSON.stringify(config).indexOf('"warn"') !== -1;
+        return JSON.stringify(config).includes('"warn"');
     };
 
-    const eslint = new ESLint();
-    const configEslint = await eslint.calculateConfigForFile(require.resolve('@ni/javascript-test/index.js'));
-    const configTypescript = await eslint.calculateConfigForFile(require.resolve('@ni/typescript-test/index.ts'));
-    const configTypescriptTypechecked = await eslint.calculateConfigForFile(require.resolve('@ni/typescript-requiring-type-checking-test/index.ts'));
-    const configAngular = await eslint.calculateConfigForFile(require.resolve('@ni/angular-test/index.ts'));
-    const configAngularTemplate = await eslint.calculateConfigForFile(require.resolve('@ni/angular-test/index.html'));
+    const testDir = path.resolve(__dirname, '..');
+    const jsPath = path.join(testDir, 'javascript', 'index.js');
+    const tsPath = path.join(testDir, 'typescript', 'index.ts');
+    const tsTypePath = path.join(testDir, 'typescript-requiring-type-checking', 'index.ts');
+    const angularTsPath = path.join(testDir, 'angular', 'index.ts');
+    const angularHtmlPath = path.join(testDir, 'angular', 'index.html');
+
+    const configEslint = await calculateConfigForFile(jsPath);
+    const configTypescript = await calculateConfigForFile(tsPath);
+    const configTypescriptTypechecked = await calculateConfigForFile(tsTypePath);
+    const configAngular = await calculateConfigForFile(angularTsPath);
+    const configAngularTemplate = await calculateConfigForFile(angularHtmlPath);
 
     const getRules = function () {
         return {
@@ -59,9 +77,9 @@ const { hideBin } = require('yargs/helpers');
 
         if (logs.length) {
             fs.writeFileSync(path.join(dir, 'rules-diff.txt'), logs.join(''));
-            global.console.log(logs.join(''));
+            console.log(logs.join(''));
         } else {
-            global.console.log('There were no changes.');
+            console.log('There were no changes.');
         }
 
         return;
@@ -73,28 +91,53 @@ const { hideBin } = require('yargs/helpers');
             fs.mkdirSync(dir);
         }
         fs.writeFileSync(path.join(dir, 'rules.txt'), json);
-        global.console.log(json);
+        console.log(json);
         return;
     }
 
-    const getDivergedRules = rules => (
-        Object.keys(rules)
-            .filter(key => !key.startsWith('@angular-eslint'))
-            .filter(key => !configTypescript.rules[key] && !configTypescriptTypechecked.rules[key])
-            .reduce((config, key) => {
-                config[key] = rules[key];
-                return config;
-            }, {})
-    );
-    const angularDivergedRules = getDivergedRules(angularRules);
-    const angularTemplateDivergedRules = getDivergedRules(angularTemplateRules);
-    const angularHasDivergedRules = !!Object.keys(angularDivergedRules).length || !!Object.keys(angularTemplateDivergedRules).length;
+    const getDivergedRules = rules => Object.keys(rules)
+        .filter(key => !key.startsWith('@angular-eslint'))
+        .filter(
+            key => !configTypescript.rules[key]
+              && !configTypescriptTypechecked.rules[key]
+        )
+        .reduce((config, key) => {
+            config[key] = rules[key];
+            return config;
+        }, {});
 
-    global.console.log('-------- Audits:');
-    global.console.log(`Evaluated ESLint rules has warn?: ${hasWarn(configEslint)}`);
-    global.console.log(`Evaluated TypeScript rules has warn?: ${hasWarn(configTypescript)}`);
-    global.console.log(`Evaluated TypeScript type checking rules has warn?: ${hasWarn(configTypescriptTypechecked)}`);
-    global.console.log(`Evaluated Angular rules has warn?: ${hasWarn(configAngular)}`);
-    global.console.log(`Evaluated Angular Template rules has warn?: ${hasWarn(configAngularTemplate)}`);
-    global.console.log(`Angular has diverged rules?: ${angularHasDivergedRules}`);
+    const angularDivergedRules = getDivergedRules(
+        angularRules.map(cfg => cfg.rules)
+    );
+    const angularTemplateDivergedRules = getDivergedRules(
+        angularTemplateRules.map(cfg => cfg.rules)
+    );
+    const angularHasDivergedRules = !!Object.keys(angularDivergedRules).length
+      || !!Object.keys(angularTemplateDivergedRules).length;
+
+    console.log('-------- Audits:');
+    console.log(`Evaluated ESLint rules has warn?: ${hasWarn(configEslint)}`);
+    console.log(
+        `Evaluated TypeScript rules has warn?: ${hasWarn(configTypescript)}`
+    );
+    console.log(
+        `Evaluated TypeScript type checking rules has warn?: ${hasWarn(
+            configTypescriptTypechecked
+        )}`
+    );
+    console.log(`Evaluated Angular rules has warn?: ${hasWarn(configAngular)}`);
+    console.log(
+        `Evaluated Angular Template rules has warn?: ${hasWarn(
+            configAngularTemplate
+        )}`
+    );
+    console.log(`Angular has diverged rules?: ${angularHasDivergedRules}`);
 })();
+
+async function calculateConfigForFile(filePath) {
+    const eslint = new ESLint({
+        cwd: path.resolve(filePath, '..')
+    });
+
+    return await eslint.calculateConfigForFile(filePath);
+}

@@ -6,18 +6,21 @@ import typescriptRequiringTypeChecking from '@ni/eslint-config-typescript/requir
 const tsconfigRootDir = path.dirname(fileURLToPath(import.meta.url));
 
 export default [
-	...typescript,
-	...typescriptRequiringTypeChecking,
 	{
 		ignores: ['*.js'],
 	},
+	...typescript,
+	...typescriptRequiringTypeChecking,
 	{
-		files: ['*.ts'],
+		files: ['**/*.ts'],
 		languageOptions: {
 			parserOptions: {
 				project: ['./tsconfig.json'],
 				tsconfigRootDir,
 			},
 		},
+		rules: {
+			'@stylistic/arrow-parens': ['error', 'as-needed']
+		}
 	},
 ];

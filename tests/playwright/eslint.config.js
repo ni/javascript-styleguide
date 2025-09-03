@@ -3,9 +3,10 @@ import playwright from '@ni/eslint-config-playwright';
 export default [
     ...playwright,
     {
-        files: ['*.ts'],
+        files: ['**/*.ts'],
         rules: {
             'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+            '@stylistic/eol-last': 'off'
         },
     },
     {

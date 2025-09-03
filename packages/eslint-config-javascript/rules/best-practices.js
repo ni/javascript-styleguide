@@ -79,7 +79,7 @@ export const bestPractices = {
             enforces consistent newlines before or after dots
             https://eslint.org/docs/rules/dot-location
         */
-        'dot-location': ['error', 'property'],
+        '@stylistic/dot-location': ['error', 'property'],
 
         /*
             require the use of === and !==
@@ -292,7 +292,7 @@ export const bestPractices = {
             disallow use of multiple spaces
             https://eslint.org/docs/rules/no-multi-spaces
         */
-        'no-multi-spaces': ['error', {
+        '@stylistic/no-multi-spaces': ['error', {
             ignoreEOLComments: false,
         }],
 

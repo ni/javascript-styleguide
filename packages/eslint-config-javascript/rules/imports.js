@@ -1,4 +1,3 @@
-import importPlugin from 'eslint-plugin-import';
 import globals from 'globals';
 
 export const imports = {
@@ -8,9 +7,6 @@ export const imports = {
         globals: {
             ...globals.es6,
         },
-    },
-    plugins: {
-        import: importPlugin,
     },
     settings: {
         'import/resolver': {

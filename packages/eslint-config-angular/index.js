@@ -5,6 +5,10 @@ export default [
     ...typescript,
     ...angular.configs.tsRecommended,
     {
+        files: ['**/*.ts'],
+        plugins: {
+            '@angular-eslint': angular.tsPlugin,
+        },
         processor: angular.processInlineTemplates,
         rules: {
             /*

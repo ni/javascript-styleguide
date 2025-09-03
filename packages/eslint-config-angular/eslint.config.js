@@ -1,7 +1,7 @@
-import javascriptIndex from '@ni/eslint-config-javascript';
+import javascript from '@ni/eslint-config-javascript';
 
 export default [
-    ...javascriptIndex,
+    ...javascript,
     {
         rules: {
             'import/no-default-export': 'off',

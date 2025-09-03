@@ -4,31 +4,31 @@ export const styleRules = {
             enforce line breaks after opening and before closing array brackets
             https://eslint.org/docs/rules/array-bracket-newline
         */
-        'array-bracket-newline': ['off', 'consistent'], // object option alternative: { multiline: true, minItems: 3 }
+        '@stylistic/array-bracket-newline': ['off', 'consistent'], // object option alternative: { multiline: true, minItems: 3 }
 
         /*
             enforce line breaks between array elements
             https://eslint.org/docs/rules/array-element-newline
         */
-        'array-element-newline': ['off', { multiline: true, minItems: 3 }],
+        '@stylistic/array-element-newline': ['off', { multiline: true, minItems: 3 }],
 
         /*
             enforce spacing inside array brackets
         */
-        'array-bracket-spacing': ['error', 'never'],
+        '@stylistic/array-bracket-spacing': ['error', 'never'],
 
         /*
             enforce spacing inside single-line blocks
             https://eslint.org/docs/rules/block-spacing
         */
-        'block-spacing': ['error', 'always'],
+        '@stylistic/block-spacing': ['error', 'always'],
 
         /*
             Use the "one true brace style" in which in which the opening brace of a block is placed
             on the same line as its corresponding statement or declaration.
             Also require the body within the braces to be on a new line.
         */
-        'brace-style': ['error', '1tbs', { allowSingleLine: false }],
+        '@stylistic/brace-style': ['error', '1tbs', { allowSingleLine: false }],
 
         /*
             require camel case names
@@ -56,17 +56,17 @@ export const styleRules = {
             This rule is controversial and is defined such that trailing commas are not required but
             may be used if preferred.
         */
-        'comma-dangle': ['error', 'only-multiline'],
+        '@stylistic/comma-dangle': ['error', 'only-multiline'],
 
         /*
             enforce spacing before and after comma
         */
-        'comma-spacing': ['error', { before: false, after: true }],
+        '@stylistic/comma-spacing': ['error', { before: false, after: true }],
 
         /*
             enforce one true comma style
         */
-        'comma-style': ['error', 'last', {
+        '@stylistic/comma-style': ['error', 'last', {
             exceptions: {
                 ArrayExpression: false,
                 ArrayPattern: false,
@@ -96,19 +96,19 @@ export const styleRules = {
             Do not require a newline at the end of every file in favor of reducing the effort to
             satisfy the rule over the proposed advantages on UNIX and with concatenation.
         */
-        'eol-last': 'off',
+        '@stylistic/eol-last': 'off',
 
         /*
             This enforces that function call args should either all be on one line or each be on separate lines.
             https://eslint.org/docs/rules/function-call-argument-newline
         */
-        'function-call-argument-newline': ['error', 'consistent'],
+        '@stylistic/function-call-argument-newline': ['error', 'consistent'],
 
         /*
             enforce spacing between functions and their invocations
             https://eslint.org/docs/rules/func-call-spacing
         */
-        'func-call-spacing': ['error', 'never'],
+        '@stylistic/func-call-spacing': ['error', 'never'],
 
         /*
             requires function names to match the name of the variable or property to which they are assigned
@@ -160,23 +160,23 @@ export const styleRules = {
             Enforce the location of arrow function bodies with implicit returns
             https://eslint.org/docs/rules/implicit-arrow-linebreak
         */
-        'implicit-arrow-linebreak': ['error', 'beside'],
+        '@stylistic/implicit-arrow-linebreak': ['error', 'beside'],
 
         /*
             This indentation size is used to promote consistency.
         */
-        indent: ['error', 4],
+        '@stylistic/indent': ['error', 4],
 
         /*
             specify whether double or single quotes should be used in JSX attributes
             https://eslint.org/docs/rules/jsx-quotes
         */
-        'jsx-quotes': ['off', 'prefer-double'],
+        '@stylistic/jsx-quotes': ['off', 'prefer-double'],
 
         /*
             enforces spacing between keys and values in object literal properties
         */
-        'key-spacing': ['error', { beforeColon: false, afterColon: true }],
+        '@stylistic/key-spacing': ['error', { beforeColon: false, afterColon: true }],
 
         /*
             require a space before & after certain keywords
@@ -195,10 +195,9 @@ export const styleRules = {
             enforce position of line comments
             https://eslint.org/docs/rules/line-comment-position
         */
-        'line-comment-position': ['off', {
+        '@stylisticline-comment-position': ['off', {
             position: 'above',
             ignorePattern: '',
-            applyDefaultPatterns: true,
         }],
 
         /*
@@ -297,7 +296,7 @@ export const styleRules = {
             enforce a particular style for multiline comments
             https://eslint.org/docs/rules/multiline-comment-style
         */
-        'multiline-comment-style': ['off', 'starred-block'],
+        '@stylistic/multiline-comment-style': ['off', 'starred-block'],
 
         /*
             require multiline ternary
@@ -319,7 +318,7 @@ export const styleRules = {
             disallow the omission of parentheses when invoking a constructor with no arguments
             https://eslint.org/docs/rules/new-parens
         */
-        'new-parens': 'error',
+        '@stylistic/new-parens': 'error',
 
         /*
             allow/disallow an empty newline after var statement
@@ -583,12 +582,12 @@ export const styleRules = {
             require quotes around object literal property names
             https://eslint.org/docs/rules/quote-props.html
         */
-        'quote-props': ['error', 'as-needed', { keywords: false, unnecessary: true, numbers: false }],
+        '@stylistic/quote-props': ['error', 'as-needed', { keywords: false, unnecessary: true, numbers: false }],
 
         /*
             specify whether double or single quotes should be used
         */
-        quotes: ['error', 'single', { avoidEscape: true }],
+        '@stylistic/quotes': ['error', 'single', { avoidEscape: true }],
 
         /*
             do not require jsdoc
@@ -599,7 +598,7 @@ export const styleRules = {
         /*
             require or disallow use of semicolons instead of ASI
         */
-        semi: ['error', 'always'],
+        '@stylistic/semi': ['error', 'always'],
 
         /*
             enforce spacing before and after semicolons

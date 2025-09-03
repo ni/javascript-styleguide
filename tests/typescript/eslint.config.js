@@ -3,9 +3,9 @@ import typescript from '@ni/eslint-config-typescript';
 export default [
     ...typescript,
     {
-        files: ['**/*.config.js'],
+        files: ['**/*.js'],
         rules: {
             'import/no-default-export': 'off',
         },
-    },
+    }
 ];

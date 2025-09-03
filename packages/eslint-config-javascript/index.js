@@ -1,3 +1,6 @@
+import importPlugin from 'eslint-plugin-import';
+import stylisticPlugin from '@stylistic/eslint-plugin';
+import nodePlugin from 'eslint-plugin-n';
 import { bestPractices } from './rules/best-practices.js';
 import { errors } from './rules/errors.js';
 import { nodeRules } from './rules/node.js';
@@ -8,20 +11,27 @@ import { imports } from './rules/imports.js';
 import { strictRules } from './rules/strict.js';
 
 export default [
-    bestPractices,
-    errors,
-    nodeRules,
-    styleRules,
-    variables,
-    es6,
-    imports,
-    strictRules,
     {
+        plugins: {
+            '@stylistic': stylisticPlugin,
+            import: importPlugin,
+            n: nodePlugin
+        },
         languageOptions: {
             parserOptions: {
                 ecmaVersion: 2022,
-                sourceType: 'module'
-            }
-        }
-    }
+                sourceType: 'module',
+            },
+        },
+        rules: {
+            ...bestPractices.rules,
+            ...errors.rules,
+            ...nodeRules.rules,
+            ...styleRules.rules,
+            ...variables.rules,
+            ...es6.rules,
+            ...imports.rules,
+            ...strictRules.rules,
+        },
+    },
 ];

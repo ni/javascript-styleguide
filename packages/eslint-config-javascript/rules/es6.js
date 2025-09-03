@@ -21,13 +21,13 @@ export const es6 = {
             Omit arrow function parenthesis where they are not required to improve readability.
             https://eslint.org/docs/rules/arrow-parens
         */
-        'arrow-parens': ['error', 'as-needed'],
+        '@stylistic/arrow-parens': ['error', 'as-needed'],
 
         /*
             require space before/after arrow function's arrow
             https://eslint.org/docs/rules/arrow-spacing
         */
-        'arrow-spacing': ['error', { before: true, after: true }],
+        '@stylistic/arrow-spacing': ['error', { before: true, after: true }],
 
         /*
             verify super() callings in constructors

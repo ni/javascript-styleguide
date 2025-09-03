@@ -12,7 +12,7 @@ export default [
 		ignores: ['*.js'],
 	},
 	{
-		files: ['*.ts'],
+		files: ['**/*.ts'],
 		languageOptions: {
 			parserOptions: {
 				project: ['./tsconfig.json'],
@@ -21,6 +21,7 @@ export default [
 		},
 		rules: {
 			'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+			'@stylistic/eol-last': 'off',
 		},
 	},
 	{

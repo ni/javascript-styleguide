@@ -12,28 +12,20 @@ export default [{
               JavaScript / NI configuration.
         */
 
-        'brace-style': 'off',
         '@stylistic/brace-style': ['error', '1tbs', { allowSingleLine: false }],
 
-        'comma-dangle': 'off',
         '@stylistic/comma-dangle': ['error', 'only-multiline'],
 
-        'comma-spacing': 'off',
         '@stylistic/comma-spacing': ['error', { before: false, after: true }],
 
-        'default-param-last': 'off',
         '@typescript-eslint/default-param-last': 'off',
 
-        'func-call-spacing': 'off',
         '@stylistic/func-call-spacing': ['error', 'never'],
 
-        indent: 'off',
         '@stylistic/indent': ['error', 4],
 
-        'init-declarations': 'off',
         '@typescript-eslint/init-declarations': 'off',
 
-        'keyword-spacing': 'off',
         '@stylistic/keyword-spacing': ['error', {
             before: true,
             after: true,
@@ -44,19 +36,14 @@ export default [{
             }
         }],
 
-        'lines-between-class-members': 'off',
         '@stylistic/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
 
-        'no-array-constructor': 'off',
         '@typescript-eslint/no-array-constructor': 'error',
 
-        'no-dupe-class-members': 'off',
         '@typescript-eslint/no-dupe-class-members': 'error',
 
-        'no-duplicate-imports': 'off',
         '@typescript-eslint/no-duplicate-imports': 'off',
 
-        'no-empty-function': 'off',
         '@typescript-eslint/no-empty-function': ['error', {
             allow: [
                 'arrowFunctions',
@@ -65,7 +52,6 @@ export default [{
             ]
         }],
 
-        'no-extra-parens': 'off',
         '@stylistic/no-extra-parens': ['off', 'all', {
             conditionalAssign: true,
             nestedBinaryExpressions: false,
@@ -74,19 +60,14 @@ export default [{
             enforceForArrowConditionals: false,
         }],
 
-        'no-extra-semi': 'off',
         '@stylistic/no-extra-semi': 'error',
 
-        'no-invalid-this': 'off',
         '@typescript-eslint/no-invalid-this': 'off',
 
-        'no-loop-func': 'off',
         '@typescript-eslint/no-loop-func': 'error',
 
-        'no-loss-of-precision': 'off',
         '@typescript-eslint/no-loss-of-precision': 'off',
 
-        'no-magic-numbers': 'off',
         '@typescript-eslint/no-magic-numbers': ['off', {
             ignore: [],
             ignoreArrayIndexes: true,
@@ -94,45 +75,34 @@ export default [{
             detectObjects: false,
         }],
 
-        'no-redeclare': 'off',
         '@typescript-eslint/no-redeclare': 'error',
 
-        'no-shadow': 'off',
         '@typescript-eslint/no-shadow': 'error',
 
-        'no-unused-expressions': 'off',
         '@typescript-eslint/no-unused-expressions': ['error', {
             allowShortCircuit: false,
             allowTernary: false,
             allowTaggedTemplates: false,
         }],
 
-        'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': ['error', { vars: 'all', args: 'all', argsIgnorePattern: '^_', ignoreRestSiblings: true }],
 
-        'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
 
-        'no-useless-constructor': 'off',
         '@typescript-eslint/no-useless-constructor': 'error',
 
-        'object-curly-spacing': 'off',
         '@stylistic/object-curly-spacing': ['error', 'always'],
 
-        quotes: 'off',
         '@stylistic/quotes': ['error', 'single', { avoidEscape: true }],
 
-        semi: 'off',
         '@stylistic/semi': ['error', 'always'],
 
-        'space-before-function-paren': 'off',
         '@stylistic/space-before-function-paren': ['error', {
             anonymous: 'always',
             named: 'never',
             asyncArrow: 'always'
         }],
 
-        'space-infix-ops': 'off',
         '@stylistic/space-infix-ops': 'error',
     }
 }];

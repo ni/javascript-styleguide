@@ -8,9 +8,7 @@ export default [
     {
         files: ['**/*.ts'],
         languageOptions: {
-            parserOptions: {
-                parser: typescriptPlugin.parser,
-            },
+            parser: typescriptPlugin.parser,
         },
         rules: {
             /*

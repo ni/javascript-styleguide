@@ -4,6 +4,9 @@ import angularTemplate from 'angular-eslint';
 export default [
     ...angularTemplate.configs.templateRecommended,
     {
+        plugins: {
+            '@angular-eslint/template': angularTemplate.templatePlugin
+        },
         rules: {
         /*
             Overrides to Angular template recommended rules:
