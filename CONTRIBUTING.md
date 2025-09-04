@@ -23,7 +23,7 @@ The TypeScript extension rules (which are rules that extend the behavior of exis
 
 ### Checking the evaluated rules
 
-The rules build on several existing rulesets such as the airbnb ruleset, the ESlint recommended ruleset, the TypeScript recommended ruleset, etc. The `npm run print-evaluated-rules` command helps to audit the final resolved rule values. It will print the result of some audits that try to detect patterns we want to avoid, such as rules configured with a `warn` severity level.
+The rules build on several existing rulesets such as the ESlint recommended ruleset, the TypeScript recommended ruleset, etc. The `npm run print-evaluated-rules` command helps to audit the final resolved rule values. It will print the result of some audits that try to detect patterns we want to avoid, such as rules configured with a `warn` severity level.
 
 #### Upgrades
 
