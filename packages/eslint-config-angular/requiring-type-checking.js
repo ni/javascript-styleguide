@@ -4,7 +4,6 @@ import typescriptPlugin from 'typescript-eslint';
 export default [
     ...typescriptRequiringTypeChecking,
     {
-        files: ['**/*.ts'],
         languageOptions: {
             parserOptions: {
                 parser: typescriptPlugin.parser,

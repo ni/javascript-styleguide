@@ -1,19 +1,18 @@
 import javascript from '@ni/eslint-config-javascript';
 import typescriptPlugin from 'typescript-eslint';
-import stylisticPlugin from '@stylistic/eslint-plugin';
+import importPlugin from 'eslint-plugin-import';
 import extensions from './lib/extensions.js';
 
 export default [
     ...javascript,
     ...typescriptPlugin.configs.recommended,
-    stylisticPlugin.configs['recommended-flat'],
+    ...typescriptPlugin.configs.stylistic,
     ...extensions,
     {
-        files: ['**/*.ts'],
         languageOptions: {
             parser: typescriptPlugin.parser
         },
-        plugins: { '@typescript-eslint': typescriptPlugin.plugin },
+        settings: importPlugin.flatConfigs.typescript.settings,
         rules: {
             /*
                 Overrides to import rules (already handled by the TypeScript compiler):

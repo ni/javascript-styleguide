@@ -2,11 +2,10 @@ import typescriptPlugin from 'typescript-eslint';
 import extensionsTypeChecked from './lib/extensions-requiring-type-checking.js';
 
 export default [
-    ...extensionsTypeChecked,
     ...typescriptPlugin.configs.recommendedTypeChecked,
     ...typescriptPlugin.configs.stylisticTypeChecked,
+    ...extensionsTypeChecked,
     {
-        files: ['**/*.ts'],
         languageOptions: {
             parser: typescriptPlugin.parser,
         },

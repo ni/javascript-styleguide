@@ -1,5 +1,5 @@
 {
-    "type": "module",
+	"type": "module",
 	"name": "@ni/typescript-requiring-type-checking-test",
 	"version": "1.0.0",
 	"private": true,

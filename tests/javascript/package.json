@@ -1,5 +1,5 @@
 {
-  "type": "module",
+	"type": "module",
 	"name": "@ni/javascript-test",
 	"version": "1.0.0",
 	"private": true,

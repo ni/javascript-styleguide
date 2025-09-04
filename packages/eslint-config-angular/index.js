@@ -2,13 +2,9 @@ import typescript from '@ni/eslint-config-typescript';
 import angular from 'angular-eslint';
 
 export default [
-    ...typescript,
     ...angular.configs.tsRecommended,
+    ...typescript,
     {
-        files: ['**/*.ts'],
-        plugins: {
-            '@angular-eslint': angular.tsPlugin,
-        },
         processor: angular.processInlineTemplates,
         rules: {
             /*
