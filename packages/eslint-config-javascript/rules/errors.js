@@ -110,7 +110,7 @@ export const errors = {
             disallow unnecessary parentheses
             https://eslint.org/docs/rules/no-extra-parens
         */
-        'no-extra-parens': ['off', 'all', {
+        '@stylistic/no-extra-parens': ['off', 'all', {
             conditionalAssign: true,
             nestedBinaryExpressions: false,
             returnAssign: false,
@@ -121,7 +121,7 @@ export const errors = {
         /*
             disallow unnecessary semicolons
         */
-        'no-extra-semi': 'error',
+        '@stylistic/no-extra-semi': 'error',
 
         /*
             disallow overwriting functions written as function declarations

@@ -5,7 +5,7 @@ export const es6 = {
         ecmaVersion: 6,
         sourceType: 'module',
         globals: {
-            ...globals.es6
+            ...globals.es6,
         },
     },
     rules: {
@@ -38,7 +38,10 @@ export const es6 = {
             enforce the spacing around the * in generator functions
             https://eslint.org/docs/rules/generator-star-spacing
         */
-        'generator-star-spacing': ['error', { before: false, after: true }],
+        '@stylistic/generator-star-spacing': [
+            'error',
+            { before: false, after: true },
+        ],
 
         /*
             disallow modifying variables of class declarations
@@ -50,9 +53,12 @@ export const es6 = {
             disallow arrow functions where they could be confused with comparisons
             https://eslint.org/docs/rules/no-confusing-arrow
         */
-        'no-confusing-arrow': ['error', {
-            allowParens: true,
-        }],
+        '@stylistic/no-confusing-arrow': [
+            'error',
+            {
+                allowParens: true,
+            },
+        ],
 
         /*
             disallow modifying variables that are declared using const
@@ -76,7 +82,7 @@ export const es6 = {
             disallow symbol constructor
             https://eslint.org/docs/rules/no-new-symbol
         */
-        'no-new-symbol': 'error',
+        'no-new-native-nonconstructor': 'error',
 
         /*
             This rule would ban exports with specific names. Projects can configure it as-needed, but there are no NI-wide restricted exports
@@ -91,13 +97,16 @@ export const es6 = {
         'no-restricted-imports': [
             'error',
             {
-                paths: [{
-                    // The following is recommended by the @angular-eslint/recommended--extra configuration.
-                    // https://github.com/angular-eslint/angular-eslint/blob/v15.2.1/packages/eslint-plugin/src/configs/recommended--extra.json
-                    name: 'rxjs/Rx',
-                    message: 'Please import directly from \'rxjs\' instead'
-                }]
-            }],
+                paths: [
+                    {
+                        // The following is recommended by the @angular-eslint/recommended--extra configuration.
+                        // https://github.com/angular-eslint/angular-eslint/blob/v15.2.1/packages/eslint-plugin/src/configs/recommended--extra.json
+                        name: 'rxjs/Rx',
+                        message: "Please import directly from 'rxjs' instead",
+                    },
+                ],
+            },
+        ],
 
         /*
             disallow to use this/super before super() calling in constructors.
@@ -121,11 +130,14 @@ export const es6 = {
             disallow renaming import, export, and destructured assignments to the same name
             https://eslint.org/docs/rules/no-useless-rename
         */
-        'no-useless-rename': ['error', {
-            ignoreDestructuring: false,
-            ignoreImport: false,
-            ignoreExport: false,
-        }],
+        'no-useless-rename': [
+            'error',
+            {
+                ignoreDestructuring: false,
+                ignoreImport: false,
+                ignoreExport: false,
+            },
+        ],
 
         /*
             Migrating from var is not trivial, so there may be exceptions for older projects.
@@ -143,18 +155,24 @@ export const es6 = {
         /*
             suggest using arrow functions as callbacks
         */
-        'prefer-arrow-callback': ['error', {
-            allowNamedFunctions: false,
-            allowUnboundThis: true,
-        }],
+        'prefer-arrow-callback': [
+            'error',
+            {
+                allowNamedFunctions: false,
+                allowUnboundThis: true,
+            },
+        ],
 
         /*
             suggest using of const declaration for variables that are never modified after declared
         */
-        'prefer-const': ['error', {
-            destructuring: 'any',
-            ignoreReadBeforeAssign: true,
-        }],
+        'prefer-const': [
+            'error',
+            {
+                destructuring: 'any',
+                ignoreReadBeforeAssign: true,
+            },
+        ],
 
         /*
             Destructuring should be considered for multi-variable declarations and assignments while simple single
@@ -203,18 +221,21 @@ export const es6 = {
             enforce spacing between object rest-spread
             https://eslint.org/docs/rules/rest-spread-spacing
         */
-        'rest-spread-spacing': ['error', 'never'],
+        '@stylistic/rest-spread-spacing': ['error', 'never'],
 
         /*
             import sorting
             https://eslint.org/docs/rules/sort-imports
         */
-        'sort-imports': ['off', {
-            ignoreCase: false,
-            ignoreDeclarationSort: false,
-            ignoreMemberSort: false,
-            memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-        }],
+        'sort-imports': [
+            'off',
+            {
+                ignoreCase: false,
+                ignoreDeclarationSort: false,
+                ignoreMemberSort: false,
+                memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+            },
+        ],
 
         /*
             require a Symbol description
@@ -226,12 +247,12 @@ export const es6 = {
             enforce usage of spacing in template strings
             https://eslint.org/docs/rules/template-curly-spacing
         */
-        'template-curly-spacing': 'error',
+        '@stylistic/template-curly-spacing': 'error',
 
         /*
             enforce spacing around the * in yield* expressions
             https://eslint.org/docs/rules/yield-star-spacing
         */
-        'yield-star-spacing': ['error', 'after']
-    }
+        '@stylistic/yield-star-spacing': ['error', 'after'],
+    },
 };

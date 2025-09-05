@@ -18,9 +18,6 @@ export default [
 				project: ['./tsconfig.json'],
 				tsconfigRootDir,
 			},
-		},
-		rules: {
-			'@stylistic/arrow-parens': ['error', 'as-needed']
 		}
 	},
 ];

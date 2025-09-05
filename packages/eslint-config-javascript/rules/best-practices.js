@@ -209,7 +209,7 @@ export const bestPractices = {
             disallow the use of leading or trailing decimal points in numeric literals
             https://eslint.org/docs/rules/no-floating-decimal
         */
-        'no-floating-decimal': 'error',
+        '@stylistic/no-floating-decimal': 'error',
 
         /*
             disallow reassignments of native objects or read-only globals
@@ -579,7 +579,7 @@ export const bestPractices = {
             require immediate function invocation to be wrapped in parentheses
             https://eslint.org/docs/rules/wrap-iife.html
         */
-        'wrap-iife': ['error', 'outside', { functionPrototypeMethods: false }],
+        '@stylistic/wrap-iife': ['error', 'outside', { functionPrototypeMethods: false }],
 
         /*
             require or disallow Yoda conditions

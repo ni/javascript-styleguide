@@ -11,6 +11,7 @@ import { imports } from './rules/imports.js';
 import { strictRules } from './rules/strict.js';
 
 export default [
+    stylisticPlugin.configs['disable-legacy'],
     {
         plugins: {
             '@stylistic': stylisticPlugin,

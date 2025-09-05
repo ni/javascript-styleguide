@@ -34,8 +34,7 @@
 	],
 	"peerDependencies": {
 		"@ni/eslint-config-javascript": "file:../eslint-config-javascript",
-		"typescript-eslint": "^8.0.0",
-		"@stylistic/eslint-plugin": "^3.0.0"
+		"typescript-eslint": "^8.0.0"
 	},
 	"exports": {
 		".": "./index.js",
