@@ -64,4 +64,4 @@ The following are guidelines for when to release as `patch`, `minor`, or `major`
 2. Make a `minor` release for new rules or changes to rules.
 
    This results in most updates to the lint rules resulting in breakages during continuous integration and requiring source changes despite a `minor` version change. This was deemed acceptable as projects are expected to use `package-lock.json` files so updates are intentional and we expect updates to be infrequent.
-3. Make a `major` release when changes to dependencies are performed such as requiring a newer Node.js version, an ESlint version update, or peer dependencies are changed.
+3. Make a `major` release when changes to dependencies are performed such as requiring a newer Node.js version, or an ESlint version update.
