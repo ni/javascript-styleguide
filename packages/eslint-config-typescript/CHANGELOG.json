@@ -2,6 +2,27 @@
   "name": "@ni/eslint-config-typescript",
   "entries": [
     {
+      "date": "Mon, 08 Sep 2025 20:20:07 GMT",
+      "version": "4.4.3",
+      "tag": "@ni/eslint-config-typescript_v4.4.3",
+      "comments": {
+        "patch": [
+          {
+            "author": "131153319+gokulprasanth-ni@users.noreply.github.com",
+            "package": "@ni/eslint-config-typescript",
+            "commit": "a6acba13b4b4e096d7a09bf95f5484695b7dcb1c",
+            "comment": "Remove Airbnb dependency from style guide"
+          },
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-typescript",
+            "comment": "Bump @ni/eslint-config-javascript to v4.3.1",
+            "commit": "not available"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 10 Feb 2025 23:13:27 GMT",
       "version": "4.4.2",
       "tag": "@ni/eslint-config-typescript_v4.4.2",

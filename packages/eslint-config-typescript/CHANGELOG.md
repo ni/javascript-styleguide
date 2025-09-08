@@ -1,8 +1,17 @@
 # Change Log - @ni/eslint-config-typescript
 
-This log was last generated on Mon, 10 Feb 2025 23:13:27 GMT and should not be manually modified.
+This log was last generated on Mon, 08 Sep 2025 20:20:07 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 4.4.3
+
+Mon, 08 Sep 2025 20:20:07 GMT
+
+### Patches
+
+- Remove Airbnb dependency from style guide (131153319+gokulprasanth-ni@users.noreply.github.com)
+- Bump @ni/eslint-config-javascript to v4.3.1
 
 ## 4.4.2
 

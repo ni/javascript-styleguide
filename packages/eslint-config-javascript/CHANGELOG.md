@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-javascript
 
-This log was last generated on Thu, 26 Sep 2024 17:18:02 GMT and should not be manually modified.
+This log was last generated on Mon, 08 Sep 2025 20:20:07 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 4.3.1
+
+Mon, 08 Sep 2025 20:20:07 GMT
+
+### Patches
+
+- Remove Airbnb dependency from style guide (131153319+gokulprasanth-ni@users.noreply.github.com )
 
 ## 4.3.0
 
