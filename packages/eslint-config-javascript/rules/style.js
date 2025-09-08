@@ -224,7 +224,7 @@ export const styleRules = {
             require or disallow newlines around directives
             https://eslint.org/docs/rules/lines-around-directive
         */
-        '@stylistic/lines-around-directive': ['error', {
+        'lines-around-directive': ['error', {
             before: 'always',
             after: 'always',
         }],
