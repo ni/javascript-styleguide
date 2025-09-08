@@ -130,7 +130,6 @@ module.exports = {
 
         /*
             Disallow assigning to imported bindings.
-            This rule does not need to be explicitly set after enabled in airbnb:
             https://eslint.org/docs/rules/no-import-assign
         */
         'no-import-assign': 'error',
