@@ -11,7 +11,7 @@ export default [
         },
     },
     {
-        files: ['*.spec.ts'],
+        files: ['**/*.spec.ts'],
         rules: {
             /*
                 Spies used by Angular application tests result in a significant number of

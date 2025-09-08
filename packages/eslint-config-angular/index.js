@@ -119,7 +119,7 @@ export default [
         },
     },
     {
-        files: ['*.spec.ts'],
+        files: ['**/*.spec.ts'],
         rules: {
             /*
                 Tests often define helper components and it improves test readability if they are in the same

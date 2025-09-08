@@ -33,9 +33,7 @@ export default defineConfig([
 	{
 		files: ['custom-ignore-attributes/**/*.html'],
 		languageOptions: { parser: angularTemplatePlugin.templateParser },
-		plugins: {
-			'@angular-eslint/template': angularTemplatePlugin.templatePlugin,
-		},
+		plugins: { '@angular-eslint/template': angularTemplatePlugin.templatePlugin },
 		rules: {
 			'@angular-eslint/template/i18n': [
 				'error',
@@ -49,18 +47,9 @@ export default defineConfig([
 	{
 		files: ['**/*.spec.ts*.html'],
 		languageOptions: { parser: angularTemplatePlugin.templateParser },
-		plugins: {
-			'@angular-eslint/template': angularTemplatePlugin.templatePlugin,
-		},
+		plugins: { '@angular-eslint/template': angularTemplatePlugin.templatePlugin },
 		rules: {
 			'@angular-eslint/template/i18n': 'off',
 		},
-	},
-	{
-		files: ['**/*.spec.ts'],
-		rules: {
-			'@angular-eslint/use-component-selector': 'off',
-			'@typescript-eslint/unbound-method': 'off',
-		},
-	},
+	}
 ]);
