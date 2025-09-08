@@ -549,7 +549,7 @@ module.exports = {
             For consistency, when we create regular expressions we should use the literal syntax rather than the RexExp() constructor.
             https://eslint.org/docs/rules/prefer-regex-literals
         */
-        'prefer-regex-literals': 'error',
+        'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
 
         /*
             require use of the second argument for parseInt()

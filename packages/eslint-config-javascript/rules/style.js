@@ -661,12 +661,19 @@ module.exports = {
             },
         }],
 
-        /*
-            This configuration already supports the JSDoc syntax. Add additional syntax as line or
-            block exceptions or markers when necessary.
-            https://eslint.org/docs/rules/spaced-comment
-        */
-        'spaced-comment': 'error',
+        // require or disallow a space immediately following the // or /* in a comment
+        // https://eslint.org/docs/rules/spaced-comment
+        'spaced-comment': ['error', 'always', {
+            line: {
+                exceptions: ['-', '+'],
+                markers: ['=', '!', '/'], // space here to support sprockets directives, slash for TS /// comments
+            },
+            block: {
+                exceptions: ['-', '+'],
+                markers: ['=', '!', ':', '::'], // space here to support sprockets directives and flow comment types
+                balanced: true,
+            }
+        }],
 
         /*
             enforce spacing around colons of switch statements
