@@ -33,7 +33,7 @@
 		"!/tools"
 	],
 	"peerDependencies": {
-		"angular-eslint": "^18.4.3",
+		"angular-eslint": "^19.0.0",
 		"@ni/eslint-config-typescript": "file:../eslint-config-typescript"
 	},
 	"exports": {
