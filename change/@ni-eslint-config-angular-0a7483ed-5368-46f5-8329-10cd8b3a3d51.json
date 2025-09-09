@@ -1,7 +1,7 @@
 {
-  "type": "minor",
-  "comment": "Migrate deprecated ESLint formatting rules to stylistic rules",
+  "type": "none",
+  "comment": "Update eslint.config.js rules",
   "packageName": "@ni/eslint-config-angular",
   "email": "gokulprasanth.ravi@emerson.com",
-  "dependentChangeType": "patch"
+  "dependentChangeType": "none"
 }
