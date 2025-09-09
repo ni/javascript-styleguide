@@ -1,6 +1,6 @@
 {
   "type": "none",
-  "comment": "Update eslint.config.js rules",
+  "comment": "Remove redundant rules that have already been applied",
   "packageName": "@ni/eslint-config-angular",
   "email": "gokulprasanth.ravi@emerson.com",
   "dependentChangeType": "none"
