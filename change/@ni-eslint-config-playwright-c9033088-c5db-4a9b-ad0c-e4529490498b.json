@@ -1,0 +1,7 @@
+{
+  "type": "none",
+  "comment": "Update eslint.config.js rules",
+  "packageName": "@ni/eslint-config-playwright",
+  "email": "gokulprasanth.ravi@emerson.com",
+  "dependentChangeType": "none"
+}

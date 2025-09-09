@@ -1,0 +1,7 @@
+{
+  "type": "minor",
+  "comment": "Migrate deprecated ESLint formatting rules to stylistic rules",
+  "packageName": "@ni/eslint-config-javascript",
+  "email": "gokulprasanth.ravi@emerson.com",
+  "dependentChangeType": "patch"
+}
