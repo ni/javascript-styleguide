@@ -77,9 +77,9 @@ module.exports = {
 
         /*
             enforces consistent newlines before or after dots
-            https://eslint.org/docs/rules/dot-location
+            https://eslint.style/rules/dot-location
         */
-        'dot-location': ['error', 'property'],
+        '@stylistic/dot-location': ['error', 'property'],
 
         /*
             require the use of === and !==
@@ -207,9 +207,9 @@ module.exports = {
 
         /*
             disallow the use of leading or trailing decimal points in numeric literals
-            https://eslint.org/docs/rules/no-floating-decimal
+            https://eslint.style/rules/no-floating-decimal
         */
-        'no-floating-decimal': 'error',
+        '@stylistic/no-floating-decimal': 'error',
 
         /*
             disallow reassignments of native objects or read-only globals
@@ -290,9 +290,9 @@ module.exports = {
 
         /*
             disallow use of multiple spaces
-            https://eslint.org/docs/rules/no-multi-spaces
+            https://eslint.style/rules/no-multi-spaces
         */
-        'no-multi-spaces': ['error', {
+        '@stylistic/no-multi-spaces': ['error', {
             ignoreEOLComments: false,
         }],
 
@@ -577,9 +577,9 @@ module.exports = {
 
         /*
             require immediate function invocation to be wrapped in parentheses
-            https://eslint.org/docs/rules/wrap-iife.html
+            https://eslint.style/rules/wrap-iife.html
         */
-        'wrap-iife': ['error', 'outside', { functionPrototypeMethods: false }],
+        '@stylistic/wrap-iife': ['error', 'outside', { functionPrototypeMethods: false }],
 
         /*
             require or disallow Yoda conditions
