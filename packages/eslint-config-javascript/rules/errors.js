@@ -120,6 +120,7 @@ module.exports = {
 
         /*
             disallow unnecessary semicolons
+            https://eslint.style/rules/no-extra-semi
         */
         '@stylistic/no-extra-semi': 'error',
 

@@ -14,12 +14,13 @@ module.exports = {
 
         /*
             enforce spacing inside array brackets
+            https://eslint.style/rules/array-bracket-spacing
         */
         '@stylistic/array-bracket-spacing': ['error', 'never'],
 
         /*
             enforce spacing inside single-line blocks
-            https://eslint.org/docs/rules/block-spacing
+            https://eslint.style/rules/block-spacing
         */
         '@stylistic/block-spacing': ['error', 'always'],
 
@@ -27,6 +28,7 @@ module.exports = {
             Use the "one true brace style" in which in which the opening brace of a block is placed
             on the same line as its corresponding statement or declaration.
             Also require the body within the braces to be on a new line.
+            https://eslint.style/rules/brace-style
         */
         '@stylistic/brace-style': ['error', '1tbs', { allowSingleLine: false }],
 
@@ -55,16 +57,19 @@ module.exports = {
         /*
             This rule is controversial and is defined such that trailing commas are not required but
             may be used if preferred.
+            https://eslint.style/rules/comma-dangle
         */
         '@stylistic/comma-dangle': ['error', 'only-multiline'],
 
         /*
             enforce spacing before and after comma
+            https://eslint.style/rules/comma-spacing
         */
         '@stylistic/comma-spacing': ['error', { before: false, after: true }],
 
         /*
             enforce one true comma style
+            https://eslint.style/rules/comma-style
         */
         '@stylistic/comma-style': ['error', 'last', {
             exceptions: {
@@ -84,6 +89,7 @@ module.exports = {
 
         /*
             disallow padding inside computed properties
+            https://eslint.style/rules/computed-property-spacing
         */
         '@stylistic/computed-property-spacing': ['error', 'never'],
 
@@ -95,6 +101,7 @@ module.exports = {
         /*
             Do not require a newline at the end of every file in favor of reducing the effort to
             satisfy the rule over the proposed advantages on UNIX and with concatenation.
+            https://eslint.style/rules/eol-last
         */
         '@stylistic/eol-last': 'off',
 
@@ -164,6 +171,7 @@ module.exports = {
 
         /*
             This indentation size is used to promote consistency.
+            https://eslint.style/rules/indent
         */
         '@stylistic/indent': ['error', 4],
 
@@ -175,11 +183,13 @@ module.exports = {
 
         /*
             enforces spacing between keys and values in object literal properties
+            https://eslint.style/rules/key-spacing
         */
         '@stylistic/key-spacing': ['error', { beforeColon: false, afterColon: true }],
 
         /*
             require a space before & after certain keywords
+            https://eslint.style/rules/keyword-spacing
         */
         '@stylistic/keyword-spacing': ['error', {
             before: true,
@@ -218,6 +228,7 @@ module.exports = {
 
         /*
             enforces empty lines around comments
+            https://eslint.style/rules/lines-around-comment
         */
         '@stylistic/lines-around-comment': 'off',
 
@@ -388,6 +399,7 @@ module.exports = {
 
         /*
             disallow mixed spaces and tabs for indentation
+            https://eslint.style/rules/no-mixed-spaces-and-tabs
         */
         '@stylistic/no-mixed-spaces-and-tabs': 'error',
 
@@ -451,11 +463,13 @@ module.exports = {
         /*
             disallow space between function identifier and application
             deprecated in favor of func-call-spacing
+            https://eslint.style/rules/function-call-spacing
         */
         '@stylistic/function-call-spacing': 'off',
 
         /*
             disallow tab characters entirely
+            https://eslint.style/rules/no-tabs
         */
         '@stylistic/no-tabs': 'error',
 
@@ -466,6 +480,7 @@ module.exports = {
 
         /*
             disallow trailing whitespace at the end of lines
+            https://eslint.style/rules/no-trailing-spaces
         */
         '@stylistic/no-trailing-spaces': ['error', {
             skipBlankLines: false,
@@ -505,6 +520,7 @@ module.exports = {
 
         /*
             require padding inside curly braces
+            https://eslint.style/rules/object-curly-spacing
         */
         '@stylistic/object-curly-spacing': ['error', 'always'],
 
@@ -552,6 +568,7 @@ module.exports = {
 
         /*
             disallow padding within blocks
+            https://eslint.style/rules/padded-blocks
         */
         '@stylistic/padded-blocks': ['error', {
             blocks: 'never',
@@ -587,6 +604,7 @@ module.exports = {
 
         /*
             specify whether double or single quotes should be used
+            https://eslint.style/rules/quotes
         */
         '@stylistic/quotes': ['error', 'single', { avoidEscape: true }],
 
@@ -598,11 +616,13 @@ module.exports = {
 
         /*
             require or disallow use of semicolons instead of ASI
+            https://eslint.style/rules/semi
         */
         '@stylistic/semi': ['error', 'always'],
 
         /*
             enforce spacing before and after semicolons
+            https://eslint.style/rules/semi-spacing
         */
         '@stylistic/semi-spacing': ['error', { before: false, after: true }],
 
@@ -624,6 +644,7 @@ module.exports = {
 
         /*
             require or disallow space before blocks
+            https://eslint.style/rules/space-before-blocks
         */
         '@stylistic/space-before-blocks': 'error',
 
@@ -642,11 +663,13 @@ module.exports = {
 
         /*
             require or disallow spaces inside parentheses
+            https://eslint.style/rules/space-in-parens
         */
         '@stylistic/space-in-parens': ['error', 'never'],
 
         /*
             require spaces around operators
+            https://eslint.style/rules/space-infix-ops
         */
         '@stylistic/space-infix-ops': 'error',
 
@@ -695,6 +718,7 @@ module.exports = {
 
         /*
             require regex literals to be wrapped in parentheses
+            https://eslint.style/rules/wrap-regex
         */
         '@stylistic/wrap-regex': 'off'
     }
