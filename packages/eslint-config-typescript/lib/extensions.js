@@ -12,33 +12,11 @@ module.exports = {
               JavaScript / NI configuration.
         */
 
-        '@stylistic/brace-style': ['error', '1tbs', { allowSingleLine: false }],
-
-        '@stylistic/comma-dangle': ['error', 'only-multiline'],
-
-        '@stylistic/comma-spacing': ['error', { before: false, after: true }],
-
         'default-param-last': 'off',
         '@typescript-eslint/default-param-last': 'off',
 
-        '@stylistic/func-call-spacing': ['error', 'never'],
-
-        '@stylistic/indent': ['error', 4],
-
         'init-declarations': 'off',
         '@typescript-eslint/init-declarations': 'off',
-
-        '@stylistic/keyword-spacing': ['error', {
-            before: true,
-            after: true,
-            overrides: {
-                return: { after: true },
-                throw: { after: true },
-                case: { after: true }
-            }
-        }],
-
-        '@stylistic/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
 
         'no-array-constructor': 'off',
         '@typescript-eslint/no-array-constructor': 'error',
@@ -57,16 +35,6 @@ module.exports = {
                 'methods'
             ]
         }],
-
-        '@stylistic/no-extra-parens': ['off', 'all', {
-            conditionalAssign: true,
-            nestedBinaryExpressions: false,
-            returnAssign: false,
-            ignoreJSX: 'all',
-            enforceForArrowConditionals: false,
-        }],
-
-        '@stylistic/no-extra-semi': 'error',
 
         'no-invalid-this': 'off',
         '@typescript-eslint/no-invalid-this': 'off',
@@ -106,19 +74,5 @@ module.exports = {
 
         'no-useless-constructor': 'off',
         '@typescript-eslint/no-useless-constructor': 'error',
-
-        '@stylistic/object-curly-spacing': ['error', 'always'],
-
-        '@stylistic/quotes': ['error', 'single', { avoidEscape: true }],
-
-        '@stylistic/semi': ['error', 'always'],
-
-        '@stylistic/space-before-function-paren': ['error', {
-            anonymous: 'always',
-            named: 'never',
-            asyncArrow: 'always'
-        }],
-
-        '@stylistic/space-infix-ops': 'error',
     }
 };
