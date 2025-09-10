@@ -1,7 +1,7 @@
 {
-  "type": "minor",
-  "comment": "Migrate deprecated ESLint formatting rules to stylistic rules",
+  "type": "none",
+  "comment": "Remove duplicate rules that have already been applied",
   "packageName": "@ni/eslint-config-typescript",
   "email": "gokulprasanth.ravi@emerson.com",
-  "dependentChangeType": "patch"
+  "dependentChangeType": "none"
 }
