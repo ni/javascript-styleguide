@@ -2,7 +2,6 @@ module.exports = {
     extends: [
         '@ni/eslint-config-javascript',
         'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/stylistic',
         'plugin:import/typescript',
         './lib/extensions'
     ],
