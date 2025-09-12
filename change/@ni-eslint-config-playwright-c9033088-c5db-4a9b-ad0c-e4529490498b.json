@@ -1,6 +1,6 @@
 {
   "type": "none",
-  "comment": "Remove redundant rules that have already been applied",
+  "comment": "Update to dev eslint config, no source changes",
   "packageName": "@ni/eslint-config-playwright",
   "email": "gokulprasanth.ravi@emerson.com",
   "dependentChangeType": "none"

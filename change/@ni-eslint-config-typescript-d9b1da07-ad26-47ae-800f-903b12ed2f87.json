@@ -1,7 +1,7 @@
 {
-  "type": "none",
-  "comment": "Remove duplicate rules that have already been applied",
+  "type": "patch",
+  "comment": "The migration to stylistic eslint config in the base javascript ruleset no longer requires overrides in the typescript ruleset as stylistic supports both typescript and javascript.",
   "packageName": "@ni/eslint-config-typescript",
   "email": "gokulprasanth.ravi@emerson.com",
-  "dependentChangeType": "none"
+  "dependentChangeType": "patch"
 }
