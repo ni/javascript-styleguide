@@ -1,8 +1,17 @@
 # Change Log - @ni/eslint-config-typescript
 
-This log was last generated on Mon, 08 Sep 2025 20:20:07 GMT and should not be manually modified.
+This log was last generated on Fri, 12 Sep 2025 12:21:59 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 4.4.4
+
+Fri, 12 Sep 2025 12:21:59 GMT
+
+### Patches
+
+- The migration to stylistic eslint config in the base javascript ruleset no longer requires overrides in the typescript ruleset as stylistic supports both typescript and javascript. (gokulprasanth.ravi@emerson.com)
+- Bump @ni/eslint-config-javascript to v4.4.0
 
 ## 4.4.3
 

@@ -2,6 +2,27 @@
   "name": "@ni/eslint-config-typescript",
   "entries": [
     {
+      "date": "Fri, 12 Sep 2025 12:21:59 GMT",
+      "version": "4.4.4",
+      "tag": "@ni/eslint-config-typescript_v4.4.4",
+      "comments": {
+        "patch": [
+          {
+            "author": "gokulprasanth.ravi@emerson.com",
+            "package": "@ni/eslint-config-typescript",
+            "commit": "91e2d9744c2daefe742164f32a4c1684c1c4cee8",
+            "comment": "The migration to stylistic eslint config in the base javascript ruleset no longer requires overrides in the typescript ruleset as stylistic supports both typescript and javascript."
+          },
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-typescript",
+            "comment": "Bump @ni/eslint-config-javascript to v4.4.0",
+            "commit": "not available"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 08 Sep 2025 20:20:07 GMT",
       "version": "4.4.3",
       "tag": "@ni/eslint-config-typescript_v4.4.3",

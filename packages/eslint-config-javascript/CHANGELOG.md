@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-javascript
 
-This log was last generated on Mon, 08 Sep 2025 20:20:07 GMT and should not be manually modified.
+This log was last generated on Fri, 12 Sep 2025 12:21:59 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 4.4.0
+
+Fri, 12 Sep 2025 12:21:59 GMT
+
+### Minor changes
+
+- Migrate deprecated ESLint formatting rules to @stylistic equivalents. See https://eslint.style/rules for the full list of stylistic rules. If your project overrides any deprecated formatting rules, update your config to use the corresponding @stylistic rule name (e.g., replace 'comma-dangle' with '@stylistic/comma-dangle') (gokulprasanth.ravi@emerson.com)
 
 ## 4.3.1
 

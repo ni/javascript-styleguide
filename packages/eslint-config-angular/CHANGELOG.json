@@ -2,6 +2,29 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Fri, 12 Sep 2025 12:21:59 GMT",
+      "version": "9.0.7",
+      "tag": "@ni/eslint-config-angular_v9.0.7",
+      "comments": {
+        "none": [
+          {
+            "author": "gokulprasanth.ravi@emerson.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "91e2d9744c2daefe742164f32a4c1684c1c4cee8",
+            "comment": "Update to dev eslint config, no source changes"
+          }
+        ],
+        "patch": [
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-angular",
+            "comment": "Bump @ni/eslint-config-typescript to v4.4.4",
+            "commit": "not available"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 08 Sep 2025 20:20:07 GMT",
       "version": "9.0.6",
       "tag": "@ni/eslint-config-angular_v9.0.6",

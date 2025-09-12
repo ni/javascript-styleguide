@@ -1,7 +1,0 @@
-{
-  "type": "minor",
-  "comment": "Migrate deprecated ESLint formatting rules to @stylistic equivalents. See https://eslint.style/rules for the full list of stylistic rules. If your project overrides any deprecated formatting rules, update your config to use the corresponding @stylistic rule name (e.g., replace 'comma-dangle' with '@stylistic/comma-dangle')",
-  "packageName": "@ni/eslint-config-javascript",
-  "email": "gokulprasanth.ravi@emerson.com",
-  "dependentChangeType": "patch"
-}

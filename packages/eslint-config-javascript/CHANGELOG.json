@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-javascript",
   "entries": [
     {
+      "date": "Fri, 12 Sep 2025 12:21:59 GMT",
+      "version": "4.4.0",
+      "tag": "@ni/eslint-config-javascript_v4.4.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "gokulprasanth.ravi@emerson.com",
+            "package": "@ni/eslint-config-javascript",
+            "commit": "91e2d9744c2daefe742164f32a4c1684c1c4cee8",
+            "comment": "Migrate deprecated ESLint formatting rules to @stylistic equivalents. See https://eslint.style/rules for the full list of stylistic rules. If your project overrides any deprecated formatting rules, update your config to use the corresponding @stylistic rule name (e.g., replace 'comma-dangle' with '@stylistic/comma-dangle')"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 08 Sep 2025 20:20:07 GMT",
       "version": "4.3.1",
       "tag": "@ni/eslint-config-javascript_v4.3.1",
