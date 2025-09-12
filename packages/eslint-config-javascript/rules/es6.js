@@ -22,15 +22,15 @@ module.exports = {
 
         /*
             Omit arrow function parenthesis where they are not required to improve readability.
-            https://eslint.org/docs/rules/arrow-parens
+            https://eslint.style/rules/arrow-parens
         */
-        'arrow-parens': ['error', 'as-needed'],
+        '@stylistic/arrow-parens': ['error', 'as-needed'],
 
         /*
             require space before/after arrow function's arrow
-            https://eslint.org/docs/rules/arrow-spacing
+            https://eslint.style/rules/arrow-spacing
         */
-        'arrow-spacing': ['error', { before: true, after: true }],
+        '@stylistic/arrow-spacing': ['error', { before: true, after: true }],
 
         /*
             verify super() callings in constructors
@@ -39,9 +39,9 @@ module.exports = {
 
         /*
             enforce the spacing around the * in generator functions
-            https://eslint.org/docs/rules/generator-star-spacing
+            https://eslint.style/rules/generator-star-spacing
         */
-        'generator-star-spacing': ['error', { before: false, after: true }],
+        '@stylistic/generator-star-spacing': ['error', { before: false, after: true }],
 
         /*
             disallow modifying variables of class declarations
@@ -51,9 +51,9 @@ module.exports = {
 
         /*
             disallow arrow functions where they could be confused with comparisons
-            https://eslint.org/docs/rules/no-confusing-arrow
+            https://eslint.style/rules/no-confusing-arrow
         */
-        'no-confusing-arrow': ['error', {
+        '@stylistic/no-confusing-arrow': ['error', {
             allowParens: true,
         }],
 
@@ -204,9 +204,9 @@ module.exports = {
 
         /*
             enforce spacing between object rest-spread
-            https://eslint.org/docs/rules/rest-spread-spacing
+            https://eslint.style/rules/rest-spread-spacing
         */
-        'rest-spread-spacing': ['error', 'never'],
+        '@stylistic/rest-spread-spacing': ['error', 'never'],
 
         /*
             import sorting
@@ -227,14 +227,14 @@ module.exports = {
 
         /*
             enforce usage of spacing in template strings
-            https://eslint.org/docs/rules/template-curly-spacing
+            https://eslint.style/rules/template-curly-spacing
         */
-        'template-curly-spacing': 'error',
+        '@stylistic/template-curly-spacing': 'error',
 
         /*
             enforce spacing around the * in yield* expressions
-            https://eslint.org/docs/rules/yield-star-spacing
+            https://eslint.style/rules/yield-star-spacing
         */
-        'yield-star-spacing': ['error', 'after']
+        '@stylistic/yield-star-spacing': ['error', 'after']
     }
 };

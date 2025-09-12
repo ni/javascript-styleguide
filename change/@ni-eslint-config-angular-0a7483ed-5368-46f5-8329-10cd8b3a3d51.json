@@ -1,0 +1,7 @@
+{
+  "type": "none",
+  "comment": "Update to dev eslint config, no source changes",
+  "packageName": "@ni/eslint-config-angular",
+  "email": "gokulprasanth.ravi@emerson.com",
+  "dependentChangeType": "none"
+}

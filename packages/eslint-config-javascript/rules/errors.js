@@ -108,9 +108,9 @@ module.exports = {
 
         /*
             disallow unnecessary parentheses
-            https://eslint.org/docs/rules/no-extra-parens
+            https://eslint.style/rules/no-extra-parens
         */
-        'no-extra-parens': ['off', 'all', {
+        '@stylistic/no-extra-parens': ['off', 'all', {
             conditionalAssign: true,
             nestedBinaryExpressions: false,
             returnAssign: false,
@@ -120,8 +120,9 @@ module.exports = {
 
         /*
             disallow unnecessary semicolons
+            https://eslint.style/rules/no-extra-semi
         */
-        'no-extra-semi': 'error',
+        '@stylistic/no-extra-semi': 'error',
 
         /*
             disallow overwriting functions written as function declarations
