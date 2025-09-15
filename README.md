@@ -69,80 +69,102 @@ After installing the lint configuration packages, follow the configuration instr
 
 ### JavaScript configuration
 
-Extend `@ni/eslint-config-javascript` in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats).
+Spread `@ni/eslint-config-javascript` configurations in your [ESLint flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`):
 
 ```js
-{
-    extends: '@ni/eslint-config-javascript'
-}
+import javascript from '@ni/eslint-config-javascript';
+
+export default [
+    ...javascript,
+];
 ```
 
 ### TypeScript configuration
 
-Extend `@ni/eslint-config-typescript` and `@ni/eslint-config-typescript/requiring-type-checking` in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
+Spread `@ni/eslint-config-typescript` and `@ni/eslint-config-typescript/requiring-type-checking` configurations in the [ESLint flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` to the project's TypeScript configuration.
 
 ```js
-{
-    extends: [
-        '@ni/eslint-config-typescript',
-        '@ni/eslint-config-typescript/requiring-type-checking'
-    ],
-    parserOptions: {
-        project: 'tsconfig.json'
+import typescript from '@ni/eslint-config-typescript';
+import typescriptTypeChecking from '@ni/eslint-config-typescript/requiring-type-checking';
+
+export default [
+    ...typescript,
+    ...typescriptTypeChecking,
+    {
+        files: ['**/*.ts'],
+        languageOptions: {
+            parserOptions: {
+                project: './tsconfig.json'
+            }
+        }
     }
-}
+];
 ```
 
 ### Angular configuration
 
-ESLint support for Angular is provided by [`@angular-eslint`](https://github.com/angular-eslint/angular-eslint#readme). **It's recommended to use `@angular-eslint/schematics` to
-configure ESLint for Angular projects**.
+ESLint support for Angular is provided by [`angular-eslint`](https://github.com/angular-eslint/angular-eslint#readme).
 
-1. **For single and multi-project workspaces**, [add the schematic](https://github.com/angular-eslint/angular-eslint#quick-start). Remove the `@angular-eslint`, `@typescript-eslint`, and `eslint` dependencies from `package.json`.
+1. **For single and multi-project workspaces**, [add the angular-eslint](https://github.com/angular-eslint/angular-eslint#quick-start). Remove the `angular-eslint` and `eslint` dependencies from `package.json`.
     ```bash
-    ng add @angular-eslint/schematics
+    ng add angular-eslint
     ```
 2. **For multi-project workspaces**, [configure each project](https://github.com/angular-eslint/angular-eslint#adding-eslint-configuration-to-an-existing-angular-cli-project-which-has-no-existing-linter), and then enable future generated projects to be configured as well.
     ```bash
-    > ng g @angular-eslint/schematics:add-eslint-to-project <PROJECT NAME>
-    > ng config cli.schematicCollections "[\"@angular-eslint/schematics\"]"
+    > ng g angular-eslint:add-eslint-to-project <PROJECT NAME>
+    > ng config cli.schematicCollections "[\"angular-eslint\"]"
     ```
-3. Extend the NI configured rules for Angular and Angular templates in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
+3. Spread the NI configured rules for Angular and Angular templates in the [ESLint flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
     ```js
-    overrides: [{
-        files: ['*.ts'],
-        extends: [
-            '@ni/eslint-config-angular',
-            '@ni/eslint-config-angular/requiring-type-checking'
-        ],
-        parserOptions: {
-            project: 'tsconfig.json'
+    import angular from '@ni/eslint-config-angular';
+    import angularTypeChecking from '@ni/eslint-config-angular/requiring-type-checking';
+    import angularTemplate from '@ni/eslint-config-angular/template';
+
+    export default [
+        {
+            files: ['**/*.ts'],
+            extends: [
+                ...angular,
+                ...angularTypeChecking
+            ],
+            languageOptions: {
+                parserOptions: {
+                    project: './tsconfig.json'
+                }
+            }
+        },
+        {
+            files: ['*.html'],
+            extends: [...angularTemplate]
         }
-    }, {
-        files: ['*.html'],
-        extends: ['@ni/eslint-config-angular/template']
-    }]
+    ];
     ```
 4. Evaluate the [project specific rule groups](#evaluate-project-specific-rule-groups) to manually add to your lint configuration. For Angular applications in particular, consider enabling the [`[application-prefix]`](#application-prefix) rule group.
 
 ### Playwright configuration
 
-Extend `@ni/eslint-config-playwright` and `@ni/eslint-config-playwright/requiring-type-checking` in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
+Spread `@ni/eslint-config-playwright` and `@ni/eslint-config-playwright/requiring-type-checking` in the [ESLint flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
 
 **Note:** The Playwright configurations extend the TypeScript configurations, so it is not necessary for an application to extend them both. However, the Playwright configurations should only be applied to directories that contain Playwright tests and utilities.
 
 ```js
 // This is an example .eslintrc.js in a Playwright-specific directory.
 // If Playwright files are mixed with other code, use an "overrides" file pattern to match only Playwright code.
-{
-    extends: [
-        '@ni/eslint-config-playwright',
-        '@ni/eslint-config-playwright/requiring-type-checking'
-    ],
-    parserOptions: {
-        project: 'tsconfig.json'
+import playwright from '@ni/eslint-config-playwright';
+import playwrightTypeChecking from '@ni/eslint-config-playwright/requiring-type-checking';
+
+export default [
+    ...playwright,
+    ...playwrightTypeChecking,
+    {
+        files: ['**/*.ts'],
+        languageOptions: {
+            parserOptions: {
+                project: './tsconfig.json'
+            }
+        }
     }
-}
+];
 ```
 
 ## Usage
@@ -257,15 +279,17 @@ To disable a rule globally, modify the `rules` section of the [ESLint configurat
     }
 ```
 
-To disable a rule for a specific file pattern or directory, modify the `overrides` section of the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats):
+To disable a rule for a specific file pattern or directory, update the rules section for that file pattern in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats):
 ```js
-    overrides: [{
+export default [
+    // ...other configs
+    {
         files: ['*.stories.ts'],
         rules: {
-            // This rule is disabled as an example
             'import/no-default-export': 'off'
         }
-    }]
+    }
+];
 ```
 
 ### Inline disable rules that don't apply to a particular situation
@@ -297,7 +321,7 @@ You can [configure a repository to prompt developers to install this extension](
 }
 ```
 
-Follow the `@angular-eslint` [instructions](https://github.com/angular-eslint/angular-eslint#linting-html-files-and-inline-templates-with-the-vscode-extension-for-eslint) for linting HTML files and inline-templates with Angular.
+Follow the `angular-eslint` [instructions](https://github.com/angular-eslint/angular-eslint#linting-html-files-and-inline-templates-with-the-vscode-extension-for-eslint) for linting HTML files and inline-templates with Angular.
 
 #### JetBrains WebStorm
 
@@ -326,11 +350,11 @@ This option can be adapted for npm scripts, for example.
 
 If there are situations where the analysis time for enabling the type checked rules is an excessive burden you may consider creating a separate ESLint configuration that avoids extending the type checked rules and omits the `parserOptions.project` configuration to run in specific scenarios.
 
-See discussion in the [performance section](https://github.com/typescript-eslint/typescript-eslint/blob/main/docs/getting-started/linting/TYPED_LINTING.md#performance) of the Getting Started - Linting with Type Information guide.
+See discussion in the [performance section](https://typescript-eslint.io/troubleshooting/typed-linting/performance/) of the Getting Started - Linting with Type Information guide.
 
 ### Angular linting performance
 
-Deviations from the `@angular-eslint schematic`, `@ni/eslint-config-angular`, and the [`parserOptions.project`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/parser#parseroptionsproject) configurations can result in significant performance degredation. Fully manual configuration [is not recommended](https://github.com/angular-eslint/angular-eslint#going-fully-manual-not-recommended). Read `@angular-eslint`'s [section on performance](https://github.com/angular-eslint/angular-eslint#eslint-configs-and-performance) for information on addressing slow linting processes.
+Deviations from the `angular-eslint`, `@ni/eslint-config-angular`, and the [`parserOptions.project`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/parser#parseroptionsproject) configurations can result in significant performance degredation. Read `angular-eslint`'s [section on performance](https://github.com/angular-eslint/angular-eslint/blob/v19.0.0/docs/RULES_REQUIRING_TYPE_INFORMATION.md) for information on addressing slow linting processes.
 
 ## License
 
