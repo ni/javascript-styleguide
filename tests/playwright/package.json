@@ -1,5 +1,5 @@
 {
-  "type": "commonjs",
+  "type": "module",
   "name": "@ni/playwright-test",
   "version": "1.0.0",
   "private": true,
