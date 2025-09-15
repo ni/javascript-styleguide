@@ -1,4 +1,4 @@
-module.exports = {
+export const errors = {
     rules: {
         /*
             Enforce “for” loop update clause moving the counter in the right direction

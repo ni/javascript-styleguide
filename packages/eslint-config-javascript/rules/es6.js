@@ -1,16 +1,4 @@
-module.exports = {
-    env: {
-        es6: true
-    },
-    parserOptions: {
-        ecmaVersion: 6,
-        sourceType: 'module',
-        ecmaFeatures: {
-            generators: false,
-            objectLiteralDuplicateProperties: false
-        }
-    },
-
+export const es6 = {
     rules: {
         /*
             Developers should consider readability, and no braces may be preferred when unnecessary. However, this rule

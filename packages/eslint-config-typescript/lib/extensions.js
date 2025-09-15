@@ -1,4 +1,4 @@
-module.exports = {
+export const extensions = {
     rules: {
         /*
             The following are extension rules that replace core JavaScript rules to support

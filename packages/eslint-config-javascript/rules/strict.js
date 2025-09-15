@@ -1,4 +1,4 @@
-module.exports = {
+export const strict = {
     rules: {
         /*
             babel inserts `'use strict';` for us

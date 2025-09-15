@@ -1,42 +1,45 @@
 {
-  "name": "@ni/eslint-config-angular",
-  "version": "9.0.7",
-  "description": "NI's Angular ESLint Shareable Config",
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint .",
-    "pack": "npm pack",
-    "print-available-rules": "node tools/print-available-rules"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ni/javascript-styleguide.git"
-  },
-  "keywords": [
-    "eslint",
-    "eslintconfig",
-    "ni"
-  ],
-  "author": "National Instruments",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ni/javascript-styleguide/issues"
-  },
-  "homepage": "https://github.com/ni/javascript-styleguide#readme",
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "**/*.js",
-    "!/.*.js",
-    "!/tools"
-  ],
-  "peerDependencies": {
-    "@angular-eslint/builder": "^18.4.3",
-    "@angular-eslint/eslint-plugin": "^18.4.3",
-    "@angular-eslint/eslint-plugin-template": "^18.4.3",
-    "@angular-eslint/schematics": "^18.4.3",
-    "@angular-eslint/template-parser": "^18.4.3",
-    "@ni/eslint-config-typescript": "^4.4.4"
-  }
+	"type": "module",
+	"name": "@ni/eslint-config-angular",
+	"version": "9.0.7",
+	"description": "NI's Angular ESLint Shareable Config",
+	"main": "index.js",
+	"scripts": {
+		"lint": "eslint .",
+		"pack": "npm pack",
+		"print-available-rules": "node tools/print-available-rules"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ni/javascript-styleguide.git"
+	},
+	"keywords": [
+		"eslint",
+		"eslintconfig",
+		"ni"
+	],
+	"author": "National Instruments",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/ni/javascript-styleguide/issues"
+	},
+	"homepage": "https://github.com/ni/javascript-styleguide#readme",
+	"publishConfig": {
+		"access": "public"
+	},
+	"files": [
+		"**/*.js",
+		"!/.*.js",
+		"!/tools"
+	],
+	"peerDependencies": {
+		"angular-eslint": "^19.0.0",
+		"@ni/eslint-config-typescript": "^4.4.4"
+	},
+	"exports": {
+		".": "./index.js",
+		"./template": "./template.js",
+		"./requiring-type-checking": "./requiring-type-checking.js",
+		"./template/options": "./template/options.js"
+	}
 }

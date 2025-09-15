@@ -1,4 +1,4 @@
-module.exports = {
+export const extensionsRequiringTypeChecking = {
     rules: {
         'dot-notation': 'off',
         '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
