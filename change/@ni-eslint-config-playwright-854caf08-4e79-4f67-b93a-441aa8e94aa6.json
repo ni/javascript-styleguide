@@ -1,0 +1,7 @@
+{
+  "type": "major",
+  "comment": "Update eslint-config-playwright to be compatible with eslint v9",
+  "packageName": "@ni/eslint-config-playwright",
+  "email": "gokulprasanth.ravi@emerson.com",
+  "dependentChangeType": "patch"
+}

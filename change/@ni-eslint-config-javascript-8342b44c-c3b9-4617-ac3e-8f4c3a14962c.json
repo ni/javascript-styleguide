@@ -1,0 +1,7 @@
+{
+  "type": "major",
+  "comment": "Update eslint-config-javascript to be compatible with eslint v9",
+  "packageName": "@ni/eslint-config-javascript",
+  "email": "gokulprasanth.ravi@emerson.com",
+  "dependentChangeType": "patch"
+}
