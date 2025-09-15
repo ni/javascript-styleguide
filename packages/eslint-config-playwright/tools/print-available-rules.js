@@ -20,4 +20,3 @@ console.log('Playwright Recommended:');
 print(playwrightRecommended);
 console.log('Remaining Playwright Rules:');
 print(playwright);
-

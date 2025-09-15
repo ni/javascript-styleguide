@@ -1,4 +1,4 @@
-export const extensions = {
+export default [{
     rules: {
         /*
             The following are extension rules that replace core JavaScript rules to support
@@ -75,4 +75,4 @@ export const extensions = {
         'no-useless-constructor': 'off',
         '@typescript-eslint/no-useless-constructor': 'error',
     }
-};
+}];

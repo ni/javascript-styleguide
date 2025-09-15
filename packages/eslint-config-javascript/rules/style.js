@@ -112,12 +112,6 @@ export const style = {
         '@stylistic/function-call-argument-newline': ['error', 'consistent'],
 
         /*
-            enforce spacing between functions and their invocations
-            https://eslint.style/rules/func-call-spacing
-        */
-        '@stylistic/func-call-spacing': ['error', 'never'],
-
-        /*
             requires function names to match the name of the variable or property to which they are assigned
             https://eslint.org/docs/rules/func-name-matching
         */
@@ -465,7 +459,7 @@ export const style = {
             deprecated in favor of func-call-spacing
             https://eslint.style/rules/function-call-spacing
         */
-        '@stylistic/function-call-spacing': 'off',
+        '@stylistic/function-call-spacing': ['error', 'never'],
 
         /*
             disallow tab characters entirely

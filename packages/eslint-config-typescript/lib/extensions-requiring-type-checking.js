@@ -1,4 +1,4 @@
-export const extensionsRequiringTypeChecking = {
+export default [{
     rules: {
         'dot-notation': 'off',
         '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
@@ -7,7 +7,7 @@ export const extensionsRequiringTypeChecking = {
         '@typescript-eslint/no-implied-eval': 'error',
 
         'no-throw-literal': 'off',
-        '@typescript-eslint/no-throw-literal': 'error',
+        '@typescript-eslint/only-throw-error': 'error',
 
         'require-await': 'off',
         '@typescript-eslint/require-await': 'error',
@@ -15,4 +15,4 @@ export const extensionsRequiringTypeChecking = {
         'no-return-await': 'off',
         '@typescript-eslint/return-await': ['error', 'always'],
     }
-};
+}];

@@ -7,12 +7,6 @@ export default [
     {
         processor: angular.processInlineTemplates,
         rules: {
-            /*
-                Overrides to Angular recommended rules:
-                https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/src/configs/recommended.json
-            */
-
-            '@angular-eslint/no-host-metadata-property': 'error',
 
             /*
                 '@angular-eslint/no-input-rename' rule notes:

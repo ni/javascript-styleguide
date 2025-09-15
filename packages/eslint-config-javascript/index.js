@@ -10,7 +10,7 @@ import { imports } from './rules/imports.js';
 import { strict } from './rules/strict.js';
 
 export default [
-	stylisticPlugin.configs['disable-legacy'],
+    stylisticPlugin.configs['disable-legacy'],
     bestPractices,
     errors,
     node,
@@ -19,14 +19,14 @@ export default [
     es6,
     imports,
     strict,
-	{
-		plugins: {
-			'@stylistic': stylisticPlugin,
-			import: importPlugin,
-		},
-		languageOptions: {
-			ecmaVersion: 2022,
-			sourceType: 'module'
-		}
-	},
+    {
+        plugins: {
+            '@stylistic': stylisticPlugin,
+            import: importPlugin,
+        },
+        languageOptions: {
+            ecmaVersion: 2022,
+            sourceType: 'module'
+        }
+    },
 ];

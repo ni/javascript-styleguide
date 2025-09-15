@@ -95,7 +95,7 @@ export default [
                 definitions, consistent with classes. Object literal types should use commas
                 consistent with object literals.
             */
-            '@typescript-eslint/member-delimiter-style': ['error', {
+            '@stylistic/member-delimiter-style': ['error', {
                 overrides: {
                     interface: {
                         singleline: {
@@ -217,7 +217,7 @@ export default [
             */
             '@typescript-eslint/sort-type-union-intersection-members': 'off',
 
-            '@typescript-eslint/type-annotation-spacing': 'error',
+            '@stylistic/type-annotation-spacing': 'error',
 
             /*
                 This rule is better enforced with the TypeScript `noImplicitAny` and
