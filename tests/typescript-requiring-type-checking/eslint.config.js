@@ -3,7 +3,7 @@ import path from 'path';
 import typescript from '@ni/eslint-config-typescript';
 import typescriptRequiringTypeChecking from '@ni/eslint-config-typescript/requiring-type-checking';
 
-const tsconfigRootDir = path.dirname(fileURLToPath(import.meta.url));
+const tsConfigRootDir = path.dirname(fileURLToPath(import.meta.url));
 
 export default [
 	{
@@ -16,7 +16,7 @@ export default [
 		languageOptions: {
 			parserOptions: {
 				project: ['./tsconfig.json'],
-				tsconfigRootDir,
+				tsConfigRootDir,
 			},
 		},
 	},

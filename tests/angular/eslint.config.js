@@ -10,7 +10,7 @@ import typescriptPlugin from 'typescript-eslint';
 import angularTemplatePlugin from 'angular-eslint';
 import { defineConfig } from 'eslint/config';
 
-const tsconfigRootDir = path.dirname(fileURLToPath(import.meta.url));
+const tsConfigRootDir = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig([
 	{ ignores: ['*.js'] },
@@ -21,7 +21,7 @@ export default defineConfig([
 			parser: typescriptPlugin.parser,
 			parserOptions: {
 				project: ['./tsconfig.json'],
-				tsconfigRootDir,
+				tsConfigRootDir,
 			},
 		},
 	},

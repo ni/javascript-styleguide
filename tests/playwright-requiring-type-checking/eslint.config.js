@@ -3,7 +3,7 @@ import path from 'path';
 import playwright from '@ni/eslint-config-playwright';
 import playwrightRequiringTypeChecking from '@ni/eslint-config-playwright/requiring-type-checking';
 
-const tsconfigRootDir = path.dirname(fileURLToPath(import.meta.url));
+const tsConfigRootDir = path.dirname(fileURLToPath(import.meta.url));
 
 export default [
 	...playwright,
@@ -16,7 +16,7 @@ export default [
 		languageOptions: {
 			parserOptions: {
 				project: ['./tsconfig.json'],
-				tsconfigRootDir,
+				tsConfigRootDir,
 			},
 		},
 		rules: {

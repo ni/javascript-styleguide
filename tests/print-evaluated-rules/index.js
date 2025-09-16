@@ -99,7 +99,7 @@ const __dirname = path.dirname(__filename);
         .filter(key => !key.startsWith('@angular-eslint'))
         .filter(
             key => !configTypescript.rules[key]
-              && !configTypescriptTypechecked.rules[key]
+                && !configTypescriptTypechecked.rules[key]
         )
         .reduce((config, key) => {
             config[key] = rules[key];
@@ -107,13 +107,13 @@ const __dirname = path.dirname(__filename);
         }, {});
 
     const angularDivergedRules = getDivergedRules(
-        angularRules.map(cfg => cfg.rules)
+        angularRules.map(config => config.rules)
     );
     const angularTemplateDivergedRules = getDivergedRules(
-        angularTemplateRules.map(cfg => cfg.rules)
+        angularTemplateRules.map(config => config.rules)
     );
     const angularHasDivergedRules = !!Object.keys(angularDivergedRules).length
-      || !!Object.keys(angularTemplateDivergedRules).length;
+        || !!Object.keys(angularTemplateDivergedRules).length;
 
     console.log('-------- Audits:');
     console.log(`Evaluated ESLint rules has warn?: ${hasWarn(configEslint)}`);
