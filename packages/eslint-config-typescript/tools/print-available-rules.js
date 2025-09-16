@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 /* eslint-disable no-console */
 // eslint-plugin-import doesn't know how to resolve entry points in commonjs modules that are
 // declared using "export" rather than the old "main" syntax in package.json.

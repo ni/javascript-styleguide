@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-/* eslint-disable no-undef */
 import { ESLint } from 'eslint';
 import angularRules from '@ni/eslint-config-angular';
 import angularTemplateRules from '@ni/eslint-config-angular/template';

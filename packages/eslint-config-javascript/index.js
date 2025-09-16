@@ -1,5 +1,6 @@
 import importPlugin from 'eslint-plugin-import';
 import stylisticPlugin from '@stylistic/eslint-plugin';
+import globals from 'globals';
 import { bestPractices } from './rules/best-practices.js';
 import { errors } from './rules/errors.js';
 import { node } from './rules/node.js';
@@ -26,7 +27,10 @@ export default [
         },
         languageOptions: {
             ecmaVersion: 2022,
-            sourceType: 'module'
+            sourceType: 'module',
+            globals: {
+                ...globals.node
+            }
         }
     },
 ];
