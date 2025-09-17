@@ -1,5 +1,6 @@
 import javascript from '@ni/eslint-config-javascript';
 import typescriptPlugin from 'typescript-eslint';
+import importPlugin from 'eslint-plugin-import';
 import extensions from './lib/extensions.js';
 
 export default [
@@ -10,6 +11,7 @@ export default [
         languageOptions: {
             parser: typescriptPlugin.parser
         },
+        settings: importPlugin.flatConfigs.typescript.settings,
         rules: {
             /*
                 Overrides to import rules (already handled by the TypeScript compiler):
