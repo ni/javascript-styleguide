@@ -105,7 +105,7 @@ export default [
 
 ESLint support for Angular is provided by [`angular-eslint`](https://github.com/angular-eslint/angular-eslint#readme).
 
-1. **For single and multi-project workspaces**, [add the angular-eslint](https://github.com/angular-eslint/angular-eslint#quick-start). Remove the `angular-eslint` and `eslint` dependencies from `package.json`.
+1. **For single and multi-project workspaces**, [add angular-eslint](https://github.com/angular-eslint/angular-eslint#quick-start). Remove the `angular-eslint` and `eslint` dependencies from `package.json`.
     ```bash
     ng add angular-eslint
     ```
@@ -284,6 +284,7 @@ To disable a rule for a specific file pattern or directory, update the rules sec
 export default [
     // ...other configs
     {
+        // This rule is disabled as an example
         files: ['*.stories.ts'],
         rules: {
             'import/no-default-export': 'off'
