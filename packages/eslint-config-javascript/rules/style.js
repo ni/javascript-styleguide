@@ -455,8 +455,7 @@ export const style = {
         ],
 
         /*
-            disallow space between function identifier and application
-            deprecated in favor of func-call-spacing
+            enforce spacing between functions and their invocations
             https://eslint.style/rules/function-call-spacing
         */
         '@stylistic/function-call-spacing': ['error', 'never'],

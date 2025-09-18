@@ -37,7 +37,7 @@ export default [
 
             /*
                 [strict-null-checks]
-                With `stickNullChecks` disabled, non-null assertions are discouraged (this rule is configured as 'error')
+                With `strictNullChecks` disabled, non-null assertions are discouraged (this rule is configured as 'error')
                 as non-null assertions do not provide additional type safety and if used inconsistently add to visual noise.
                 With `strictNullChecks` enabled, the non-null assertion operator (this rule configured as 'off')
                 is useful for asserting that a value will no longer be null and usage of operator should be allowed.
@@ -45,11 +45,6 @@ export default [
             '@typescript-eslint/no-non-null-assertion': 'error',
 
             'valid-typeof': 'off',
-
-            /*
-                Overrides to TypeScript stylistic rules:
-                https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/stylistic.ts
-            */
 
             /*
                 Overrides to Typescript rules outside of the recommended configuration:
@@ -93,6 +88,11 @@ export default [
             ],
 
             /*
+                Overrides to TypeScript stylistic rules:
+                https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/flat/stylistic.ts
+            */
+
+            /*
                 All interface members should be terminated with a semicolon including single line
                 definitions, consistent with classes. Object literal types should use commas
                 consistent with object literals.
@@ -117,6 +117,8 @@ export default [
                     }
                 }
             }],
+
+            '@stylistic/type-annotation-spacing': 'error',
 
             /*
                 Group members by fields and methods and then order them by accessibility starting
@@ -218,8 +220,6 @@ export default [
                 Projects may enable if desired.
             */
             '@typescript-eslint/sort-type-union-intersection-members': 'off',
-
-            '@stylistic/type-annotation-spacing': 'error',
 
             /*
                 This rule is better enforced with the TypeScript `noImplicitAny` and
