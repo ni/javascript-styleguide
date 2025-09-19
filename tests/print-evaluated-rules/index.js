@@ -27,7 +27,7 @@ const __dirname = path.dirname(__filename);
         .wrap(null).argv;
 
     const hasWarn = function (config) {
-        return JSON.stringify(config).includes('"warn"');
+        return JSON.stringify(normalizeRulesSeverityToString(config.rules)).indexOf('"warn"') !== -1;
     };
 
     const testDir = path.resolve(__dirname, '..');
@@ -94,7 +94,7 @@ const __dirname = path.dirname(__filename);
         return;
     }
 
-    const getDivergedRules = rules => Object.keys(rules)
+    const getDivergedRules = rules => (Object.keys(rules)
         .filter(key => !key.startsWith('@angular-eslint'))
         .filter(
             key => !configTypescript.rules[key]
@@ -103,14 +103,10 @@ const __dirname = path.dirname(__filename);
         .reduce((config, key) => {
             config[key] = rules[key];
             return config;
-        }, {});
+        }, {}));
 
-    const angularDivergedRules = getDivergedRules(
-        angularRules.map(config => config.rules)
-    );
-    const angularTemplateDivergedRules = getDivergedRules(
-        angularTemplateRules.map(config => config.rules)
-    );
+    const angularDivergedRules = getDivergedRules(Object.assign({}, ...angularRules.slice(-2).map(item => item.rules)));
+    const angularTemplateDivergedRules = getDivergedRules(Object.assign({}, ...angularTemplateRules.slice(-2).map(item => item.rules)));
     const angularHasDivergedRules = !!Object.keys(angularDivergedRules).length
         || !!Object.keys(angularTemplateDivergedRules).length;
 
