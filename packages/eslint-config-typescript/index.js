@@ -34,6 +34,8 @@ export default [
             */
 
             '@typescript-eslint/explicit-module-boundary-types': 'error',
+            'no-with': 'error',
+            'no-class-assign': 'error',
 
             /*
                 [strict-null-checks]

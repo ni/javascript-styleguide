@@ -21,6 +21,13 @@ export default [
             '@typescript-eslint/no-redundant-type-constituents': 'off',
             '@typescript-eslint/no-unsafe-declaration-merging': 'off',
             '@typescript-eslint/no-unsafe-enum-comparison': 'off',
+            '@typescript-eslint/prefer-find': 'off',
+            'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
+            '@typescript-eslint/prefer-promise-reject-errors': 'off',
+            '@typescript-eslint/no-unsafe-unary-minus': 'off',
+            '@typescript-eslint/no-array-delete': 'off',
+            'no-with': 'error',
+            'no-class-assign': 'error',
 
             /*
                 This rule can be confusing if you're not familiar with JavaScript's rules for binding `this`,
