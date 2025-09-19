@@ -69,7 +69,7 @@ After installing the lint configuration packages, follow the configuration instr
 
 ### JavaScript configuration
 
-Spread `@ni/eslint-config-javascript` configurations in your [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`):
+Export `@ni/eslint-config-javascript` configurations in your [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`):
 
 ```js
 import javascript from '@ni/eslint-config-javascript';
@@ -81,7 +81,7 @@ export default [
 
 ### TypeScript configuration
 
-Spread `@ni/eslint-config-typescript` and `@ni/eslint-config-typescript/requiring-type-checking` configurations in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` to the project's TypeScript configuration.
+Export `@ni/eslint-config-typescript` and `@ni/eslint-config-typescript/requiring-type-checking` configurations in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` to the project's TypeScript configuration.
 
 ```js
 import typescript from '@ni/eslint-config-typescript';
@@ -114,7 +114,7 @@ ESLint support for Angular is provided by [`angular-eslint`](https://github.com/
     > ng g angular-eslint:add-eslint-to-project <PROJECT NAME>
     > ng config cli.schematicCollections "[\"angular-eslint\"]"
     ```
-3. Spread the NI configured rules for Angular and Angular templates in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
+3. Export the NI configured rules for Angular and Angular templates in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
     ```js
     import angular from '@ni/eslint-config-angular';
     import angularTypeChecking from '@ni/eslint-config-angular/requiring-type-checking';
@@ -143,7 +143,7 @@ ESLint support for Angular is provided by [`angular-eslint`](https://github.com/
 
 ### Playwright configuration
 
-Spread `@ni/eslint-config-playwright` and `@ni/eslint-config-playwright/requiring-type-checking` in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
+Export `@ni/eslint-config-playwright` and `@ni/eslint-config-playwright/requiring-type-checking` in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
 
 **Note:** The Playwright configurations extend the TypeScript configurations, so it is not necessary for an application to extend them both. However, the Playwright configurations should only be applied to directories that contain Playwright tests and utilities.
 
