@@ -45,11 +45,11 @@ const __dirname = path.dirname(__filename);
 
     const getRules = function () {
         return {
-            ...configEslint.rules,
-            ...configTypescript.rules,
-            ...configTypescriptTypechecked.rules,
-            ...configAngular.rules,
-            ...configAngularTemplate.rules
+            ...normalizeRulesSeverityToString(configEslint.rules),
+            ...normalizeRulesSeverityToString(configTypescript.rules),
+            ...normalizeRulesSeverityToString(configTypescriptTypechecked.rules),
+            ...normalizeRulesSeverityToString(configAngular.rules),
+            ...normalizeRulesSeverityToString(configAngularTemplate.rules)
         };
     };
 
@@ -139,4 +139,32 @@ async function calculateConfigForFile(filePath) {
     });
 
     return await eslint.calculateConfigForFile(filePath);
+}
+
+function normalizeSeverityToString(val) {
+    switch (val) {
+        case 0:
+            return 'off';
+        case 1:
+            return 'warn';
+        case 2:
+            return 'error';
+        default:
+            return val;
+    }
+}
+
+function normalizeRulesSeverityToString(rulesObj) {
+    const updatedRules = {};
+    for (const ruleName in rulesObj) {
+        if (Object.prototype.hasOwnProperty.call(rulesObj, ruleName)) {
+            const ruleVal = rulesObj[ruleName];
+            if (Array.isArray(ruleVal)) {
+                updatedRules[ruleName] = [normalizeSeverityToString(ruleVal[0]), ...ruleVal.slice(1)];
+            } else {
+                updatedRules[ruleName] = normalizeSeverityToString(ruleVal);
+            }
+        }
+    }
+    return updatedRules;
 }
