@@ -1,9 +1,8 @@
 import { fileURLToPath } from 'url';
 import path from 'path';
 
-import angular from '@ni/eslint-config-angular';
-import angularTemplate from '@ni/eslint-config-angular/template';
-import angularRequiringTypeChecking from '@ni/eslint-config-angular/requiring-type-checking';
+import { angularConfig } from '@ni/eslint-config-angular';
+import { angularTemplateConfig } from '@ni/eslint-config-angular/template';
 import { ignoreAttributes } from '@ni/eslint-config-angular/template/options';
 
 import typescriptPlugin from 'typescript-eslint';
@@ -16,7 +15,7 @@ export default defineConfig([
 	{ ignores: ['*.js'] },
 	{
 		files: ['**/*.ts'],
-		extends: [...angular, ...angularRequiringTypeChecking],
+		extends: [...angularConfig],
 		languageOptions: {
 			parser: typescriptPlugin.parser,
 			parserOptions: {
@@ -27,7 +26,7 @@ export default defineConfig([
 	},
 	{
 		files: ['*.html'],
-		extends: [...angularTemplate],
+		extends: [...angularTemplateConfig],
 		languageOptions: { parser: angularTemplatePlugin.templateParser },
 	},
 	{

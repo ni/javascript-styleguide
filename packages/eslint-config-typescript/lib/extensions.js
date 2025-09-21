@@ -1,4 +1,4 @@
-export default [{
+export const extensionsConfig = [{
     rules: {
         /*
             The following are extension rules that replace core JavaScript rules to support

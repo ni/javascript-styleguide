@@ -1,3 +1,3 @@
-import typescriptRequiringTypeChecking from '@ni/eslint-config-typescript/requiring-type-checking';
+import { typescriptRequiringTypeCheckingConfig } from '@ni/eslint-config-typescript/requiring-type-checking';
 
-export default [...typescriptRequiringTypeChecking];
+export const playwrightRequiringTypeCheckingConfig = [...typescriptRequiringTypeCheckingConfig];

@@ -1,12 +1,14 @@
-import javascript from '@ni/eslint-config-javascript';
+import { javascriptConfig } from '@ni/eslint-config-javascript';
 import typescriptPlugin from 'typescript-eslint';
 import importPlugin from 'eslint-plugin-import';
-import extensions from './lib/extensions.js';
+import { extensionsConfig } from './lib/extensions.js';
+import { typescriptRequiringTypeCheckingConfig } from './requiring-type-checking.js';
 
-export default [
-    ...javascript,
+export const typescriptConfig = [
+    ...javascriptConfig,
     ...typescriptPlugin.configs.recommended,
-    ...extensions,
+    ...extensionsConfig,
+    ...typescriptRequiringTypeCheckingConfig,
     {
         languageOptions: {
             parser: typescriptPlugin.parser
@@ -34,8 +36,6 @@ export default [
             */
 
             '@typescript-eslint/explicit-module-boundary-types': 'error',
-            'no-with': 'error',
-            'no-class-assign': 'error',
 
             /*
                 [strict-null-checks]

@@ -1,9 +1,9 @@
-import typescript from '@ni/eslint-config-typescript';
+import { typescriptConfig } from '@ni/eslint-config-typescript';
 import angular from 'angular-eslint';
 
-export default [
+export const angularConfig = [
     ...angular.configs.tsRecommended,
-    ...typescript,
+    ...typescriptConfig,
     {
         processor: angular.processInlineTemplates,
         rules: {
@@ -134,7 +134,13 @@ export default [
                 Tests often define additional classes as mocks or helper components and it improves test readability
                 if those are in the same file as the tests.
             */
-            'max-classes-per-file': 'off'
+            'max-classes-per-file': 'off',
+
+            /*
+                Spies used by Angular application tests result in a significant number of
+                unbound methods so this rule is disabled for test specs in Angular projects.
+            */
+            '@typescript-eslint/unbound-method': 'off',
         }
     }
 ];

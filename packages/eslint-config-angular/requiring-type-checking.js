@@ -1,8 +1,8 @@
-import typescriptRequiringTypeChecking from '@ni/eslint-config-typescript/requiring-type-checking';
+import { typescriptRequiringTypeCheckingConfig } from '@ni/eslint-config-typescript/requiring-type-checking';
 import typescriptPlugin from 'typescript-eslint';
 
-export default [
-    ...typescriptRequiringTypeChecking,
+export const angularRequiringTypeCheckingConfig = [
+    ...typescriptRequiringTypeCheckingConfig,
     {
         languageOptions: {
             parser: typescriptPlugin.parser,

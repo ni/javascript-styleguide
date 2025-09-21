@@ -1,10 +1,10 @@
 import typescriptPlugin from 'typescript-eslint';
-import extensionsTypeChecked from './lib/extensions-requiring-type-checking.js';
+import { extensionsRequiringTypeCheckingConfig } from './lib/extensions-requiring-type-checking.js';
 
-export default [
+export const typescriptRequiringTypeCheckingConfig = [
     ...typescriptPlugin.configs.recommendedTypeChecked,
     ...typescriptPlugin.configs.stylisticTypeChecked,
-    ...extensionsTypeChecked,
+    ...extensionsRequiringTypeCheckingConfig,
     {
         languageOptions: {
             parser: typescriptPlugin.parser

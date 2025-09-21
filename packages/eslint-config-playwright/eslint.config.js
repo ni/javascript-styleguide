@@ -1,10 +1,12 @@
-import javascript from '@ni/eslint-config-javascript';
+import { javascriptConfig } from '@ni/eslint-config-javascript';
 
 export default [
-    ...javascript,
+    ...javascriptConfig,
+    {
+        ignores: ['eslint.config.js'],
+    },
     {
         rules: {
-            'import/no-default-export': 'off',
             'import/no-extraneous-dependencies': 'off',
             'import/no-unresolved': 'off',
         },

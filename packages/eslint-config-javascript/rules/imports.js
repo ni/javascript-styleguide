@@ -101,7 +101,7 @@ export const imports = {
                 '**/protractor.conf.js', // protractor config
                 '**/protractor.conf.*.js', // protractor config
                 '**/karma.conf.js', // karma config
-                '**/.eslintrc.js' // eslint config
+                '**/eslint.config.js' // eslint config
             ],
             optionalDependencies: false,
         }],

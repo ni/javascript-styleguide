@@ -16,7 +16,6 @@
     "@ni/eslint-config-angular": "*",
     "@ni/javascript-test": "*",
     "@ni/typescript-test": "*",
-    "@ni/typescript-requiring-type-checking-test": "*",
     "eslint": "^9.35.0"
   },
   "dependencies": {

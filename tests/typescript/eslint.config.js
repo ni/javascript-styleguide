@@ -1,11 +1,21 @@
-import typescript from '@ni/eslint-config-typescript';
+import { fileURLToPath } from 'url';
+import path from 'path';
+import { typescriptConfig } from '@ni/eslint-config-typescript';
+
+const tsConfigRootDir = path.dirname(fileURLToPath(import.meta.url));
 
 export default [
-    ...typescript,
+    ...typescriptConfig,
     {
-        files: ['*.js'],
-        rules: {
-            'import/no-default-export': 'off',
+        ignores: ['eslint.config.js']
+    },
+    {
+        files: ['**/*.ts'],
+        languageOptions: {
+            parserOptions: {
+                project: ['./tsconfig.json'],
+                tsConfigRootDir,
+            },
         },
     },
 ];

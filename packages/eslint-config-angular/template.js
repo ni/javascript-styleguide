@@ -1,7 +1,7 @@
 import { ignoreAttributes } from '@ni/eslint-config-angular/template/options';
 import angularTemplate from 'angular-eslint';
 
-export default [
+export const angularTemplateConfig = [
     ...angularTemplate.configs.templateRecommended,
     {
         rules: {

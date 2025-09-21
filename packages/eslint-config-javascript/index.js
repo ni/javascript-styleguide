@@ -10,7 +10,7 @@ import { es6 } from './rules/es6.js';
 import { imports } from './rules/imports.js';
 import { strict } from './rules/strict.js';
 
-export default [
+export const javascriptConfig = [
     stylisticPlugin.configs['disable-legacy'],
     bestPractices,
     errors,

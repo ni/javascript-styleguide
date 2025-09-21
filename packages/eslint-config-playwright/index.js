@@ -1,8 +1,8 @@
-import typescript from '@ni/eslint-config-typescript';
+import { typescriptConfig } from '@ni/eslint-config-typescript';
 import playwright from 'eslint-plugin-playwright';
 
-export default [
-    ...typescript,
+export const playwrightConfig = [
+    ...typescriptConfig,
     playwright.configs['flat/recommended'],
     {
         rules: {

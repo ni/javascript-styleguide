@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { ESLint } from 'eslint';
-import angularRules from '@ni/eslint-config-angular';
-import angularTemplateRules from '@ni/eslint-config-angular/template';
+import { angularConfig } from '@ni/eslint-config-angular';
+import { angularTemplateConfig } from '@ni/eslint-config-angular/template';
 import fs from 'fs';
 import path from 'path';
 import yargs from 'yargs/yargs';
@@ -105,8 +105,8 @@ const __dirname = path.dirname(__filename);
             return config;
         }, {}));
 
-    const angularDivergedRules = getDivergedRules(Object.assign({}, ...angularRules.slice(-2).map(item => item.rules)));
-    const angularTemplateDivergedRules = getDivergedRules(Object.assign({}, ...angularTemplateRules.slice(-2).map(item => item.rules)));
+    const angularDivergedRules = getDivergedRules(Object.assign({}, ...angularConfig.slice(-2).map(item => item.rules)));
+    const angularTemplateDivergedRules = getDivergedRules(Object.assign({}, ...angularTemplateConfig.slice(-2).map(item => item.rules)));
     const angularHasDivergedRules = !!Object.keys(angularDivergedRules).length
         || !!Object.keys(angularTemplateDivergedRules).length;
 
