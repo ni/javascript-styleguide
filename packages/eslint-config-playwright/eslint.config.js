@@ -7,6 +7,7 @@ export default [
     },
     {
         rules: {
+            // Disable this rule because some packages used in the project are not listed in devDependencies or dependencies.
             'import/no-extraneous-dependencies': 'off',
         },
     },

@@ -1,6 +1,9 @@
 {
     "compilerOptions": {
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "strictNullChecks": true,
+        "moduleResolution": "node",
+        "target": "ES2020"
     },
     "include": ["."]
 }
