@@ -295,6 +295,46 @@ The rule configuration files in this package (`index.js`, `typescript.js`, etc) 
 
 ESLint offers several [ways to disable a rule for a line or file](https://eslint.org/docs/user-guide/configuring/rules#disabling-rules). Suppressions should be as targeted as possible and should include a comment explaining the suppression.
 
+### Migrating to ESLint Flat Configuration Format
+
+ESLint’s [flat config format](https://eslint.org/docs/latest/use/configure/configuration-files-new) is now the recommended way to configure ESLint. If your project is still using a legacy `.eslintrc.*` file, follow these steps to migrate:
+
+1. **Rename your configuration file**
+Replace your `.eslintrc.js` or `.eslintrc.json` with a new `eslint.config.js` file at the root of your project.
+
+2. **Switch to using imports**
+Instead of using the `extends` property, import the configuration packages you need and export an array of configurations:
+
+   ```js
+   // eslint.config.js
+   import { angularConfig, angularTemplateConfig } from '@ni/eslint-config-angular';
+
+   export default [
+     ...angularConfig,
+     ...angularTemplateConfig,
+     // Add any project-specific overrides here
+   ];
+   ```
+
+   **Note:** All rules that previously required type checking are now included in the main config export for each package. You no longer need to import a separate requiring-type-checking config—just import the main config to get all rules.
+
+3. **Set parser options as needed**  
+   For TypeScript and Angular projects, ensure you set `parserOptions.project` in a config block to point to your TypeScript configuration:
+
+   ```js
+   {
+     files: ['**/*.ts'],
+     languageOptions: {
+       parserOptions: {
+         project: './tsconfig.json'
+       }
+     }
+   }
+   ```
+
+4. **Remove legacy config fields**  
+   The flat config format does not use `parser`, or `plugins` at the top level. All configuration should be handled through the imported arrays and objects.
+
 ### Recommended Development Environment Configuration
 
 Modern IDEs can be configured to provide live feedback about ESLint errors.
