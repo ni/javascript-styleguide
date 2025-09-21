@@ -72,24 +72,22 @@ After installing the lint configuration packages, follow the configuration instr
 Export `@ni/eslint-config-javascript` configurations in your [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`):
 
 ```js
-import javascript from '@ni/eslint-config-javascript';
+import { javascriptConfig } from '@ni/eslint-config-javascript';
 
 export default [
-    ...javascript,
+    ...javascriptConfig,
 ];
 ```
 
 ### TypeScript configuration
 
-Export `@ni/eslint-config-typescript` and `@ni/eslint-config-typescript/requiring-type-checking` configurations in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` to the project's TypeScript configuration.
+Export `@ni/eslint-config-typescript` configurations in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` to the project's TypeScript configuration.
 
 ```js
-import typescript from '@ni/eslint-config-typescript';
-import typescriptTypeChecking from '@ni/eslint-config-typescript/requiring-type-checking';
+import { typescriptConfig } from '@ni/eslint-config-typescript';
 
 export default [
-    ...typescript,
-    ...typescriptTypeChecking,
+    ...typescriptConfig,
     {
         files: ['**/*.ts'],
         languageOptions: {
@@ -116,16 +114,14 @@ ESLint support for Angular is provided by [`angular-eslint`](https://github.com/
     ```
 3. Export the NI configured rules for Angular and Angular templates in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
     ```js
-    import angular from '@ni/eslint-config-angular';
-    import angularTypeChecking from '@ni/eslint-config-angular/requiring-type-checking';
-    import angularTemplate from '@ni/eslint-config-angular/template';
+    import angularConfig from '@ni/eslint-config-angular';
+    import angularTemplateConfig from '@ni/eslint-config-angular/template';
 
     export default [
         {
             files: ['**/*.ts'],
             extends: [
-                ...angular,
-                ...angularTypeChecking
+                ...angularConfig
             ],
             languageOptions: {
                 parserOptions: {
@@ -135,7 +131,7 @@ ESLint support for Angular is provided by [`angular-eslint`](https://github.com/
         },
         {
             files: ['*.html'],
-            extends: [...angularTemplate]
+            extends: [...angularTemplateConfig]
         }
     ];
     ```
@@ -143,19 +139,17 @@ ESLint support for Angular is provided by [`angular-eslint`](https://github.com/
 
 ### Playwright configuration
 
-Export `@ni/eslint-config-playwright` and `@ni/eslint-config-playwright/requiring-type-checking` in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
+Export `@ni/eslint-config-playwright` in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
 
 **Note:** The Playwright configurations extend the TypeScript configurations, so it is not necessary for an application to extend them both. However, the Playwright configurations should only be applied to directories that contain Playwright tests and utilities.
 
 ```js
 // This is an example .eslintrc.js in a Playwright-specific directory.
 // If Playwright files are mixed with other code, use an "overrides" file pattern to match only Playwright code.
-import playwright from '@ni/eslint-config-playwright';
-import playwrightTypeChecking from '@ni/eslint-config-playwright/requiring-type-checking';
+import playwrightConfig from '@ni/eslint-config-playwright';
 
 export default [
-    ...playwright,
-    ...playwrightTypeChecking,
+    ...playwrightConfig,
     {
         files: ['**/*.ts'],
         languageOptions: {
@@ -347,7 +341,7 @@ This option can be adapted for npm scripts, for example.
 
 ### TypeScript linting performance
 
-`@ni/eslint-config/typescript-requiring-type-checking` includes rules that require type checking that run slower as they utilize the TypeScript compiler for type information.
+`@ni/eslint-config-typescript` includes rules that require type checking that run slower as they utilize the TypeScript compiler for type information.
 
 If there are situations where the analysis time for enabling the type checked rules is an excessive burden you may consider creating a separate ESLint configuration that avoids extending the type checked rules and omits the `parserOptions.project` configuration to run in specific scenarios.
 
