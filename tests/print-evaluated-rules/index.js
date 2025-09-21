@@ -33,13 +33,11 @@ const __dirname = path.dirname(__filename);
     const testDir = path.resolve(__dirname, '..');
     const jsPath = path.join(testDir, 'javascript', 'index.js');
     const tsPath = path.join(testDir, 'typescript', 'index.ts');
-    const tsTypePath = path.join(testDir, 'typescript-requiring-type-checking', 'index.ts');
     const angularTsPath = path.join(testDir, 'angular', 'index.ts');
     const angularHtmlPath = path.join(testDir, 'angular', 'index.html');
 
     const configEslint = await calculateConfigForFile(jsPath);
     const configTypescript = await calculateConfigForFile(tsPath);
-    const configTypescriptTypechecked = await calculateConfigForFile(tsTypePath);
     const configAngular = await calculateConfigForFile(angularTsPath);
     const configAngularTemplate = await calculateConfigForFile(angularHtmlPath);
 
@@ -47,7 +45,6 @@ const __dirname = path.dirname(__filename);
         return {
             ...normalizeRulesSeverityToString(configEslint.rules),
             ...normalizeRulesSeverityToString(configTypescript.rules),
-            ...normalizeRulesSeverityToString(configTypescriptTypechecked.rules),
             ...normalizeRulesSeverityToString(configAngular.rules),
             ...normalizeRulesSeverityToString(configAngularTemplate.rules)
         };
@@ -98,7 +95,6 @@ const __dirname = path.dirname(__filename);
         .filter(key => !key.startsWith('@angular-eslint'))
         .filter(
             key => !configTypescript.rules[key]
-                && !configTypescriptTypechecked.rules[key]
         )
         .reduce((config, key) => {
             config[key] = rules[key];
@@ -114,11 +110,6 @@ const __dirname = path.dirname(__filename);
     console.log(`Evaluated ESLint rules has warn?: ${hasWarn(configEslint)}`);
     console.log(
         `Evaluated TypeScript rules has warn?: ${hasWarn(configTypescript)}`
-    );
-    console.log(
-        `Evaluated TypeScript type checking rules has warn?: ${hasWarn(
-            configTypescriptTypechecked
-        )}`
     );
     console.log(`Evaluated Angular rules has warn?: ${hasWarn(configAngular)}`);
     console.log(
