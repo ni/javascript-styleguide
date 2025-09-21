@@ -123,10 +123,10 @@ export const typescriptRequiringTypeCheckingConfig = [
             '@typescript-eslint/no-confusing-void-expression': ['error', { ignoreArrowShorthand: true }],
 
             /* [strict-null-checks] */
-            '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'off',
+            '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
 
             /* [strict-null-checks] */
-            '@typescript-eslint/no-unnecessary-condition': 'off',
+            '@typescript-eslint/no-unnecessary-condition': 'error',
 
             '@typescript-eslint/no-unnecessary-qualifier': 'error',
 
@@ -172,16 +172,14 @@ export const typescriptRequiringTypeCheckingConfig = [
             '@typescript-eslint/require-array-sort-compare': 'error',
 
             /*
-                [strict-null-checks] This rule requires the TypeScript strictNullChecks compiler flag. If strictNullChecks is enabled, disallow numbers
-                with the following configuration:
-                '@typescript-eslint/strict-boolean-expressions': ['error', {
-                    allowNumber: false,
-                    allowNullableBoolean: true,
-                    allowNullableString: true,
-                    allowNullableNumber: false
-                }]
+                [strict-null-checks]
             */
-            '@typescript-eslint/strict-boolean-expressions': 'off',
+            '@typescript-eslint/strict-boolean-expressions': ['error', {
+                allowNumber: false,
+                allowNullableBoolean: true,
+                allowNullableString: true,
+                allowNullableNumber: false
+            }],
 
             /*
                 This rule is made redundant by `default-case` so it will never fire and is disabled.
