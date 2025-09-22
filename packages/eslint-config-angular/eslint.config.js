@@ -8,6 +8,7 @@ export default [
 	{
 		files: ['**/*.js'],
 		rules: {
+			'import/extensions': 'off'
 		},
 	},
 ];
