@@ -1,6 +1,6 @@
 {
   "type": "major",
-  "comment": "Update eslint-config-angular to be compatible with eslint v9",
+  "comment": "Update eslint-config-angular to be compatible with eslint v9. Change default rule configuration to assume `strictNullChecks` is enabled.",
   "packageName": "@ni/eslint-config-angular",
   "email": "131153319+gokulprasanth-ni@users.noreply.github.com",
   "dependentChangeType": "patch"

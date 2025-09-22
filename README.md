@@ -242,11 +242,9 @@ Tag: [`[strict-null-checks]`](https://github.com/ni/javascript-styleguide/search
 
 When `strictNullChecks` are enabled the values `null` and `undefined` are treated as distinct types by the compiler. For example, with `strictNullChecks` enabled, the value `null` could not be directly assigned to a binding of a `Cat` object, ie `const cat: Cat = null` would be a compile error. The `null` value is a distinct type and the binding would have to explicitly state that it can have a `null` value, ie `const cat: Cat | null = null;`.
 
-`strictNullChecks` are a powerful tool for code correctness and give us a way to avoid ["The Billion Dollar Mistake"](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/). However, it can be impractical to retrofit `strictNullChecks` configuration into an existing application and requires expanding your mental model for software development for use in new applications.
+`strictNullChecks` are a powerful tool for code correctness and give us a way to avoid ["The Billion Dollar Mistake"](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/). 
 
-As such, `strictNullChecks` are not recommended by default in order to prevent overhead of rule adoption for existing applications.
-
-However, we encourage new applications to leverage `strictNullChecks` for development. Enabling `strictNullChecks` is the TypeScript compiler recommendation and it is enabled by default in new Angular applications.
+This style guide assumes `strictNullChecks` are enabled by default. However, it can be impractical to retrofit `strictNullChecks` configuration into an existing application and requires expanding your mental model for software development for use in new applications. To adopt this style guide in a project without `strictNullChecks`, configure every rule tagged with `[strict-null-checks]` to `off` unless specified in the rule comment.
 
 #### Accessibility
 
