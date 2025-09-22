@@ -14,4 +14,10 @@ export class NI {
     public makeAwesomer(): void {
         this._awesomeLevel += 1;
     }
+
+    public async slowAdd(a: number, b: number, timeMs: number): Promise<number> {
+        return await new Promise(resolve => {
+            setTimeout(() => resolve(a + b), timeMs);
+        });
+    }
 }
