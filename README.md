@@ -297,10 +297,10 @@ ESLint offers several [ways to disable a rule for a line or file](https://eslint
 
 ESLint’s [flat config format](https://eslint.org/docs/latest/use/configure/configuration-files-new) is now the recommended way to configure ESLint. If your project is still using a legacy `.eslintrc.*` file, follow these steps to migrate:
 
-1. **Rename your configuration file**,
+1. **Rename your configuration file**
 Replace your `.eslintrc.js` or `.eslintrc.json` with a new `eslint.config.js` file at the root of your project.
 
-2. **Switch to using imports**,
+2. **Switch to using imports**
 Instead of using the `extends` property, import the configuration packages you need and export an array of configurations:
 
    ```js
@@ -316,7 +316,7 @@ Instead of using the `extends` property, import the configuration packages you n
 
    **Note:** All rules that previously required type checking are now included in the main config export for each package. You no longer need to import a separate requiring-type-checking config—just import the main config to get all rules.
 
-3. **Set parser options as needed**,
+3. **Set parser options as needed**
    For TypeScript and Angular projects, ensure you set `parserOptions.project` in a config block to point to your TypeScript configuration:
 
    ```js
@@ -330,7 +330,7 @@ Instead of using the `extends` property, import the configuration packages you n
    }
    ```
 
-4. **Remove legacy config fields**,
+4. **Remove legacy config fields**
    The flat config format does not use `parser`, or `plugins` at the top level. All configuration should be handled through the imported arrays and objects.
 
 ### Recommended Development Environment Configuration
