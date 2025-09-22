@@ -8,7 +8,6 @@ export default [
     {
         files: ['*.js'],
         rules: {
-            'import/no-extraneous-dependencies': 'off',
         },
     },
 ];

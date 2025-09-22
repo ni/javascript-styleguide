@@ -1,5 +1,5 @@
 {
-  "type":"module",
+  "type": "module",
   "name": "@ni/eslint-config-javascript",
   "version": "4.4.0",
   "description": "NI's JavaScript ESLint Shareable Config",
@@ -32,8 +32,9 @@
     "!/.*.js"
   ],
   "peerDependencies": {
+    "@stylistic/eslint-plugin": "^5.0.0",
     "eslint": "^9.35.0",
     "eslint-plugin-import": "^2.31.1",
-    "@stylistic/eslint-plugin": "^5.0.0"
+    "globals": "^14.0.0"
   }
 }

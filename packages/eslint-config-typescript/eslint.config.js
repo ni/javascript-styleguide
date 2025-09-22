@@ -8,9 +8,7 @@ export default [
     {
         files: ['**/*.js'],
         rules: {
-            // Disable these rules because some packages used in the project are not listed in devDependencies or dependencies, and ES6 modules require explicit file extensions by default.
             'import/extensions': 'off',
-            'import/no-extraneous-dependencies': 'off',
             'import/no-unresolved': 'off',
         },
     },
