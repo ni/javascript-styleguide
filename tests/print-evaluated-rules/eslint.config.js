@@ -4,10 +4,5 @@ export default [
     ...javascriptConfig,
     {
         ignores: ['eslint.config.js']
-    },
-    {
-        files: ['*.js'],
-        rules: {
-        },
-    },
+    }
 ];

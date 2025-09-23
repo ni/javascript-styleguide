@@ -4,9 +4,5 @@ export default [
     ...javascriptConfig,
     {
         ignores: ['eslint.config.js'],
-    },
-    {
-        rules: {
-        },
-    },
+    }
 ];
