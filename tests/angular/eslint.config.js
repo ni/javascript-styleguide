@@ -12,7 +12,12 @@ import { defineConfig } from 'eslint/config';
 const tsConfigRootDir = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig([
-	{ ignores: ['*.js'] },
+	{
+		files: ['eslint.config.js'],
+		rules: {
+			'import/no-default-export': 'off',
+		}
+	},
 	{
 		files: ['**/*.ts'],
 		extends: [...angularConfig],
