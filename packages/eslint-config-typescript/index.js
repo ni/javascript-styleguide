@@ -37,15 +37,6 @@ export const typescriptConfig = [
 
             '@typescript-eslint/explicit-module-boundary-types': 'error',
 
-            /*
-                [strict-null-checks]
-                With `strictNullChecks` disabled, non-null assertions are discouraged (this rule is configured as 'error')
-                as non-null assertions do not provide additional type safety and if used inconsistently add to visual noise.
-                With `strictNullChecks` enabled, the non-null assertion operator (this rule configured as 'off')
-                is useful for asserting that a value will no longer be null and usage of operator should be allowed.
-            */
-            '@typescript-eslint/no-non-null-assertion': 'off',
-
             'valid-typeof': 'off',
 
             /*
