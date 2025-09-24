@@ -333,6 +333,44 @@ Instead of using the `extends` property, import the configuration packages you n
 4. **Remove legacy config fields**
    The flat config format does not use `parser`, or `plugins` at the top level. All configuration should be handled through the imported arrays and objects.
 
+5. **@stylistic rules**
+   The following rules are moved from `@typescript-eslint` to `@stylistic`. Update any project config overrides and inline suppressions to the new names:  
+   - `@typescript-eslint/member-delimiter-style` → `@stylistic/member-delimiter-style`  
+   - `@typescript-eslint/type-annotation-spacing` → `@stylistic/type-annotation-spacing`  
+
+   Other deprecated rules may also now reside under `@stylistic`. Search your codebase for old suppressions (e.g. `eslint-disable @typescript-eslint/...`) and rename them as needed.
+
+6. **Angular CLI linkage**
+   When using `eslint.config.js` with Angular, explicitly point the Angular workspace at the flat config. In `angular.json` (per project):  
+   ```json
+   "projects": {
+     "my-app": {
+       "architect": {
+         "lint": {
+           "builder": "@angular-eslint/builder:lint",
+           "options": {
+             "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"],
+             "eslintConfig": "./eslint.config.js"
+           }
+         }
+       }
+     }
+   }
+   ```
+
+7. **strictNullChecks** is now enabled by default.  
+   - If your project has `strictNullChecks` enabled, remove previously overridden strictNullChecks rules.  
+   - If your project has `strictNullChecks` disabled, disable those strictNullChecks rules to maintain previous behavior. Example:  
+     ```js
+     {
+       files: ['**/*.ts'],
+       rules: {
+         '@typescript-eslint/no-unnecessary-condition': 'off',
+         '@typescript-eslint/strict-boolean-expressions': 'off'
+       }
+     }
+     ```
+
 ### Recommended Development Environment Configuration
 
 Modern IDEs can be configured to provide live feedback about ESLint errors.
