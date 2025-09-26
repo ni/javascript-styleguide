@@ -341,7 +341,7 @@ Instead of using the `extends` property, import the configuration packages you n
    Other deprecated rules may also now reside under `@stylistic`. Search your codebase for old suppressions (e.g. `eslint-disable @typescript-eslint/...`) and rename them as needed.
 
 6. **Angular CLI linkage**
-   When using `eslint.config.js` with Angular, explicitly point the Angular workspace at the flat config. In `angular.json` (per project):  
+  Configure the linter in `angular.json` for each project in Angular workspaces to use the `eslint.config.js` ESLint configuration. Example: 
    ```json
    "projects": {
      "my-app": {
@@ -359,8 +359,8 @@ Instead of using the `extends` property, import the configuration packages you n
    ```
 
 7. **strictNullChecks** is now enabled by default.  
-   - If your project has `strictNullChecks` enabled, remove previously overridden strictNullChecks rules.  
-   - If your project has `strictNullChecks` disabled, disable those strictNullChecks rules to maintain previous behavior. Example:  
+   - If your project has `strictNullChecks` enabled, remove previously overridden strict rules for null checks.  
+   - If your project has `strictNullChecks` disabled, disable strict rules for null checks to maintain previous behavior. Example:  
      ```js
      {
        files: ['**/*.ts'],
