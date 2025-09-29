@@ -67,7 +67,7 @@ export const variables = {
             In situations where they are required like unused callback function arguments,
             indicate that the unused variable is intentional by pre-pending its name with `_`.
         */
-        'no-unused-vars': ['error', { vars: 'all', args: 'all', argsIgnorePattern: '^_', ignoreRestSiblings: true }],
+        'no-unused-vars': ['error', { vars: 'all', args: 'all', argsIgnorePattern: '^_', caughtErrorsIgnorePattern: '^_', ignoreRestSiblings: true }],
 
         /*
             Defining classes and variables before their use can cause errors. However, placing

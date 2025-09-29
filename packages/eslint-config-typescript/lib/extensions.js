@@ -67,7 +67,7 @@ export const extensionsConfig = [{
         }],
 
         'no-unused-vars': 'off',
-        '@typescript-eslint/no-unused-vars': ['error', { vars: 'all', args: 'all', argsIgnorePattern: '^_', ignoreRestSiblings: true }],
+        '@typescript-eslint/no-unused-vars': ['error', { vars: 'all', args: 'all', argsIgnorePattern: '^_', caughtErrorsIgnorePattern: '^_', ignoreRestSiblings: true }],
 
         'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
