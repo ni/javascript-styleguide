@@ -1,7 +1,5 @@
-/* eslint-disable no-console */
 import { ESLint } from 'eslint';
-import { angularConfig } from '@ni/eslint-config-angular';
-import { angularTemplateConfig } from '@ni/eslint-config-angular/template';
+import { angularConfig, angularTemplateConfig } from '@ni/eslint-config-angular';
 import fs from 'fs';
 import path from 'path';
 import yargs from 'yargs/yargs';
