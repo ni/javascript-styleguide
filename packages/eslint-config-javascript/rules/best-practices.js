@@ -1,4 +1,6 @@
-export const bestPractices = {
+import { defineConfig } from 'eslint/config';
+
+export const bestPractices = defineConfig([{
     rules: {
         /*
             enforces getter/setter pairs in objects
@@ -587,4 +589,4 @@ export const bestPractices = {
         */
         yoda: 'error'
     }
-};
+}]);

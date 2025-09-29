@@ -1,4 +1,6 @@
-export const es6 = {
+import { defineConfig } from 'eslint/config';
+
+export const es6 = defineConfig([{
     rules: {
         /*
             Developers should consider readability, and no braces may be preferred when unnecessary. However, this rule
@@ -225,4 +227,4 @@ export const es6 = {
         */
         '@stylistic/yield-star-spacing': ['error', 'after']
     }
-};
+}]);

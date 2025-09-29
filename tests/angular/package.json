@@ -1,14 +1,15 @@
 {
-  "type": "module",
   "name": "@ni/angular-test",
   "version": "1.0.0",
   "private": true,
   "description": "Smoke test for Angular project integration.",
+  "type": "module",
   "scripts": {
     "test": "eslint ."
   },
   "peerDependencies": {
-    "@ni/eslint-config-angular": "*"
+    "@ni/eslint-config-angular": "*",
+    "@ni/eslint-config-javascript": "*"
   },
   "dependencies": {
     "@angular/core": "^18.2.13"

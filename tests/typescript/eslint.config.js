@@ -1,24 +1,16 @@
-import { fileURLToPath } from 'url';
-import path from 'path';
+import { javascriptConfig } from '@ni/eslint-config-javascript';
 import { typescriptConfig } from '@ni/eslint-config-typescript';
 import { defineConfig } from 'eslint/config';
 
-const tsConfigRootDir = path.dirname(fileURLToPath(import.meta.url));
-
 export default defineConfig([
-    {
-        files: ['eslint.config.js'],
-        rules: {
-            'import/no-default-export': 'off',
-        }
-    },
+    javascriptConfig,
     {
         files: ['**/*.ts'],
-        extends: [...typescriptConfig],
+        extends: typescriptConfig,
         languageOptions: {
             parserOptions: {
                 project: ['./tsconfig.json'],
-                tsConfigRootDir,
+                tsConfigRootDir: import.meta.dirname,
             },
         },
     },

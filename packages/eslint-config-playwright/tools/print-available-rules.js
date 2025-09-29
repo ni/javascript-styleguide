@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import plugin from 'eslint-plugin-playwright';
 
 const isTrue = val => val !== undefined && val !== false;

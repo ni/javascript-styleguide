@@ -1,4 +1,6 @@
-export const variables = {
+import { defineConfig } from 'eslint/config';
+
+export const variables = defineConfig([{
     rules: {
         /*
             enforce or disallow variable initializations at definition
@@ -76,4 +78,4 @@ export const variables = {
         */
         'no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
     }
-};
+}]);

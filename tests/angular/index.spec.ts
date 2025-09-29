@@ -12,8 +12,8 @@ class MyComponent {
 }
 
 describe('MyComponent', () => {
-    let hostComponent: MyComponent;
-    let fixture: ComponentFixture<MyComponent>;
+    let hostComponent!: MyComponent;
+    let fixture!: ComponentFixture<MyComponent>;
 
     it('should have a div', async () => {
         await fixture.whenStable();

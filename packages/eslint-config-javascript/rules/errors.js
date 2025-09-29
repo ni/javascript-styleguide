@@ -1,4 +1,6 @@
-export const errors = {
+import { defineConfig } from 'eslint/config';
+
+export const errors = defineConfig([{
     rules: {
         /*
             Enforce “for” loop update clause moving the counter in the right direction
@@ -283,4 +285,4 @@ export const errors = {
         */
         'valid-typeof': ['error', { requireStringLiterals: true }],
     }
-};
+}]);

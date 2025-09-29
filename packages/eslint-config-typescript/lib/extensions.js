@@ -1,4 +1,6 @@
-export const extensionsConfig = [{
+import { defineConfig } from 'eslint/config';
+
+export const extensionsConfig = defineConfig([{
     rules: {
         /*
             The following are extension rules that replace core JavaScript rules to support
@@ -75,4 +77,4 @@ export const extensionsConfig = [{
         'no-useless-constructor': 'off',
         '@typescript-eslint/no-useless-constructor': 'error',
     }
-}];
+}]);

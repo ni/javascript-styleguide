@@ -1,8 +1,9 @@
+import { defineConfig } from 'eslint/config';
 import angularTemplate from 'angular-eslint';
 import { ignoreAttributes } from './template/options.js';
 
-export const angularTemplateConfig = [
-    ...angularTemplate.configs.templateRecommended,
+export const angularTemplateConfig = defineConfig([
+    angularTemplate.configs.templateRecommended,
     {
         rules: {
             /*
@@ -107,4 +108,4 @@ export const angularTemplateConfig = [
             '@angular-eslint/template/i18n': 'off'
         }
     }
-];
+]);

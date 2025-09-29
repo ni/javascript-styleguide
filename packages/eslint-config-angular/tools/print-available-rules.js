@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import angularPlugin from 'angular-eslint';
 
 const print = keys => {

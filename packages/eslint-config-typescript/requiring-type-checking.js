@@ -1,10 +1,11 @@
+import { defineConfig } from 'eslint/config';
 import typescriptPlugin from 'typescript-eslint';
 import { extensionsRequiringTypeCheckingConfig } from './lib/extensions-requiring-type-checking.js';
 
-export const typescriptRequiringTypeCheckingConfig = [
-    ...typescriptPlugin.configs.recommendedTypeChecked,
-    ...typescriptPlugin.configs.stylisticTypeChecked,
-    ...extensionsRequiringTypeCheckingConfig,
+export const typescriptRequiringTypeCheckingConfig = defineConfig([
+    typescriptPlugin.configs.recommendedTypeChecked,
+    typescriptPlugin.configs.stylisticTypeChecked,
+    extensionsRequiringTypeCheckingConfig,
     {
         languageOptions: {
             parser: typescriptPlugin.parser
@@ -187,4 +188,4 @@ export const typescriptRequiringTypeCheckingConfig = [
             '@typescript-eslint/switch-exhaustiveness-check': 'off'
         }
     }
-];
+]);

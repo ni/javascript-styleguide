@@ -1,14 +1,15 @@
+import { defineConfig } from 'eslint/config';
 import { javascriptConfig } from '@ni/eslint-config-javascript';
 import typescriptPlugin from 'typescript-eslint';
 import importPlugin from 'eslint-plugin-import';
 import { extensionsConfig } from './lib/extensions.js';
 import { typescriptRequiringTypeCheckingConfig } from './requiring-type-checking.js';
 
-export const typescriptConfig = [
-    ...javascriptConfig,
-    ...typescriptPlugin.configs.recommended,
-    ...extensionsConfig,
-    ...typescriptRequiringTypeCheckingConfig,
+export const typescriptConfig = defineConfig([
+    javascriptConfig,
+    typescriptPlugin.configs.recommended,
+    extensionsConfig,
+    typescriptRequiringTypeCheckingConfig,
     {
         languageOptions: {
             parser: typescriptPlugin.parser
@@ -223,4 +224,4 @@ export const typescriptConfig = [
             '@typescript-eslint/unified-signatures': 'error',
         }
     }
-];
+]);

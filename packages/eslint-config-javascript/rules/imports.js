@@ -1,4 +1,6 @@
-export const imports = {
+import { defineConfig } from 'eslint/config';
+
+export const imports = defineConfig([{
     settings: {
         'import/resolver': {
             node: {
@@ -101,6 +103,7 @@ export const imports = {
                 '**/protractor.conf.js', // protractor config
                 '**/protractor.conf.*.js', // protractor config
                 '**/karma.conf.js', // karma config
+                '**/.eslintrc.js', // eslint config
                 '**/eslint.config.js' // eslint config
             ],
             optionalDependencies: false,
@@ -374,5 +377,19 @@ export const imports = {
             https://github.com/import-js/eslint-plugin-import/blob/d5fc8b670dc8e6903dbb7b0894452f60c03089f5/docs/rules/no-empty-named-blocks.md
         */
         'import/no-empty-named-blocks': 'off',
-    },
-};
+    }
+}, {
+    /*
+        Eslint configuration file specific settings
+    */
+    files: ['eslint.config.js', 'eslint.config.mjs'],
+    rules: {
+        // eslint config files require a top-level default export
+        'import/no-default-export': 'off',
+        // eslint-plugin-import doesn't know how to resolve entry points in packages
+        // that use modern export maps in package.json.
+        // https://github.com/typescript-eslint/typescript-eslint/issues/7565
+        // https://github.com/import-js/eslint-plugin-import/issues/2703
+        'import/no-unresolved': 'off',
+    }
+}]);

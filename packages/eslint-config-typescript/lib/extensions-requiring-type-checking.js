@@ -1,4 +1,6 @@
-export const extensionsRequiringTypeCheckingConfig = [{
+import { defineConfig } from 'eslint/config';
+
+export const extensionsRequiringTypeCheckingConfig = defineConfig([{
     rules: {
         'dot-notation': 'off',
         '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
@@ -15,4 +17,4 @@ export const extensionsRequiringTypeCheckingConfig = [{
         'no-return-await': 'off',
         '@typescript-eslint/return-await': ['error', 'always'],
     }
-}];
+}]);

@@ -1,18 +1,8 @@
-// eslint-disable-next-line import/no-useless-path-segments
-import { javascriptConfig } from './index.js';
+import { defineConfig } from 'eslint/config';
 
-export default [
-    ...javascriptConfig,
-    {
-        files: ['eslint.config.js'],
-        rules: {
-            'import/no-default-export': 'off'
-        }
-    },
-    {
-        files: ['**/*.js'],
-        rules: {
-            'import/extensions': 'off'
-        },
-    },
-];
+import { javascriptConfig, nodeEsmImportConfig } from './index.js';
+
+export default defineConfig([
+    javascriptConfig,
+    nodeEsmImportConfig,
+]);

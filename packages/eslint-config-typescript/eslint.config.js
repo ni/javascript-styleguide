@@ -1,27 +1,14 @@
-import { javascriptConfig } from '@ni/eslint-config-javascript';
+import { defineConfig } from 'eslint/config';
 
-export default [
-    ...javascriptConfig,
+import { javascriptConfig, nodeEsmImportConfig } from '@ni/eslint-config-javascript';
+
+export default defineConfig([
+    javascriptConfig,
+    nodeEsmImportConfig,
     {
-        files: ['eslint.config.js'],
+        files: ['tools/*.js'],
         rules: {
-            'import/no-default-export': 'off'
+            'no-console': 'off'
         }
-    },
-    {
-        files: ['**/*.js'],
-        rules: {
-            'import/extensions': 'off',
-            // eslint-plugin-import doesn't know how to resolve entry points in packages
-            // that use modern export maps in package.json.
-            // https://github.com/typescript-eslint/typescript-eslint/issues/7565
-            // https://github.com/import-js/eslint-plugin-import/issues/2703
-            'import/no-unresolved': [
-                'error',
-                {
-                    ignore: ['typescript-eslint']
-                }
-            ],
-        },
-    },
-];
+    }
+]);

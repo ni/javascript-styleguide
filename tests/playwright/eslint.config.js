@@ -1,20 +1,22 @@
 import { fileURLToPath } from 'url';
 import path from 'path';
 import { playwrightConfig } from '@ni/eslint-config-playwright';
+import { javascriptConfig } from '@ni/eslint-config-javascript';
 import { defineConfig } from 'eslint/config';
 
 const tsConfigRootDir = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig([
     {
-        files: ['eslint.config.js'],
+        files: ['**/*.js'],
+        extends: javascriptConfig,
         rules: {
             'import/no-default-export': 'off',
         }
     },
     {
         files: ['*.ts'],
-        extends: [...playwrightConfig],
+        extends: playwrightConfig,
         languageOptions: {
             parserOptions: {
                 project: ['./tsconfig.json'],

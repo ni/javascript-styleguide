@@ -1,4 +1,6 @@
-export const style = {
+import { defineConfig } from 'eslint/config';
+
+export const style = defineConfig([{
     rules: {
         /*
             enforce line breaks after opening and before closing array brackets
@@ -715,4 +717,4 @@ export const style = {
         */
         '@stylistic/wrap-regex': 'off'
     }
-};
+}]);

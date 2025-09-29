@@ -1,8 +1,9 @@
+import { defineConfig } from 'eslint/config';
 import { typescriptConfig } from '@ni/eslint-config-typescript';
 import playwright from 'eslint-plugin-playwright';
 
-export const playwrightConfig = [
-    ...typescriptConfig,
+export const playwrightConfig = defineConfig([
+    typescriptConfig,
     playwright.configs['flat/recommended'],
     {
         rules: {
@@ -82,4 +83,4 @@ export const playwrightConfig = [
             'playwright/require-top-level-describe': 'error'
         }
     }
-];
+]);

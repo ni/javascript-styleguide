@@ -1,4 +1,6 @@
-export const node = {
+import { defineConfig } from 'eslint/config';
+
+export const node = defineConfig([{
     rules: {
         /*
             enforce return after a callback
@@ -58,4 +60,4 @@ export const node = {
         */
         'no-sync': 'off',
     }
-};
+}]);

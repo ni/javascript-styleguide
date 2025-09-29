@@ -75,7 +75,7 @@ Export `@ni/eslint-config-javascript` configurations in your [ESLint flat config
 import { javascriptConfig } from '@ni/eslint-config-javascript';
 
 export default [
-    ...javascriptConfig,
+    javascriptConfig,
 ];
 ```
 
@@ -87,7 +87,7 @@ Export `@ni/eslint-config-typescript` configurations in the [ESLint flat configu
 import { typescriptConfig } from '@ni/eslint-config-typescript';
 
 export default [
-    ...typescriptConfig,
+    typescriptConfig,
     {
         files: ['**/*.ts'],
         languageOptions: {
@@ -121,7 +121,7 @@ ESLint support for Angular is provided by [`angular-eslint`](https://github.com/
         {
             files: ['**/*.ts'],
             extends: [
-                ...angularConfig
+                angularConfig
             ],
             languageOptions: {
                 parserOptions: {
@@ -131,7 +131,7 @@ ESLint support for Angular is provided by [`angular-eslint`](https://github.com/
         },
         {
             files: ['*.html'],
-            extends: [...angularTemplateConfig]
+            extends: angularTemplateConfig]
         }
     ];
     ```
@@ -149,7 +149,7 @@ Export `@ni/eslint-config-playwright` in the [ESLint flat configuration](https:/
 import playwrightConfig from '@ni/eslint-config-playwright';
 
 export default [
-    ...playwrightConfig,
+    playwrightConfig,
     {
         files: ['**/*.ts'],
         languageOptions: {
@@ -308,8 +308,8 @@ Instead of using the `extends` property, import the configuration packages you n
    import { angularConfig, angularTemplateConfig } from '@ni/eslint-config-angular';
 
    export default [
-     ...angularConfig,
-     ...angularTemplateConfig,
+     angularConfig,
+     angularTemplateConfig,
      // Add any project-specific overrides here
    ];
    ```

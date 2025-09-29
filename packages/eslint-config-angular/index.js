@@ -1,9 +1,13 @@
+import { defineConfig } from 'eslint/config';
 import { typescriptConfig } from '@ni/eslint-config-typescript';
 import angular from 'angular-eslint';
 
-export const angularConfig = [
-    ...angular.configs.tsRecommended,
-    ...typescriptConfig,
+export { angularTemplateConfig } from './template.js';
+export { ignoreAttributes } from './template/options.js';
+
+export const angularConfig = defineConfig([
+    angular.configs.tsRecommended,
+    typescriptConfig,
     {
         processor: angular.processInlineTemplates,
         rules: {
@@ -143,4 +147,4 @@ export const angularConfig = [
             '@typescript-eslint/unbound-method': 'off',
         }
     }
-];
+]);
