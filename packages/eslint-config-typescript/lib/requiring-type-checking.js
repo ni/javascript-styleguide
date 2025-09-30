@@ -1,6 +1,6 @@
 import { defineConfig } from 'eslint/config';
 import typescriptPlugin from 'typescript-eslint';
-import { extensionsRequiringTypeCheckingConfig } from './lib/extensions-requiring-type-checking.js';
+import { extensionsRequiringTypeCheckingConfig } from './extensions-requiring-type-checking.js';
 
 export const typescriptRequiringTypeCheckingConfig = defineConfig([
     typescriptPlugin.configs.recommendedTypeChecked,

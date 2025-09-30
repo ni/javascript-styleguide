@@ -2,8 +2,8 @@ import { defineConfig } from 'eslint/config';
 import { typescriptConfig } from '@ni/eslint-config-typescript';
 import angular from 'angular-eslint';
 
-export { angularTemplateConfig } from './template.js';
-export { ignoreAttributes } from './template/options.js';
+export { angularTemplateConfig } from './lib/template.js';
+export { ignoreAttributes } from './lib/template-options.js';
 
 export const angularConfig = defineConfig([
     angular.configs.tsRecommended,

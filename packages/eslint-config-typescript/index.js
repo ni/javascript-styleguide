@@ -3,7 +3,7 @@ import { javascriptConfig } from '@ni/eslint-config-javascript';
 import typescriptPlugin from 'typescript-eslint';
 import importPlugin from 'eslint-plugin-import';
 import { extensionsConfig } from './lib/extensions.js';
-import { typescriptRequiringTypeCheckingConfig } from './requiring-type-checking.js';
+import { typescriptRequiringTypeCheckingConfig } from './lib/requiring-type-checking.js';
 
 export const typescriptConfig = defineConfig([
     javascriptConfig,
