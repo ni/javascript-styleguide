@@ -38,6 +38,6 @@
     "peerDependencies": {
         "@ni/eslint-config-javascript": "^4.4.0",
         "eslint-plugin-import": "^2.32.0",
-        "typescript-eslint": "^8.44.1"
+        "typescript-eslint": "^8.45.0"
     }
 }
