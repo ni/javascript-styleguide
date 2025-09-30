@@ -47,56 +47,43 @@ Install the package for your corresponding language as a development dependency:
 
     Then follow the [Playwright configuration](#playwright-configuration) instructions.
 
-With npm 7 and up the required peer dependencies will be installed automatically and you can move on to [Configuration](#configuration).
-
-If you are using npm 6 or lower, use the following instructions to manually install the required peer dependencies:
-
-Use [`npm view`](https://docs.npmjs.com/cli/view.html) to list the correct versions of each peer package to install yourself. For example, with a JavaScript project run:
-
-```bash
-npm view @ni/eslint-config-javascript peerDependencies
-```
-
-Alternatively, use [`npx install-peerdeps`](https://www.npmjs.com/package/install-peerdeps) as a shortcut to install the peer packages for you. For example, with a JavaScript project run:
-
-```bash
-npx install-peerdeps --dev @ni/eslint-config-javascript
-```
-
 ## Configuration
 
 After installing the lint configuration packages, follow the configuration instructions for your project language:
 
 ### JavaScript configuration
 
-Export `@ni/eslint-config-javascript` configurations in your [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`):
+Use `@ni/eslint-config-javascript` configurations in your [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`):
 
 ```js
+import { defineConfig } from 'eslint/config';
 import { javascriptConfig } from '@ni/eslint-config-javascript';
 
-export default [
+export default defineConfig([
     javascriptConfig,
-];
+]);
 ```
 
 ### TypeScript configuration
 
-Export `@ni/eslint-config-typescript` configurations in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` to the project's TypeScript configuration.
+Use `@ni/eslint-config-typescript` configurations in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` to the project's TypeScript configuration to correctly enable [linting with type information](https://typescript-eslint.io/getting-started/typed-linting).
 
 ```js
+import { defineConfig } from 'eslint/config';
 import { typescriptConfig } from '@ni/eslint-config-typescript';
 
-export default [
-    typescriptConfig,
+export default defineConfig([
     {
         files: ['**/*.ts'],
+        extends: typescriptConfig,
         languageOptions: {
             parserOptions: {
-                project: './tsconfig.json'
-            }
-        }
-    }
-];
+                project: ['./tsconfig.json'],
+                tsConfigRootDir: import.meta.dirname,
+            },
+        },
+    },
+]);
 ```
 
 ### Angular configuration
@@ -112,53 +99,52 @@ ESLint support for Angular is provided by [`angular-eslint`](https://github.com/
     > ng g angular-eslint:add-eslint-to-project <PROJECT NAME>
     > ng config cli.schematicCollections "[\"angular-eslint\"]"
     ```
-3. Export the NI configured rules for Angular and Angular templates in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
+3. Use the NI configured rules for Angular and Angular templates in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` configuration to the project's TypeScript configuration to correctly enable [linting with type information](https://typescript-eslint.io/getting-started/typed-linting)..
     ```js
-    import angularConfig from '@ni/eslint-config-angular';
-    import angularTemplateConfig from '@ni/eslint-config-angular/template';
+    import { defineConfig } from 'eslint/config';
+    import { angularConfig, angularTemplateConfig } from '@ni/eslint-config-angular';
 
-    export default [
+    export default defineConfig([
         {
             files: ['**/*.ts'],
-            extends: [
-                angularConfig
-            ],
+            extends: angularConfig,
             languageOptions: {
                 parserOptions: {
-                    project: './tsconfig.json'
-                }
-            }
+                    project: ['./tsconfig.json'],
+                    tsConfigRootDir: import.meta.dirname,
+                },
+            },
         },
         {
-            files: ['*.html'],
-            extends: angularTemplateConfig]
+            files: ['**/*.html'],
+            extends: angularTemplateConfig,
         }
-    ];
+    ]);
     ```
 4. Evaluate the [project specific rule groups](#evaluate-project-specific-rule-groups) to manually add to your lint configuration. For Angular applications in particular, consider enabling the [`[application-prefix]`](#application-prefix) rule group.
 
 ### Playwright configuration
 
-Export `@ni/eslint-config-playwright` in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
-
-**Note:** The Playwright configurations extend the TypeScript configurations, so it is not necessary for an application to extend them both. However, the Playwright configurations should only be applied to directories that contain Playwright tests and utilities.
+Use `@ni/eslint-config-playwright` configurations in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` to the project's TypeScript configuration to correctly enable [linting with type information](https://typescript-eslint.io/getting-started/typed-linting).
 
 ```js
-// This is an example .eslintrc.js in a Playwright-specific directory.
-// If Playwright files are mixed with other code, use an "overrides" file pattern to match only Playwright code.
-import playwrightConfig from '@ni/eslint-config-playwright';
+import { defineConfig } from 'eslint/config';
+import { playwrightConfig } from '@ni/eslint-config-playwright';
 
-export default [
-    playwrightConfig,
+export default defineConfig([
     {
+        // This files pattern should be updated to only match
+        // Playwright test files and not other TypeScript files
         files: ['**/*.ts'],
+        extends: playwrightConfig,
         languageOptions: {
             parserOptions: {
-                project: './tsconfig.json'
-            }
+                project: ['./tsconfig.json'],
+                tsConfigRootDir: import.meta.dirname,
+            },
         }
     }
-];
+]);
 ```
 
 ## Usage
@@ -273,7 +259,9 @@ To disable a rule globally, modify the `rules` section of the [ESLint configurat
 
 To disable a rule for a specific file pattern or directory, update the rules section for that file pattern in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats):
 ```js
-export default [
+import { defineConfig } from 'eslint/config';
+
+export default defineConfig([
     // ...other configs
     {
         // This rule is disabled as an example
@@ -282,7 +270,7 @@ export default [
             'import/no-default-export': 'off'
         }
     }
-];
+]);
 ```
 
 ### Inline disable rules that don't apply to a particular situation
@@ -305,13 +293,14 @@ Instead of using the `extends` property, import the configuration packages you n
 
    ```js
    // eslint.config.js
+   import { defineConfig } from 'eslint/config';
    import { angularConfig, angularTemplateConfig } from '@ni/eslint-config-angular';
 
-   export default [
+   export default defineConfig([
      angularConfig,
      angularTemplateConfig,
      // Add any project-specific overrides here
-   ];
+   ]);
    ```
 
    **Note:** All rules that previously required type checking are now included in the main config export for each package. You no longer need to import a separate requiring-type-checking config—just import the main config to get all rules.
@@ -320,14 +309,15 @@ Instead of using the `extends` property, import the configuration packages you n
    For TypeScript and Angular projects, ensure you set `parserOptions.project` in a config block to point to your TypeScript configuration:
 
    ```js
-   {
-     files: ['**/*.ts'],
-     languageOptions: {
-       parserOptions: {
-         project: './tsconfig.json'
-       }
-     }
-   }
+    {
+        files: ['**/*.ts'],
+        languageOptions: {
+            parserOptions: {
+                project: ['./tsconfig.json'],
+                tsConfigRootDir: import.meta.dirname,
+            },
+        }
+    }
    ```
 
 4. **Remove legacy config fields**
