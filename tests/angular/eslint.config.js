@@ -1,7 +1,6 @@
-import { angularConfig, angularTemplateConfig, ignoreAttributes } from '@ni/eslint-config-angular';
-
 import { defineConfig } from 'eslint/config';
 import { javascriptConfig } from '@ni/eslint-config-javascript';
+import { angularConfig, angularTemplateConfig, ignoreAttributes } from '@ni/eslint-config-angular';
 
 export default defineConfig([
     {
