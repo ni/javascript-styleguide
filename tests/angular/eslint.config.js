@@ -24,7 +24,8 @@ export default defineConfig([
     },
     // Use only a single top-level eslint.config.js: https://eslint.org/docs/latest/use/configure/configuration-files#experimental-configuration-file-resolution
     {
-        files: ['custom-ignore-attributes/**/*.html', '*.html'],
+        files: ['custom-ignore-attributes/**/*.html'],
+        ignores: ['custom-ignore-attributes/**/*.spec.ts*.html'],
         rules: {
             '@angular-eslint/template/i18n': [
                 'error',
@@ -33,12 +34,6 @@ export default defineConfig([
                     ignoreAttributes: [...ignoreAttributes.all, 'custom-field'],
                 },
             ],
-        },
-    },
-    {
-        files: ['**/*.spec.ts*.html'],
-        rules: {
-            '@angular-eslint/template/i18n': 'off',
         },
     },
 ]);

@@ -100,7 +100,7 @@ export const angularTemplateConfig = defineConfig([
     {
         // Ignore inline templates in tests using the inline template naming convention
         // See naming details: https://github.com/angular-eslint/angular-eslint/releases/tag/v14.0.0
-        files: ['*.spec.ts*.html'],
+        files: ['**/*.spec.ts*.html'],
         rules: {
             /*
                 Tests often define helper components that don't need to be marked for i18n.
