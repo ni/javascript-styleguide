@@ -1,8 +1,8 @@
 import { defineConfig } from 'eslint/config';
 
-import { javascriptConfig, nodeEsmImportConfig } from './index.js';
+import { javascriptConfig, importNodeEsmConfig } from './index.js';
 
 export default defineConfig([
     javascriptConfig,
-    nodeEsmImportConfig,
+    importNodeEsmConfig,
 ]);

@@ -11,6 +11,7 @@ import { es6 } from './rules/es6.js';
 import { imports } from './rules/imports.js';
 import { strict } from './rules/strict.js';
 
+export { importNodeEsmConfig } from './lib/import-node-esm.js';
 export const javascriptConfig = defineConfig([
     stylisticPlugin.configs['disable-legacy'],
     bestPractices,
@@ -34,20 +35,4 @@ export const javascriptConfig = defineConfig([
             }
         }
     },
-]);
-
-export const nodeEsmImportConfig = defineConfig([
-    {
-        rules: {
-            // node esm resolution requires extensions
-            'import/extensions': 'off',
-            // node esm resolution requires full path name
-            'import/no-useless-path-segments': 'off',
-            // eslint-plugin-import doesn't know how to resolve entry points in packages
-            // that use modern export maps in package.json.
-            // https://github.com/typescript-eslint/typescript-eslint/issues/7565
-            // https://github.com/import-js/eslint-plugin-import/issues/2703
-            'import/no-unresolved': 'off',
-        }
-    }
 ]);
