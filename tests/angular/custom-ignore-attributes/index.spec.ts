@@ -7,7 +7,7 @@ import { ComponentFixture } from '@angular/core/testing';
 })
 class MyComponent {
     @Input() public attr = false;
-    @ViewChild('div') public div: HTMLDivElement;
+    @ViewChild('div') public div!: HTMLDivElement;
     public myMethod(): void {}
 }
 
