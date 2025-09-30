@@ -1,6 +1,6 @@
 import { defineConfig } from 'eslint/config';
 import { javascriptConfig } from '@ni/eslint-config-javascript';
-import { angularConfig, angularTemplateConfig, ignoreAttributes } from '@ni/eslint-config-angular';
+import { angularTypescriptConfig, angularTemplateConfig, ignoreAttributes } from '@ni/eslint-config-angular';
 
 export default defineConfig([
     {
@@ -9,7 +9,7 @@ export default defineConfig([
     },
     {
         files: ['**/*.ts'],
-        extends: angularConfig,
+        extends: angularTypescriptConfig,
         languageOptions: {
             parserOptions: {
                 project: ['./tsconfig.json'],

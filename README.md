@@ -99,15 +99,15 @@ ESLint support for Angular is provided by [`angular-eslint`](https://github.com/
     > ng g angular-eslint:add-eslint-to-project <PROJECT NAME>
     > ng config cli.schematicCollections "[\"angular-eslint\"]"
     ```
-3. Use the NI configured rules for Angular and Angular templates in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` configuration to the project's TypeScript configuration to correctly enable [linting with type information](https://typescript-eslint.io/getting-started/typed-linting)..
+3. Use the NI configured rules for Angular TypeScript code and Angular templates in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` configuration to the project's TypeScript configuration to correctly enable [linting with type information](https://typescript-eslint.io/getting-started/typed-linting)..
     ```js
     import { defineConfig } from 'eslint/config';
-    import { angularConfig, angularTemplateConfig } from '@ni/eslint-config-angular';
+    import { angularTypescriptConfig, angularTemplateConfig } from '@ni/eslint-config-angular';
 
     export default defineConfig([
         {
             files: ['**/*.ts'],
-            extends: angularConfig,
+            extends: angularTypescriptConfig,
             languageOptions: {
                 parserOptions: {
                     project: ['./tsconfig.json'],
@@ -294,10 +294,10 @@ Instead of using the `extends` property, import the configuration packages you n
    ```js
    // eslint.config.js
    import { defineConfig } from 'eslint/config';
-   import { angularConfig, angularTemplateConfig } from '@ni/eslint-config-angular';
+   import { angularTypescriptConfig, angularTemplateConfig } from '@ni/eslint-config-angular';
 
    export default defineConfig([
-     angularConfig,
+     angularTypescriptConfig,
      angularTemplateConfig,
      // Add any project-specific overrides here
    ]);

@@ -5,7 +5,7 @@ import angular from 'angular-eslint';
 export { angularTemplateConfig } from './lib/template.js';
 export { ignoreAttributes } from './lib/template-options.js';
 
-export const angularConfig = defineConfig([
+export const angularTypescriptConfig = defineConfig([
     angular.configs.tsRecommended,
     typescriptConfig,
     {
