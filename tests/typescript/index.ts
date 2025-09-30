@@ -7,8 +7,8 @@ export class NI {
         this._awesomeLevel = 11;
     }
 
-    public get Awesome(): boolean {
-        return this._awesomeLevel > 0; 
+    public get awesome(): boolean {
+        return this._awesomeLevel > 0;
     }
 
     public makeAwesomer(): void {
