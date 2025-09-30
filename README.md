@@ -429,4 +429,4 @@ Deviations from the `angular-eslint`, `@ni/eslint-config-angular`, and the [`par
 
 ## License
 
-[MIT (c) 2021 National Instruments Corporation](./LICENSE)
+[MIT (c) 2025 National Instruments Corporation](./LICENSE)
