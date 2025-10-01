@@ -1,0 +1,7 @@
+{
+	"files": ["./index.ts"],
+	"compilerOptions": {
+		"strict": true,
+		"target": "ES2020"
+	}
+}

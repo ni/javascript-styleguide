@@ -41,16 +41,14 @@
     "packages/eslint-config-playwright",
     "tests/javascript",
     "tests/typescript",
-    "tests/typescript-requiring-type-checking",
     "tests/angular",
     "tests/playwright",
-    "tests/playwright-requiring-type-checking",
     "tests/print-evaluated-rules"
   ],
   "devDependencies": {
     "beachball": "^2.41.0"
   },
   "peerDependencies": {
-    "typescript": "~4.8.2"
+    "typescript": "~5.4.5"
   }
 }

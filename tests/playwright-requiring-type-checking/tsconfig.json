@@ -1,8 +1,0 @@
-{
-    "files": ["./index.ts"],
-    "compilerOptions": {
-        "strictNullChecks": false,
-        "moduleResolution": "node",
-        "target": "ES2020",
-    },
-}

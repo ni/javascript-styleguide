@@ -7,13 +7,13 @@ import { ComponentFixture } from '@angular/core/testing';
 })
 class MyComponent {
     @Input() public attr = false;
-    @ViewChild('div') public div: HTMLDivElement;
+    @ViewChild('div') public div!: HTMLDivElement;
     public myMethod(): void {}
 }
 
 describe('MyComponent', () => {
-    let hostComponent: MyComponent;
-    let fixture: ComponentFixture<MyComponent>;
+    let hostComponent!: MyComponent;
+    let fixture!: ComponentFixture<MyComponent>;
 
     it('should have a div', async () => {
         await fixture.whenStable();

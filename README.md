@@ -47,102 +47,104 @@ Install the package for your corresponding language as a development dependency:
 
     Then follow the [Playwright configuration](#playwright-configuration) instructions.
 
-With npm 7 and up the required peer dependencies will be installed automatically and you can move on to [Configuration](#configuration).
-
-If you are using npm 6 or lower, use the following instructions to manually install the required peer dependencies:
-
-Use [`npm view`](https://docs.npmjs.com/cli/view.html) to list the correct versions of each peer package to install yourself. For example, with a JavaScript project run:
-
-```bash
-npm view @ni/eslint-config-javascript peerDependencies
-```
-
-Alternatively, use [`npx install-peerdeps`](https://www.npmjs.com/package/install-peerdeps) as a shortcut to install the peer packages for you. For example, with a JavaScript project run:
-
-```bash
-npx install-peerdeps --dev @ni/eslint-config-javascript
-```
-
 ## Configuration
 
 After installing the lint configuration packages, follow the configuration instructions for your project language:
 
 ### JavaScript configuration
 
-Extend `@ni/eslint-config-javascript` in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats).
+Use `@ni/eslint-config-javascript` configurations in your [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`):
 
 ```js
-{
-    extends: '@ni/eslint-config-javascript'
-}
+import { defineConfig } from 'eslint/config';
+import { javascriptConfig } from '@ni/eslint-config-javascript';
+
+export default defineConfig([
+    javascriptConfig,
+]);
 ```
 
 ### TypeScript configuration
 
-Extend `@ni/eslint-config-typescript` and `@ni/eslint-config-typescript/requiring-type-checking` in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
+Use `@ni/eslint-config-typescript` configurations in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` to the project's TypeScript configuration to correctly enable [linting with type information](https://typescript-eslint.io/getting-started/typed-linting).
 
 ```js
-{
-    extends: [
-        '@ni/eslint-config-typescript',
-        '@ni/eslint-config-typescript/requiring-type-checking'
-    ],
-    parserOptions: {
-        project: 'tsconfig.json'
-    }
-}
+import { defineConfig } from 'eslint/config';
+import { typescriptConfig } from '@ni/eslint-config-typescript';
+
+export default defineConfig([
+    {
+        files: ['**/*.ts'],
+        extends: typescriptConfig,
+        languageOptions: {
+            parserOptions: {
+                project: ['./tsconfig.json'],
+                tsConfigRootDir: import.meta.dirname,
+            },
+        },
+    },
+]);
 ```
 
 ### Angular configuration
 
-ESLint support for Angular is provided by [`@angular-eslint`](https://github.com/angular-eslint/angular-eslint#readme). **It's recommended to use `@angular-eslint/schematics` to
-configure ESLint for Angular projects**.
+ESLint support for Angular is provided by [`angular-eslint`](https://github.com/angular-eslint/angular-eslint#readme).
 
-1. **For single and multi-project workspaces**, [add the schematic](https://github.com/angular-eslint/angular-eslint#quick-start). Remove the `@angular-eslint`, `@typescript-eslint`, and `eslint` dependencies from `package.json`.
+1. **For single and multi-project workspaces**, [add angular-eslint](https://github.com/angular-eslint/angular-eslint#quick-start). Remove the `angular-eslint` and `eslint` dependencies from `package.json`.
     ```bash
-    ng add @angular-eslint/schematics
+    ng add angular-eslint
     ```
 2. **For multi-project workspaces**, [configure each project](https://github.com/angular-eslint/angular-eslint#adding-eslint-configuration-to-an-existing-angular-cli-project-which-has-no-existing-linter), and then enable future generated projects to be configured as well.
     ```bash
-    > ng g @angular-eslint/schematics:add-eslint-to-project <PROJECT NAME>
-    > ng config cli.schematicCollections "[\"@angular-eslint/schematics\"]"
+    > ng g angular-eslint:add-eslint-to-project <PROJECT NAME>
+    > ng config cli.schematicCollections "[\"angular-eslint\"]"
     ```
-3. Extend the NI configured rules for Angular and Angular templates in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
+3. Use the NI configured rules for Angular TypeScript code and Angular templates in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` configuration to the project's TypeScript configuration to correctly enable [linting with type information](https://typescript-eslint.io/getting-started/typed-linting)..
     ```js
-    overrides: [{
-        files: ['*.ts'],
-        extends: [
-            '@ni/eslint-config-angular',
-            '@ni/eslint-config-angular/requiring-type-checking'
-        ],
-        parserOptions: {
-            project: 'tsconfig.json'
+    import { defineConfig } from 'eslint/config';
+    import { angularTypescriptConfig, angularTemplateConfig } from '@ni/eslint-config-angular';
+
+    export default defineConfig([
+        {
+            files: ['**/*.ts'],
+            extends: angularTypescriptConfig,
+            languageOptions: {
+                parserOptions: {
+                    project: ['./tsconfig.json'],
+                    tsConfigRootDir: import.meta.dirname,
+                },
+            },
+        },
+        {
+            files: ['**/*.html'],
+            extends: angularTemplateConfig,
         }
-    }, {
-        files: ['*.html'],
-        extends: ['@ni/eslint-config-angular/template']
-    }]
+    ]);
     ```
 4. Evaluate the [project specific rule groups](#evaluate-project-specific-rule-groups) to manually add to your lint configuration. For Angular applications in particular, consider enabling the [`[application-prefix]`](#application-prefix) rule group.
 
 ### Playwright configuration
 
-Extend `@ni/eslint-config-playwright` and `@ni/eslint-config-playwright/requiring-type-checking` in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats). Set the `parserOptions.project` configuration to the project's TypeScript configuration.
-
-**Note:** The Playwright configurations extend the TypeScript configurations, so it is not necessary for an application to extend them both. However, the Playwright configurations should only be applied to directories that contain Playwright tests and utilities.
+Use `@ni/eslint-config-playwright` configurations in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` to the project's TypeScript configuration to correctly enable [linting with type information](https://typescript-eslint.io/getting-started/typed-linting).
 
 ```js
-// This is an example .eslintrc.js in a Playwright-specific directory.
-// If Playwright files are mixed with other code, use an "overrides" file pattern to match only Playwright code.
-{
-    extends: [
-        '@ni/eslint-config-playwright',
-        '@ni/eslint-config-playwright/requiring-type-checking'
-    ],
-    parserOptions: {
-        project: 'tsconfig.json'
+import { defineConfig } from 'eslint/config';
+import { playwrightConfig } from '@ni/eslint-config-playwright';
+
+export default defineConfig([
+    {
+        // This files pattern should be updated to only match
+        // Playwright test files and not other TypeScript files
+        files: ['**/*.ts'],
+        extends: playwrightConfig,
+        languageOptions: {
+            parserOptions: {
+                project: ['./tsconfig.json'],
+                tsConfigRootDir: import.meta.dirname,
+            },
+        }
     }
-}
+]);
 ```
 
 ## Usage
@@ -226,11 +228,9 @@ Tag: [`[strict-null-checks]`](https://github.com/ni/javascript-styleguide/search
 
 When `strictNullChecks` are enabled the values `null` and `undefined` are treated as distinct types by the compiler. For example, with `strictNullChecks` enabled, the value `null` could not be directly assigned to a binding of a `Cat` object, ie `const cat: Cat = null` would be a compile error. The `null` value is a distinct type and the binding would have to explicitly state that it can have a `null` value, ie `const cat: Cat | null = null;`.
 
-`strictNullChecks` are a powerful tool for code correctness and give us a way to avoid ["The Billion Dollar Mistake"](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/). However, it can be impractical to retrofit `strictNullChecks` configuration into an existing application and requires expanding your mental model for software development for use in new applications.
+`strictNullChecks` are a powerful tool for code correctness and give us a way to avoid ["The Billion Dollar Mistake"](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/). 
 
-As such, `strictNullChecks` are not recommended by default in order to prevent overhead of rule adoption for existing applications.
-
-However, we encourage new applications to leverage `strictNullChecks` for development. Enabling `strictNullChecks` is the TypeScript compiler recommendation and it is enabled by default in new Angular applications.
+This style guide assumes `strictNullChecks` are enabled by default. However, it can be impractical to retrofit `strictNullChecks` configuration into an existing application and requires expanding your mental model for software development for use in new applications. To adopt this style guide in a project without `strictNullChecks`, configure every rule tagged with `[strict-null-checks]` to `off` unless specified in the rule comment.
 
 #### Accessibility
 
@@ -257,15 +257,20 @@ To disable a rule globally, modify the `rules` section of the [ESLint configurat
     }
 ```
 
-To disable a rule for a specific file pattern or directory, modify the `overrides` section of the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats):
+To disable a rule for a specific file pattern or directory, update the rules section for that file pattern in the [ESLint configuration](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats):
 ```js
-    overrides: [{
+import { defineConfig } from 'eslint/config';
+
+export default defineConfig([
+    // ...other configs
+    {
+        // This rule is disabled as an example
         files: ['*.stories.ts'],
         rules: {
-            // This rule is disabled as an example
             'import/no-default-export': 'off'
         }
-    }]
+    }
+]);
 ```
 
 ### Inline disable rules that don't apply to a particular situation
@@ -275,6 +280,86 @@ A project should strive to adopt this configuration as fully as possible, but th
 The rule configuration files in this package (`index.js`, `typescript.js`, etc) contain comments on each rule if it might commonly be disabled.
 
 ESLint offers several [ways to disable a rule for a line or file](https://eslint.org/docs/user-guide/configuring/rules#disabling-rules). Suppressions should be as targeted as possible and should include a comment explaining the suppression.
+
+### Migrating to ESLint Flat Configuration Format
+
+ESLint’s [flat config format](https://eslint.org/docs/latest/use/configure/configuration-files-new) is now the recommended way to configure ESLint. If your project is still using a legacy `.eslintrc.*` file, follow these steps to migrate:
+
+1. **Rename your configuration file**
+Replace your `.eslintrc.js` or `.eslintrc.json` with a new `eslint.config.js` file at the root of your project.
+
+2. **Switch to using imports**
+Instead of using the `extends` property, import the configuration packages you need and export an array of configurations:
+
+   ```js
+   // eslint.config.js
+   import { defineConfig } from 'eslint/config';
+   import { angularTypescriptConfig, angularTemplateConfig } from '@ni/eslint-config-angular';
+
+   export default defineConfig([
+     angularTypescriptConfig,
+     angularTemplateConfig,
+     // Add any project-specific overrides here
+   ]);
+   ```
+
+   **Note:** All rules that previously required type checking are now included in the main config export for each package. You no longer need to import a separate requiring-type-checking config—just import the main config to get all rules.
+
+3. **Set parser options as needed**
+   For TypeScript and Angular projects, ensure you set `parserOptions.project` in a config block to point to your TypeScript configuration:
+
+   ```js
+    {
+        files: ['**/*.ts'],
+        languageOptions: {
+            parserOptions: {
+                project: ['./tsconfig.json'],
+                tsConfigRootDir: import.meta.dirname,
+            },
+        }
+    }
+   ```
+
+4. **Remove legacy config fields**
+   The flat config format does not use `parser`, or `plugins` at the top level. All configuration should be handled through the imported arrays and objects.
+
+5. **@stylistic rules**
+   The following rules are moved from `@typescript-eslint` to `@stylistic`. Update any project config overrides and inline suppressions to the new names:  
+   - `@typescript-eslint/member-delimiter-style` → `@stylistic/member-delimiter-style`  
+   - `@typescript-eslint/type-annotation-spacing` → `@stylistic/type-annotation-spacing`  
+
+   Other deprecated rules may also now reside under `@stylistic`. Search your codebase for old suppressions (e.g. `eslint-disable @typescript-eslint/...`) and rename them as needed.
+
+6. **Angular CLI linkage**
+  Configure the linter in `angular.json` for each project in Angular workspaces to use the `eslint.config.js` ESLint configuration. Example: 
+   ```json
+   "projects": {
+     "my-app": {
+       "architect": {
+         "lint": {
+           "builder": "@angular-eslint/builder:lint",
+           "options": {
+             "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"],
+             "eslintConfig": "./eslint.config.js"
+           }
+         }
+       }
+     }
+   }
+   ```
+
+7. **strictNullChecks** is now enabled by default.  
+   - If your project has `strictNullChecks` enabled, remove previously overridden strict rules for null checks.  
+   - If your project has `strictNullChecks` disabled, disable strict rules for null checks to maintain previous behavior. Example:  
+     ```js
+     {
+       files: ['**/*.ts'],
+       rules: {
+         '@typescript-eslint/no-unnecessary-condition': 'off',
+         '@typescript-eslint/strict-boolean-expressions': 'off'
+       }
+     }
+     ```
 
 ### Recommended Development Environment Configuration
 
@@ -297,7 +382,7 @@ You can [configure a repository to prompt developers to install this extension](
 }
 ```
 
-Follow the `@angular-eslint` [instructions](https://github.com/angular-eslint/angular-eslint#linting-html-files-and-inline-templates-with-the-vscode-extension-for-eslint) for linting HTML files and inline-templates with Angular.
+Follow the `angular-eslint` [instructions](https://github.com/angular-eslint/angular-eslint#linting-html-files-and-inline-templates-with-the-vscode-extension-for-eslint) for linting HTML files and inline-templates with Angular.
 
 #### JetBrains WebStorm
 
@@ -322,16 +407,16 @@ This option can be adapted for npm scripts, for example.
 
 ### TypeScript linting performance
 
-`@ni/eslint-config/typescript-requiring-type-checking` includes rules that require type checking that run slower as they utilize the TypeScript compiler for type information.
+`@ni/eslint-config-typescript` includes rules that require type checking that run slower as they utilize the TypeScript compiler for type information.
 
 If there are situations where the analysis time for enabling the type checked rules is an excessive burden you may consider creating a separate ESLint configuration that avoids extending the type checked rules and omits the `parserOptions.project` configuration to run in specific scenarios.
 
-See discussion in the [performance section](https://github.com/typescript-eslint/typescript-eslint/blob/main/docs/getting-started/linting/TYPED_LINTING.md#performance) of the Getting Started - Linting with Type Information guide.
+See discussion in the [performance section](https://typescript-eslint.io/troubleshooting/typed-linting/performance/) of the Getting Started - Linting with Type Information guide.
 
 ### Angular linting performance
 
-Deviations from the `@angular-eslint schematic`, `@ni/eslint-config-angular`, and the [`parserOptions.project`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/parser#parseroptionsproject) configurations can result in significant performance degredation. Fully manual configuration [is not recommended](https://github.com/angular-eslint/angular-eslint#going-fully-manual-not-recommended). Read `@angular-eslint`'s [section on performance](https://github.com/angular-eslint/angular-eslint#eslint-configs-and-performance) for information on addressing slow linting processes.
+Deviations from the `angular-eslint`, `@ni/eslint-config-angular`, and the [`parserOptions.project`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/parser#parseroptionsproject) configurations can result in significant performance degredation. Read `angular-eslint`'s [section on performance](https://github.com/angular-eslint/angular-eslint/blob/v19.0.0/docs/RULES_REQUIRING_TYPE_INFORMATION.md) for information on addressing slow linting processes.
 
 ## License
 
-[MIT (c) 2021 National Instruments Corporation](./LICENSE)
+[MIT (c) 2025 National Instruments Corporation](./LICENSE)

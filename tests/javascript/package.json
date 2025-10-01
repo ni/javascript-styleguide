@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "Smoke test for JavaScript project integration.",
+  "type": "module",
   "scripts": {
     "test": "eslint ."
   },

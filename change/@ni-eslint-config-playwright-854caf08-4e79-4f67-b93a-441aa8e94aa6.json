@@ -1,0 +1,7 @@
+{
+  "type": "major",
+  "comment": "Update eslint-config-playwright to be compatible with eslint v9.  Change default rule configuration to assume `strictNullChecks` is enabled. See [Migration Guide](https://github.com/ni/javascript-styleguide/blob/main/README.md#migrating-to-eslint-flat-configuration-format) for more information.",
+  "packageName": "@ni/eslint-config-playwright",
+  "email": "131153319+gokulprasanth-ni@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}

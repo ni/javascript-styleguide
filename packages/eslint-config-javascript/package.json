@@ -1,38 +1,43 @@
 {
-  "name": "@ni/eslint-config-javascript",
-  "version": "4.4.0",
-  "description": "NI's JavaScript ESLint Shareable Config",
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint .",
-    "pack": "npm pack"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ni/javascript-styleguide.git"
-  },
-  "keywords": [
-    "eslint",
-    "eslintconfig",
-    "ni"
-  ],
-  "author": "National Instruments",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ni/javascript-styleguide/issues"
-  },
-  "homepage": "https://github.com/ni/javascript-styleguide#readme",
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "/*.js",
-    "rules/*.js",
-    "!/.*.js"
-  ],
-  "peerDependencies": {
-    "eslint": "^8.57.0",
-    "eslint-plugin-import": "^2.29.1",
-    "@stylistic/eslint-plugin": "^3.0.0"
-  }
+    "name": "@ni/eslint-config-javascript",
+    "version": "4.4.0",
+    "description": "NI's JavaScript ESLint Shareable Config",
+    "type": "module",
+    "main": "index.js",
+    "exports": {
+        ".": "./index.js"
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "pack": "npm pack"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ni/javascript-styleguide.git"
+    },
+    "keywords": [
+        "eslint",
+        "eslintconfig",
+        "ni"
+    ],
+    "author": "National Instruments",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ni/javascript-styleguide/issues"
+    },
+    "homepage": "https://github.com/ni/javascript-styleguide#readme",
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "**/*.js",
+        "!/tools/*",
+        "!/eslint.config.js"
+    ],
+    "peerDependencies": {
+        "@stylistic/eslint-plugin": "^5.4.0",
+        "eslint": "^9.36.0",
+        "eslint-plugin-import": "^2.32.0",
+        "globals": "^14.0.0"
+    }
 }

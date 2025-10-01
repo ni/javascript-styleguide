@@ -11,4 +11,4 @@ See the [ni/javascript-styleguide](https://github.com/ni/javascript-styleguide#r
 
 ## License
 
-[MIT (c) 2022 National Instruments Corporation](./LICENSE)
+[MIT (c) 2025 National Instruments Corporation](./LICENSE)

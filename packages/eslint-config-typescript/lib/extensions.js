@@ -1,4 +1,6 @@
-module.exports = {
+import { defineConfig } from 'eslint/config';
+
+export const extensionsConfig = defineConfig([{
     rules: {
         /*
             The following are extension rules that replace core JavaScript rules to support
@@ -67,7 +69,7 @@ module.exports = {
         }],
 
         'no-unused-vars': 'off',
-        '@typescript-eslint/no-unused-vars': ['error', { vars: 'all', args: 'all', argsIgnorePattern: '^_', ignoreRestSiblings: true }],
+        '@typescript-eslint/no-unused-vars': ['error', { vars: 'all', args: 'all', argsIgnorePattern: '^_', caughtErrorsIgnorePattern: '^_', ignoreRestSiblings: true }],
 
         'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
@@ -75,4 +77,4 @@ module.exports = {
         'no-useless-constructor': 'off',
         '@typescript-eslint/no-useless-constructor': 'error',
     }
-};
+}]);
