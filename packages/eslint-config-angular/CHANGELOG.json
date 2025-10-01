@@ -2,6 +2,33 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Wed, 01 Oct 2025 04:25:59 GMT",
+      "version": "10.0.0",
+      "tag": "@ni/eslint-config-angular_v10.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "131153319+gokulprasanth-ni@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "89e71c817707462b6dea720c90025f9db8eeb949",
+            "comment": "Update eslint-config-angular to be compatible with eslint v9. Change default rule configuration to assume `strictNullChecks` is enabled. See [Migration Guide](https://github.com/ni/javascript-styleguide/blob/main/README.md#migrating-to-eslint-flat-configuration-format) for more information."
+          },
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-angular",
+            "comment": "Bump @ni/eslint-config-typescript to v5.0.0",
+            "commit": "not available"
+          },
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-angular",
+            "comment": "Bump @ni/eslint-config-javascript to v5.0.0",
+            "commit": "not available"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 12 Sep 2025 12:21:59 GMT",
       "version": "9.0.7",
       "tag": "@ni/eslint-config-angular_v9.0.7",

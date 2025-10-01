@@ -1,43 +1,43 @@
 {
-    "name": "@ni/eslint-config-angular",
-    "version": "9.0.7",
-    "description": "NI's Angular ESLint Shareable Config",
-    "type": "module",
-    "main": "index.js",
-    "exports": {
-        ".": "./index.js"
-    },
-    "scripts": {
-        "lint": "eslint .",
-        "pack": "npm pack",
-        "print-available-rules": "node tools/print-available-rules"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/ni/javascript-styleguide.git"
-    },
-    "keywords": [
-        "eslint",
-        "eslintconfig",
-        "ni"
-    ],
-    "author": "National Instruments",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/ni/javascript-styleguide/issues"
-    },
-    "homepage": "https://github.com/ni/javascript-styleguide#readme",
-    "publishConfig": {
-        "access": "public"
-    },
-    "files": [
-        "**/*.js",
-        "!/tools/*",
-        "!/eslint.config.js"
-    ],
-    "peerDependencies": {
-        "angular-eslint": "^18.4.3",
-        "@ni/eslint-config-typescript": "^4.4.4",
-        "@ni/eslint-config-javascript": "^4.4.0"
-    }
+  "name": "@ni/eslint-config-angular",
+  "version": "10.0.0",
+  "description": "NI's Angular ESLint Shareable Config",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pack": "npm pack",
+    "print-available-rules": "node tools/print-available-rules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ni/javascript-styleguide.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "ni"
+  ],
+  "author": "National Instruments",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ni/javascript-styleguide/issues"
+  },
+  "homepage": "https://github.com/ni/javascript-styleguide#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "**/*.js",
+    "!/tools/*",
+    "!/eslint.config.js"
+  ],
+  "peerDependencies": {
+    "angular-eslint": "^18.4.3",
+    "@ni/eslint-config-typescript": "^5.0.0",
+    "@ni/eslint-config-javascript": "^5.0.0"
+  }
 }

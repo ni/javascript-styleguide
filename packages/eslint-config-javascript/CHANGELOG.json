@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-javascript",
   "entries": [
     {
+      "date": "Wed, 01 Oct 2025 04:25:59 GMT",
+      "version": "5.0.0",
+      "tag": "@ni/eslint-config-javascript_v5.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "131153319+gokulprasanth-ni@users.noreply.github.com",
+            "package": "@ni/eslint-config-javascript",
+            "commit": "89e71c817707462b6dea720c90025f9db8eeb949",
+            "comment": "Update eslint-config-javascript to be compatible with eslint v9. See [Migration Guide](https://github.com/ni/javascript-styleguide/blob/main/README.md#migrating-to-eslint-flat-configuration-format) for more information."
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 12 Sep 2025 12:21:59 GMT",
       "version": "4.4.0",
       "tag": "@ni/eslint-config-javascript_v4.4.0",

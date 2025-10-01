@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-javascript
 
-This log was last generated on Fri, 12 Sep 2025 12:21:59 GMT and should not be manually modified.
+<!-- This log was last generated on Wed, 01 Oct 2025 04:25:59 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## 5.0.0
+
+Wed, 01 Oct 2025 04:25:59 GMT
+
+### Major changes
+
+- Update eslint-config-javascript to be compatible with eslint v9. See [Migration Guide](https://github.com/ni/javascript-styleguide/blob/main/README.md#migrating-to-eslint-flat-configuration-format) for more information. (131153319+gokulprasanth-ni@users.noreply.github.com)
 
 ## 4.4.0
 
