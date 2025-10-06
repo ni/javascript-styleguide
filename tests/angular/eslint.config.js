@@ -12,8 +12,7 @@ export default defineConfig([
         extends: angularTypescriptConfig,
         languageOptions: {
             parserOptions: {
-                project: ['./tsconfig.json'],
-                tsConfigRootDir: import.meta.dirname,
+                project: ['./tsconfig.json']
             },
         },
     },
