@@ -1,7 +1,0 @@
-{
-  "type": "minor",
-  "comment": "Update the configuration for import/no-extraneous-dependencies to includes all of the supported names for ESLint configuration files.",
-  "packageName": "@ni/eslint-config-javascript",
-  "email": "2351292+TrevorKarjanis@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}

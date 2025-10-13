@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-javascript",
   "entries": [
     {
+      "date": "Mon, 13 Oct 2025 20:47:22 GMT",
+      "version": "5.1.0",
+      "tag": "@ni/eslint-config-javascript_v5.1.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "2351292+TrevorKarjanis@users.noreply.github.com",
+            "package": "@ni/eslint-config-javascript",
+            "commit": "0f96d204ccef72bf3de03573a36efba389fc878a",
+            "comment": "Update the configuration for import/no-extraneous-dependencies to includes all of the supported names for ESLint configuration files."
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 01 Oct 2025 04:25:59 GMT",
       "version": "5.0.0",
       "tag": "@ni/eslint-config-javascript_v5.0.0",

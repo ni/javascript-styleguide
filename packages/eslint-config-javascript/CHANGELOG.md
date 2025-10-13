@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-javascript
 
-<!-- This log was last generated on Wed, 01 Oct 2025 04:25:59 GMT and should not be manually modified. -->
+<!-- This log was last generated on Mon, 13 Oct 2025 20:47:22 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## 5.1.0
+
+Mon, 13 Oct 2025 20:47:22 GMT
+
+### Minor changes
+
+- Update the configuration for import/no-extraneous-dependencies to includes all of the supported names for ESLint configuration files. (2351292+TrevorKarjanis@users.noreply.github.com)
 
 ## 5.0.0
 
