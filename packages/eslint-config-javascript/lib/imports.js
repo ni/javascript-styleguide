@@ -105,7 +105,13 @@ export const imports = defineConfig([{
                 '**/protractor.conf.*.js', // protractor config
                 '**/karma.conf.js', // karma config
                 '**/.eslintrc.js', // legacy eslint config
-                '**/eslint.config.js', // eslint config
+                // The following eslint.config.* files are supported by ESLint >=9.
+                '**/eslint.config.cjs',
+                '**/eslint.config.cts',
+                '**/eslint.config.js',
+                '**/eslint.config.mjs',
+                '**/eslint.config.mts',
+                '**/eslint.config.ts'
             ],
             optionalDependencies: false,
         }],
