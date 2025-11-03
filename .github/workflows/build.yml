@@ -4,11 +4,14 @@ on:
     branches:
     - '**'
 
+permissions:
+  id-token: write
+  contents: read
+
 env:
   GITHUB_SERVICE_USER: "rajsite"
   GITHUB_SERVICE_EMAIL: "rajsite@users.noreply.github.com"
   HAS_GITHUBPAGESDEPLOYTOKEN: ${{secrets.GITHUBPAGESDEPLOYTOKEN != ''}}
-  HAS_NPM_TOKEN: ${{secrets.NPM_TOKEN != ''}}
 
 jobs:
   build:
@@ -27,7 +30,7 @@ jobs:
     # Install dependencies
     - uses: actions/setup-node@v4
       with:
-        node-version: '22'
+        node-version: '24'
         registry-url: 'https://registry.npmjs.org'
         cache: 'npm'
     - run: npm ci
@@ -58,7 +61,4 @@ jobs:
       run: |
         git config --global user.name "${{ env.GITHUB_SERVICE_USER }}"
         git config --global user.email "${{ env.GITHUB_SERVICE_EMAIL }}"
-    - if: env.HAS_GITHUBPAGESDEPLOYTOKEN == 'true' && env.HAS_NPM_TOKEN == 'true' && startsWith(github.ref, 'refs/heads/main')
-      env:
-        NPM_SECRET_TOKEN: ${{ secrets.NPM_TOKEN }}
-      run: npm run publish:ci -- -n $NPM_SECRET_TOKEN
+        npm run invoke-publish
