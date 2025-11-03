@@ -2,6 +2,27 @@
   "name": "@ni/eslint-config-typescript",
   "entries": [
     {
+      "date": "Mon, 03 Nov 2025 16:15:37 GMT",
+      "version": "5.0.2",
+      "tag": "@ni/eslint-config-typescript_v5.0.2",
+      "comments": {
+        "patch": [
+          {
+            "author": "1588923+rajsite@users.noreply.github.com",
+            "package": "@ni/eslint-config-typescript",
+            "commit": "74f131e550c3f5a565e78dbf7606854074ce17fc",
+            "comment": "Updates for npm trusted publishing"
+          },
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-typescript",
+            "comment": "Bump @ni/eslint-config-javascript to v5.1.1",
+            "commit": "not available"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 13 Oct 2025 20:47:22 GMT",
       "version": "5.0.1",
       "tag": "@ni/eslint-config-typescript_v5.0.1",

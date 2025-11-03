@@ -1,8 +1,18 @@
 # Change Log - @ni/eslint-config-angular
 
-<!-- This log was last generated on Mon, 13 Oct 2025 20:47:22 GMT and should not be manually modified. -->
+<!-- This log was last generated on Mon, 03 Nov 2025 16:15:37 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## 10.0.2
+
+Mon, 03 Nov 2025 16:15:37 GMT
+
+### Patches
+
+- Updates for npm trusted publishing (1588923+rajsite@users.noreply.github.com)
+- Bump @ni/eslint-config-typescript to v5.0.2
+- Bump @ni/eslint-config-javascript to v5.1.1
 
 ## 10.0.1
 
