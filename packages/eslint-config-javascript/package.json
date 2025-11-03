@@ -13,7 +13,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ni/javascript-styleguide.git"
+    "url": "git+https://github.com/ni/javascript-styleguide.git",
+    "directory": "packages/eslint-config-javascript"
   },
   "keywords": [
     "eslint",

@@ -13,8 +13,7 @@
     "test": "npm --workspaces --if-present test",
     "change": "beachball change --verbose",
     "check": "beachball check --verbose --changehint \"Run 'npm run change' to generate a change file\"",
-    "publish": "beachball publish --verbose --message \"applying package updates [skip ci]\"",
-    "publish:ci": "beachball publish --verbose --yes --access public --message \"applying package updates [skip ci]\""
+    "invoke-publish": "beachball publish --yes --access public --message \"applying package updates [skip ci]\""
   },
   "repository": {
     "type": "git",

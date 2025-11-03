@@ -14,7 +14,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ni/javascript-styleguide.git"
+    "url": "git+https://github.com/ni/javascript-styleguide.git",
+    "directory": "packages/eslint-config-angular"
   },
   "keywords": [
     "eslint",
