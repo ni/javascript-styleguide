@@ -49,7 +49,11 @@ Install the package for your corresponding language as a development dependency:
 
 ## Configuration
 
-After installing the lint configuration packages, follow the configuration instructions for your project language:
+After installing the lint configuration packages, determine if the project is using CommonJS or ES modules by default. ES modules will specify ["type": "module"](https://nodejs.org/api/packages.html#type) in `package.json`. The following configuration examples are ES modules. Use the file extension `mjs` for ES modules in CommonJS projects, e.g. `eslint.config.mjs` will be common for Angular.
+
+With flat configuration, the `files` declaration must use a glob to match files in subdirectories. See [Glob-Based Configs](https://eslint.org/docs/latest/use/configure/migration-guide#glob-based-configs).
+
+Follow the instructions for your project's language:
 
 ### JavaScript configuration
 
@@ -66,7 +70,7 @@ export default defineConfig([
 
 ### TypeScript configuration
 
-Use `@ni/eslint-config-typescript` configurations in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` to the project's TypeScript configuration to correctly enable [linting with type information](https://typescript-eslint.io/getting-started/typed-linting).
+Use `@ni/eslint-config-typescript` configurations in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `languageOptions.parserOptions.project` to the project's TypeScript configuration to correctly enable [linting with type information](https://typescript-eslint.io/getting-started/typed-linting).
 
 ```js
 import { defineConfig } from 'eslint/config';
@@ -79,7 +83,7 @@ export default defineConfig([
         languageOptions: {
             parserOptions: {
                 project: ['./tsconfig.json'],
-                tsConfigRootDir: import.meta.dirname,
+                tsconfigRootDir: import.meta.dirname,
             },
         },
     },
@@ -90,38 +94,58 @@ export default defineConfig([
 
 ESLint support for Angular is provided by [`angular-eslint`](https://github.com/angular-eslint/angular-eslint#readme).
 
-1. **For single and multi-project workspaces**, [add angular-eslint](https://github.com/angular-eslint/angular-eslint#quick-start). Remove the `angular-eslint` and `eslint` dependencies from `package.json`.
+1. **For single and multi-project workspaces**, [add angular-eslint](https://github.com/angular-eslint/angular-eslint#quick-start).
     ```bash
     ng add angular-eslint
     ```
-2. **For multi-project workspaces**, [configure each project](https://github.com/angular-eslint/angular-eslint#adding-eslint-configuration-to-an-existing-angular-cli-project-which-has-no-existing-linter), and then enable future generated projects to be configured as well.
+2. Remove the `angular-eslint`, `typescript-eslint`, and `eslint` development dependencies from `package.json`.
+3. **For multi-project workspaces**, [configure each project](https://github.com/angular-eslint/angular-eslint#adding-eslint-configuration-to-an-existing-angular-cli-project-which-has-no-existing-linter), and then enable future generated projects to be configured as well.
     ```bash
     > ng g angular-eslint:add-eslint-to-project <PROJECT NAME>
     > ng config cli.schematicCollections "[\"angular-eslint\"]"
     ```
-3. Use the NI configured rules for Angular TypeScript code and Angular templates in the [ESLint flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) (`eslint.config.js`). Set the `parserOptions.project` configuration to the project's TypeScript configuration to correctly enable [linting with type information](https://typescript-eslint.io/getting-started/typed-linting)..
+4. Replace `eslint.config.js` with the following `eslint.config.mjs` [flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new) of rules for Typescript, Angular templates, and JavaScript.
     ```js
     import { defineConfig } from 'eslint/config';
     import { angularTypescriptConfig, angularTemplateConfig } from '@ni/eslint-config-angular';
+    import { javascriptConfig } from '@ni/eslint-config-javascript';
 
     export default defineConfig([
+        {
+            // JavaScript rules fail to parse the HTML files that are added below. Therefore, the JavaScript
+            // configuration must now match the correct files to avoid an error.
+            files: ['**/*.js'],
+            extends: javascriptConfig
+        },
         {
             files: ['**/*.ts'],
             extends: angularTypescriptConfig,
             languageOptions: {
                 parserOptions: {
-                    project: ['./tsconfig.json'],
-                    tsConfigRootDir: import.meta.dirname,
-                },
-            },
+                    // The `languageOptions.parserOptions.projectService` option is recommended but does not identify
+                    // tsconfig.*.json files. Use the older `project` configuration instead. The general `tsconfig.json` is
+                    // declared last in the hope that the application and test configurations will apply to their
+                    // applicable files correctly.
+                    // https://typescript-eslint.io/troubleshooting/typed-linting/#project-service-issues
+                    project: ['tsconfig.app.json', 'tsconfig.spec.json', 'tsconfig.json']
+                    // In projects (e.g. libraries) using `parserOptions.project`, Angular requires that the paths be
+                    // relative to the root, but the VSCode extension requires them to be relative to the project
+                    // directory. Set the root to be the project directory to satisfy both. The `parserOptions.projectService`
+                    // configuration would likely resolve this, but is not used for reasons described above.
+                    // https://typescript-eslint.io/blog/project-service
+                    // tsconfigRootDir: import.meta.dirname
+                }
+
+            }
         },
         {
             files: ['**/*.html'],
-            extends: angularTemplateConfig,
+            extends: angularTemplateConfig
         }
     ]);
     ```
-4. Evaluate the [project specific rule groups](#evaluate-project-specific-rule-groups) to manually add to your lint configuration. For Angular applications in particular, consider enabling the [`[application-prefix]`](#application-prefix) rule group.
+5. Evaluate the [project specific rule groups](#evaluate-project-specific-rule-groups) to manually add to your lint configuration. For Angular applications in particular, consider enabling the [`[application-prefix]`](#application-prefix) rule group.
+6. With flat configurations, configurations for subdirectories must be defined at the root except for projects which are already root configurations. ESLint loads only one flat configuration resolved relative to the working directory (e.g. root). Support for defining configurations in subdirectories is experimental behind an active feature flag. The angular-eslint builder does not support this feature flag. See ESLint [issue #18385](https://github.com/eslint/eslint/issues/18385).
 
 ### Playwright configuration
 
@@ -140,7 +164,7 @@ export default defineConfig([
         languageOptions: {
             parserOptions: {
                 project: ['./tsconfig.json'],
-                tsConfigRootDir: import.meta.dirname,
+                tsconfigRootDir: import.meta.dirname,
             },
         }
     }
@@ -314,7 +338,7 @@ Instead of using the `extends` property, import the configuration packages you n
         languageOptions: {
             parserOptions: {
                 project: ['./tsconfig.json'],
-                tsConfigRootDir: import.meta.dirname,
+                tsconfigRootDir: import.meta.dirname,
             },
         }
     }
