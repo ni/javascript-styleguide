@@ -108,14 +108,14 @@ ESLint support for Angular is provided by [`angular-eslint`](https://github.com/
     ```js
     import { defineConfig } from 'eslint/config';
     import { angularTypescriptConfig, angularTemplateConfig } from '@ni/eslint-config-angular';
-    import { javascriptConfig } from '@ni/eslint-config-javascript';
+    import { javascriptConfig, importNodeEsmConfig } from '@ni/eslint-config-javascript';
 
     export default defineConfig([
         {
             // JavaScript rules fail to parse the HTML files that are added below. Therefore, the JavaScript
             // configuration must now match the correct files to avoid an error.
-            files: ['**/*.js'],
-            extends: javascriptConfig
+            files: ['**/*.js', '**/*.mjs'],
+            extends: [javascriptConfig, importNodeEsmConfig]
         },
         {
             files: ['**/*.ts'],
@@ -144,6 +144,15 @@ ESLint support for Angular is provided by [`angular-eslint`](https://github.com/
         }
     ]);
     ```
+5. Update the `lintFilePatterns` in `angular.json` to include `.ts`, `.html`, and `.js`, and `.mjs` files.
+```json
+"lintFilePatterns": [
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.mjs",
+    "src/**/*.html"
+]
+```
 5. Evaluate the [project specific rule groups](#evaluate-project-specific-rule-groups) to manually add to your lint configuration. For Angular applications in particular, consider enabling the [`[application-prefix]`](#application-prefix) rule group.
 6. With flat configurations, configurations for subdirectories must be defined at the root except for projects which are already root configurations. ESLint loads only one flat configuration resolved relative to the working directory (e.g. root). Support for defining configurations in subdirectories is experimental behind an active feature flag. The angular-eslint builder does not support this feature flag. See ESLint [issue #18385](https://github.com/eslint/eslint/issues/18385).
 
