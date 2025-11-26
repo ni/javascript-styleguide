@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "Apply the ESLint configuration specific rules using globs.",
+  "packageName": "@ni/eslint-config-javascript",
+  "email": "2351292+TrevorKarjanis@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
