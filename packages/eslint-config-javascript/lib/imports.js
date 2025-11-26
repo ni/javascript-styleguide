@@ -387,12 +387,12 @@ export const imports = defineConfig([{
     }
 }, {
     /*
-        Eslint configuration file specific settings
+        ESLint configuration file specific settings
     */
-    files: ['eslint.config.js', 'eslint.config.mjs'],
+    files: ['**/eslint.config.js', '**/eslint.config.mjs'],
     extends: [importNodeEsmConfig],
     rules: {
         // eslint config files require a top-level default export
-        'import/no-default-export': 'off',
+        'import/no-default-export': 'off'
     }
 }]);
