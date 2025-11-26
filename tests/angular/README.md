@@ -1,5 +1,7 @@
 # Angular Smoke Test
 
-## Overview
+This package is a smoke test for using the Angular rules in an Angular workspace. See [CONTRIBUTING.md](../../CONTRIBUTING.md#smoke-tests) for more information on smoke tests.
 
-This package is a smoke test for using the Angular rules in a project. See [CONTRIBUTING.md](../../CONTRIBUTING.md#smoke-tests) for more information.
+## Testing
+
+- The `npm test` script runs the linter to test that the lint configuration functions correctly with `ng lint` and and also runs `ng test`.
