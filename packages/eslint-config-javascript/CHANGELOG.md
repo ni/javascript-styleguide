@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-javascript
 
-<!-- This log was last generated on Mon, 03 Nov 2025 16:15:37 GMT and should not be manually modified. -->
+<!-- This log was last generated on Wed, 26 Nov 2025 16:58:56 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## 5.1.2
+
+Wed, 26 Nov 2025 16:58:56 GMT
+
+### Patches
+
+- Apply the ESLint configuration specific rules using globs. (2351292+TrevorKarjanis@users.noreply.github.com)
 
 ## 5.1.1
 
