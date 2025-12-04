@@ -1,0 +1,7 @@
+{
+  "type": "major",
+  "comment": "Update to Typescript 5.8 and Angular 19",
+  "packageName": "@ni/eslint-config-angular",
+  "email": "7282195+m-akinc@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
