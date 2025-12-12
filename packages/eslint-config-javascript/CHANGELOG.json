@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-javascript",
   "entries": [
     {
+      "date": "Fri, 12 Dec 2025 16:36:33 GMT",
+      "version": "5.1.4",
+      "tag": "@ni/eslint-config-javascript_v5.1.4",
+      "comments": {
+        "patch": [
+          {
+            "author": "1588923+rajsite@users.noreply.github.com",
+            "package": "@ni/eslint-config-javascript",
+            "commit": "a7761f92b1ef7349d0c8f89ddd8412de31ace1f6",
+            "comment": "Expand config file names allowed to use devDependencies"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 26 Nov 2025 16:58:56 GMT",
       "version": "5.1.2",
       "tag": "@ni/eslint-config-javascript_v5.1.2",
