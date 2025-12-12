@@ -104,6 +104,7 @@ export const imports = defineConfig([{
                 '**/protractor.conf.js', // protractor config
                 '**/protractor.conf.*.js', // protractor config
                 '**/karma.conf.js', // karma config
+                '**/karma.conf.*.js', // karma config
                 '**/.eslintrc.js', // legacy eslint config
                 // The following eslint.config.* files are supported by ESLint >=9.
                 '**/eslint.config.cjs',
