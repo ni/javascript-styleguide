@@ -88,31 +88,26 @@ export const imports = defineConfig([{
                 'spec/**', // mocha, rspec-like pattern
                 '**/__tests__/**', // jest pattern
                 '**/__mocks__/**', // jest pattern
-                'test.{js,jsx}', // repos with a single test file
-                'test-*.{js,jsx}', // repos with multiple top-level test files
-                '**/*{.,_}{test,spec}.{js,jsx}', // tests where the extension or filename suffix denotes that it is a test
-                '**/jest.config.js', // jest config
-                '**/jest.setup.js', // jest setup
-                '**/vue.config.js', // vue-cli config
-                '**/webpack.config.js', // webpack config
-                '**/webpack.config.*.js', // webpack config
-                '**/rollup.config.js', // rollup config
-                '**/rollup.config.*.js', // rollup config
-                '**/gulpfile.js', // gulp config
-                '**/gulpfile.*.js', // gulp config
-                '**/Gruntfile{,.js}', // grunt config
-                '**/protractor.conf.js', // protractor config
-                '**/protractor.conf.*.js', // protractor config
-                '**/karma.conf.js', // karma config
-                '**/karma.conf.*.js', // karma config
-                '**/.eslintrc.js', // legacy eslint config
+                'test.{js,cjs,mjs,ts,cts,mts,jsx,tsx}', // repos with a single test file
+                'test-*.{js,cjs,mjs,ts,cts,mts,jsx,tsx}', // repos with multiple top-level test files
+                '**/*{.,_}{test,spec}.{js,cjs,mjs,ts,cts,mts,jsx,tsx}', // tests where the extension or filename suffix denotes that it is a test
+                '**/jest.config.{js,cjs}', // jest config
+                '**/jest.setup.{js,cjs}', // jest setup
+                '**/vue.config.{js,cjs}', // vue-cli config
+                '**/webpack.config.{js,cjs}', // webpack config
+                '**/webpack.config.*.{js,cjs}', // webpack config
+                '**/rollup.config.{js,cjs,mjs}', // rollup config
+                '**/rollup.config.*.{js,cjs,mjs}', // rollup config
+                '**/gulpfile.{js,cjs}', // gulp config
+                '**/gulpfile.*.{js,cjs}', // gulp config
+                '**/Gruntfile{,.js,.cjs}', // grunt config
+                '**/protractor.conf.{js,cjs}', // protractor config
+                '**/protractor.conf.*.{js,cjs}', // protractor config
+                '**/karma.conf.{js,cjs}', // karma config
+                '**/karma.conf.*.{js,cjs}', // karma config
+                '**/.eslintrc.{js,cjs}', // legacy eslint config
                 // The following eslint.config.* files are supported by ESLint >=9.
-                '**/eslint.config.cjs',
-                '**/eslint.config.cts',
-                '**/eslint.config.js',
-                '**/eslint.config.mjs',
-                '**/eslint.config.mts',
-                '**/eslint.config.ts'
+                '**/eslint.config.{js,cjs,mjs,ts,cts,mts}',
             ],
             optionalDependencies: false,
         }],
