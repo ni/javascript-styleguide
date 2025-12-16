@@ -16,14 +16,21 @@ const ignoreAttributeSets = {
         'aria-describedby',
         'aria-labelledby',
         'aria-live',
+        'form',
         'rel',
         'sizes',
+        // anchor
+        'hreflang',
+        'ping',
+        'referrerpolicy',
+        'download',
         // Not possible for Angular i18n to handle meta tags yet
         // https://github.com/angular/angular-cli/issues/8947
         'meta[content]'
     ],
     nimble: [
         // shared
+        'alignment',
         'appearance',
         'appearance-variant',
         'orientation',
@@ -37,6 +44,7 @@ const ignoreAttributeSets = {
         'location',
 
         // rich text
+        'markdown',
         'nimble-mapping-user[display-name]',
         'pattern',
 
@@ -57,8 +65,30 @@ const ignoreAttributeSets = {
         'menu-slot',
         'parent-id-field-name',
         'selection-mode',
+        'sort-by-field-name',
         'sort-direction',
         'width-mode',
+
+        // table column (date-text)
+        'custom-locale-matcher',
+        'custom-weekday',
+        'custom-era',
+        'custom-year',
+        'custom-month',
+        'custom-day',
+        'custom-hour',
+        'custom-minute',
+        'custom-second',
+        'custom-time-zone-name',
+        'custom-format-matcher',
+        'custom-hour12',
+        'custom-time-zone',
+        'custom-calendar',
+        'custom-day-period',
+        'custom-numbering-system',
+        'custom-date-style',
+        'custom-time-style',
+        'custom-hour-cycle',
 
         // tabs
         'activeid',
@@ -75,7 +105,6 @@ const ignoreAttributeSets = {
         // angular-specific
         'nimbleRouterLink',
         'queryParamsHandling'
-
     ],
     spright: [
         // chat
