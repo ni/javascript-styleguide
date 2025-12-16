@@ -37,7 +37,7 @@
     "!/eslint.config.js"
   ],
   "peerDependencies": {
-    "angular-eslint": "^18.4.3",
+    "angular-eslint": "^19.8.1",
     "@ni/eslint-config-typescript": "^5.0.5",
     "@ni/eslint-config-javascript": "^5.1.4"
   }

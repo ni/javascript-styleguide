@@ -16,7 +16,7 @@ export const angularTypescriptConfig = defineConfig([
                 https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/src/configs/recommended.json
             */
 
-            '@angular-eslint/no-host-metadata-property': 'error',
+            '@angular-eslint/prefer-standalone': 'off',
 
             /*
                 '@angular-eslint/no-input-rename' rule notes:
