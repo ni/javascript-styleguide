@@ -1,6 +1,6 @@
 {
   "name": "@ni/eslint-config-angular",
-  "version": "10.0.5",
+  "version": "11.0.0",
   "description": "NI's Angular ESLint Shareable Config",
   "type": "module",
   "main": "index.js",

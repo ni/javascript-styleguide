@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Tue, 16 Dec 2025 16:58:10 GMT",
+      "version": "11.0.0",
+      "tag": "@ni/eslint-config-angular_v11.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "7282195+m-akinc@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "f03c703de0031803c8c73b22ee16852055720fa2",
+            "comment": "Update to Typescript 5.8 and Angular 19"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 12 Dec 2025 16:36:33 GMT",
       "version": "10.0.5",
       "tag": "@ni/eslint-config-angular_v10.0.5",

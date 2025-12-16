@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-<!-- This log was last generated on Fri, 12 Dec 2025 16:36:33 GMT and should not be manually modified. -->
+<!-- This log was last generated on Tue, 16 Dec 2025 16:58:10 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## 11.0.0
+
+Tue, 16 Dec 2025 16:58:10 GMT
+
+### Major changes
+
+- Update to Typescript 5.8 and Angular 19 (7282195+m-akinc@users.noreply.github.com)
 
 ## 10.0.5
 
