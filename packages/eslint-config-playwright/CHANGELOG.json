@@ -2,6 +2,27 @@
   "name": "@ni/eslint-config-playwright",
   "entries": [
     {
+      "date": "Fri, 12 Dec 2025 16:36:33 GMT",
+      "version": "2.0.5",
+      "tag": "@ni/eslint-config-playwright_v2.0.5",
+      "comments": {
+        "patch": [
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-playwright",
+            "comment": "Bump @ni/eslint-config-typescript to v5.0.5",
+            "commit": "not available"
+          },
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-playwright",
+            "comment": "Bump @ni/eslint-config-javascript to v5.1.4",
+            "commit": "not available"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 26 Nov 2025 16:58:56 GMT",
       "version": "2.0.3",
       "tag": "@ni/eslint-config-playwright_v2.0.3",

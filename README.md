@@ -123,9 +123,8 @@ ESLint support for Angular is provided by [`angular-eslint`](https://github.com/
             languageOptions: {
                 parserOptions: {
                     // The `languageOptions.parserOptions.projectService` option is recommended but does not identify
-                    // tsconfig.*.json files. Use the older `project` configuration instead. The general `tsconfig.json` is
-                    // declared last in the hope that the application and test configurations will apply to their
-                    // applicable files correctly.
+                    // tsconfig.*.json files. Use the older `project` configuration instead. `project` has an order of
+                    // precedence, so include `tsconfig.json` last.
                     // https://typescript-eslint.io/troubleshooting/typed-linting/#project-service-issues
                     project: ['tsconfig.app.json', 'tsconfig.spec.json', 'tsconfig.json']
                     // In projects (e.g. libraries) using `parserOptions.project`, Angular requires that the paths be

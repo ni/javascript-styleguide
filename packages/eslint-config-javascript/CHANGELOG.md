@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-javascript
 
-<!-- This log was last generated on Wed, 26 Nov 2025 16:58:56 GMT and should not be manually modified. -->
+<!-- This log was last generated on Fri, 12 Dec 2025 16:36:33 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## 5.1.4
+
+Fri, 12 Dec 2025 16:36:33 GMT
+
+### Patches
+
+- Expand config file names allowed to use devDependencies (1588923+rajsite@users.noreply.github.com)
 
 ## 5.1.2
 

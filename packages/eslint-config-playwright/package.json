@@ -1,6 +1,6 @@
 {
   "name": "@ni/eslint-config-playwright",
-  "version": "2.0.3",
+  "version": "2.0.5",
   "description": "NI's Playwright ESLint Shareable Config",
   "type": "module",
   "main": "index.js",
@@ -37,8 +37,8 @@
     "!/eslint.config.js"
   ],
   "peerDependencies": {
-    "@ni/eslint-config-typescript": "^5.0.3",
-    "@ni/eslint-config-javascript": "^5.1.2",
+    "@ni/eslint-config-typescript": "^5.0.5",
+    "@ni/eslint-config-javascript": "^5.1.4",
     "eslint-plugin-playwright": "^0.18.0"
   }
 }
