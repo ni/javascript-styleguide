@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-<!-- This log was last generated on Tue, 16 Dec 2025 16:58:10 GMT and should not be manually modified. -->
+<!-- This log was last generated on Tue, 16 Dec 2025 21:24:32 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## 11.0.1
+
+Tue, 16 Dec 2025 21:24:32 GMT
+
+### Patches
+
+- Update attributes that should not be localized (7282195+m-akinc@users.noreply.github.com)
 
 ## 11.0.0
 

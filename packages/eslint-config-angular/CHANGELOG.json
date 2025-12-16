@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Tue, 16 Dec 2025 21:24:32 GMT",
+      "version": "11.0.1",
+      "tag": "@ni/eslint-config-angular_v11.0.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "7282195+m-akinc@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "d63f34c5d125941c17945690103737ef815fce8f",
+            "comment": "Update attributes that should not be localized"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 16 Dec 2025 16:58:10 GMT",
       "version": "11.0.0",
       "tag": "@ni/eslint-config-angular_v11.0.0",
