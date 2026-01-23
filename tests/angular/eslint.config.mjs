@@ -32,7 +32,11 @@ export default defineConfig([
         rules: {
             '@angular-eslint/template/i18n': [
                 'error',
-                { checkId: false, ignoreAttributes: [...ignoreAttributes.all, 'custom-field'] }
+                { 
+                    allowMarkupInContent: false,
+                    checkId: false,
+                    ignoreAttributes: [...ignoreAttributes.all, 'custom-field']
+                }
             ]
         }
     }]);

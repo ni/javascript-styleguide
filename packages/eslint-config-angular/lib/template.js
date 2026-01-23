@@ -74,6 +74,7 @@ export const angularTemplateConfig = defineConfig([
             '@angular-eslint/template/i18n': [
                 'error',
                 {
+                    allowMarkupInContent: false,
                     checkId: false,
                     ignoreAttributes: [...ignoreAttributes.all]
                 }
