@@ -1,0 +1,7 @@
+{
+  "type": "minor",
+  "comment": "Update configuration of `@angular-eslint/template/i18n` to set `allowMarkupInContent: false`",
+  "packageName": "@ni/eslint-config-angular",
+  "email": "jattasNI@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
