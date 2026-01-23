@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Fri, 23 Jan 2026 23:19:30 GMT",
+      "version": "11.1.0",
+      "tag": "@ni/eslint-config-angular_v11.1.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "jattasNI@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "cd543efe2c20aafc71eea6e29646da9c9a36cc6d",
+            "comment": "Update configuration of `@angular-eslint/template/i18n` to set `allowMarkupInContent: false`"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 16 Dec 2025 21:24:32 GMT",
       "version": "11.0.1",
       "tag": "@ni/eslint-config-angular_v11.0.1",
