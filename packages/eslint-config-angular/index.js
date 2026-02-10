@@ -17,6 +17,13 @@ export const angularTypescriptConfig = defineConfig([
             */
 
             '@angular-eslint/component-class-suffix': 'error',
+            /*
+                Enabling this would require replacing DI constuctor parameters with fields initialized with `inject()`.
+                The new fields would have to be declared early/first in the class (other initializers may be relying on them),
+                and doing so may violate @typescript-eslint/member-ordering. Additionally, it likely requires effort to
+                update existing unit tests.
+                See: https://github.com/ni/javascript-styleguide/issues/190
+            */
             '@angular-eslint/prefer-inject': 'off',
             '@angular-eslint/prefer-standalone': 'off',
 
