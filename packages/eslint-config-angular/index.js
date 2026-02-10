@@ -16,6 +16,7 @@ export const angularTypescriptConfig = defineConfig([
                 https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/src/configs/recommended.json
             */
 
+            '@angular-eslint/component-class-suffix': 'error',
             '@angular-eslint/prefer-inject': 'off',
             '@angular-eslint/prefer-standalone': 'off',
 
