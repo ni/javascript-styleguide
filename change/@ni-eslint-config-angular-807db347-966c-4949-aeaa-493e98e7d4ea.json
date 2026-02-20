@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "Add 'sandbox' to template options",
-  "packageName": "@ni/eslint-config-angular",
-  "email": "rajsite@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}

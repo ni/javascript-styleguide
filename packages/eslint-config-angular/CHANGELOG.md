@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-<!-- This log was last generated on Fri, 23 Jan 2026 23:19:30 GMT and should not be manually modified. -->
+<!-- This log was last generated on Fri, 20 Feb 2026 23:04:01 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## 11.1.1
+
+Fri, 20 Feb 2026 23:04:01 GMT
+
+### Patches
+
+- Add 'sandbox' to template options (rajsite@users.noreply.github.com)
 
 ## 11.1.0
 
