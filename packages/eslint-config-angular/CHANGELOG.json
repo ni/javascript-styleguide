@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Fri, 20 Feb 2026 23:04:01 GMT",
+      "version": "11.1.1",
+      "tag": "@ni/eslint-config-angular_v11.1.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "rajsite@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "26982e60ff4f269c4fb8e15d224cd1831948feee",
+            "comment": "Add 'sandbox' to template options"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 23 Jan 2026 23:19:30 GMT",
       "version": "11.1.0",
       "tag": "@ni/eslint-config-angular_v11.1.0",

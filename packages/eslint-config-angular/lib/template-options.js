@@ -26,7 +26,8 @@ const ignoreAttributeSets = {
         'download',
         // Not possible for Angular i18n to handle meta tags yet
         // https://github.com/angular/angular-cli/issues/8947
-        'meta[content]'
+        'meta[content]',
+        'sandbox'
     ],
     nimble: [
         // shared
