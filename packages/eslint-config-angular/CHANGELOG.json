@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Thu, 19 Mar 2026 18:18:10 GMT",
+      "version": "12.0.0",
+      "tag": "@ni/eslint-config-angular_v12.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "7282195+m-akinc@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "bb2bd8149aa7324e6c1f2f6b7b2c536f578a1a71",
+            "comment": "Update to Angular 20"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 20 Feb 2026 23:04:01 GMT",
       "version": "11.1.1",
       "tag": "@ni/eslint-config-angular_v11.1.1",

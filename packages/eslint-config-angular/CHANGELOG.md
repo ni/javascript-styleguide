@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-angular
 
-<!-- This log was last generated on Fri, 20 Feb 2026 23:04:01 GMT and should not be manually modified. -->
+<!-- This log was last generated on Thu, 19 Mar 2026 18:18:10 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## 12.0.0
+
+Thu, 19 Mar 2026 18:18:10 GMT
+
+### Major changes
+
+- Update to Angular 20 (7282195+m-akinc@users.noreply.github.com)
 
 ## 11.1.1
 
