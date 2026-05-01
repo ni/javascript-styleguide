@@ -12,6 +12,6 @@
     "@ni/eslint-config-playwright": "*"
   },
   "devDependencies": {
-    "@playwright/test": "^1.42.1"
+    "@playwright/test": "^1.59.1"
   }
 }
