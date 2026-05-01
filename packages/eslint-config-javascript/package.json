@@ -36,9 +36,9 @@
     "!/eslint.config.js"
   ],
   "peerDependencies": {
-    "@stylistic/eslint-plugin": "^5.4.0",
-    "eslint": "^9.36.0",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint": "^9.39.4",
     "eslint-plugin-import": "^2.32.0",
-    "globals": "^14.0.0"
+    "globals": "^17.6.0"
   }
 }
