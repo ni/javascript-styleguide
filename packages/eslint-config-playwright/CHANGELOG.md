@@ -1,8 +1,18 @@
 # Change Log - @ni/eslint-config-playwright
 
-<!-- This log was last generated on Fri, 12 Dec 2025 16:36:33 GMT and should not be manually modified. -->
+<!-- This log was last generated on Fri, 01 May 2026 21:07:05 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## 2.0.6
+
+Fri, 01 May 2026 21:07:05 GMT
+
+### Patches
+
+- dep update (1588923+rajsite@users.noreply.github.com)
+- Bump @ni/eslint-config-typescript to v5.0.6
+- Bump @ni/eslint-config-javascript to v5.1.5
 
 ## 2.0.5
 

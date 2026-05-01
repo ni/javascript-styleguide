@@ -2,6 +2,33 @@
   "name": "@ni/eslint-config-playwright",
   "entries": [
     {
+      "date": "Fri, 01 May 2026 21:07:05 GMT",
+      "version": "2.0.6",
+      "tag": "@ni/eslint-config-playwright_v2.0.6",
+      "comments": {
+        "patch": [
+          {
+            "author": "1588923+rajsite@users.noreply.github.com",
+            "package": "@ni/eslint-config-playwright",
+            "commit": "1ec189a111164d09361aadec9bbb5a390acef20e",
+            "comment": "dep update"
+          },
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-playwright",
+            "comment": "Bump @ni/eslint-config-typescript to v5.0.6",
+            "commit": "not available"
+          },
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-playwright",
+            "comment": "Bump @ni/eslint-config-javascript to v5.1.5",
+            "commit": "not available"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 12 Dec 2025 16:36:33 GMT",
       "version": "2.0.5",
       "tag": "@ni/eslint-config-playwright_v2.0.5",

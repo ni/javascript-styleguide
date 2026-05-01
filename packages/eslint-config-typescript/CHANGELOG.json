@@ -2,6 +2,27 @@
   "name": "@ni/eslint-config-typescript",
   "entries": [
     {
+      "date": "Fri, 01 May 2026 21:07:05 GMT",
+      "version": "5.0.6",
+      "tag": "@ni/eslint-config-typescript_v5.0.6",
+      "comments": {
+        "patch": [
+          {
+            "author": "1588923+rajsite@users.noreply.github.com",
+            "package": "@ni/eslint-config-typescript",
+            "commit": "1ec189a111164d09361aadec9bbb5a390acef20e",
+            "comment": "dep update"
+          },
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-typescript",
+            "comment": "Bump @ni/eslint-config-javascript to v5.1.5",
+            "commit": "not available"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 12 Dec 2025 16:36:33 GMT",
       "version": "5.0.5",
       "tag": "@ni/eslint-config-typescript_v5.0.5",

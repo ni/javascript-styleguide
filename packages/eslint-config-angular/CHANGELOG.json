@@ -2,6 +2,27 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Fri, 01 May 2026 21:07:05 GMT",
+      "version": "12.0.1",
+      "tag": "@ni/eslint-config-angular_v12.0.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-angular",
+            "comment": "Bump @ni/eslint-config-typescript to v5.0.6",
+            "commit": "not available"
+          },
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-angular",
+            "comment": "Bump @ni/eslint-config-javascript to v5.1.5",
+            "commit": "not available"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 19 Mar 2026 18:18:10 GMT",
       "version": "12.0.0",
       "tag": "@ni/eslint-config-angular_v12.0.0",
