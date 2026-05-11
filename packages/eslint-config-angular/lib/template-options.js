@@ -10,6 +10,9 @@
 // CSS selector style element[attribute] ignore entries
 // which can be used to scope attribute ignores to specific
 // elements.
+
+import { fvIgnoreAttributes } from './ok/fv/ignore-attributes.js';
+
 const ignoreAttributeSets = {
     web: [
         'accept',
@@ -110,6 +113,10 @@ const ignoreAttributeSets = {
     spright: [
         // chat
         'message-type'
+    ],
+    ok: [
+        // fv
+        ...fvIgnoreAttributes
     ],
     systemlink: [
         // gainsights telemetry

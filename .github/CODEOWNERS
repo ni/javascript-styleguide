@@ -5,3 +5,9 @@
 
 # These owners will be the default owners for everything in the repo.
 * @jattasNI @rajsite
+
+# Specific content owners
+/**/fv/** @jattasNI @fredvisser
+
+# Change files don't need explicit reviewers
+/change
