@@ -11,7 +11,7 @@
 // which can be used to scope attribute ignores to specific
 // elements.
 
-import { fvIgnoreAttributes } from './ok/fv/ignore-attributes';
+import { fvIgnoreAttributes } from './ok/fv/ignore-attributes.js';
 
 const ignoreAttributeSets = {
     web: [
