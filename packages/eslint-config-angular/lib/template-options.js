@@ -129,6 +129,7 @@ const ignoreAttributeSets = {
         'keyType',
         'labelFieldName',
         'parentIdFieldName',
+        'pinLocation',
         'selectionMode',
         'slTableColumnId',
         'widthMode',
