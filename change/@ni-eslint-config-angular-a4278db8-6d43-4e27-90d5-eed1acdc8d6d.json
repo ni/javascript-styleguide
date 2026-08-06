@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "Add 'pinLocation' i18n exception for sl-table mapping column",
+  "packageName": "@ni/eslint-config-angular",
+  "email": "alyssa.holzer@emerson.com",
+  "dependentChangeType": "patch"
+}
