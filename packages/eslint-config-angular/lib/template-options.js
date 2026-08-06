@@ -65,6 +65,7 @@ const ignoreAttributeSets = {
         'label-field-name',
         'menu-slot',
         'parent-id-field-name',
+        'pin-location',
         'selection-mode',
         'sort-by-field-name',
         'sort-direction',
