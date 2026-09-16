@@ -1,8 +1,20 @@
 # Change Log - @ni/eslint-config-angular
 
-<!-- This log was last generated on Fri, 01 May 2026 21:07:05 GMT and should not be manually modified. -->
+<!-- This log was last generated on Wed, 16 Sep 2026 16:23:47 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## 13.0.0
+
+Wed, 16 Sep 2026 16:23:47 GMT
+
+### Major changes
+
+- Update to Angular 21 (7282195+m-akinc@users.noreply.github.com)
+
+### Patches
+
+- Add i18n exceptions for sl-table and nimble-table mapping column pin location (alyssa.holzer@emerson.com)
 
 ## 12.0.1
 

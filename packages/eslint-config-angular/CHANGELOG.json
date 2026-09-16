@@ -2,6 +2,29 @@
   "name": "@ni/eslint-config-angular",
   "entries": [
     {
+      "date": "Wed, 16 Sep 2026 16:23:47 GMT",
+      "version": "13.0.0",
+      "tag": "@ni/eslint-config-angular_v13.0.0",
+      "comments": {
+        "patch": [
+          {
+            "author": "alyssa.holzer@emerson.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "3eada51e417a54229c11812d3b3ae973e8d4b0e0",
+            "comment": "Add i18n exceptions for sl-table and nimble-table mapping column pin location"
+          }
+        ],
+        "major": [
+          {
+            "author": "7282195+m-akinc@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "3eada51e417a54229c11812d3b3ae973e8d4b0e0",
+            "comment": "Update to Angular 21"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 01 May 2026 21:07:05 GMT",
       "version": "12.0.1",
       "tag": "@ni/eslint-config-angular_v12.0.1",

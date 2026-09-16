@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "Add i18n exceptions for sl-table and nimble-table mapping column pin location",
-  "packageName": "@ni/eslint-config-angular",
-  "email": "alyssa.holzer@emerson.com",
-  "dependentChangeType": "patch"
-}
