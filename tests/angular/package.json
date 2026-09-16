@@ -11,22 +11,21 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^20.3.19",
-    "@angular/common": "^20.3.19",
-    "@angular/compiler": "^20.3.19",
-    "@angular/core": "^20.3.19",
-    "@angular/forms": "^20.3.19",
-    "@angular/platform-browser": "^20.3.19",
-    "@angular/platform-browser-dynamic": "^20.3.19",
+    "@angular/common": "^21.2.19",
+    "@angular/compiler": "^21.2.19",
+    "@angular/core": "^21.2.19",
+    "@angular/forms": "^21.2.19",
+    "@angular/platform-browser": "^21.2.19",
+    "@angular/platform-browser-dynamic": "^21.2.19",
     "rxjs": "^7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.1"
   },
   "devDependencies": {
-    "@angular/build": "^20.3.25",
-    "@angular/cli": "^20.3.25",
-    "@angular/compiler-cli": "^20.3.19",
-    "@angular/localize": "^20.3.19",
+    "@angular/build": "^21.2.19",
+    "@angular/cli": "^21.2.19",
+    "@angular/compiler-cli": "^21.2.19",
+    "@angular/localize": "^21.2.19",
     "@types/jasmine": "^5.1.4",
     "jasmine-core": "^5.13.0",
     "karma": "^6.4.0",
@@ -34,8 +33,8 @@
     "karma-coverage": "^2.2.0",
     "karma-jasmine": "^5.1.0",
     "karma-jasmine-html-reporter": "^2.2.0",
-    "ng-packagr": "^20.3.2",
-    "typescript": "~5.8.3"
+    "ng-packagr": "^21.2.6",
+    "typescript": "~5.9.3"
   },
   "peerDependencies": {
     "@ni/eslint-config-angular": "*",

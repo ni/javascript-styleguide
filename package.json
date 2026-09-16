@@ -48,6 +48,6 @@
     "beachball": "^2.65.3"
   },
   "peerDependencies": {
-    "typescript": "~5.8.3"
+    "typescript": "~5.9.3"
   }
 }
