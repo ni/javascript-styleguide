@@ -1,5 +1,12 @@
 import { defineConfig } from 'eslint/config';
 
+export const restrictedImportPaths = [{
+    // The following is recommended by the @angular-eslint/recommended--extra configuration.
+    // https://github.com/angular-eslint/angular-eslint/blob/v15.2.1/packages/eslint-plugin/src/configs/recommended--extra.json
+    name: 'rxjs/Rx',
+    message: 'Please import directly from \'rxjs\' instead'
+}];
+
 export const es6 = defineConfig([{
     rules: {
         /*
@@ -84,12 +91,7 @@ export const es6 = defineConfig([{
         'no-restricted-imports': [
             'error',
             {
-                paths: [{
-                    // The following is recommended by the @angular-eslint/recommended--extra configuration.
-                    // https://github.com/angular-eslint/angular-eslint/blob/v15.2.1/packages/eslint-plugin/src/configs/recommended--extra.json
-                    name: 'rxjs/Rx',
-                    message: 'Please import directly from \'rxjs\' instead'
-                }]
+                paths: restrictedImportPaths
             }],
 
         /*
