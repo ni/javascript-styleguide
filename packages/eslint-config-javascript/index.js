@@ -12,6 +12,7 @@ import { imports } from './lib/imports.js';
 import { strict } from './lib/strict.js';
 
 export { importNodeEsmConfig } from './lib/import-node-esm.js';
+export { restrictedImportPaths } from './lib/es6.js';
 export const javascriptConfig = defineConfig([
     stylisticPlugin.configs['disable-legacy'],
     bestPractices,
