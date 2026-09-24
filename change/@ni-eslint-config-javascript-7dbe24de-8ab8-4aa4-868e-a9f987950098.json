@@ -1,5 +1,5 @@
 {
-  "type": "patch",
+  "type": "minor",
   "comment": "Export restricted import paths for extension by consuming projects",
   "packageName": "@ni/eslint-config-javascript",
   "email": "robert.milea@ni.com",
