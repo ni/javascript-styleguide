@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-javascript
 
-<!-- This log was last generated on Fri, 01 May 2026 21:07:05 GMT and should not be manually modified. -->
+<!-- This log was last generated on Thu, 24 Sep 2026 14:45:16 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## 5.2.0
+
+Thu, 24 Sep 2026 14:45:16 GMT
+
+### Minor changes
+
+- Export restricted import paths for extension by consuming projects (robert.milea@ni.com)
 
 ## 5.1.5
 

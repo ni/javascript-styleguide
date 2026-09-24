@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-typescript
 
-<!-- This log was last generated on Fri, 01 May 2026 21:07:05 GMT and should not be manually modified. -->
+<!-- This log was last generated on Thu, 24 Sep 2026 14:45:16 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## 5.0.7
+
+Thu, 24 Sep 2026 14:45:16 GMT
+
+### Patches
+
+- Bump @ni/eslint-config-javascript to v5.2.0
 
 ## 5.0.6
 

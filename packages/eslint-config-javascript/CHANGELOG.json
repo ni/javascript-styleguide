@@ -2,6 +2,21 @@
   "name": "@ni/eslint-config-javascript",
   "entries": [
     {
+      "date": "Thu, 24 Sep 2026 14:45:16 GMT",
+      "version": "5.2.0",
+      "tag": "@ni/eslint-config-javascript_v5.2.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "robert.milea@ni.com",
+            "package": "@ni/eslint-config-javascript",
+            "commit": "92cb6d3e97a64c89f79d3870e351d0fb09ffd6b1",
+            "comment": "Export restricted import paths for extension by consuming projects"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 01 May 2026 21:07:05 GMT",
       "version": "5.1.5",
       "tag": "@ni/eslint-config-javascript_v5.1.5",
