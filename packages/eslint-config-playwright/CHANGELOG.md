@@ -1,8 +1,16 @@
 # Change Log - @ni/eslint-config-playwright
 
-<!-- This log was last generated on Thu, 24 Sep 2026 14:45:16 GMT and should not be manually modified. -->
+<!-- This log was last generated on Wed, 18 Nov 2026 23:08:24 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## 2.1.0
+
+Wed, 18 Nov 2026 23:08:24 GMT
+
+### Minor changes
+
+- Mark several recommended Playwright rules as errors instead of warnings (jattasNI@users.noreply.github.com)
 
 ## 2.0.7
 
