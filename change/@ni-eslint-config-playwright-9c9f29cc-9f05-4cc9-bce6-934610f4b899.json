@@ -1,7 +1,0 @@
-{
-  "type": "minor",
-  "comment": "Mark several recommended Playwright rules as errors instead of warnings",
-  "packageName": "@ni/eslint-config-playwright",
-  "email": "jattasNI@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}
